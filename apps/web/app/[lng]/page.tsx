@@ -9,7 +9,7 @@ interface PageProps {
 }
 
 export default async function Page({ params: { lng } }: PageProps) {
-  const { t } = await useTranslation(lng);
+  const { t }: { t: any } = await useTranslation(lng);
 
   return <h1>{t('title')}</h1>;
 }
