@@ -5,6 +5,7 @@ import { defaultColorScheme } from './defaultColorScheme';
 import Link from 'next/link';
 
 declare module '@codegouvfr/react-dsfr/next-appdir' {
+  // eslint-disable-next-line no-unused-vars
   interface RegisterLink {
     Link: typeof Link;
   }
