@@ -12,7 +12,7 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   ...configuration,
   collectCoverageFrom: [...configuration.collectCoverageFrom],
-  // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
     // Handle module aliases (this will be automatically configure
