@@ -1,0 +1,33 @@
+{
+  "name": "demonstrateur-api-particulier",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "dotenv -- turbo run build",
+    "dev": "dotenv -- turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "scalingo-postbuild": "dotenv -- turbo run scalingo-postbuild",
+    "start": "dotenv -- turbo run start",
+    "test": "dotenv -- turbo run test",
+    "test:coverage": "dotenv -- turbo run test:coverage --continue"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.12",
+    "dotenv-cli": "latest",
+    "eslint-config-custom": "*",
+    "prettier": "latest",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": "18.15.0",
+    "npm": "9.5.0"
+  },
+  "dependencies": {
+    "sass": "^1.64.1"
+  }
+}

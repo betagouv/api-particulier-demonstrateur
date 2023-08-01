@@ -1,0 +1,19 @@
+{
+  "header": {
+    "title": "Mon FranceConnect",
+    "subTitle": "Mon FranceConnect puts you in control of your data.",
+    "logoText1": "FRENCH",
+    "logoText2": "REPUBLIC"
+  },
+  "content": {
+    "description": "Collect your receipts",
+    "notification": "Your session has expired, please log in again."
+  },
+  "footer": {
+    "description": "Mon FranceConnect provides citizens with the data and supporting documents that the Administration has on them. It is currently being tested and should be enriched gradually. It does not record any personal information without your consent."
+  },
+  "verify": {
+    "title": "Vérifiez l'authenticité des informations du justificatif grâce aux données ci-dessus:",
+    "subtitle": "Données décodées récupérées par l'utilisateur:"
+  }
+}
