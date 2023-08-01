@@ -11,7 +11,15 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 const customJestConfig = {
   ...configuration,
-  collectCoverageFrom: [...configuration.collectCoverageFrom],
+  collectCoverageFrom: [
+    ...configuration.collectCoverageFrom,
+    '!**/StartDsfr.tsx',
+    '!**/layout.tsx',
+    '!**/app/defaultColorScheme.ts',
+    '!**/middleware.ts',
+    '!**/i18n-config.ts',
+    '!**/.next/**',
+  ],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
