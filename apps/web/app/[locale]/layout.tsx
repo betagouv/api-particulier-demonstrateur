@@ -10,11 +10,11 @@ import { Footer } from '@codegouvfr/react-dsfr/Footer';
 import { headerFooterDisplayItem } from '@codegouvfr/react-dsfr/Display';
 import { fr } from '@codegouvfr/react-dsfr';
 import Link from 'next/link';
-import { dir } from 'i18next';
-import { languages } from '@/i18n/settings';
+import { NextIntlClientProvider } from 'next-intl';
+import { notFound } from 'next/navigation';
 
 interface Params {
-  lng: string;
+  locale: string;
 }
 
 interface PageProps {
@@ -22,13 +22,20 @@ interface PageProps {
   children: JSX.Element;
 }
 
-export async function generateStaticParams() {
-  return languages.map((lng) => ({ lng }));
+export function generateStaticParams() {
+  return [{ locale: 'fr' }, { locale: 'en' }];
 }
 
-export default function RootLayout({ children, params: { lng } }: PageProps) {
+export default async function RootLayout({ children, params: { locale } }: PageProps) {
+  let messages;
+  try {
+    messages = (await import(`../../messages/${locale}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
+
   return (
-    <html {...getHtmlAttributes({ defaultColorScheme })} lang={lng} dir={dir(lng)}>
+    <html {...getHtmlAttributes({ defaultColorScheme })} lang={locale}>
       <head>
         <StartDsfr />
         <DsfrHead
@@ -75,7 +82,9 @@ export default function RootLayout({ children, params: { lng } }: PageProps) {
                   }),
                 }}
               >
-                {children}
+                <NextIntlClientProvider locale={locale} messages={messages}>
+                  {children}
+                </NextIntlClientProvider>
               </div>
               <Footer
                 accessibility="fully compliant"

@@ -17,7 +17,6 @@ const customJestConfig = {
   moduleNameMapper: {
     // Handle module aliases (this will be automatically configure
     // for you soon)
-    '^@/i18n/(.*)$': '<rootDir>/app/i18n/$1',
   },
 };
 

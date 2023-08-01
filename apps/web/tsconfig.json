@@ -3,8 +3,7 @@
     "allowJs": true,
     "baseUrl": ".",
     "paths": {
-      "@/app/*": ["./app/*"],
-      "@/i18n/*": ["i18n/*"]
+      "@/app/*": ["./app/*"]
     },
     "strictNullChecks": true,
     "plugins": [
@@ -14,14 +13,6 @@
     ]
   },
   "extends": "tsconfig/nextjs.json",
-  "include": [
-    "next-env.d.ts",
-    "next-api-request.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "i18n/index.js",
-    "middleware.js"
-  ],
+  "include": ["next-env.d.ts", "next-api-request.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "middleware.ts"],
   "exclude": ["node_modules"]
 }
