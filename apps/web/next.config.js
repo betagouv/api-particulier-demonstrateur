@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   swcMinify: true,
-  transpilePackages: ['ui', '@codegouvfr/react-dsfr'],
+  transpilePackages: ['@codegouvfr/react-dsfr'],
   experimental: {
     appDir: true,
   },
