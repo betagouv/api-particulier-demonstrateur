@@ -6,7 +6,7 @@ jest.mock('next-intl', () => ({
 }));
 
 describe('Page component', () => {
-  it('affiche le titre correct', async () => {
+  it('should display correct text', async () => {
     const { getByText } = render(<Page />);
 
     const titleElement = getByText('title');

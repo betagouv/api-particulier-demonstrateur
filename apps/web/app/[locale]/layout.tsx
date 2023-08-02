@@ -8,7 +8,6 @@ import MuiDsfrThemeProvider from '@codegouvfr/react-dsfr/mui';
 import { Header } from '@codegouvfr/react-dsfr/Header';
 import { Footer } from '@codegouvfr/react-dsfr/Footer';
 import { headerFooterDisplayItem } from '@codegouvfr/react-dsfr/Display';
-import { fr } from '@codegouvfr/react-dsfr';
 import Link from 'next/link';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
@@ -72,20 +71,11 @@ export default async function RootLayout({ children, params: { locale } }: PageP
                   title: 'Accueil - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)',
                 }}
               />
-              <div
-                style={{
-                  flex: 1,
-                  margin: 'auto',
-                  maxWidth: 1000,
-                  ...fr.spacing('padding', {
-                    topBottom: '10v',
-                  }),
-                }}
-              >
-                <NextIntlClientProvider locale={locale} messages={messages}>
-                  {children}
-                </NextIntlClientProvider>
-              </div>
+
+              <NextIntlClientProvider locale={locale} messages={messages}>
+                {children}
+              </NextIntlClientProvider>
+
               <Footer
                 accessibility="fully compliant"
                 contentDescription={`

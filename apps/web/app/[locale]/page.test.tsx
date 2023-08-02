@@ -1,15 +1,16 @@
 import { render } from '@testing-library/react';
-import Page from './page';
+import Header from '@/components/pages/index/Header';
+import Content from '@/components/pages/index/Content';
+import Index from './page';
 
-jest.mock('next-intl', () => ({
-  useTranslations: () => (key: any) => key,
-}));
+jest.mock('@/components/pages/index/Header');
+jest.mock('@/components/pages/index/Content');
 
-describe('Page component', () => {
-  it('affiche le titre correct', async () => {
-    const { getByText } = render(<Page />);
+describe('Index component', () => {
+  it('should render Header and Content components', async () => {
+    render(<Index />);
 
-    const titleElement = getByText('title');
-    expect(titleElement).toBeInTheDocument();
+    expect(Header).toHaveBeenCalledTimes(1);
+    expect(Content).toHaveBeenCalledTimes(1);
   });
 });

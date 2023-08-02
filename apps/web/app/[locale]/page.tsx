@@ -1,9 +1,13 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import Header from '@/components/pages/index/Header';
+import Content from '@/components/pages/index/Content';
 
-export default function Page() {
-  const t = useTranslations('Index');
-
-  return <h1>{t('title')}</h1>;
+export default function Index() {
+  return (
+    <>
+      <Header />
+      <Content />
+    </>
+  );
 }

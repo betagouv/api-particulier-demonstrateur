@@ -3,7 +3,8 @@
     "allowJs": true,
     "baseUrl": ".",
     "paths": {
-      "@/app/*": ["./app/*"]
+      "@/app/*": ["./app/*"],
+      "@/components/*": ["./components/*"]
     },
     "strictNullChecks": true,
     "plugins": [

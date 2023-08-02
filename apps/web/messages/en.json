@@ -1,8 +1,15 @@
 {
   "Index": {
-    "title": "Hello world!"
+    "title": "Buy my FuturVille Mobility + <br></br> transport card",
+    "content": {
+      "title": "Mobility card +",
+      "price": "80€/month",
+      "socialTariff": "Social tariff: 30€/month*",
+      "subContent": "*for job seekers, students, pupils and beneficiaries of <br></br>complementary health insurance.",
+      "suscribeButton": "Subscribe online"
+    }
   },
-  "Home": {
+  "Subscription": {
     "title": "Hello world from home!"
   }
 }

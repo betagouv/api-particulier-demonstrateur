@@ -1,8 +1,15 @@
 {
   "Index": {
-    "title": "Bonjour tout le monde!"
+    "title": "Acheter ma carte Mobilités + <br></br> des transports de FutureVille",
+    "content": {
+      "title": "Carte Mobilités +",
+      "price": "80€/mois",
+      "socialTariff": "Tarification sociale: 30€/mois*",
+      "subContent": "*pour les demandeurs d'emploi, les étudiants, les élèves et les bénéficiaires de la<br></br>complémentaire santé solidaire.",
+      "suscribeButton": "Souscrire en ligne"
+    }
   },
-  "Home": {
+  "Subscription": {
     "title": "Bonjour tout le monde de la page d'accueil"
   }
 }
