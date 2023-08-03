@@ -2,12 +2,12 @@ import { useColors } from '@codegouvfr/react-dsfr/useColors';
 import { fr } from '@codegouvfr/react-dsfr';
 import { useTranslations } from 'next-intl';
 
-export default function Header() {
+export default function PurchaseInfo() {
   const theme = useColors();
   const t = useTranslations('Index');
 
   return (
-    <div style={{ backgroundColor: theme.decisions.background.alt.blueFrance.default }}>
+    <div style={{ backgroundColor: theme.decisions.background.alt.blueCumulus.default }}>
       <div
         className={'fr-container'}
         style={{

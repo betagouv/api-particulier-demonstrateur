@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Header from './Header';
+import PurchaseInfo from './PurchaseInfo';
 
 jest.mock('next-intl', () => ({
   useTranslations: jest.fn().mockReturnValue({
@@ -11,7 +11,7 @@ jest.mock('next-intl', () => ({
 
 describe('Header component', () => {
   it('should render with correct text', async () => {
-    const { getByText } = render(<Header />);
+    const { getByText } = render(<PurchaseInfo />);
 
     const titleElement = getByText('title');
     expect(titleElement).toBeInTheDocument();

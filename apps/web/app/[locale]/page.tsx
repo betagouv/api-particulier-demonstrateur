@@ -1,13 +1,13 @@
 'use client';
 
-import Header from '@/components/pages/index/Header';
-import Content from '@/components/pages/index/Content';
+import PurchaseInfo from '@/components/pages/index/PurchaseInfo';
+import PricingInfo from '@/components/pages/index/PricingInfo';
 
 export default function Index() {
   return (
     <>
-      <Header />
-      <Content />
+      <PurchaseInfo />
+      <PricingInfo />
     </>
   );
 }

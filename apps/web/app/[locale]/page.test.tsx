@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
-import Header from '@/components/pages/index/Header';
-import Content from '@/components/pages/index/Content';
+import Header from '@/components/pages/index/PurchaseInfo';
+import Content from '@/components/pages/index/PricingInfo';
 import Index from './page';
 
 jest.mock('@/components/pages/index/Header');

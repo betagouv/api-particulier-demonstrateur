@@ -9,7 +9,27 @@
       "suscribeButton": "Souscrire en ligne"
     }
   },
-  "Subscription": {
-    "title": "Bonjour tout le monde de la page d'accueil"
+  "Souscription": {
+    "title": "Souscription à la Carte Mobilités +",
+    "price": "80€/mois",
+    "socialTariff": "Tarification sociale: 30€/mois*",
+    "subContent": "*pour les demandeurs d'emploi, les étudiants, les élèves et les bénéficiaires de la<br></br>complémentaire santé solidaire.",
+    "eligibilite": {
+      "stepperTitle": "Éligibilité au tarif social",
+      "stepperNextTitle": "Vérifier les informations de la carte",
+      "checkboxLegend": "Étes-vous ?",
+      "checkboxLabel1": "Demandeur d emploi",
+      "checkboxLabel2": "Étudiant",
+      "checkboxLabel3": "Étudiant boursier",
+      "checkboxLabel4": "Bénéficiaire de la C2S",
+      "checkboxLabel5": "Dans aucune de ces situations",
+      "button": "Suivant",
+      "alertTitle": "Vos informations vont être transmises pour vérifier votre statut",
+      "alertDescription": "Nous allons demander le justificatif de votre situation directement auprès des administrations en charges. Si l'information est disponible, vous n'aurez pas de justificatifs à fournir.",
+      "cardTitle": "Comment fonctionne la tarification sociale ?",
+      "cardDescription": "Retrouvez le descriptif de la démarche, les critères d'élibilité et les documents nécessaires pour obtenir un Pass tarif réduit",
+      "cardDetail": "PDF - 61,88 Ko"
+    },
+    "connexion": {}
   }
 }

@@ -64,7 +64,7 @@ export default async function RootLayout({ children, params: { locale } }: PageP
           <NextAppDirEmotionCacheProvider options={{ key: 'css' }}>
             <MuiDsfrThemeProvider>
               <Header
-                brandTop={<>INTITULE</>}
+                brandTop={<>DÉMONSTRATEUR API PARTICULIER</>}
                 serviceTitle="Mobilité+ "
                 homeLinkProps={{
                   href: '/',
