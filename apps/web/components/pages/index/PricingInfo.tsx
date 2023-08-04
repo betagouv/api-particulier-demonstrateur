@@ -20,13 +20,17 @@ export default function PricingInfo() {
     >
       <h2>{t('content.title')}</h2>
       <Highlight size="lg" style={{ margin: 0 }}>
-        <p style={{ fontSize: '30px' }}>{t('content.price')}</p>
-        <p style={{ fontSize: '20px', margin: 0 }}>{t('content.socialTariff')}</p>
-        <p style={{ fontSize: '15px', fontWeight: 'normal' }}>
+        {/** Using span with br because Hydration failed. Indeed, HighLight component use already <p> for children.*/}
+        <span style={{ fontSize: '30px' }}>{t('content.price')}</span>
+        <br />
+        <span style={{ fontSize: '20px', margin: 0 }}>{t('content.socialTariff')}</span>
+        <br />
+        <span style={{ fontSize: '15px', fontWeight: 'normal' }}>
           {t.rich('content.subContent', {
             br: () => <br />,
           })}
-        </p>
+        </span>
+        <br />
       </Highlight>
       <Link href="/souscription/connexion">
         <Button size="large" onClick={function noRefCheck() {}} iconId="fr-icon-arrow-right-line" iconPosition="right">
