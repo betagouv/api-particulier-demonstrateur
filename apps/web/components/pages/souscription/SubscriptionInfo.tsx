@@ -2,8 +2,8 @@
 
 import { useColors } from '@codegouvfr/react-dsfr/useColors';
 import { useTranslations } from 'next-intl';
-import { Highlight } from '@codegouvfr/react-dsfr/Highlight';
 import { fr } from '@codegouvfr/react-dsfr';
+import HighlightSubscription from '@/components/common/HighlightSubscription';
 
 export default function SubscriptionInfo() {
   const theme = useColors();
@@ -22,19 +22,7 @@ export default function SubscriptionInfo() {
         }}
       >
         <h2>{t('title')}</h2>
-        <Highlight size="lg" style={{ margin: 0 }}>
-          {/** Using span with br because Hydration failed. Indeed, HighLight component use already <p> for children.*/}
-          <span style={{ fontSize: '30px' }}>{t('price')}</span>
-          <br />
-          <span style={{ fontSize: '20px', margin: 0 }}>{t('socialTariff')}</span>
-          <br />
-          <span style={{ fontSize: '15px', fontWeight: 'normal' }}>
-            {t.rich('subContent', {
-              br: () => <br />,
-            })}
-          </span>
-          <br />
-        </Highlight>
+        <HighlightSubscription />
       </div>
     </div>
   );

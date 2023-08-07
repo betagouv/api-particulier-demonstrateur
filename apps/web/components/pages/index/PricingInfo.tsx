@@ -1,8 +1,8 @@
 import { fr } from '@codegouvfr/react-dsfr';
-import { Highlight } from '@codegouvfr/react-dsfr/Highlight';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import HighlightSubscription from '@/components/common/HighlightSubscription';
 
 export default function PricingInfo() {
   const t = useTranslations('Index');
@@ -19,19 +19,7 @@ export default function PricingInfo() {
       }}
     >
       <h2>{t('content.title')}</h2>
-      <Highlight size="lg" style={{ margin: 0 }}>
-        {/** Using span with br because Hydration failed. Indeed, HighLight component use already <p> for children.*/}
-        <span style={{ fontSize: '30px' }}>{t('content.price')}</span>
-        <br />
-        <span style={{ fontSize: '20px', margin: 0 }}>{t('content.socialTariff')}</span>
-        <br />
-        <span style={{ fontSize: '15px', fontWeight: 'normal' }}>
-          {t.rich('content.subContent', {
-            br: () => <br />,
-          })}
-        </span>
-        <br />
-      </Highlight>
+      <HighlightSubscription />
       <Link href="/souscription/connexion">
         <Button
           size="large"
