@@ -15,7 +15,7 @@ const customJestConfig = {
     ...configuration.collectCoverageFrom,
     '!**/StartDsfr.tsx',
     '!**/layout.tsx',
-    '!**/app/defaultColorScheme.ts',
+    '!**/defaultColorScheme.ts',
     '!**/middleware.ts',
     '!**/i18n-config.ts',
     '!**/.next/**',

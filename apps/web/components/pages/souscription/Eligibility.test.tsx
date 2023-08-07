@@ -1,10 +1,6 @@
 import { render } from '@testing-library/react';
 import Eligibility from './Eligibility';
 
-jest.mock('next-intl', () => ({
-  useTranslations: () => (key: string) => key,
-}));
-
 describe('Eligibility component', () => {
   it('should render components correctly', async () => {
     const { container } = render(<Eligibility />);
