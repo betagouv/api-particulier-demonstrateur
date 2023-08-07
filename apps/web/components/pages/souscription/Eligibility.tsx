@@ -80,7 +80,7 @@ export default function Eligibility() {
             <Link href="">
               <Button
                 size="large"
-                onClick={function noRefCheck() {}}
+                // onClick={function noRefCheck() {}}
                 iconId="fr-icon-arrow-right-line"
                 iconPosition="right"
               >
@@ -92,7 +92,7 @@ export default function Eligibility() {
             closable
             title={t('eligibilite.alertTitle')}
             description={t('eligibilite.alertDescription')}
-            onClose={function noRefCheck() {}}
+            // onClose={function noRefCheck() {}}
             severity="info"
             small
             style={{ marginTop: '60px' }}

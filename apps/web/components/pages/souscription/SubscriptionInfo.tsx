@@ -23,13 +23,17 @@ export default function SubscriptionInfo() {
       >
         <h2>{t('title')}</h2>
         <Highlight size="lg" style={{ margin: 0 }}>
-          <p style={{ fontSize: '30px' }}>{t('price')}</p>
-          <p style={{ fontSize: '20px', margin: 0 }}>{t('socialTariff')}</p>
-          <p style={{ fontSize: '15px', fontWeight: 'normal' }}>
+          {/** Using span with br because Hydration failed. Indeed, HighLight component use already <p> for children.*/}
+          <span style={{ fontSize: '30px' }}>{t('price')}</span>
+          <br />
+          <span style={{ fontSize: '20px', margin: 0 }}>{t('socialTariff')}</span>
+          <br />
+          <span style={{ fontSize: '15px', fontWeight: 'normal' }}>
             {t.rich('subContent', {
               br: () => <br />,
             })}
-          </p>
+          </span>
+          <br />
         </Highlight>
       </div>
     </div>

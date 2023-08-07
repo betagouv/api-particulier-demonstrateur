@@ -33,7 +33,12 @@ export default function PricingInfo() {
         <br />
       </Highlight>
       <Link href="/souscription/connexion">
-        <Button size="large" onClick={function noRefCheck() {}} iconId="fr-icon-arrow-right-line" iconPosition="right">
+        <Button
+          size="large"
+          /*onClick={function noRefCheck() {}}*/
+          iconId="fr-icon-arrow-right-line"
+          iconPosition="right"
+        >
           {t('content.suscribeButton')}
         </Button>
       </Link>
