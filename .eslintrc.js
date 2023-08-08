@@ -1,10 +1,25 @@
 module.exports = {
   root: true,
-  // This tells ESLint to load the config from the package `eslint-config-custom`
-  extends: ['custom'],
+  extends: ['eslint:recommended', 'next', 'prettier'],
+  globals: {
+    JSX: 'readonly',
+  },
   settings: {
     next: {
-      rootDir: ['apps/*/'],
+      rootDir: ['app/*/'],
     },
+  },
+  rules: {
+    '@next/next/no-html-link-for-pages': 'off',
+    'react/jsx-key': 'off',
+    quotes: ['error', 'single'],
+    indent: ['error', 2, { SwitchCase: 1, offsetTernaryExpressions: true }],
+    'max-len': ['error', { code: 120 }],
+    'no-tabs': ['error'],
+    semi: ['error', 'always'],
+    'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+  },
+  env: {
+    jest: true,
   },
 };
