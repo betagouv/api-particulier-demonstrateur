@@ -30,6 +30,7 @@ const customJestConfig = {
     '!**/middleware.ts',
     '!**/i18n-config.ts',
     '!**/.next/**',
+    '!**/.history/**',
   ],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
