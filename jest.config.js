@@ -1,5 +1,3 @@
-const configuration = require('jest-config-custom');
-
 const nextJest = require('next/jest');
 
 const createJestConfig = nextJest({
@@ -10,9 +8,22 @@ const createJestConfig = nextJest({
 
 // Add any custom config to be passed to Jest
 const customJestConfig = {
-  ...configuration,
+  preset: 'ts-jest',
+  coverageReporters: ['json', 'lcov', 'text', 'clover'],
+  coverageThreshold: {
+    global: {
+      statements: 100,
+      branches: 100,
+      functions: 100,
+      lines: 100,
+    },
+  },
   collectCoverageFrom: [
-    ...configuration.collectCoverageFrom,
+    '**/*.tsx',
+    '**/*.ts',
+    '!**/index.tsx',
+    '!**/index.ts',
+    '!**/*.test.tsx',
     '!**/StartDsfr.tsx',
     '!**/layout.tsx',
     '!**/defaultColorScheme.ts',
