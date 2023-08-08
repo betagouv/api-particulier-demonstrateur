@@ -10,11 +10,6 @@
   justify-content: center;
 }
 
-.centeredText {
-  text-align: center;
-  margin-top: 20px;
-}
-
 .choice {
   width: 100%;
   height: 100%;
@@ -28,17 +23,20 @@
   text-align: center;
 }
 
-.leftTitle {
-  margin: 10px;
-}
-
+/* Suppression des sélecteurs individuels car ils ont les mêmes propriétés */
+.leftTitle,
 .rightTitle {
-  margin: 10px;
+  margin: 0;
 }
 
 .tag {
   margin-bottom: 10%;
   background-color: #cbcbfa;
+}
+
+.centeredText {
+  text-align: center;
+  margin-top: 20px;
 }
 
 .forgotPassword {
@@ -50,7 +48,7 @@
 
 .centeredInput {
   display: block;
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 5px 10px;
   width: 60%;
   text-align: left;
@@ -69,7 +67,6 @@
   left: 0;
   right: 0;
   background: #aaa;
-  z-index: -1;
 }
 
 .orText {

@@ -43,7 +43,7 @@ export default function Authentication() {
               className={styles.centeredInput}
               label="Identifiant"
               state="default"
-              stateRelatedMessage="Text de validation / d'explication de l'erreur"
+              stateRelatedMessage="Le mot de passe n'est pas bon."
             />
 
             <PasswordInput className={styles.centeredInput} label="Mot de passe" />
