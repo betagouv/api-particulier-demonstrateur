@@ -1,34 +1,72 @@
 {
   "Index": {
-    "title": "Acheter ma carte Mobilités + <br></br> des transports de FutureVille",
-    "content": {
-      "title": "Carte Mobilités +",
-      "suscribeButton": "Souscrire en ligne"
+    "title": "Bienvenue sur le démonstrateur d'API particulier",
+    "subTitle": "Choisissez votre scénario :",
+    "badgeFC": "FranceConnect",
+    "badgeTSolidaire": "Tarification solidaire",
+    "badgeTSociale": "Tarification sociale",
+    "cards": {
+      "henri": {
+        "title": "Transports tarif réduit",
+        "desc": "Henri achète une carte des transports annuelle. Il est demandeur d'emploi et éligible au tarif réduit. Il va se connecter avec FranceConnect"
+      },
+      "juliette": {
+        "title": "Transports tarif réduit",
+        "desc": "Juliette souhaite acheter une carte des transportsavec un abonnement mensuel. Elle est étudiante et éligible au tarif réduit. Elle va se connecter SANS FranceConnect. "
+      },
+      "camille": {
+        "title": "Cantine à 1 euro",
+        "desc": "Camille inscrit ses enfants à la cantine, elle n'a pas de ressources et est éligible au dispositif Cantines à 1 euros. Elle va se connecter avec FranceConnect. "
+      },
+      "kevin": {
+        "title": "Cantine tarif réduit",
+        "desc": "Kevin inscrit ses enfants à la cantine, ses ressources sont faibles, il est éligible au tarif solidaire. "
+      }
     }
   },
   "Souscription": {
+    "title": "Acheter ma carte Mobilité + des transports de FuturVille",
+    "content": {
+      "title": "Carte Mobilité +",
+      "button": "Suivant"
+    }
+  },
+  "Eligibilite": {
     "title": "Souscription à la Carte Mobilités +",
-    "eligibilite": {
-      "stepperTitle": "Éligibilité au tarif social",
-      "stepperNextTitle": "Vérifier les informations de la carte",
-      "checkboxLegend": "Étes-vous ?",
-      "checkboxLabel1": "Demandeur d emploi",
-      "checkboxLabel2": "Étudiant",
-      "checkboxLabel3": "Étudiant boursier",
-      "checkboxLabel4": "Bénéficiaire de la C2S",
-      "checkboxLabel5": "Dans aucune de ces situations",
-      "button": "Suivant",
-      "alertTitle": "Vos informations vont être transmises pour vérifier votre statut",
-      "alertDescription": "Nous allons demander le justificatif de votre situation directement auprès des administrations en charges. Si l'information est disponible, vous n'aurez pas de justificatifs à fournir.",
-      "cardTitle": "Comment fonctionne la tarification sociale ?",
-      "cardDescription": "Retrouvez le descriptif de la démarche, les critères d'élibilité et les documents nécessaires pour obtenir un Pass tarif réduit",
-      "cardDetail": "PDF - 61,88 Ko"
-    },
-    "connexion": {}
+    "stepperTitle": "Éligibilité au tarif social",
+    "stepperNextTitle": "Vérifier les informations de la carte",
+    "checkboxLegend": "Étes-vous ?",
+    "checkboxLabel1": "Demandeur d emploi",
+    "checkboxLabel2": "Étudiant",
+    "checkboxLabel3": "Étudiant boursier",
+    "checkboxLabel4": "Bénéficiaire de la C2S",
+    "checkboxLabel5": "Dans aucune de ces situations",
+    "button": "Suivant",
+    "alertTitle": "Vos informations vont être transmises pour vérifier votre statut",
+    "alertDescription": "Nous allons demander le justificatif de votre situation directement auprès des administrations en charges. Si l'information est disponible, vous n'aurez pas de justificatifs à fournir.",
+    "cardTitle": "Comment fonctionne la tarification sociale ?",
+    "cardDescription": "Retrouvez le descriptif de la démarche, les critères d'élibilité et les documents nécessaires pour obtenir un Pass tarif réduit",
+    "cardDetail": "PDF - 61,88 Ko"
+  },
+  "Connexion": {
+    "stepperTitle": "S'authentifier",
+    "stepperNextTitle": "Éligibilité au tarif social",
+    "connectionTitle": "Se connecter",
+    "contentLeft": "Se connecter avec FranceConnect :",
+    "tagLeft": "En cas de demande de tarif réduit: Souscription en 3 clics",
+    "middleText": "Ou",
+    "contentRight": "Se connecter avec son compte :",
+    "tafRight": "En cas de demande de tarif réduit: Délais moyen de 15 jours",
+    "inputLabel": "Identifiant",
+    "inputRelatedMessage": "Le mot de passe n'est pas bon.",
+    "inputPassword": "Mot de passe",
+    "buttonConnection": "Se connecter",
+    "bottomTitle": "Pas encore de compte ?",
+    "bottomButton": "Créer un compte"
   },
   "HighlightSubscription": {
     "price": "80€/mois",
     "socialTariff": "Tarification sociale: 30€/mois*",
-    "subContent": "*pour les demandeurs d'emploi, les étudiants, les élèves et les bénéficiaires de la<br></br>complémentaire santé solidaire."
+    "subContent": "*pour les demandeurs d'emploi, les étudiants, les élèves et les bénéficiaires de la complémentaire santé solidaire."
   }
 }

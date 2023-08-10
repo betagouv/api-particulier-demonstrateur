@@ -7,7 +7,7 @@ import HighlightSubscription from '@/components/common/HighlightSubscription';
 
 export default function SubscriptionInfo() {
   const theme = useColors();
-  const t = useTranslations('Souscription');
+  const t = useTranslations('Eligibilite');
 
   return (
     <div style={{ backgroundColor: theme.decisions.background.alt.grey.default }}>

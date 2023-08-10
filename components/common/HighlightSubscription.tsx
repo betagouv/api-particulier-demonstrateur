@@ -11,11 +11,7 @@ export default function HighlightSubscription() {
       <br />
       <span style={{ fontSize: '20px', margin: 0 }}>{t('socialTariff')}</span>
       <br />
-      <span style={{ fontSize: '15px', fontWeight: 'normal' }}>
-        {t.rich('subContent', {
-          br: () => <br />,
-        })}
-      </span>
+      <span style={{ fontSize: '15px', fontWeight: 'normal' }}>{t('subContent')}</span>
       <br />
     </Highlight>
   );
