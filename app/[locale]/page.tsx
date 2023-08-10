@@ -36,7 +36,7 @@ export default function Index() {
                   </li>
                 </ul>
               }
-              desc={t('cards.henri.title')}
+              desc={t('cards.henri.desc')}
               enlargeLink
               imageAlt="texte alternatif de l’image"
               linkProps={{

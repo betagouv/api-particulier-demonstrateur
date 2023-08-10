@@ -20,7 +20,7 @@ export default function PricingInfo() {
     >
       <h2>{t('content.title')}</h2>
       <HighlightSubscription />
-      <Link href="/souscription/connexion">
+      <Link href="/eligibilite">
         <Button
           size="large"
           /*onClick={function noRefCheck() {}}*/
