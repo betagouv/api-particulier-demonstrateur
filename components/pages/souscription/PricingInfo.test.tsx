@@ -6,7 +6,9 @@ describe('PricingInfo component', () => {
     const { container } = render(<PricingInfo />);
 
     const highlightElement = container.querySelector('.fr-highlight');
+    const linkElements = container.querySelector('a[href="/eligibilite"]');
 
+    expect(linkElements).toBeInTheDocument();
     expect(highlightElement).not.toBeNull();
   });
 
