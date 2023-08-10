@@ -40,7 +40,7 @@ export default function Index() {
               enlargeLink
               imageAlt="texte alternatif de l’image"
               linkProps={{
-                href: '#',
+                href: '/souscription',
               }}
               title={t('cards.henri.title')}
             />
@@ -62,7 +62,7 @@ export default function Index() {
               enlargeLink
               imageAlt="texte alternatif de l’image"
               linkProps={{
-                href: '#',
+                href: '/souscription',
               }}
               title={t('cards.juliette.title')}
             />
@@ -93,7 +93,7 @@ export default function Index() {
               enlargeLink
               imageAlt="texte alternatif de l’image"
               linkProps={{
-                href: '#',
+                href: '/souscription',
               }}
               title={t('cards.camille.title')}
             />
@@ -115,7 +115,7 @@ export default function Index() {
               enlargeLink
               imageAlt="texte alternatif de l’image"
               linkProps={{
-                href: '#',
+                href: '/souscription',
               }}
               title={t('cards.kevin.title')}
             />
