@@ -18,7 +18,7 @@ export default function PurchaseInfo() {
           width: '100%',
         }}
       >
-        <h1 style={{ fontSize: '50px', maxWidth: '700px', overflowWrap: 'break-word' }}>{t('title')}</h1>
+        <h1 style={{ maxWidth: '700px', overflowWrap: 'break-word', lineHeight: '1.2' }}>{t('title')}</h1>
       </div>
     </div>
   );

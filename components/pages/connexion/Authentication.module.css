@@ -23,7 +23,6 @@
   text-align: center;
 }
 
-/* Suppression des sélecteurs individuels car ils ont les mêmes propriétés */
 .leftTitle,
 .rightTitle {
   margin: 0;
