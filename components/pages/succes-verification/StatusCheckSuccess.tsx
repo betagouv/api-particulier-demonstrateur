@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import CardSocialPricing from '@/components/common/CardSocialPricing';
 
-export default function StatusCheck() {
-  const t = useTranslations('Verification');
+export default function StatusCheckSuccess() {
+  const t = useTranslations('Succes-verification');
 
   return (
     <div

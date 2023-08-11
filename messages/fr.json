@@ -61,7 +61,7 @@
     "bottomTitle": "Pas encore de compte ?",
     "bottomButton": "Créer un compte"
   },
-  "Verification": {
+  "Succes-verification": {
     "stepperTitle": "Vérification de votre statut",
     "stepperNextTitle": "Souscription",
     "alertInfoTitle": "Votre statut demandeur d'emploi a été confirmé",
@@ -69,6 +69,17 @@
     "alertSuccessTitle": "Vous êtes éligible au tarif réduit !",
     "alertSuccessDescription": "Votre carte Mobilités + sera financée à 50% par votre commune et vous reviendra à 30 euros/mois.",
     "button": "Suivant"
+  },
+  "Erreur-verification": {
+    "stepperTitle": "Vérification de votre statut",
+    "stepperNextTitle": "Souscription",
+    "alertTitle": "Votre statut demandeur d'emploi n'a pas pu être confirmé",
+    "alertDesc": "Pôle emploi n'a pas pu confirmer votre statut.",
+    "checkboxLegend": "Pour poursuivre ma souscription :",
+    "checkboxLabel1": "J'autorise Mobilités + à redemander mon statut a pôle emploi ultérieurement. Je terminerai ma souscription une fois mon statut obtenu.",
+    "checkboxLabel2": "Je transmets par moi-même mon attestation Pôle emploi qui sera vérifiée par un agent dans les prochains jours.",
+    "checkboxLabel3": "J'ai besoin de ma carte maintenant, je commande une carte sans réduction.",
+    "button": "Je transmets mes justificatifs"
   },
   "HighlightSubscription": {
     "price": "80€/mois",

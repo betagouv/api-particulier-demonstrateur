@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import StatusCheck from './StatusCheck';
+import StatusCheck from './StatusCheckSuccess';
 
 describe('StatusCheck component', () => {
   it('should render components correctly', async () => {
