@@ -65,6 +65,18 @@
     "bottomTitle": "No account yet?",
     "bottomButton": "Create an account"
   },
+  "Verification": {
+    "stepperTitle": "Check your status",
+    "stepperNextTitle": "Subscription",
+    "alertInfoTitle": "Your job-seeker status has been confirmed",
+    "alertInfoDescription": "Pôle emploi has confirmed your registration as a job seeker",
+    "alertSuccessTitle": "You're eligible for the reduced rate!",
+    "alertSuccessDescription": "Your Mobilités + card will be 50% financed by your local council and will cost you 30 euros/month.",
+    "button": "Next",
+    "cardTitle": "How does social pricing work?",
+    "cardDescription": "Find the description of the process, the eligibility criteria and the documents necessary to obtain a reduced rate Pass",
+    "cardDetail": "PDF - 61,88 Ko"
+  },
   "HighlightSubscription": {
     "price": "80€/month",
     "socialTariff": "Social tariff: 30€/month*",

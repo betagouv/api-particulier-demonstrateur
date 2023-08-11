@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { Card } from '@codegouvfr/react-dsfr/Card';
 import { Alert } from '@codegouvfr/react-dsfr/Alert';
 import { useTranslations } from 'next-intl';
-// import styles from './Eligibility.module.css';
 
 export default function Eligibility() {
   const t = useTranslations('Eligibilite');
@@ -73,7 +72,7 @@ export default function Eligibility() {
           />
 
           <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
-            <Link href="">
+            <Link href="/connexion">
               <Button
                 size="large"
                 // onClick={function noRefCheck() {}}

@@ -64,6 +64,18 @@
     "bottomTitle": "Pas encore de compte ?",
     "bottomButton": "Créer un compte"
   },
+  "Verification": {
+    "stepperTitle": "Vérification de votre statut",
+    "stepperNextTitle": "Souscription",
+    "alertInfoTitle": "Votre statut demandeur d'emploi a été confirmé",
+    "alertInfoDescription": "Pôle emploi nous a confirmé votre inscription en tant que demandeur d'emploi",
+    "alertSuccessTitle": "Vous êtes éligible au tarif réduit !",
+    "alertSuccessDescription": "Votre carte Mobilités + sera financée à 50% par votre commune et vous reviendra à 30 euros/mois.",
+    "button": "Suivant",
+    "cardTitle": "Comment fonctionne la tarification sociale ?",
+    "cardDescription": "Retrouvez le descriptif de la démarche, les critères d'élibilité et les documents nécessaires pour obtenir un Pass tarif réduit",
+    "cardDetail": "PDF - 61,88 Ko"
+  },
   "HighlightSubscription": {
     "price": "80€/mois",
     "socialTariff": "Tarification sociale: 30€/mois*",
