@@ -3,9 +3,9 @@ import { fr } from '@codegouvfr/react-dsfr';
 import { Checkbox } from '@codegouvfr/react-dsfr/Checkbox';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import Link from 'next/link';
-import { Card } from '@codegouvfr/react-dsfr/Card';
 import { Alert } from '@codegouvfr/react-dsfr/Alert';
 import { useTranslations } from 'next-intl';
+import CardSocialPricing from '@/components/common/CardSocialPricing';
 
 export default function Eligibility() {
   const t = useTranslations('Eligibilite');
@@ -95,16 +95,7 @@ export default function Eligibility() {
         </div>
 
         <div style={{ flex: '35%', paddingLeft: '60px' }}>
-          <Card
-            desc={t('cardDescription')}
-            enlargeLink
-            endDetail={t('cardDetail')}
-            imageAlt="texte alternatif de l’image"
-            linkProps={{
-              href: '#',
-            }}
-            title={t('cardTitle')}
-          />
+          <CardSocialPricing />
         </div>
       </div>
     </div>

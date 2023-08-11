@@ -44,10 +44,7 @@
     "checkboxLabel5": "In none of these situations",
     "button": "Next",
     "alertTitle": "Your information will be transmitted to verify your status",
-    "alertDescription": "We will request proof of your situation directly from the authorities in charge. If the information is available, you will not have to provide supporting documents.",
-    "cardTitle": "How does social pricing work?",
-    "cardDescription": "Find the description of the process, the eligibility criteria and the documents necessary to obtain a reduced rate Pass",
-    "cardDetail": "PDF - 61,88 Ko"
+    "alertDescription": "We will request proof of your situation directly from the authorities in charge. If the information is available, you will not have to provide supporting documents."
   },
   "Connexion": {
     "stepperTitle": "Authenticate",
@@ -72,14 +69,16 @@
     "alertInfoDescription": "Pôle emploi has confirmed your registration as a job seeker",
     "alertSuccessTitle": "You're eligible for the reduced rate!",
     "alertSuccessDescription": "Your Mobilités + card will be 50% financed by your local council and will cost you 30 euros/month.",
-    "button": "Next",
-    "cardTitle": "How does social pricing work?",
-    "cardDescription": "Find the description of the process, the eligibility criteria and the documents necessary to obtain a reduced rate Pass",
-    "cardDetail": "PDF - 61,88 Ko"
+    "button": "Next"
   },
   "HighlightSubscription": {
     "price": "80€/month",
     "socialTariff": "Social tariff: 30€/month*",
     "subContent": "*for job seekers, students, pupils and beneficiaries of <br></br>complementary health insurance."
+  },
+  "CardSocialPricing": {
+    "cardTitle": "How does social pricing work?",
+    "cardDescription": "Find the description of the process, the eligibility criteria and the documents necessary to obtain a reduced rate Pass",
+    "cardDetail": "PDF - 61,88 Ko"
   }
 }
