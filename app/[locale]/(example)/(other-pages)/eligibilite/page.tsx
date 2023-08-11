@@ -1,6 +1,6 @@
 'use client';
 
-import Eligibility from '@/components/pages/souscription/Eligibility';
+import Eligibility from '@/components/pages/eligibilite/Eligibility';
 
 export default function Eligibilite() {
   return (

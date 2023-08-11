@@ -5,7 +5,7 @@ import Link from 'next/link';
 import HighlightSubscription from '@/components/common/HighlightSubscription';
 
 export default function PricingInfo() {
-  const t = useTranslations('Index');
+  const t = useTranslations('Souscription');
 
   return (
     <div
@@ -20,14 +20,14 @@ export default function PricingInfo() {
     >
       <h2>{t('content.title')}</h2>
       <HighlightSubscription />
-      <Link href="/souscription/connexion">
+      <Link href="/eligibilite">
         <Button
           size="large"
           /*onClick={function noRefCheck() {}}*/
           iconId="fr-icon-arrow-right-line"
           iconPosition="right"
         >
-          {t('content.suscribeButton')}
+          {t('content.button')}
         </Button>
       </Link>
     </div>

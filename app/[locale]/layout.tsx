@@ -5,9 +5,6 @@ import { getHtmlAttributes } from '@codegouvfr/react-dsfr/next-appdir/getHtmlAtt
 import { StartDsfr } from '../StartDsfr';
 import { defaultColorScheme } from '../defaultColorScheme';
 import MuiDsfrThemeProvider from '@codegouvfr/react-dsfr/mui';
-import { Header } from '@codegouvfr/react-dsfr/Header';
-import { Footer } from '@codegouvfr/react-dsfr/Footer';
-import { headerFooterDisplayItem } from '@codegouvfr/react-dsfr/Display';
 import Link from 'next/link';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
@@ -63,26 +60,9 @@ export default async function RootLayout({ children, params: { locale } }: PageP
         <DsfrProvider>
           <NextAppDirEmotionCacheProvider options={{ key: 'css' }}>
             <MuiDsfrThemeProvider>
-              <Header
-                brandTop={<>DÉMONSTRATEUR API PARTICULIER</>}
-                serviceTitle="Mobilité+ "
-                homeLinkProps={{
-                  href: '/',
-                  title: 'Accueil - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)',
-                }}
-              />
-
               <NextIntlClientProvider locale={locale} messages={messages}>
                 {children}
               </NextIntlClientProvider>
-
-              <Footer
-                accessibility="fully compliant"
-                contentDescription={`
-                    Ceci est un démonstrateur pour illustrer l'usage de l'API Particulier. 
-                `}
-                bottomItems={[headerFooterDisplayItem]}
-              />
             </MuiDsfrThemeProvider>
           </NextAppDirEmotionCacheProvider>
         </DsfrProvider>

@@ -8,7 +8,7 @@ import { Alert } from '@codegouvfr/react-dsfr/Alert';
 import { useTranslations } from 'next-intl';
 
 export default function Eligibility() {
-  const t = useTranslations('Souscription');
+  const t = useTranslations('Eligibilite');
 
   return (
     <div
@@ -25,49 +25,44 @@ export default function Eligibility() {
       }}
     >
       <div style={{ width: '65%' }}>
-        <Stepper
-          currentStep={2}
-          nextTitle={t('eligibilite.stepperNextTitle')}
-          stepCount={4}
-          title={t('eligibilite.stepperTitle')}
-        />
+        <Stepper currentStep={2} nextTitle={t('stepperNextTitle')} stepCount={4} title={t('stepperTitle')} />
       </div>
 
       <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
         <div style={{ flex: '65%' }}>
           <Checkbox
-            legend={t('eligibilite.checkboxLegend')}
+            legend={t('checkboxLegend')}
             options={[
               {
-                label: t('eligibilite.checkboxLabel1'),
+                label: t('checkboxLabel1'),
                 nativeInputProps: {
                   name: 'checkboxes-1',
                   value: 'value1',
                 },
               },
               {
-                label: t('eligibilite.checkboxLabel2'),
+                label: t('checkboxLabel2'),
                 nativeInputProps: {
                   name: 'checkboxes-1',
                   value: 'value2',
                 },
               },
               {
-                label: t('eligibilite.checkboxLabel3'),
+                label: t('checkboxLabel3'),
                 nativeInputProps: {
                   name: 'checkboxes-1',
                   value: 'value3',
                 },
               },
               {
-                label: t('eligibilite.checkboxLabel4'),
+                label: t('checkboxLabel4'),
                 nativeInputProps: {
                   name: 'checkboxes-1',
                   value: 'value4',
                 },
               },
               {
-                label: t('eligibilite.checkboxLabel5'),
+                label: t('checkboxLabel5'),
                 nativeInputProps: {
                   name: 'checkboxes-1',
                   value: 'value5',
@@ -77,21 +72,21 @@ export default function Eligibility() {
           />
 
           <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
-            <Link href="">
+            <Link href="/connexion">
               <Button
                 size="large"
                 // onClick={function noRefCheck() {}}
                 iconId="fr-icon-arrow-right-line"
                 iconPosition="right"
               >
-                {t('eligibilite.button')}
+                {t('button')}
               </Button>
             </Link>
           </div>
           <Alert
             closable
-            title={t('eligibilite.alertTitle')}
-            description={t('eligibilite.alertDescription')}
+            title={t('alertTitle')}
+            description={t('alertDescription')}
             // onClose={function noRefCheck() {}}
             severity="info"
             small
@@ -101,14 +96,14 @@ export default function Eligibility() {
 
         <div style={{ flex: '35%' }}>
           <Card
-            desc={t('eligibilite.cardDescription')}
+            desc={t('cardDescription')}
             enlargeLink
-            endDetail={t('eligibilite.cardDetail')}
+            endDetail={t('cardDetail')}
             imageAlt="texte alternatif de l’image"
             linkProps={{
               href: '#',
             }}
-            title={t('eligibilite.cardTitle')}
+            title={t('cardTitle')}
           />
         </div>
       </div>
