@@ -1,7 +1,7 @@
 {
   "Index": {
     "Headtitle": "Particular API demonstrator",
-    "title": "Welcome to the particular <br></br> API demonstrator",
+    "title": "Welcome to the particular API demonstrator",
     "subTitle": "Choose your scenario:",
     "badgeFC": "FranceConnect",
     "badgeTSolidaire": "Solidarity pricing",
@@ -26,7 +26,7 @@
     }
   },
   "Souscription": {
-    "title": "Buy my Mobility + <br></br> transport card from FuturVille",
+    "title": "Buy my Mobility + transport card from FuturVille",
     "content": {
       "title": "Mobility card +",
       "button": "Next"
@@ -68,6 +68,6 @@
   "HighlightSubscription": {
     "price": "80€/month",
     "socialTariff": "Social tariff: 30€/month*",
-    "subContent": "*for job seekers, students, pupils and beneficiaries of <br></br>complementary health insurance."
+    "subContent": "*for job seekers, students, pupils and beneficiaries of complementary health insurance."
   }
 }
