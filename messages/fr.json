@@ -43,10 +43,7 @@
     "checkboxLabel5": "Dans aucune de ces situations",
     "button": "Suivant",
     "alertTitle": "Vos informations vont être transmises pour vérifier votre statut",
-    "alertDescription": "Nous allons demander le justificatif de votre situation directement auprès des administrations en charges. Si l'information est disponible, vous n'aurez pas de justificatifs à fournir.",
-    "cardTitle": "Comment fonctionne la tarification sociale ?",
-    "cardDescription": "Retrouvez le descriptif de la démarche, les critères d'élibilité et les documents nécessaires pour obtenir un Pass tarif réduit",
-    "cardDetail": "PDF - 61,88 Ko"
+    "alertDescription": "Nous allons demander le justificatif de votre situation directement auprès des administrations en charges. Si l'information est disponible, vous n'aurez pas de justificatifs à fournir."
   },
   "Connexion": {
     "stepperTitle": "S'authentifier",
@@ -64,9 +61,34 @@
     "bottomTitle": "Pas encore de compte ?",
     "bottomButton": "Créer un compte"
   },
+  "Succes-verification": {
+    "stepperTitle": "Vérification de votre statut",
+    "stepperNextTitle": "Souscription",
+    "alertInfoTitle": "Votre statut demandeur d'emploi a été confirmé",
+    "alertInfoDescription": "Pôle emploi nous a confirmé votre inscription en tant que demandeur d'emploi",
+    "alertSuccessTitle": "Vous êtes éligible au tarif réduit !",
+    "alertSuccessDescription": "Votre carte Mobilités + sera financée à 50% par votre commune et vous reviendra à 30 euros/mois.",
+    "button": "Suivant"
+  },
+  "Erreur-verification": {
+    "stepperTitle": "Vérification de votre statut",
+    "stepperNextTitle": "Souscription",
+    "alertTitle": "Votre statut demandeur d'emploi n'a pas pu être confirmé",
+    "alertDesc": "Pôle emploi n'a pas pu confirmer votre statut.",
+    "checkboxLegend": "Pour poursuivre ma souscription :",
+    "checkboxLabel1": "J'autorise Mobilités + à redemander mon statut a pôle emploi ultérieurement. Je terminerai ma souscription une fois mon statut obtenu.",
+    "checkboxLabel2": "Je transmets par moi-même mon attestation Pôle emploi qui sera vérifiée par un agent dans les prochains jours.",
+    "checkboxLabel3": "J'ai besoin de ma carte maintenant, je commande une carte sans réduction.",
+    "button": "Je transmets mes justificatifs"
+  },
   "HighlightSubscription": {
     "price": "80€/mois",
     "socialTariff": "Tarification sociale: 30€/mois*",
     "subContent": "*pour les demandeurs d'emploi, les étudiants, les élèves et les bénéficiaires de la complémentaire santé solidaire."
+  },
+  "CardSocialPricing": {
+    "cardTitle": "Comment fonctionne la tarification sociale ?",
+    "cardDescription": "Retrouvez le descriptif de la démarche, les critères d'élibilité et les documents nécessaires pour obtenir un Pass tarif réduit",
+    "cardDetail": "PDF - 61,88 Ko"
   }
 }
