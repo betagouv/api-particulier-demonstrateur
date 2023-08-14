@@ -14,7 +14,7 @@
     "prebuild": "only-include-used-icons"
   },
   "dependencies": {
-    "@codegouvfr/react-dsfr": "^0.73.6",
+    "@codegouvfr/react-dsfr": "^0.74.2",
     "@emotion/react": "^11.10.6",
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.6",
@@ -47,7 +47,7 @@
     "typescript": "^4.5.3"
   },
   "engines": {
-    "node": "18.15.0",
-    "npm": "9.5.0"
+    "node": "18.17.0",
+    "npm": "9.6.7"
   }
 }
