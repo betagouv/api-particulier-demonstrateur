@@ -2,7 +2,7 @@
 
 import { Stepper } from '@codegouvfr/react-dsfr/Stepper';
 import { fr } from '@codegouvfr/react-dsfr';
-import styles from './Page.module.css';
+import styles from './page.module.css';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { FranceConnectButton } from '@codegouvfr/react-dsfr/FranceConnectButton';
 import { Input } from '@codegouvfr/react-dsfr/Input';
