@@ -3,7 +3,7 @@ import Layout from './layout';
 
 describe('Layout component', () => {
   it('should render the layout and its children', async () => {
-    const { getByLabelText, container } = render(
+    const { getByText, container } = render(
       <Layout>
         <p>Yolo</p>
       </Layout>,
@@ -13,10 +13,10 @@ describe('Layout component', () => {
     expect(highlightElement).not.toBeNull();
     expect(highlightElement).toHaveClass('fr-highlight');
 
-    const titleElement = getByLabelText('title');
+    const titleElement = getByText('title');
     expect(titleElement).toBeInTheDocument();
 
-    const child = getByLabelText('Yolo');
+    const child = getByText('Yolo');
     expect(child).toBeInTheDocument();
   });
 });

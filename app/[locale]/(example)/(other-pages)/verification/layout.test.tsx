@@ -3,20 +3,19 @@ import Layout from './layout';
 
 describe('Layout component', () => {
   it('should render the layout and its children', async () => {
-    const { getByLabelText, container } = render(
+    const { getByText, container } = render(
       <Layout>
         <p>Yolo</p>
       </Layout>,
     );
 
-    const highlightElement = container.querySelector('.fr-highlight');
-    expect(highlightElement).not.toBeNull();
-    expect(highlightElement).toHaveClass('fr-highlight');
+    const stepperElement = container.querySelector('.fr-stepper');
+    expect(stepperElement).toBeInTheDocument();
 
-    const titleElement = getByLabelText('title');
-    expect(titleElement).toBeInTheDocument();
+    const cardElement = container.querySelector('.fr-card');
+    expect(cardElement).toBeInTheDocument();
 
-    const child = getByLabelText('Yolo');
+    const child = getByText('Yolo');
     expect(child).toBeInTheDocument();
   });
 });
