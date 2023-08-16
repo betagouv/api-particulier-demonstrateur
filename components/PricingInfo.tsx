@@ -2,7 +2,7 @@ import { fr } from '@codegouvfr/react-dsfr';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import HighlightSubscription from '@/components/common/HighlightSubscription';
+import HighlightSubscription from '@/components/HighlightSubscription';
 
 export default function PricingInfo() {
   const t = useTranslations('Souscription');

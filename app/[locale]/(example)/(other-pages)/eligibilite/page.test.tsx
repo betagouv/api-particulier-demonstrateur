@@ -1,12 +1,22 @@
 import { render } from '@testing-library/react';
-import Eligibilite from './page';
+import Page from './page';
 
-describe('Eligibilite component', () => {
-  it('should render component correctly', async () => {
-    const { container } = render(<Eligibilite />);
+describe('Page component', () => {
+  it('should render page', async () => {
+    const { container } = render(<Page />);
 
     const stepperElement = container.querySelector('.fr-stepper');
+    const checkboxElement = container.querySelector('.fr-checkbox-group');
+    const buttonElement = container.querySelector('.fr-btn');
+    const alertElement = container.querySelector('.fr-alert');
+    const cardElement = container.querySelector('.fr-card');
+    const linkElements = container.querySelector('a[href="/connexion"]');
 
-    expect(stepperElement).not.toBeNull();
+    expect(stepperElement).toHaveClass('fr-stepper');
+    expect(checkboxElement).toHaveClass('fr-checkbox-group');
+    expect(buttonElement).toHaveClass('fr-btn');
+    expect(alertElement).toHaveClass('fr-alert');
+    expect(cardElement).toHaveClass('fr-card');
+    expect(linkElements).toBeInTheDocument();
   });
 });
