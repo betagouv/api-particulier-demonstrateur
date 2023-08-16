@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
-import Index from './page';
+import Page from './page';
 
-describe('Index component', () => {
+describe('Page component', () => {
   it('should have correct number of components', async () => {
-    const { container } = render(<Index />);
+    const { container } = render(<Page />);
 
     const cardElement = container.querySelectorAll('.fr-card');
     const badgeElements = container.querySelectorAll('.fr-badge');

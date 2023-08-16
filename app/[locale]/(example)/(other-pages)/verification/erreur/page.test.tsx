@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
-import StatusCheck from './StatusCheckSuccess';
+import Page from './page';
 
-describe('StatusCheck component', () => {
-  it('should render components correctly', async () => {
-    const { container } = render(<StatusCheck />);
+describe('Page component', () => {
+  it('should render Page correctly', async () => {
+    const { container } = render(<Page />);
 
     const stepperElement = container.querySelector('.fr-stepper');
     const buttonElement = container.querySelector('.fr-btn');
