@@ -62,6 +62,19 @@
     "bottomTitle": "No account yet?",
     "bottomButton": "Create an account"
   },
+  "Choix-connexion": {
+    "title": "Connection in progress on Mobilités +",
+    "subTitle": "Choose an account to log in:",
+    "header": {
+      "brandTop1": "RÉPUBLIQUE",
+      "brandTop2": "FRANCAISE",
+      "homeLinkPropsTitle": "Home - Name of entity (ministry, secretariat of state, government)"
+    },
+    "overlayText": {
+      "title": "The user goes to the FranceConnect website, selects the account of his choice to connect...",
+      "button": "Continuing the journey"
+    }
+  },
   "Succes-verification": {
     "stepperTitle": "Check your status",
     "stepperNextTitle": "Subscription",
