@@ -116,5 +116,10 @@
       "homeLinkTitle": "Home - Name of entity (ministry, secretariat of state, government)",
       "footerDesc": "This is a demo to illustrate the use of the Particulier API."
     }
+  },
+  "Tooltip": {
+    "title": "API Particulier Example",
+    "homeBtn": "Back to story choice",
+    "previousBtn": "Previous page"
   }
 }

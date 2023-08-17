@@ -115,5 +115,10 @@
       "homeLinkTitle": "Accueil - Nom de l’entité (ministère, secrétariat d'état, gouvernement)",
       "footerDesc": "Ceci est un démonstrateur pour illustrer l'usage de l'API Particulier."
     }
+  },
+  "Tooltip": {
+    "title": "Démonstrateur API Particulier",
+    "homeBtn": "Retour aux choix de scénarios",
+    "previousBtn": "Retour à l'écran précédent"
   }
 }

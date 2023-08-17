@@ -3,11 +3,14 @@
 import styles from './page.module.css';
 import { Card } from '@codegouvfr/react-dsfr/Card';
 import { Badge } from '@codegouvfr/react-dsfr/Badge';
+import { useColors } from '@codegouvfr/react-dsfr/useColors';
+import Tooltip from '@/components/Tooltip';
 import { useTranslations } from 'next-intl';
 import Banner from '@/components/Banner';
 
 export default function Index() {
   const t = useTranslations('Index');
+  const theme = useColors();
 
   return (
     <div className={styles.container}>
@@ -23,11 +26,17 @@ export default function Index() {
             }}
           >
             <Card
-              style={{ height: 350, color: 'black' }}
+              style={{ height: 350 }}
               start={
                 <ul className="fr-badges-group">
                   <li>
-                    <Badge style={{ backgroundColor: '#fcd7d7', fontWeight: 'normal' }} small>
+                    <Badge
+                      style={{
+                        backgroundColor: theme.decisions.background.contrast.warning.hover,
+                        fontWeight: 'normal',
+                      }}
+                      small
+                    >
                       {t('badgeFC')}
                     </Badge>
                   </li>
@@ -40,7 +49,6 @@ export default function Index() {
               }
               desc={t('cards.henri.desc')}
               enlargeLink
-              imageAlt="texte alternatif de l’image"
               linkProps={{
                 href: '/souscription',
               }}
@@ -59,10 +67,9 @@ export default function Index() {
                   {t('badgeTSociale')}
                 </Badge>
               }
-              style={{ height: 350, color: 'black' }}
+              style={{ height: 350 }}
               desc={t('cards.juliette.desc')}
               enlargeLink
-              imageAlt="texte alternatif de l’image"
               linkProps={{
                 href: '/souscription',
               }}
@@ -79,7 +86,13 @@ export default function Index() {
               start={
                 <ul className="fr-badges-group">
                   <li>
-                    <Badge style={{ backgroundColor: '#fcd7d7', fontWeight: 'normal' }} small>
+                    <Badge
+                      style={{
+                        backgroundColor: theme.decisions.background.contrast.warning.hover,
+                        fontWeight: 'normal',
+                      }}
+                      small
+                    >
                       {t('badgeFC')}
                     </Badge>
                   </li>
@@ -90,10 +103,9 @@ export default function Index() {
                   </li>
                 </ul>
               }
-              style={{ height: 350, color: 'black' }}
+              style={{ height: 350 }}
               desc={t('cards.camille.desc')}
               enlargeLink
-              imageAlt="texte alternatif de l’image"
               linkProps={{
                 href: '/souscription',
               }}
@@ -112,10 +124,9 @@ export default function Index() {
                   {t('badgeTSolidaire')}
                 </Badge>
               }
-              style={{ height: 350, color: 'black' }}
+              style={{ height: 350 }}
               desc={t('cards.kevin.desc')}
               enlargeLink
-              imageAlt="texte alternatif de l’image"
               linkProps={{
                 href: '/souscription',
               }}
@@ -124,6 +135,9 @@ export default function Index() {
           </div>
         </div>
       </main>
+      <Tooltip>
+        <p>Text</p>
+      </Tooltip>
     </div>
   );
 }
