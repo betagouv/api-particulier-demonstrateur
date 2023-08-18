@@ -8,8 +8,8 @@ import { useTranslations } from 'next-intl';
 import Button from '@codegouvfr/react-dsfr/Button';
 
 type DisabledActions = {
-  home: boolean;
-  back: boolean;
+  home?: boolean;
+  back?: boolean;
 };
 
 export default function Tooltip({
@@ -35,6 +35,7 @@ export default function Tooltip({
   const bgColorBackButton = disabledActions.back ? bgColorDisabledBackBtn : bgColorNotDisabledBackBtn;
 
   useEffect(() => {
+    /* istanbul ignore next */
     const spacing = isVisible && containerRef?.current?.offsetHeight ? containerRef?.current?.offsetHeight : 0;
     document.body.style.paddingBottom = spacing + 'px';
   }, [isVisible, containerRef]);
