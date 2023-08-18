@@ -119,6 +119,6 @@
   "Tooltip": {
     "title": "Démonstrateur API Particulier",
     "homeBtn": "Retour aux choix de scénarios",
-    "previousBtn": "Retour à l'écran précédent"
+    "backBtn": "Retour à l'écran précédent"
   }
 }

@@ -28,6 +28,12 @@ export default function Tooltip({
   const [isBackBtnHovered, setIsBackBtnHovered] = useState(false);
   const [isHomeBtnHovered, setIsHomeBtnHovered] = useState(false);
 
+  const bgColorDisabledBackBtn = fr.colors.getHex({ isDark: !theme.isDark }).options.grey._925_125.default;
+  const bgColorHoveredBackBtn = fr.colors.getHex({ isDark: !theme.isDark }).options.blueFrance.sun113_625.hover;
+  const bgColorDefaultBackBtn = fr.colors.getHex({ isDark: !theme.isDark }).options.blueFrance.sun113_625.default;
+  const bgColorNotDisabledBackBtn = isBackBtnHovered ? bgColorHoveredBackBtn : bgColorDefaultBackBtn;
+  const bgColorBackButton = disabledActions.back ? bgColorDisabledBackBtn : bgColorNotDisabledBackBtn;
+
   useEffect(() => {
     const spacing = isVisible && containerRef?.current?.offsetHeight ? containerRef?.current?.offsetHeight : 0;
     document.body.style.paddingBottom = spacing + 'px';
@@ -61,14 +67,10 @@ export default function Tooltip({
               onClick={() => router.back()}
               style={{
                 color: fr.colors.getHex({ isDark: theme.isDark }).options.grey._200_850.default,
-                backgroundColor: disabledActions.back
-                  ? fr.colors.getHex({ isDark: !theme.isDark }).options.grey._925_125.default
-                  : isBackBtnHovered
-                  ? fr.colors.getHex({ isDark: !theme.isDark }).options.blueFrance.sun113_625.hover
-                  : fr.colors.getHex({ isDark: !theme.isDark }).options.blueFrance.sun113_625.default,
+                backgroundColor: bgColorBackButton,
               }}
             >
-              {t('previousBtn')}
+              {t('backBtn')}
             </Button>
           </span>
           <span onMouseEnter={() => setIsHomeBtnHovered(true)} onMouseLeave={() => setIsHomeBtnHovered(false)}>
