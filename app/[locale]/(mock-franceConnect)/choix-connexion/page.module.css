@@ -1,0 +1,77 @@
+.container {
+  text-align: center;
+  padding-top: 60px;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(227, 227, 253, 0) 10%, #e3e3fd 65%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.textOverlay {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.title,
+.subtitle {
+  padding: 0 20px;
+}
+
+.rectangleContainer {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.rectangle {
+  margin: 10px 0;
+  background-color: #f0f0f0;
+  position: relative;
+  border: 0.5px solid grey;
+}
+
+@media (min-width: 992px) {
+  .textOverlay {
+    top: 65%;
+  }
+
+  .subtitle {
+    font-size: 2.5rem;
+  }
+
+  .rectangleContainer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
