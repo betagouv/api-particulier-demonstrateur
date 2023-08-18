@@ -2,9 +2,9 @@
   "Index": {
     "title": "Bienvenue sur le démonstrateur d'API particulier",
     "subTitle": "Choisissez votre scénario :",
-    "badgeFC": "FranceConnect",
-    "badgeTSolidaire": "Tarification solidaire",
-    "badgeTSociale": "Tarification sociale",
+    "tagFC": "FranceConnect",
+    "tagTSolidaire": "Tarification solidaire",
+    "tagTSociale": "Tarification sociale",
     "cards": {
       "henri": {
         "title": "Transports tarif réduit",

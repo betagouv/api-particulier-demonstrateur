@@ -1,5 +1,5 @@
 .title {
-  font-size: 30px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 300;
   line-height: 36px;
@@ -8,16 +8,17 @@
 }
 
 .buttons {
+  flex-direction: column;
   display: flex;
   gap: 20px;
 }
 
 .closeBtn,
 .openBtn {
-  height: 80px;
-  width: 80px;
-  right: 45px;
-  border-radius: 50px;
+  height: 60px;
+  width: 60px;
+  right: 20px;
+  border-radius: 30px;
   color: var(--text-inverted-blue-france);
   background-color: #8585f6;
   transition: all 0.1s ease-in-out;
@@ -29,11 +30,11 @@
 
 .openBtn {
   position: fixed;
-  bottom: 45px;
+  bottom: 20px;
   background-color: var(--blue-france-sun-113-625) !important;
   transform: scale(0, 0);
   opacity: 0;
-  z-index: 1;
+  z-index: 999;
 }
 .openBtn.active {
   opacity: 1;
@@ -44,10 +45,8 @@
 }
 
 .closeBtn {
-  height: 80px;
-  width: 80px;
   position: absolute;
-  top: -40px;
+  top: -30px;
   z-index: 1;
 }
 .closeBtn:hover {
@@ -58,12 +57,21 @@
   padding: 2rem;
   transition: all 0.2s ease-in-out;
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   width: 100%;
   bottom: 0;
   shape-outside: circle(100%);
-  clip-path: circle(0px at calc(100% - 85px) calc(100% - 85px));
+  clip-path: circle(0px at calc(100% - 50px) calc(100% - 50px));
 }
 .tooltipContainer.active {
-  clip-path: circle(150% at calc(100% - 85px) calc(100% - 85px));
+  clip-path: circle(150% at calc(100% - 50px) calc(100% - 50px));
+}
+
+@media (min-width: 576px) {
+  .title {
+    font-size: 30px;
+  }
+  .buttons {
+    flex-direction: row;
+  }
 }

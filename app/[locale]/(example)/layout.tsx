@@ -21,7 +21,7 @@ export default function DemonstratorLayout({ children }: { children: JSX.Element
           title: t('header.homeLinkTitle'),
         }}
       />
-      {children}{' '}
+      {children}
       <Footer
         accessibility="fully compliant"
         contentDescription={t('header.footerDesc')}

@@ -1,22 +1,36 @@
+'use client';
 import React, { useState, useRef, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import styles from './Tooltip.module.css';
 import { fr } from '@codegouvfr/react-dsfr';
 import { useColors } from '@codegouvfr/react-dsfr/useColors';
 import { useTranslations } from 'next-intl';
 import Button from '@codegouvfr/react-dsfr/Button';
 
-export default function Tooltip({ children }: { children: JSX.Element }) {
+type DisabledActions = {
+  home: boolean;
+  back: boolean;
+};
+
+export default function Tooltip({
+  children,
+  disabledActions = { home: false, back: false },
+}: {
+  children?: JSX.Element;
+  disabledActions?: DisabledActions;
+}) {
+  const router = useRouter();
   const t = useTranslations('Tooltip');
   const theme = useColors();
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(true);
   const [isOpenBtnHovered, setIsOpenBtnHovered] = useState(false);
-
-  const [spacingPage, setSpacingPage] = useState('0px');
+  const [isBackBtnHovered, setIsBackBtnHovered] = useState(false);
+  const [isHomeBtnHovered, setIsHomeBtnHovered] = useState(false);
 
   useEffect(() => {
     const spacing = isVisible && containerRef?.current?.offsetHeight ? containerRef?.current?.offsetHeight : 0;
-    setSpacingPage(spacing + 'px');
+    document.body.style.paddingBottom = spacing + 'px';
   }, [isVisible, containerRef]);
 
   return (
@@ -39,27 +53,50 @@ export default function Tooltip({ children }: { children: JSX.Element }) {
         </div>
         {children}
         <div className={styles.buttons}>
-          <Button
-            iconId="fr-icon-arrow-left-fill"
-            disabled
-            style={{
-              color: fr.colors.getHex({ isDark: theme.isDark }).options.grey._200_850.default,
-              backgroundColor: isOpenBtnHovered
-                ? fr.colors.getHex({ isDark: !theme.isDark }).options.blueFrance.sun113_625.hover
-                : fr.colors.getHex({ isDark: !theme.isDark }).options.blueFrance.sun113_625.default,
-            }}
-          >
-            {t('previousBtn')}
-          </Button>
-          <Button
-            className={styles.backButton}
-            iconId="fr-icon-home-4-fill"
-            disabled
-            onClick={function noRefCheck() {}}
-            priority="secondary"
-          >
-            {t('homeBtn')}
-          </Button>
+          <span onMouseEnter={() => setIsBackBtnHovered(true)} onMouseLeave={() => setIsBackBtnHovered(false)}>
+            <Button
+              disabled={disabledActions.back}
+              className={styles.backButton}
+              iconId="fr-icon-arrow-left-fill"
+              onClick={() => router.back()}
+              style={{
+                color: fr.colors.getHex({ isDark: theme.isDark }).options.grey._200_850.default,
+                backgroundColor: disabledActions.back
+                  ? fr.colors.getHex({ isDark: !theme.isDark }).options.grey._925_125.default
+                  : isBackBtnHovered
+                  ? fr.colors.getHex({ isDark: !theme.isDark }).options.blueFrance.sun113_625.hover
+                  : fr.colors.getHex({ isDark: !theme.isDark }).options.blueFrance.sun113_625.default,
+              }}
+            >
+              {t('previousBtn')}
+            </Button>
+          </span>
+          <span onMouseEnter={() => setIsHomeBtnHovered(true)} onMouseLeave={() => setIsHomeBtnHovered(false)}>
+            <Button
+              disabled={disabledActions.home}
+              style={{
+                color: disabledActions.home
+                  ? fr.colors.getHex({ isDark: !theme.isDark }).options.grey._625_425.default
+                  : fr.colors.getHex({ isDark: !theme.isDark }).options.blueFrance.sun113_625.default,
+                boxShadow:
+                  'inset 0 0 0 1px ' +
+                  (disabledActions.home
+                    ? 'transparent'
+                    : fr.colors.getHex({ isDark: !theme.isDark }).options.blueFrance.sun113_625.default),
+                backgroundColor: isHomeBtnHovered
+                  ? disabledActions.home
+                    ? 'transparent'
+                    : fr.colors.getHex({ isDark: !theme.isDark }).options.grey._1000_50.default
+                  : 'transparent',
+              }}
+              className={styles.homeButton}
+              iconId="fr-icon-home-4-fill"
+              onClick={() => router.push('/')}
+              priority="secondary"
+            >
+              {t('homeBtn')}
+            </Button>
+          </span>
         </div>
         <button className={styles.closeBtn} onClick={() => setIsVisible(!isVisible)}>
           <i className={fr.cx('fr-icon-close-line')} />
@@ -78,7 +115,6 @@ export default function Tooltip({ children }: { children: JSX.Element }) {
       >
         <i className={fr.cx('ri-lightbulb-flash-line')} />
       </button>
-      <div style={{ marginBottom: spacingPage }}></div>
     </>
   );
 }

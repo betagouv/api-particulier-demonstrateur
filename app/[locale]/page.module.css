@@ -18,6 +18,11 @@
   margin-top: 5%;
 }
 
+.card {
+  width: 290px;
+  height: 380px;
+}
+
 .main {
   width: 100%;
   display: flex;
