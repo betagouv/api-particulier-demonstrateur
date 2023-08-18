@@ -32,6 +32,10 @@
       "button": "Next"
     }
   },
+  "Banner": {
+    "mobileTitle": "Demo",
+    "webTitle": "Démonstrateur API Particulier"
+  },
   "Eligibilite": {
     "title": "Subscription to the Mobility + Card",
     "stepperTitle": "Eligibility for the social tariff",
@@ -104,5 +108,13 @@
     "cardTitle": "How does social pricing work?",
     "cardDescription": "Find the description of the process, the eligibility criteria and the documents necessary to obtain a reduced rate Pass",
     "cardDetail": "PDF - 61,88 Ko"
+  },
+  "DemonstratorLayout": {
+    "header": {
+      "brandTop": "DÉMONSTRATEUR API PARTICULIER",
+      "serviceTitle": "Mobility+ ",
+      "homeLinkTitle": "Home - Name of entity (ministry, secretariat of state, government)",
+      "footerDesc": "This is a demo to illustrate the use of the Particulier API."
+    }
   }
 }

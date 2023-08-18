@@ -31,6 +31,10 @@
       "button": "Suivant"
     }
   },
+  "Banner": {
+    "mobileTitle": "Démo",
+    "webTitle": "Démonstrateur API Particulier"
+  },
   "Eligibilite": {
     "title": "Souscription à la Carte Mobilités +",
     "stepperTitle": "Éligibilité au tarif social",
@@ -103,5 +107,13 @@
     "cardTitle": "Comment fonctionne la tarification sociale ?",
     "cardDescription": "Retrouvez le descriptif de la démarche, les critères d'élibilité et les documents nécessaires pour obtenir un Pass tarif réduit",
     "cardDetail": "PDF - 61,88 Ko"
+  },
+  "DemonstratorLayout": {
+    "header": {
+      "brandTop": "DÉMONSTRATEUR API PARTICULIER",
+      "serviceTitle": "Mobilité+ ",
+      "homeLinkTitle": "Accueil - Nom de l’entité (ministère, secrétariat d'état, gouvernement)",
+      "footerDesc": "Ceci est un démonstrateur pour illustrer l'usage de l'API Particulier."
+    }
   }
 }

@@ -1,0 +1,54 @@
+.bandeau {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: rotate(30deg) scale(1) translate(253px, -135px);
+  width: 694px;
+  text-align: center;
+  background: var(--dark-background-open-blue-france, #272747);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  line-height: 2em;
+  z-index: 999;
+  color: #fff;
+  font-size: 22px;
+}
+
+.bandeau .mobileTitle {
+  display: block;
+  padding-left: 20px;
+}
+
+.bandeau .webTitle {
+  display: none;
+  padding-left: 20px;
+}
+
+@media (min-width: 576px) {
+  .bandeau {
+    font-size: 17px;
+    transform: rotate(30deg) scale(1) translate(213px, -57px);
+  }
+
+  .bandeau .mobileTitle {
+    display: none;
+  }
+
+  .bandeau .webTitle {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .bandeau {
+    font-size: 19px;
+    transform: rotate(30deg) scale(1) translate(204px, -45px);
+  }
+}
+
+@media (min-width: 992px) {
+  .bandeau {
+    font-size: 23px;
+    transform: rotate(30deg) scale(1) translate(193px, -25px);
+  }
+}

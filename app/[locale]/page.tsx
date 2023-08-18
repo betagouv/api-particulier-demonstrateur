@@ -4,12 +4,14 @@ import styles from './page.module.css';
 import { Card } from '@codegouvfr/react-dsfr/Card';
 import { Badge } from '@codegouvfr/react-dsfr/Badge';
 import { useTranslations } from 'next-intl';
+import Banner from '@/components/Banner';
 
 export default function Index() {
   const t = useTranslations('Index');
 
   return (
     <div className={styles.container}>
+      <Banner />
       <main className={styles.main}>
         <h2 className={styles.title}>{t('title')}</h2>
         <h3 className={styles.subtitle}>{t('subTitle')} </h3>

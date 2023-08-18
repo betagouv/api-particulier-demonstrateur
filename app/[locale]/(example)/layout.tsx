@@ -1,25 +1,30 @@
+'use client';
+
 import { Header } from '@codegouvfr/react-dsfr/Header';
 import { Footer } from '@codegouvfr/react-dsfr/Footer';
 import { headerFooterDisplayItem } from '@codegouvfr/react-dsfr/Display';
+import Banner from '@/components/Banner';
+import { useTranslations } from 'next-intl';
 
 export default function DemonstratorLayout({ children }: { children: JSX.Element }) {
+  const t = useTranslations('DemonstratorLayout');
+
   return (
     <>
-      {' '}
+      <Banner />
       <Header
-        brandTop={<>DÉMONSTRATEUR API PARTICULIER</>}
-        serviceTitle="Mobilité+ "
+        style={{ zIndex: 'unset' }}
+        brandTop={<>{t('header.brandTop')}</>}
+        serviceTitle={t('header.serviceTitle')}
         homeLinkProps={{
           href: '/',
-          title: 'Accueil - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)',
+          title: t('header.homeLinkTitle'),
         }}
       />
       {children}{' '}
       <Footer
         accessibility="fully compliant"
-        contentDescription={`
-                    Ceci est un démonstrateur pour illustrer l'usage de l'API Particulier. 
-                `}
+        contentDescription={t('header.footerDesc')}
         bottomItems={[headerFooterDisplayItem]}
       />
     </>
