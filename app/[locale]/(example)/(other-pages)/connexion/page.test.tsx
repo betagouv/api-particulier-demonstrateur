@@ -11,7 +11,9 @@ describe('Page component', () => {
     const InputIDElement = container.querySelector('.fr-label');
     const InputPasswordElement = container.querySelector('.fr-password');
     const buttonElements = container.querySelectorAll('.fr-btn');
+    const lien = container.querySelector('a[href="/choix-connexion"]');
 
+    expect(lien).toBeInTheDocument();
     expect(stepperElement).toHaveClass('fr-stepper');
     expect(franceConnectElement).toHaveClass('fr-connect__login');
     expect(tagElement).toHaveClass('fr-tag');

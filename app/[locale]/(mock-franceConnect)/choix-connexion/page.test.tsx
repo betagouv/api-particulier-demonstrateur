@@ -12,12 +12,13 @@ describe('ConnectionChoice component', () => {
     const overlayButtonElement = getByText('overlayText.button');
     const titleElement = getByText('title');
     const subTitleElement = getByText('subTitle');
+    const lien = container.querySelector('a[href="/verification/succes"]');
 
+    expect(lien).toBeInTheDocument();
     expect(buttonElement).toHaveClass('fr-btn');
     expect(headerElement).toHaveClass('fr-header');
     expect(titleElement).toBeInTheDocument();
     expect(subTitleElement).toBeInTheDocument();
-
     expect(overlayTextTitleElement).toBeInTheDocument();
     expect(overlayButtonElement).toBeInTheDocument();
   });
