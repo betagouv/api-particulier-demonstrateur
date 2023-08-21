@@ -34,7 +34,7 @@ export default function Page() {
             <Tag className={styles.tag} iconId="fr-icon-notification-3-fill">
               {t('tagLeft')}
             </Tag>
-            <FranceConnectButton url="https://example.com" />
+            <FranceConnectButton url="/choix-connexion" />
           </div>
           <div className={styles.separator}>
             <span className={styles.orText}>{t('middleText')}</span>

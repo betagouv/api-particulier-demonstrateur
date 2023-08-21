@@ -5,6 +5,7 @@ import { Header } from '@codegouvfr/react-dsfr/Header';
 import Image from 'next/image';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 export default function ConnectionChoice() {
   const t = useTranslations('Choix-connexion');
@@ -39,7 +40,7 @@ export default function ConnectionChoice() {
           iconPosition="right"
           priority="secondary"
         >
-          {t('overlayText.button')}
+          <Link href="/verification/succes">{t('overlayText.button')}</Link>
         </Button>
       </div>
       <div className={styles.overlay}></div>
