@@ -2,9 +2,9 @@
   "Index": {
     "title": "Bienvenue sur le démonstrateur d'API particulier",
     "subTitle": "Choisissez votre scénario :",
-    "badgeFC": "FranceConnect",
-    "badgeTSolidaire": "Tarification solidaire",
-    "badgeTSociale": "Tarification sociale",
+    "tagFC": "FranceConnect",
+    "tagTSolidaire": "Tarification solidaire",
+    "tagTSociale": "Tarification sociale",
     "cards": {
       "henri": {
         "title": "Transports tarif réduit",
@@ -115,5 +115,10 @@
       "homeLinkTitle": "Accueil - Nom de l’entité (ministère, secrétariat d'état, gouvernement)",
       "footerDesc": "Ceci est un démonstrateur pour illustrer l'usage de l'API Particulier."
     }
+  },
+  "Tooltip": {
+    "title": "Démonstrateur API Particulier",
+    "homeBtn": "Retour aux choix de scénarios",
+    "backBtn": "Retour à l'écran précédent"
   }
 }
