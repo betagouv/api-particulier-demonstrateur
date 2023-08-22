@@ -1,37 +1,40 @@
 {
   "UsageAndUser": {
-    "title": "Bienvenue sur le démonstrateur d'API particulier",
-    "subtitle1:": "Choisissez votre cas d'usage :",
-    "subtitle2:": "Choisissez votre personnage :",
-    "FranceConnect": "FranceConnect",
-    "tagSocialPricing": "Tarification sociale",
-    "tagSolidarityPricing": "Tarification solidaire",
-    "scenario1": "Scénario 1",
-    "scenario2": "Scénario 2",
+    "title": "Welcome to the Individual API demonstrator",
+    "titleUsage": "Choose your use case:",
+    "titleUser": "Choose your user:",
+    "scenario": "Scenario {number}",
+    "tags": {
+      "FranceConnect": "FranceConnect",
+      "socialPricing": "Social Pricing",
+      "solidarityPricing": "Solidarity Pricing",
+      "transportCard": "Transport Card",
+      "canteen": "Cafeteria"
+    },
     "cards": {
       "transport": {
-        "title": "Tarification sociale des transports",
-        "desc": "Avec API Particulier, construire un service aux tarifs adaptés selon le statut de votre usager."
+        "title": "Social Pricing for Transport",
+        "desc": "With the Individual API, build a service with rates adapted to your user's status."
       },
       "canteen": {
-        "title": "Tarification solidaire de la cantine",
-        "desc": "Avec API Particulier, construire un service aux tarifs adaptés selon les ressources de vos usagers."
+        "title": "Solidarity Pricing for the Cafeteria",
+        "desc": "With the Individual API, build a service with rates adapted to your users' resources."
       },
       "henri": {
-        "title": "Reduced price transport",
-        "desc": "Henri buys an annual transport card. He is a job seeker and eligible for the reduced rate. It will connect with FranceConnect"
+        "title": "Henri, job seeker",
+        "desc": "Henri buys an annual transport card. He is a job seeker and eligible for the reduced rate. He will connect using FranceConnect."
       },
       "juliette": {
-        "title": "Reduced price transport",
-        "desc": "Juliette wants to buy a transport card with a monthly subscription. She is a student and eligible for the reduced rate. It will connect WITHOUT FranceConnect."
+        "title": "Juliette, student",
+        "desc": "Juliette wishes to purchase a transport card with a monthly subscription. She is a student and eligible for the reduced rate. She will connect WITHOUT using FranceConnect."
       },
       "camille": {
-        "title": "Canteen at 1 euro",
-        "desc": "Camille enrolls her children in the canteen, she has no resources and is eligible for the 1-euro canteen scheme. She will connect with FranceConnect."
+        "title": "Camille, MSA Family Quotient of 320",
+        "desc": "Camille registers her children in the cafeteria, her family quotient (QF) is 320, she is eligible for the 1 euro Cafeterias program. She will connect using FranceConnect."
       },
       "kevin": {
-        "title": "Canteen reduced price",
-        "desc": "Kevin enrolls his children in the canteen, his resources are low, he is eligible for the solidarity rate."
+        "title": "Kevin, MSA Family Quotient of 750",
+        "desc": "Kevin registers his children in the cafeteria, his family quotient (QF) is 750, he is eligible for the solidarity rate."
       }
     }
   },

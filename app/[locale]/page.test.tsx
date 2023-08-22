@@ -7,28 +7,16 @@ jest.mock('@/components/Tooltip');
 describe('Page component', () => {
   const expectedJourneys = [
     {
-      name: 'Henry',
+      name: null,
       type: 'transport',
-      description: 'job seeker',
-      isFranceConnectAuth: true,
+      description: null,
+      isFranceConnectAuth: null,
     },
     {
-      name: 'Juliette',
-      type: 'transport',
-      description: 'student',
-      isFranceConnectAuth: false,
-    },
-    {
-      name: 'Camille',
-      type: 'cafeteria',
-      description: 'family quotient of 320',
-      isFranceConnectAuth: true,
-    },
-    {
-      name: 'Kevin',
-      type: 'cafeteria',
-      description: 'family quotient of of 750',
-      isFranceConnectAuth: true,
+      name: null,
+      type: 'canteen',
+      description: null,
+      isFranceConnectAuth: null,
     },
   ];
 

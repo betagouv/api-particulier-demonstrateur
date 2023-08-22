@@ -28,7 +28,10 @@ export default function Index() {
             role="button"
             onClick={() =>
               handleCardClick({
+                name: null,
                 type: 'transport',
+                description: null,
+                isFranceConnectAuth: null,
               })
             }
           >
@@ -53,7 +56,10 @@ export default function Index() {
             role="button"
             onClick={() =>
               handleCardClick({
+                name: null,
                 type: 'canteen',
+                description: null,
+                isFranceConnectAuth: null,
               })
             }
           >
