@@ -27,6 +27,7 @@ export default function Index() {
         <h3 className={styles.subtitle}>{t('subTitle')} </h3>
         <div className={styles.cards}>
           <div
+            role="button"
             onClick={() =>
               handleCardClick({
                 name: 'Henry',
@@ -64,6 +65,7 @@ export default function Index() {
             />
           </div>
           <div
+            role="button"
             onClick={() =>
               handleCardClick({
                 name: 'Juliette',
@@ -85,6 +87,7 @@ export default function Index() {
             />
           </div>
           <div
+            role="button"
             onClick={() =>
               handleCardClick({
                 name: 'Camille',
@@ -122,6 +125,7 @@ export default function Index() {
             />
           </div>
           <div
+            role="button"
             onClick={() =>
               handleCardClick({
                 name: 'Kevin',

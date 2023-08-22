@@ -31,6 +31,7 @@ const customJestConfig = {
     '!**/i18n-config.ts',
     '!**/.next/**',
     '!**/.history/**',
+    '!**/journey-provider.tsx/**',
   ],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
