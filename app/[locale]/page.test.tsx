@@ -37,11 +37,13 @@ describe('Page component', () => {
 
     const cardElement = container.querySelectorAll('.fr-card');
     const tagElements = container.querySelectorAll('.fr-tag');
-    const linkElements = container.querySelectorAll('a[href="/souscription"]');
+    const link1 = container.querySelectorAll('a[href="/choix-personnage?usage=1"]');
+    const link2 = container.querySelectorAll('a[href="/choix-personnage?usage=2"]');
 
-    expect(linkElements.length).toBe(4);
-    expect(cardElement.length).toBe(4);
-    expect(tagElements.length).toBe(6);
+    expect(link1.length).toBe(1);
+    expect(link2.length).toBe(1);
+    expect(cardElement.length).toBe(2);
+    expect(tagElements.length).toBe(2);
     expect(Tooltip).toHaveBeenCalledTimes(1);
   });
 

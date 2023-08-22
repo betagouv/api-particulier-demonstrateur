@@ -1,11 +1,22 @@
 {
-  "Index": {
-    "title": "Welcome to the particular API demonstrator",
-    "subTitle": "Choose your scenario:",
-    "tagFC": "FranceConnect",
-    "tagTSolidaire": "Solidarity pricing",
-    "tagTSociale": "Social pricing",
+  "UsageAndUser": {
+    "title": "Bienvenue sur le démonstrateur d'API particulier",
+    "subtitle1:": "Choisissez votre cas d'usage :",
+    "subtitle2:": "Choisissez votre personnage :",
+    "FranceConnect": "FranceConnect",
+    "tagSocialPricing": "Tarification sociale",
+    "tagSolidarityPricing": "Tarification solidaire",
+    "scenario1": "Scénario 1",
+    "scenario2": "Scénario 2",
     "cards": {
+      "transport": {
+        "title": "Tarification sociale des transports",
+        "desc": "Avec API Particulier, construire un service aux tarifs adaptés selon le statut de votre usager."
+      },
+      "canteen": {
+        "title": "Tarification solidaire de la cantine",
+        "desc": "Avec API Particulier, construire un service aux tarifs adaptés selon les ressources de vos usagers."
+      },
       "henri": {
         "title": "Reduced price transport",
         "desc": "Henri buys an annual transport card. He is a job seeker and eligible for the reduced rate. It will connect with FranceConnect"

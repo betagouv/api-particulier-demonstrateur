@@ -15,15 +15,17 @@ type DisabledActions = {
 export default function Tooltip({
   children,
   disabledActions = { home: false, back: false },
+  isOpenedByDefault = true,
 }: {
   children?: JSX.Element;
   disabledActions?: DisabledActions;
+  isOpenedByDefault?: boolean;
 }) {
   const router = useRouter();
   const t = useTranslations('Tooltip');
   const theme = useColors();
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(isOpenedByDefault);
   const [isOpenBtnHovered, setIsOpenBtnHovered] = useState(false);
   const [isBackBtnHovered, setIsBackBtnHovered] = useState(false);
   const [isHomeBtnHovered, setIsHomeBtnHovered] = useState(false);
