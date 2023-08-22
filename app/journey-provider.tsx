@@ -4,7 +4,7 @@ import { JourneyContextType, PageProps } from '@/app/interfaces';
 import { createContext, useState, useContext, useEffect } from 'react';
 import { Journey } from '@/app/types';
 
-const initialJourney = { name: '', type: '', description: '', isFranceConnection: false };
+const initialJourney = { name: '', type: '', description: '', isFranceConnectAuth: false };
 
 const JourneyContext = createContext<JourneyContextType | null>(null);
 
@@ -20,6 +20,10 @@ export const useJourney = (): JourneyContextType => {
 
 export default function Provider({ children }: PageProps) {
   const [journey, setJourney] = useState<Journey>(() => {
+    if (typeof window === 'undefined') {
+      return initialJourney;
+    }
+
     const storedValue = localStorage.getItem('user-journey');
     return storedValue ? JSON.parse(storedValue) : initialJourney;
   });

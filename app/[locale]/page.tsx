@@ -28,7 +28,12 @@ export default function Index() {
         <div className={styles.cards}>
           <div
             onClick={() =>
-              handleCardClick({ name: 'Henry', type: 'transport', description: 'job seeker', isFranceConnection: true })
+              handleCardClick({
+                name: 'Henry',
+                type: 'transport',
+                description: 'job seeker',
+                isFranceConnectAuth: true,
+              })
             }
           >
             <Card
@@ -64,7 +69,7 @@ export default function Index() {
                 name: 'Juliette',
                 type: 'transport',
                 description: 'student',
-                isFranceConnection: false,
+                isFranceConnectAuth: false,
               })
             }
           >
@@ -85,7 +90,7 @@ export default function Index() {
                 name: 'Camille',
                 type: 'cafeteria',
                 description: 'family quotient of 320',
-                isFranceConnection: true,
+                isFranceConnectAuth: true,
               })
             }
           >
@@ -122,7 +127,7 @@ export default function Index() {
                 name: 'Kevin',
                 type: 'cafeteria',
                 description: 'family quotient of of 750',
-                isFranceConnection: true,
+                isFranceConnectAuth: true,
               })
             }
           >
