@@ -1,9 +1,9 @@
-import { render } from '@testing-library/react';
+import { renderWithProvider } from '@/utils/test.utils';
 import Page from './page';
 
 describe('Page component', () => {
   it('should render page', async () => {
-    const { container } = render(<Page />);
+    const { container } = renderWithProvider(<Page />);
 
     const stepperElement = container.querySelector('.fr-stepper');
     const checkboxElement = container.querySelector('.fr-checkbox-group');

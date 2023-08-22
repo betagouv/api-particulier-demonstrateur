@@ -8,9 +8,14 @@ import Link from 'next/link';
 import { Alert } from '@codegouvfr/react-dsfr/Alert';
 import { useTranslations } from 'next-intl';
 import CardSocialPricing from '@/components/CardSocialPricing';
+import { useJourney } from '@/app/journey-provider';
 
 export default function Page() {
   const t = useTranslations('Eligibilite');
+
+  const { journey } = useJourney();
+
+  console.log(journey);
 
   return (
     <div

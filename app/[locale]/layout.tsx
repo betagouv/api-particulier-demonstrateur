@@ -8,6 +8,7 @@ import MuiDsfrThemeProvider from '@codegouvfr/react-dsfr/mui';
 import Link from 'next/link';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
+import JourneyProvider from '../journey-provider';
 
 interface Params {
   locale: string;
@@ -61,7 +62,7 @@ export default async function RootLayout({ children, params: { locale } }: PageP
           <NextAppDirEmotionCacheProvider options={{ key: 'css' }}>
             <MuiDsfrThemeProvider>
               <NextIntlClientProvider locale={locale} messages={messages}>
-                {children}
+                <JourneyProvider>{children}</JourneyProvider>
               </NextIntlClientProvider>
             </MuiDsfrThemeProvider>
           </NextAppDirEmotionCacheProvider>

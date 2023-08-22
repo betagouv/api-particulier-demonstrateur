@@ -21,7 +21,8 @@
     "baseUrl": ".",
     "paths": {
       "@/app/*": ["./app/*"],
-      "@/components/*": ["./components/*"]
+      "@/components/*": ["./components/*"],
+      "@/utils/*": ["./utils/*"]
     },
     "strictNullChecks": true,
     "plugins": [

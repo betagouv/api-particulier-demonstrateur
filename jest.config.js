@@ -31,11 +31,14 @@ const customJestConfig = {
     '!**/i18n-config.ts',
     '!**/.next/**',
     '!**/.history/**',
+    '!**/journey-provider.tsx/**',
   ],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
     '^@/components/(.*)$': '<rootDir>/components/$1',
+    '^@/app/(.*)$': '<rootDir>/app/$1',
+    '^@/utils/(.*)$': '<rootDir>/utils/$1',
   },
 };
 
