@@ -12,7 +12,7 @@ describe('ConnectionChoice component', () => {
     const overlayButtonElement = getByText('overlayText.button');
     const titleElement = getByText('title');
     const subTitleElement = getByText('subTitle');
-    const lien = container.querySelector('a[href="/verification/succes"]');
+    const lien = container.querySelector('a[href="/impot-connexion"]');
 
     expect(lien).toBeInTheDocument();
     expect(buttonElement).toHaveClass('fr-btn');
