@@ -51,13 +51,31 @@ export default function ConnectionChoice() {
 
         <div className={styles.rectangleContainer}>
           <div className={styles.rectangle}>
-            <Image src="/images/impots.gouv.jpg" width={300} height={140} alt="" style={{ objectFit: 'cover' }} />
+            <Image
+              src="/images/impots.gouv.jpg"
+              width={300}
+              height={140}
+              alt=""
+              style={{ objectFit: 'cover', maxWidth: '100%' }}
+            />
           </div>
           <div className={styles.rectangle}>
-            <Image src="/images/assurance-maladie.png" width={300} height={140} alt="" style={{ objectFit: 'cover' }} />
+            <Image
+              src="/images/assurance-maladie.png"
+              width={300}
+              height={140}
+              alt=""
+              style={{ objectFit: 'cover', maxWidth: '100%' }}
+            />
           </div>
           <div className={styles.rectangle}>
-            <Image src="/images/yris.png" alt="" width={300} height={140} style={{ objectFit: 'cover' }} />
+            <Image
+              src="/images/yris.png"
+              alt=""
+              width={300}
+              height={140}
+              style={{ objectFit: 'cover', maxWidth: '100%' }}
+            />
           </div>
         </div>
       </div>
