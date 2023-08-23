@@ -1,1 +1,6 @@
-export type Journey = { name: string; type: string; description: string; isFranceConnectAuth: boolean };
+export type Journey = {
+  name: string | null;
+  type: string;
+  description: string | null;
+  isFranceConnectAuth: boolean | null;
+};

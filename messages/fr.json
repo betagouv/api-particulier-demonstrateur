@@ -1,26 +1,40 @@
 {
-  "Index": {
+  "UsageAndUser": {
     "title": "Bienvenue sur le démonstrateur d'API particulier",
-    "subTitle": "Choisissez votre scénario :",
-    "tagFC": "FranceConnect",
-    "tagTSolidaire": "Tarification solidaire",
-    "tagTSociale": "Tarification sociale",
+    "titleUsage": "Choisissez votre cas d'usage :",
+    "titleUser": "Choisissez votre utilisateur :",
+    "scenario": "Scénario {number}",
+    "tags": {
+      "FranceConnect": "FranceConnect",
+      "socialPricing": "Tarification sociale",
+      "solidarityPricing": "Tarification solidaire",
+      "transportCard": "Carte Transport",
+      "canteen": "Cantine"
+    },
     "cards": {
+      "transport": {
+        "title": "Tarification sociale des transports",
+        "desc": "Avec API Particulier, construire un service aux tarifs adaptés selon le statut de votre usager."
+      },
+      "canteen": {
+        "title": "Tarification solidaire de la cantine",
+        "desc": "Avec API Particulier, construire un service aux tarifs adaptés selon les ressources de vos usagers."
+      },
       "henri": {
-        "title": "Transports tarif réduit",
-        "desc": "Henri achète une carte des transports annuelle. Il est demandeur d'emploi et éligible au tarif réduit. Il va se connecter avec FranceConnect"
+        "title": "Henri, demandeur d’emploi",
+        "desc": "Henri achète une carte des transports annuelle. Il est demandeur d’emploi et éligible au tarif réduit. Il va se connecter avec FranceConnect."
       },
       "juliette": {
-        "title": "Transports tarif réduit",
-        "desc": "Juliette souhaite acheter une carte des transports avec un abonnement mensuel. Elle est étudiante et éligible au tarif réduit. Elle va se connecter SANS FranceConnect. "
+        "title": "Juliette, étudiante",
+        "desc": "Juliette souhaite acheter une carte des transports avec abonnement mensuel. Elle est étudiante et éligible au tarif réduit. Elle va se connecter SANS FranceConnect."
       },
       "camille": {
-        "title": "Cantine à 1 euro",
-        "desc": "Camille inscrit ses enfants à la cantine, elle n'a pas de ressources et est éligible au dispositif Cantines à 1 euros. Elle va se connecter avec FranceConnect. "
+        "title": "Camille, QF MSA de 320",
+        "desc": "Camille inscrit ses enfants à la cantine, son quotient familial (QF) est de 320, elle est éligible au dispositif Cantines à 1 euros. Elle va se connecter avec FranceConnect."
       },
       "kevin": {
-        "title": "Cantine tarif réduit",
-        "desc": "Kevin inscrit ses enfants à la cantine, ses ressources sont faibles, il est éligible au tarif solidaire. "
+        "title": "Kevin, QF MSA de 750",
+        "desc": "Kevin inscrit ses enfants à la cantine, son quotient familial (QF) est de 750, il est éligible au tarif solidaire."
       }
     }
   },
