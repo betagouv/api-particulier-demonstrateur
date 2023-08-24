@@ -134,5 +134,24 @@
     "title": "API Particulier Example",
     "homeBtn": "Back to story choice",
     "backBtn": "Previous page"
+  },
+  "Confirmation-connexion": {
+    "header": {
+      "brandTop1": "RÉPUBLIQUE",
+      "brandTop2": "FRANCAISE",
+      "homeLinkPropsTitle": "Home - Name of entity (ministry, secretariat of state, government)"
+    },
+    "title": "You will log in as :",
+    "subTitle": "Camille MARTIN",
+    "button": "Continue to the Citizenship Portal",
+    "accordionTitle": "The following data will be transmitted:",
+    "accordionContent1": "First name",
+    "accordionContent2": "Birth name",
+    "accordionContent3": "Common name",
+    "accordionContent4": "Date of birth",
+    "accordionContent5": "Gender",
+    "accordionContent6": "Place of birth",
+    "accordionContent7": "Country of birth",
+    "accordionContent8": "Family quota CAF or MSA"
   }
 }

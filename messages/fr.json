@@ -134,5 +134,24 @@
     "title": "Démonstrateur API Particulier",
     "homeBtn": "Retour aux choix de scénarios",
     "backBtn": "Retour à l'écran précédent"
+  },
+  "Confirmation-connexion": {
+    "header": {
+      "brandTop1": "RÉPUBLIQUE",
+      "brandTop2": "FRANCAISE",
+      "homeLinkPropsTitle": "Accueil - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)"
+    },
+    "title": "Vous allez vous connecter en tant que :",
+    "subTitle": "Camille MARTIN",
+    "button": "Continuer sur le Portail des démarches citoyennes",
+    "accordionTitle": "Les données suivantes vont être transmises :",
+    "accordionContent1": "Prénom",
+    "accordionContent2": "Nom de naissance",
+    "accordionContent3": "Nom d'usage",
+    "accordionContent4": "Date de naissance",
+    "accordionContent5": "Sexe",
+    "accordionContent6": "Lieu de naissance",
+    "accordionContent7": "Pays de naissance",
+    "accordionContent8": "Quotient familial CAF ou MSA"
   }
 }
