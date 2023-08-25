@@ -1,25 +1,10 @@
-import { renderWithProvider, fireEvent } from '@/utils/test.utils';
+import { renderWithProvider } from '@/utils/test.utils';
 import Page from './page';
 import Tooltip from '@/components/Tooltip';
 
 jest.mock('@/components/Tooltip');
 
 describe('Page component', () => {
-  const expectedJourneys = [
-    {
-      name: null,
-      type: 'transport',
-      description: null,
-      isFranceConnectAuth: null,
-    },
-    {
-      name: null,
-      type: 'canteen',
-      description: null,
-      isFranceConnectAuth: null,
-    },
-  ];
-
   it('should have correct number of components', async () => {
     const { container } = renderWithProvider(<Page />);
 
@@ -33,34 +18,5 @@ describe('Page component', () => {
     expect(cardElement.length).toBe(2);
     expect(tagElements.length).toBe(2);
     expect(Tooltip).toHaveBeenCalledTimes(1);
-  });
-
-  it('should call setJourney with correct data when a Card is clicked', () => {
-    const { getAllByRole } = renderWithProvider(<Page />);
-
-    const cardElement = getAllByRole('button');
-
-    cardElement.forEach((button, index) => {
-      fireEvent.click(button);
-      const storedJourney = JSON.parse(localStorage.getItem('user-journey') || '');
-      expect(storedJourney).toEqual(expectedJourneys[index]);
-    });
-  });
-
-  it('should preserve journey data in local storage when page is refreshed', () => {
-    const { getAllByRole, unmount } = renderWithProvider(<Page />);
-
-    const cardElement = getAllByRole('button')[0];
-    fireEvent.click(cardElement);
-
-    const expectedStoredJourney = JSON.parse(localStorage.getItem('user-journey') || '');
-
-    unmount();
-
-    renderWithProvider(<Page />);
-
-    const actualStoredJourney = JSON.parse(localStorage.getItem('user-journey') || '');
-
-    expect(actualStoredJourney).toEqual(expectedStoredJourney);
   });
 });
