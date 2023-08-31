@@ -40,7 +40,7 @@ export default function ConnectionChoice() {
           iconPosition="right"
           priority="secondary"
         >
-          <Link href="/verification/succes">{t('overlayText.button')}</Link>
+          <Link href="/impot-connexion">{t('overlayText.button')}</Link>
         </Button>
       </div>
       <div className={styles.overlay}></div>
