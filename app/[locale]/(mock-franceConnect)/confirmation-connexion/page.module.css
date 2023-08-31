@@ -1,0 +1,46 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 100px 20px 20px 20px;
+}
+
+.text {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.name {
+  font-size: 4em;
+  margin: 0.3em 0 1em 0;
+  color: #000091;
+}
+
+.text,
+.name {
+  line-height: 0.9;
+}
+
+.accordion {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .accordion {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .accordion {
+    width: 70%;
+  }
+}
+
+@media (min-width: 992px) {
+  .accordion {
+    width: 50%;
+  }
+}
