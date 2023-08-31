@@ -1,0 +1,142 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #f0f0f0;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(227, 227, 253, 0) 10%, #e3e3fd 65%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.textOverlay {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textOverlay p {
+  line-height: 1.2;
+}
+
+.textOverlay p span {
+  font-weight: bold;
+}
+
+.rectangleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.rectangle {
+  background-color: #ffffff;
+  width: 100%;
+  height: 250px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid #cccccc;
+  margin: 20px 0;
+  position: relative;
+}
+
+.rectangle h3 {
+  margin: 10px 0;
+  font-weight: normal;
+  color: #666666;
+  font-size: 20px;
+}
+
+.separatorLine {
+  height: 2px;
+  background-color: #0063cb;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.separatorLine2 {
+  height: 0.5px;
+  background-color: rgb(187, 187, 187);
+  width: 100%;
+  margin: 10px 0;
+}
+
+.clickableText {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.bulletPoint {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 8px;
+  position: relative;
+}
+
+.bulletPoint::before,
+.bulletPoint::after {
+  content: '';
+  position: absolute;
+  background-color: black;
+}
+
+.bulletPoint::before {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  top: 25%;
+  bottom: 25%;
+}
+
+.bulletPoint::after {
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+  left: 25%;
+  right: 25%;
+}
+
+@media (min-width: 768px) {
+  .textOverlay p {
+    font-size: 1.5em;
+  }
+
+  .textOverlay {
+    top: 65%;
+  }
+
+  .rectangleContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .rectangle {
+    width: 48%;
+  }
+}

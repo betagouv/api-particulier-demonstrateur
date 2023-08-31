@@ -92,6 +92,31 @@
       "button": "Continuing the journey"
     }
   },
+  "Impot-connexion": {
+    "header": {
+      "brandTop1": "RÉPUBLIQUE",
+      "brandTop2": "FRANCAISE",
+      "homeLinkPropsTitle": "Home - Name of entity (ministry, secretariat of state, government)"
+    },
+    "overlayText": {
+      "title": "Once the user has selected the account of their choice, they are transferred to the relevant login page, in this case the impot.gouv.fr website.",
+      "titleBold": "He enters his login and password...",
+      "button": "Continuing the journey"
+    },
+    "rectangleLeft": {
+      "title": "I log in with my impot.gouv.fr account",
+      "inputTitle": "Tax number",
+      "inputPlaceholder": "13 chiffres",
+      "button": "Continue"
+    },
+    "rectangleRight": {
+      "title": "Help",
+      "content1": "Where can you find your tax number?",
+      "content2": "Don't have a tax number yet?",
+      "content3": "Login with franceConnect",
+      "content4": "Cookie management"
+    }
+  },
   "Succes-verification": {
     "stepperTitle": "Check your status",
     "stepperNextTitle": "Subscription",
@@ -139,5 +164,24 @@
     "title": "End of journey!",
     "button1": "See the route when {name} selects the wrong discount status",
     "button2": "Back to scenario selection"
+  },
+  "Confirmation-connexion": {
+    "header": {
+      "brandTop1": "RÉPUBLIQUE",
+      "brandTop2": "FRANCAISE",
+      "homeLinkPropsTitle": "Home - Name of entity (ministry, secretariat of state, government)"
+    },
+    "title": "You will log in as :",
+    "subTitle": "Camille MARTIN",
+    "button": "Continue to the Citizenship Portal",
+    "accordionTitle": "The following data will be transmitted:",
+    "accordionContent1": "First name",
+    "accordionContent2": "Birth name",
+    "accordionContent3": "Common name",
+    "accordionContent4": "Date of birth",
+    "accordionContent5": "Gender",
+    "accordionContent6": "Place of birth",
+    "accordionContent7": "Country of birth",
+    "accordionContent8": "Family quota CAF or MSA"
   }
 }

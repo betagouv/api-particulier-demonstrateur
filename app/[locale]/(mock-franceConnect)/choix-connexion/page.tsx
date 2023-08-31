@@ -40,7 +40,7 @@ export default function ConnectionChoice() {
           iconPosition="right"
           priority="secondary"
         >
-          <Link href="/verification/succes">{t('overlayText.button')}</Link>
+          <Link href="/impot-connexion">{t('overlayText.button')}</Link>
         </Button>
       </div>
       <div className={styles.overlay}></div>
@@ -51,13 +51,31 @@ export default function ConnectionChoice() {
 
         <div className={styles.rectangleContainer}>
           <div className={styles.rectangle}>
-            <Image src="/images/impots.gouv.jpg" width={300} height={140} alt="" style={{ objectFit: 'cover' }} />
+            <Image
+              src="/images/impots.gouv.jpg"
+              width={300}
+              height={140}
+              alt=""
+              style={{ objectFit: 'cover', maxWidth: '100%' }}
+            />
           </div>
           <div className={styles.rectangle}>
-            <Image src="/images/assurance-maladie.png" width={300} height={140} alt="" style={{ objectFit: 'cover' }} />
+            <Image
+              src="/images/assurance-maladie.png"
+              width={300}
+              height={140}
+              alt=""
+              style={{ objectFit: 'cover', maxWidth: '100%' }}
+            />
           </div>
           <div className={styles.rectangle}>
-            <Image src="/images/yris.png" alt="" width={300} height={140} style={{ objectFit: 'cover' }} />
+            <Image
+              src="/images/yris.png"
+              alt=""
+              width={300}
+              height={140}
+              style={{ objectFit: 'cover', maxWidth: '100%' }}
+            />
           </div>
         </div>
       </div>

@@ -14,13 +14,15 @@
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
 }
 
 .leftChoice,
 .rightChoice {
   flex: 1;
-  padding: 20px;
   text-align: center;
+  width: 100%;
+  padding: 10px;
 }
 
 .leftTitle,
@@ -29,6 +31,7 @@
 }
 
 .tag {
+  margin-top: 2%;
   margin-bottom: 10%;
   background-color: #cbcbfa;
 }
@@ -54,25 +57,51 @@
 }
 
 .separator {
-  width: 0.5px;
+  height: 0.5px;
   position: relative;
-}
-
-.separator::before {
-  content: '';
-  position: absolute;
-  top: 10%;
-  bottom: 10%;
-  left: 0;
-  right: 0;
   background: #aaa;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .orText {
   background: white;
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: calc(50% - 10px);
+  transform: translateX(-50%);
   padding: 0 10px;
+  line-height: 1;
+}
+
+@media (min-width: 992px) {
+  .separator {
+    width: 0.5px;
+    height: auto;
+    background: none;
+  }
+
+  .separator::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    background: #aaa;
+  }
+
+  .orText {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .leftChoice,
+  .rightChoice {
+    padding: 20px;
+  }
+
+  .choice {
+    flex-direction: row;
+  }
 }
