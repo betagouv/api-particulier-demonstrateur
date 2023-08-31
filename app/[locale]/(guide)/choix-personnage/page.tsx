@@ -8,12 +8,20 @@ import { useTranslations } from 'next-intl';
 import Banner from '@/components/Banner';
 import { useSearchParams } from 'next/navigation';
 import { useColors } from '@codegouvfr/react-dsfr/useColors';
+import { useJourney } from '@/app/journey-provider';
+import { Journey } from '@/app/types';
 
 export default function Index() {
   const theme = useColors();
   const searchParams = useSearchParams();
   const usage = searchParams.get('usage');
   const t = useTranslations('UsageAndUser');
+
+  const { setJourney } = useJourney();
+
+  const handleCardClick = (data: Journey) => {
+    setJourney(data);
+  };
 
   return (
     <div className={common.container}>
@@ -24,105 +32,153 @@ export default function Index() {
         <div className={common.cards}>
           {usage === '1' ? (
             <>
-              <Card
-                className={common.card}
-                start={
-                  <>
-                    <ul className="fr-tags-group">
-                      <li>
-                        <Tag
-                          small
-                          style={{
-                            backgroundColor: theme.decisions.background.contrast.warning.hover,
-                          }}
-                        >
-                          {t('tags.FranceConnect')}
-                        </Tag>
-                      </li>
-                      <li>
-                        <Tag small>{t('tags.canteen')}</Tag>
-                      </li>
-                    </ul>
-                    <span>{t('scenario', { number: 1 })}</span>
-                  </>
+              <div
+                role="button"
+                onClick={() =>
+                  handleCardClick({
+                    name: 'Henry',
+                    type: 'transport',
+                    description: null,
+                    isFranceConnectAuth: null,
+                  })
                 }
-                desc={t('cards.henri.desc')}
-                enlargeLink
-                linkProps={{
-                  href: '/souscription',
-                }}
-                title={t('cards.henri.title')}
-              />
-              <Card
-                className={common.card}
-                start={
-                  <>
-                    <ul className="fr-tags-group">
-                      <li>
-                        <Tag small>{t('tags.canteen')}</Tag>
-                      </li>
-                    </ul>
-                    <span>{t('scenario', { number: 2 })}</span>
-                  </>
+              >
+                <Card
+                  className={common.card}
+                  start={
+                    <>
+                      <ul className="fr-tags-group">
+                        <li>
+                          <Tag
+                            small
+                            style={{
+                              backgroundColor: theme.decisions.background.contrast.warning.hover,
+                            }}
+                          >
+                            {t('tags.FranceConnect')}
+                          </Tag>
+                        </li>
+                        <li>
+                          <Tag small>{t('tags.canteen')}</Tag>
+                        </li>
+                      </ul>
+                      <span>{t('scenario', { number: 1 })}</span>
+                    </>
+                  }
+                  desc={t('cards.henri.desc')}
+                  enlargeLink
+                  linkProps={{
+                    href: '/souscription',
+                  }}
+                  title={t('cards.henri.title')}
+                />
+              </div>
+              <div
+                role="button"
+                onClick={() =>
+                  handleCardClick({
+                    name: 'Juliette',
+                    type: 'transport',
+                    description: null,
+                    isFranceConnectAuth: null,
+                  })
                 }
-                desc={t('cards.juliette.desc')}
-                enlargeLink
-                linkProps={{
-                  href: '/souscription',
-                }}
-                title={t('cards.juliette.title')}
-              />
+              >
+                <Card
+                  className={common.card}
+                  start={
+                    <>
+                      <ul className="fr-tags-group">
+                        <li>
+                          <Tag small>{t('tags.canteen')}</Tag>
+                        </li>
+                      </ul>
+                      <span>{t('scenario', { number: 2 })}</span>
+                    </>
+                  }
+                  desc={t('cards.juliette.desc')}
+                  enlargeLink
+                  linkProps={{
+                    href: '/souscription',
+                  }}
+                  title={t('cards.juliette.title')}
+                />
+              </div>
             </>
           ) : (
             <>
-              <Card
-                className={common.card}
-                start={
-                  <>
-                    <ul className="fr-tags-group">
-                      <li>
-                        <Tag
-                          small
-                          style={{
-                            backgroundColor: theme.decisions.background.contrast.warning.hover,
-                          }}
-                        >
-                          {t('tags.FranceConnect')}
-                        </Tag>
-                      </li>
-                      <li>
-                        <Tag small>{t('tags.transportCard')}</Tag>
-                      </li>
-                    </ul>
-                    <span>{t('scenario', { number: 1 })}</span>
-                  </>
+              <div
+                role="button"
+                onClick={() =>
+                  handleCardClick({
+                    name: 'Camille',
+                    type: 'canteen',
+                    description: null,
+                    isFranceConnectAuth: null,
+                  })
                 }
-                desc={t('cards.camille.desc')}
-                enlargeLink
-                linkProps={{
-                  href: '/souscription',
-                }}
-                title={t('cards.camille.title')}
-              />
-              <Card
-                className={common.card}
-                start={
-                  <>
-                    <ul className="fr-tags-group">
-                      <li>
-                        <Tag small>{t('tags.transportCard')}</Tag>
-                      </li>
-                    </ul>
-                    <span>{t('scenario', { number: 2 })}</span>
-                  </>
+              >
+                <Card
+                  className={common.card}
+                  start={
+                    <>
+                      <ul className="fr-tags-group">
+                        <li>
+                          <Tag
+                            small
+                            style={{
+                              backgroundColor: theme.decisions.background.contrast.warning.hover,
+                            }}
+                          >
+                            {t('tags.FranceConnect')}
+                          </Tag>
+                        </li>
+                        <li>
+                          <Tag small>{t('tags.transportCard')}</Tag>
+                        </li>
+                      </ul>
+                      <span>{t('scenario', { number: 1 })}</span>
+                    </>
+                  }
+                  desc={t('cards.camille.desc')}
+                  enlargeLink
+                  linkProps={{
+                    href: '/souscription',
+                  }}
+                  title={t('cards.camille.title')}
+                />
+              </div>
+              <div
+                role="button"
+                onClick={() =>
+                  handleCardClick({
+                    name: 'Kevin',
+                    type: 'canteen',
+                    description: null,
+                    isFranceConnectAuth: null,
+                  })
                 }
-                desc={t('cards.kevin.desc')}
-                enlargeLink
-                linkProps={{
-                  href: '/souscription',
-                }}
-                title={t('cards.kevin.title')}
-              />
+              >
+                <Card
+                  className={common.card}
+                  start={
+                    <>
+                      <ul className="fr-tags-group">
+                        <li>
+                          <Tag small>{t('tags.transportCard')}</Tag>
+                        </li>
+                      </ul>
+                      <span>{t('scenario', { number: 2 })}</span>
+                    </>
+                  }
+                  desc={t('cards.kevin.desc')}
+                  enlargeLink
+                  linkProps={{
+                    href: '/souscription',
+                  }}
+                  title={t('cards.kevin.title')}
+                />
+              </div>
             </>
           )}
         </div>
