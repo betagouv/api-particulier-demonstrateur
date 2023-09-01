@@ -160,6 +160,11 @@
     "homeBtn": "Back to story choice",
     "backBtn": "Previous page"
   },
+  "End-journey": {
+    "title": "End of journey!",
+    "button1": "See the route when {name} selects the wrong discount status",
+    "button2": "Back to scenario selection"
+  },
   "Confirmation-connexion": {
     "header": {
       "brandTop1": "RÉPUBLIQUE",

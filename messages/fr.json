@@ -160,6 +160,11 @@
     "homeBtn": "Retour aux choix de scénarios",
     "backBtn": "Retour à l'écran précédent"
   },
+  "End-journey": {
+    "title": "Fin du parcours !",
+    "button1": "Voir le parcours lorsqu'{name} séléctionne le mauvais statut tarif réduit",
+    "button2": "Retourner au choix du scénario"
+  },
   "Confirmation-connexion": {
     "header": {
       "brandTop1": "RÉPUBLIQUE",
