@@ -3,7 +3,6 @@
 import styles from './page.module.css';
 import { Header } from '@codegouvfr/react-dsfr/Header';
 import { useTranslations } from 'next-intl';
-import Banner from '@/components/Banner';
 import Tooltip from '@/components/Tooltip';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { Accordion } from '@codegouvfr/react-dsfr/Accordion';
@@ -33,7 +32,6 @@ export default function ConnectionConfirmation() {
           orientation: 'horizontal',
         }}
       />
-      <Banner />
       <div className={styles.content}>
         <p className={styles.text}>{t('title')}</p>
         <h1 className={styles.name}>{t('subTitle')}</h1>

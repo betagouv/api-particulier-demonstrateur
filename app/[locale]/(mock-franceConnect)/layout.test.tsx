@@ -1,6 +1,5 @@
 import { render } from '@testing-library/react';
 import Layout from './layout';
-import Banner from '@/components/Banner';
 import Tooltip from '@/components/Tooltip';
 
 jest.mock('@/components/Banner');
@@ -17,7 +16,6 @@ describe('Layout component', () => {
     const child = getByText('Titi');
     expect(child).toBeInTheDocument();
 
-    expect(Banner).toHaveBeenCalledTimes(1);
     expect(Tooltip).toHaveBeenCalledTimes(1);
   });
 });

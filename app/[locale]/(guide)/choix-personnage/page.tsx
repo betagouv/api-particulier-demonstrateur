@@ -5,7 +5,6 @@ import { Card } from '@codegouvfr/react-dsfr/Card';
 import { Tag } from '@codegouvfr/react-dsfr/Tag';
 import Tooltip from '@/components/Tooltip';
 import { useTranslations } from 'next-intl';
-import Banner from '@/components/Banner';
 import { useSearchParams } from 'next/navigation';
 import { useColors } from '@codegouvfr/react-dsfr/useColors';
 import { useJourney } from '@/app/journey-provider';
@@ -25,7 +24,6 @@ export default function Index() {
 
   return (
     <div className={common.container}>
-      <Banner />
       <main className={common.main}>
         <h1 className={`fr-h2 ${common.title}`}>{t('title')}</h1>
         <h2 className={`fr-h1 ${common.subtitle}`}>{t('titleUser')} </h2>

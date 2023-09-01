@@ -2,10 +2,8 @@ import { render } from '@testing-library/react';
 import Page from './page';
 
 import Tooltip from '@/components/Tooltip';
-import Banner from '@/components/Banner';
 
 jest.mock('@/components/Tooltip');
-jest.mock('@/components/Banner');
 
 describe('ConnectionConfirmation component', () => {
   it('should render components', async () => {

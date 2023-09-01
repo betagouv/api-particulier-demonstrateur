@@ -3,7 +3,6 @@
 import { Header } from '@codegouvfr/react-dsfr/Header';
 import { Footer } from '@codegouvfr/react-dsfr/Footer';
 import { headerFooterDisplayItem } from '@codegouvfr/react-dsfr/Display';
-import Banner from '@/components/Banner';
 import { useTranslations } from 'next-intl';
 
 export default function DemonstratorLayout({ children }: { children: JSX.Element }) {
@@ -11,7 +10,6 @@ export default function DemonstratorLayout({ children }: { children: JSX.Element
 
   return (
     <>
-      <Banner />
       <Header
         style={{ zIndex: 'unset' }}
         brandTop={<>{t('header.brandTop')}</>}
