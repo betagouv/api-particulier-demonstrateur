@@ -7,16 +7,10 @@ jest.mock('@/components/Tooltip');
 describe('Page component', () => {
   const expectedJourneys = [
     {
-      name: null,
       type: 'transport',
-      description: null,
-      isFranceConnectAuth: null,
     },
     {
-      name: null,
       type: 'canteen',
-      description: null,
-      isFranceConnectAuth: null,
     },
   ];
 
@@ -32,7 +26,7 @@ describe('Page component', () => {
     expect(link2.length).toBe(1);
     expect(cardElement.length).toBe(2);
     expect(tagElements.length).toBe(2);
-    expect(Tooltip).toHaveBeenCalledTimes(1);
+    expect(Tooltip).toHaveBeenCalledTimes(2);
   });
 
   it('should call setJourney with correct data when a Card is clicked', () => {

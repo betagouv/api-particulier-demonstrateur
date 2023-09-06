@@ -1,6 +1,10 @@
 import { renderWithProvider } from '@/utils/test.utils';
 import Page from './page';
 
+jest.mock('next/navigation', () => ({
+  useRouter: () => ({ back: jest.fn(), push: jest.fn() }),
+}));
+
 describe('Page component', () => {
   it('should render page', async () => {
     const { container } = renderWithProvider(<Page />);

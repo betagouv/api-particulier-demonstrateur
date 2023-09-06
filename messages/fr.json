@@ -20,19 +20,19 @@
         "title": "Tarification solidaire de la cantine",
         "desc": "Avec API Particulier, construire un service aux tarifs adaptés selon les ressources de vos usagers."
       },
-      "henri": {
+      "user1": {
         "title": "Henri, demandeur d’emploi",
         "desc": "Henri achète une carte des transports annuelle. Il est demandeur d’emploi et éligible au tarif réduit. Il va se connecter avec FranceConnect."
       },
-      "juliette": {
+      "user2": {
         "title": "Juliette, étudiante",
         "desc": "Juliette souhaite acheter une carte des transports avec abonnement mensuel. Elle est étudiante et éligible au tarif réduit. Elle va se connecter SANS FranceConnect."
       },
-      "camille": {
+      "user3": {
         "title": "Camille, QF MSA de 320",
         "desc": "Camille inscrit ses enfants à la cantine, son quotient familial (QF) est de 320, elle est éligible au dispositif Cantines à 1 euros. Elle va se connecter avec FranceConnect."
       },
-      "kevin": {
+      "user4": {
         "title": "Kevin, QF MSA de 750",
         "desc": "Kevin inscrit ses enfants à la cantine, son quotient familial (QF) est de 750, il est éligible au tarif solidaire."
       }
@@ -88,7 +88,7 @@
       "homeLinkPropsTitle": "Accueil - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)"
     },
     "overlayText": {
-      "title": "L'utilisateur se retrouve sur le site de FranceConnect, il séléctionne le compte de son choix pour se connecter...",
+      "title": "L'utilisateur se retrouve sur le site de FranceConnect, il sélectionne le compte de son choix pour se connecter...",
       "button": "Poursuivre le parcours"
     }
   },
@@ -158,11 +158,17 @@
   "Tooltip": {
     "title": "Démonstrateur API Particulier",
     "homeBtn": "Retour aux choix de scénarios",
-    "backBtn": "Retour à l'écran précédent"
+    "backBtn": "Retour à l'écran précédent",
+    "useCase": "Cas d'usage",
+    "transport": "Tarification sociale des transports ",
+    "canteen": "Tarification solidaire de la cantine",
+    "user": "Personnage",
+    "withFranceConnect": "avec FranceConnect",
+    "withoutFranceConnect": "sans FranceConnect"
   },
   "End-journey": {
     "title": "Fin du parcours !",
-    "button1": "Voir le parcours lorsqu'{name} séléctionne le mauvais statut tarif réduit",
+    "button1": "Voir le parcours lorsque {user} sélectionne le mauvais statut tarif réduit",
     "button2": "Retourner au choix du scénario"
   },
   "Confirmation-connexion": {
@@ -172,7 +178,6 @@
       "homeLinkPropsTitle": "Accueil - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)"
     },
     "title": "Vous allez vous connecter en tant que :",
-    "subTitle": "Camille MARTIN",
     "button": "Continuer sur le Portail des démarches citoyennes",
     "accordionTitle": "Les données suivantes vont être transmises :",
     "accordionContent1": "Prénom",

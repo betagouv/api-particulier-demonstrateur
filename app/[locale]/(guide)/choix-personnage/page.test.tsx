@@ -12,18 +12,20 @@ describe('Page component', () => {
   it('should have correct number of components', async () => {
     const useSearchParamsMock = jest.spyOn(require('next/navigation'), 'useSearchParams');
     useSearchParamsMock.mockReturnValue({ get: jest.fn().mockReturnValue('1') });
-    const { container, getByText } = renderWithProvider(<Page />);
+    const { container, getByText, getByRole } = renderWithProvider(<Page />);
 
     const cardElement = container.querySelectorAll('.fr-card');
     const tagElements = container.querySelectorAll('.fr-tag');
-    const linkElements = container.querySelectorAll('a[href="/souscription"]');
 
-    const titleCard1 = getByText('cards.henri.title');
+    const titleCard1 = getByText('cards.user1.title');
     expect(titleCard1).toBeInTheDocument();
-    const titleCard2 = getByText('cards.juliette.title');
+    const user1Link = getByRole('link', { name: /cards.user1.title/i });
+    expect(user1Link).toBeInTheDocument();
+    const titleCard2 = getByText('cards.user2.title');
     expect(titleCard2).toBeInTheDocument();
+    const user2Link = getByRole('link', { name: /cards.user2.title/i });
+    expect(user2Link).toBeInTheDocument();
 
-    expect(linkElements.length).toBe(2);
     expect(cardElement.length).toBe(2);
     expect(tagElements.length).toBe(3);
     expect(Tooltip).toHaveBeenCalledTimes(1);
@@ -32,16 +34,24 @@ describe('Page component', () => {
   it('should call setJourney with correct data when a Card is clicked with usage = 1', () => {
     const expectedJourneys = [
       {
-        name: 'Henry',
-        type: 'transport',
-        description: null,
-        isFranceConnectAuth: null,
+        type: null,
+        user: {
+          // eslint-disable-next-line quotes
+          description: "Henri, demandeur d'emploi",
+          firstName: 'Henri',
+          isFranceConnectAuth: true,
+          lastName: 'Dupont',
+        },
       },
       {
-        name: 'Juliette',
-        type: 'transport',
-        description: null,
-        isFranceConnectAuth: null,
+        type: null,
+        user: {
+          // eslint-disable-next-line quotes
+          description: 'Juliette, étudiante',
+          firstName: 'Juliette',
+          isFranceConnectAuth: false,
+          lastName: 'Lejeune',
+        },
       },
     ];
     const useSearchParamsMock = jest.spyOn(require('next/navigation'), 'useSearchParams');
@@ -61,16 +71,22 @@ describe('Page component', () => {
   it('should call setJourney with correct data when a Card is clicked with usage = 2', () => {
     const expectedJourneys = [
       {
-        name: 'Camille',
-        type: 'canteen',
-        description: null,
-        isFranceConnectAuth: null,
+        type: null,
+        user: {
+          description: 'Camille, quotient familial MSA de 320',
+          firstName: 'Camille',
+          isFranceConnectAuth: true,
+          lastName: 'Dubois',
+        },
       },
       {
-        name: 'Kevin',
-        type: 'canteen',
-        description: null,
-        isFranceConnectAuth: null,
+        type: null,
+        user: {
+          description: 'Kevin, quotient familial MSA de 750',
+          firstName: 'Kevin',
+          isFranceConnectAuth: false,
+          lastName: 'Durand',
+        },
       },
     ];
     const useSearchParamsMock = jest.spyOn(require('next/navigation'), 'useSearchParams');

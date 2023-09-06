@@ -4,13 +4,15 @@ import styles from './page.module.css';
 import { Header } from '@codegouvfr/react-dsfr/Header';
 import { useTranslations } from 'next-intl';
 import Banner from '@/components/Banner';
-import Tooltip from '@/components/Tooltip';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { Accordion } from '@codegouvfr/react-dsfr/Accordion';
 import Link from 'next/link';
+import Tooltip from '@/components/Tooltip';
+import { useJourney } from '@/app/journey-provider';
 
 export default function ConnectionConfirmation() {
   const t = useTranslations('Confirmation-connexion');
+  const { journey } = useJourney();
 
   return (
     <>
@@ -29,14 +31,14 @@ export default function ConnectionConfirmation() {
         id="fr-header-simple-header-with-service-title-and-tagline"
         operatorLogo={{
           alt: '[À MODIFIER - texte alternatif de l’image]',
-          imgUrl: 'https://upload.wikimedia.org/wikipedia/fr/d/d6/Logo_FranceConnect_en_2018.png',
+          imgUrl: '/images/logo_france_connect.png',
           orientation: 'horizontal',
         }}
       />
       <Banner />
       <div className={styles.content}>
         <p className={styles.text}>{t('title')}</p>
-        <h1 className={styles.name}>{t('subTitle')}</h1>
+        <h1 className={styles.name}>{journey?.user?.firstName + ' ' + journey?.user?.lastName}</h1>
         <Button
           size="large"
           // onClick={function noRefCheck() {}}

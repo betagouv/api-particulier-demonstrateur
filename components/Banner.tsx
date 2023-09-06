@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import styles from './Banner.module.css';
 import { useTranslations } from 'next-intl';

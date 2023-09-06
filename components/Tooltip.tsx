@@ -6,6 +6,7 @@ import { fr } from '@codegouvfr/react-dsfr';
 import { useColors } from '@codegouvfr/react-dsfr/useColors';
 import { useTranslations } from 'next-intl';
 import Button from '@codegouvfr/react-dsfr/Button';
+import { useJourney } from '@/app/journey-provider';
 
 type DisabledActions = {
   home?: boolean;
@@ -16,12 +17,17 @@ export default function Tooltip({
   children,
   disabledActions = { home: false, back: false },
   isOpenedByDefault = true,
+  hiddenUser = false,
+  hiddenUseCase = false,
 }: {
   children?: JSX.Element;
   disabledActions?: DisabledActions;
   isOpenedByDefault?: boolean;
+  hiddenUser?: boolean;
+  hiddenUseCase?: boolean;
 }) {
   const router = useRouter();
+  const { journey } = useJourney();
   const t = useTranslations('Tooltip');
   const theme = useColors();
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -59,6 +65,28 @@ export default function Tooltip({
           }}
         >
           {t('title')}
+        </div>
+        <div className={styles.info}>
+          {journey?.type && !hiddenUseCase ? (
+            <div>
+              <b>{t('useCase')} : </b>
+              {t(journey.type)}
+              {!!journey?.user?.isFranceConnectAuth === journey?.user?.isFranceConnectAuth
+                ? ' | ' + (journey?.user?.isFranceConnectAuth ? t('withFranceConnect') : t('withoutFranceConnect'))
+                : ''}
+            </div>
+          ) : (
+            ''
+          )}
+
+          {journey?.user && !hiddenUser ? (
+            <div>
+              <b>{t('user')} : </b>
+              {journey.user.description}
+            </div>
+          ) : (
+            ''
+          )}
         </div>
         {children}
         <div className={styles.buttons}>

@@ -5,8 +5,7 @@ import { useJourney } from '@/app/journey-provider';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-
-import styles from './page.module.css';
+import styles from '../styles.module.css';
 
 export default function Page() {
   const t = useTranslations('End-journey');
@@ -23,7 +22,7 @@ export default function Page() {
       >
         <Link href="">
           {/** TODO - configure a dynamic name */}
-          {t('button1', { name: journey.name })}
+          {t('button1', { user: journey?.user?.firstName })}
         </Link>
       </Button>
 

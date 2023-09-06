@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { renderWithProvider } from '@/utils/test.utils';
 import Page from './page';
 
 import Tooltip from '@/components/Tooltip';
@@ -7,16 +7,23 @@ import Banner from '@/components/Banner';
 jest.mock('@/components/Tooltip');
 jest.mock('@/components/Banner');
 
+jest.mock('next/navigation', () => ({
+  useRouter: () => ({ back: jest.fn(), push: jest.fn() }),
+}));
+
 describe('ConnectionConfirmation component', () => {
   it('should render components', async () => {
-    const { container, getByText } = render(<Page />);
+    const { container, getByText } = renderWithProvider(<Page />, {
+      user: { firstName: 'John', lastName: 'Doe', description: '', isFranceConnectAuth: false },
+      type: 'canteen',
+    });
 
     const buttonElement = container.querySelector('.fr-btn');
     const headerElement = container.querySelector('.fr-header');
     const lien = container.querySelector('a[href="/verification/succes"]');
 
     const titleElement = getByText('title');
-    const subTitleElement = getByText('subTitle');
+    const subTitleElement = getByText('John Doe');
     const buttonTextElement = getByText('button');
     const accordionTitleElement = getByText('accordionTitle');
 

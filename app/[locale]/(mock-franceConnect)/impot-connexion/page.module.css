@@ -1,11 +1,10 @@
 .container {
   width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: #f0f0f0;
+  background-color: var(--background-default-grey-active);
   margin: 0 auto;
   padding-top: 20px;
 }
@@ -16,21 +15,20 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, rgba(227, 227, 253, 0) 10%, #e3e3fd 65%);
-  z-index: 1;
+  background: linear-gradient(180deg, rgba(227, 227, 253, 0) 0%, var(--background-alt-blue-france-hover) 50%);
+  z-index: calc(var(--ground) + 501);
   pointer-events: none;
 }
 
 .textOverlay {
   position: absolute;
-  top: 75%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: calc(var(--ground) + 502);
   max-width: 500px;
   margin: 0 auto;
   text-align: left;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,10 +123,6 @@
 @media (min-width: 768px) {
   .textOverlay p {
     font-size: 1.5em;
-  }
-
-  .textOverlay {
-    top: 65%;
   }
 
   .rectangleContainer {
