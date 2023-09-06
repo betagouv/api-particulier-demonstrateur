@@ -1,11 +1,12 @@
 import { Journey } from '@/app/types';
+import { Dispatch, SetStateAction } from 'react';
 
 export interface JourneyContextType {
   journey: Journey;
-  // eslint-disable-next-line no-unused-vars
-  setJourney(value: Journey): void;
+  setJourney: Dispatch<SetStateAction<Journey>>;
 }
 
-export interface PageProps {
+export interface ProviderProps {
   children: JSX.Element;
+  value?: Journey;
 }

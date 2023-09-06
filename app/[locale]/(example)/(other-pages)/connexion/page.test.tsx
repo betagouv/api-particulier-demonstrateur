@@ -1,9 +1,13 @@
-import { render } from '@testing-library/react';
+import { renderWithProvider } from '@/utils/test.utils';
 import Page from './page';
+
+jest.mock('next/navigation', () => ({
+  useRouter: () => ({ back: jest.fn(), push: jest.fn() }),
+}));
 
 describe('Page component', () => {
   it('should render Page', async () => {
-    const { container } = render(<Page />);
+    const { container } = renderWithProvider(<Page />);
 
     const stepperElement = container.querySelector('.fr-stepper');
     const franceConnectElement = container.querySelector('.fr-connect__login');
@@ -19,6 +23,6 @@ describe('Page component', () => {
     expect(tagElement).toHaveClass('fr-tag');
     expect(InputIDElement).toHaveClass('fr-label');
     expect(InputPasswordElement).toHaveClass('fr-password');
-    expect(buttonElements.length).toBe(3);
+    expect(buttonElements.length).toBe(5);
   });
 });

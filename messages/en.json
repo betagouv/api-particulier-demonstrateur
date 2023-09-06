@@ -158,11 +158,23 @@
   "Tooltip": {
     "title": "API Particulier Example",
     "homeBtn": "Back to story choice",
-    "backBtn": "Previous page"
+    "backBtn": "Previous page",
+    "useCase": "Use case",
+    "transport": "Transport",
+    "canteen": "Canteen",
+    "user": "Character",
+    "users": {
+      "henri": "Henri, job seeker",
+      "juliette": "Juliette, student",
+      "camille": "Camille, with an MSA family quotient of 320",
+      "kevin": "Kevin, with an MSA family quotient of 750"
+    },
+    "withFranceConnect": "with FranceConnect",
+    "withoutFranceConnect": "without FranceConnect"
   },
   "End-journey": {
     "title": "End of journey!",
-    "button1": "See the route when {name} selects the wrong discount status",
+    "button1": "See the route when {user} selects the wrong discount status",
     "button2": "Back to scenario selection"
   },
   "Confirmation-connexion": {
@@ -172,7 +184,6 @@
       "homeLinkPropsTitle": "Home - Name of entity (ministry, secretariat of state, government)"
     },
     "title": "You will log in as :",
-    "subTitle": "Camille MARTIN",
     "button": "Continue to the Citizenship Portal",
     "accordionTitle": "The following data will be transmitted:",
     "accordionContent1": "First name",

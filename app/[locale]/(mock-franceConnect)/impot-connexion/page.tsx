@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Input } from '@codegouvfr/react-dsfr/Input';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import Link from 'next/link';
+import Tooltip from '@/components/Tooltip';
 
 import styles from './page.module.css';
 
@@ -27,8 +28,8 @@ export default function ConnectionImpot() {
         }}
         id="fr-header-simple-header-with-service-title-and-tagline"
         operatorLogo={{
-          alt: '[À MODIFIER - texte alternatif de l’image]',
-          imgUrl: 'https://connective.b-cdn.net/wp-content/uploads/Assurance-Maladie-01.png',
+          alt: 'Logo impots.gouv.fr',
+          imgUrl: '/images/impots_gouv_fr.svg',
           orientation: 'horizontal',
         }}
       />
@@ -45,7 +46,7 @@ export default function ConnectionImpot() {
           iconPosition="right"
           priority="secondary"
         >
-          <Link href="/verification/succes">{t('overlayText.button')}</Link>
+          <Link href="/confirmation-connexion">{t('overlayText.button')}</Link>
         </Button>
       </div>
       <div className={styles.overlay}></div>
@@ -67,7 +68,7 @@ export default function ConnectionImpot() {
               iconId="fr-icon-lock-unlock-fill"
             />
             <Button style={{ color: 'grey' }} /*onClick={/function noRefCheck() {}}*/ priority="tertiary">
-              <Link href="/verification/succes">{t('rectangleLeft.button')}</Link>
+              <Link href="/confirmation/succes">{t('rectangleLeft.button')}</Link>
             </Button>
           </div>
           <div className={styles.rectangle}>
@@ -94,6 +95,7 @@ export default function ConnectionImpot() {
           </div>
         </div>
       </div>
+      <Tooltip />
     </>
   );
 }

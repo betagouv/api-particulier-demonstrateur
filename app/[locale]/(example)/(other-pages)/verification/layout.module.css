@@ -1,0 +1,15 @@
+.card {
+  display: none;
+}
+.stepper {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .card {
+    display: block;
+  }
+  .stepper {
+    width: 65%;
+  }
+}

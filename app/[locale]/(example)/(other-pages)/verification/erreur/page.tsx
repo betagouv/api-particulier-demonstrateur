@@ -55,7 +55,7 @@ export default function Page() {
           paddingBottom: '50px',
         }}
       >
-        <Link href="">
+        <Link href="/end-journey">
           <Button
             size="large"
             // onClick={function noRefCheck() {}}

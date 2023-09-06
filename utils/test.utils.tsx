@@ -1,9 +1,10 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import Provider from '@/app/journey-provider';
+import * as rtl from '@testing-library/react';
+import JourneyProvider, { initialJourney } from '@/app/journey-provider';
+import { Journey } from '@/app/types';
 
-const customRender = (ui: React.ReactElement, options?: any) => render(ui, { wrapper: Provider, ...options });
+export const renderWithProvider = (ui: JSX.Element, value: Journey = initialJourney) => {
+  return rtl.render(<JourneyProvider value={value}>{ui}</JourneyProvider>);
+};
 
 export * from '@testing-library/react';
-
-export { customRender as renderWithProvider };

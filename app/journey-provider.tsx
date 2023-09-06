@@ -1,10 +1,9 @@
 'use client';
 
-import { JourneyContextType, PageProps } from '@/app/interfaces';
-import { createContext, useState, useContext, useEffect } from 'react';
+import { JourneyContextType, ProviderProps } from '@/app/interfaces';
+import { createContext, useState, useContext, useEffect, useRef } from 'react';
 import { Journey } from '@/app/types';
-
-const initialJourney = { name: '', type: '', description: '', isFranceConnectAuth: false };
+export const initialJourney: Journey = { user: null, type: null };
 
 const JourneyContext = createContext<JourneyContextType | null>(null);
 
@@ -17,19 +16,30 @@ export const useJourney = (): JourneyContextType => {
 
   return context;
 };
-
-export default function Provider({ children }: PageProps) {
-  const [journey, setJourney] = useState<Journey>(() => {
-    if (typeof window === 'undefined') {
-      return initialJourney;
-    }
-
-    const storedValue = localStorage.getItem('user-journey');
-    return storedValue ? JSON.parse(storedValue) : initialJourney;
-  });
+export default function Provider({ children, value }: ProviderProps) {
+  const [journey, setJourney] = useState<Journey>(value || initialJourney);
+  const isInitialRender = useRef(true);
 
   useEffect(() => {
-    localStorage.setItem('user-journey', JSON.stringify(journey));
+    if (typeof window !== 'undefined') {
+      const storedValue = localStorage.getItem('user-journey');
+      if (isInitialRender.current) {
+        if (storedValue) {
+          setJourney(JSON.parse(storedValue));
+        }
+        isInitialRender.current = false;
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!isInitialRender.current) {
+      if (journey) {
+        localStorage.setItem('user-journey', JSON.stringify(journey));
+      } else {
+        localStorage.removeItem('user-journey');
+      }
+    }
   }, [journey]);
 
   return <JourneyContext.Provider value={{ journey, setJourney }}>{children}</JourneyContext.Provider>;

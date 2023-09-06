@@ -1,42 +1,31 @@
 'use client';
 
-import common from './(guide)/common.module.css';
+import styles from './(guide)/styles.module.css';
 import { Card } from '@codegouvfr/react-dsfr/Card';
 import { Tag } from '@codegouvfr/react-dsfr/Tag';
 import Tooltip from '@/components/Tooltip';
 import { useTranslations } from 'next-intl';
-import Banner from '@/components/Banner';
 import { useJourney } from '@/app/journey-provider';
-import { Journey } from '@/app/types';
+import { useEffect } from 'react';
+import { Journey } from '../types';
 
 export default function Index() {
   const t = useTranslations('UsageAndUser');
   const { setJourney } = useJourney();
 
-  const handleCardClick = (data: Journey) => {
-    setJourney(data);
-  };
+  useEffect(() => {
+    setJourney(null as Journey);
+  }, [setJourney]);
 
   return (
-    <div className={common.container}>
-      <Banner />
-      <main className={common.main}>
-        <h1 className={`fr-h2 ${common.title}`}>{t('title')}</h1>
-        <h2 className={`fr-h1 ${common.subtitle}`}>{t('titleUsage')} </h2>
-        <div className={common.cards}>
-          <div
-            role="button"
-            onClick={() =>
-              handleCardClick({
-                name: null,
-                type: 'transport',
-                description: null,
-                isFranceConnectAuth: null,
-              })
-            }
-          >
+    <div className={styles.container}>
+      <main className={styles.main}>
+        <h1 className={`fr-h2 ${styles.title}`}>{t('title')}</h1>
+        <h2 className={`fr-h1 ${styles.subtitle}`}>{t('titleUsage')} </h2>
+        <div className={styles.cards}>
+          <div role="button" onClick={() => setJourney((prev: Journey) => ({ ...prev, type: 'transport' }) as Journey)}>
             <Card
-              className={common.card}
+              className={styles.card}
               start={
                 <ul className="fr-tags-group">
                   <li>
@@ -52,19 +41,9 @@ export default function Index() {
               title={t('cards.transport.title')}
             />
           </div>
-          <div
-            role="button"
-            onClick={() =>
-              handleCardClick({
-                name: null,
-                type: 'canteen',
-                description: null,
-                isFranceConnectAuth: null,
-              })
-            }
-          >
+          <div role="button" onClick={() => setJourney((prev: Journey) => ({ ...prev, type: 'canteen' }) as Journey)}>
             <Card
-              className={common.card}
+              className={styles.card}
               start={
                 <ul className="fr-tags-group">
                   <li>
@@ -82,7 +61,12 @@ export default function Index() {
           </div>
         </div>
       </main>
-      <Tooltip disabledActions={{ back: true, home: true }} isOpenedByDefault={false}></Tooltip>
+      <Tooltip
+        disabledActions={{ back: true, home: true }}
+        isOpenedByDefault={false}
+        hiddenUseCase={true}
+        hiddenUser={true}
+      ></Tooltip>
     </div>
   );
 }

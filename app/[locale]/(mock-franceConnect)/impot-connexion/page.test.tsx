@@ -1,10 +1,13 @@
-import { render } from '@testing-library/react';
 import Page from './page';
+import { renderWithProvider } from '@/utils/test.utils';
+
+jest.mock('next/navigation', () => ({
+  useRouter: () => ({ back: jest.fn(), push: jest.fn() }),
+}));
 
 describe('ConnectionImpot component', () => {
   it('should render components', async () => {
-    const { container, getByText, getByPlaceholderText, debug } = render(<Page />);
-    debug();
+    const { container, getByText, getByPlaceholderText, getByRole } = renderWithProvider(<Page />);
     const buttonElement = container.querySelectorAll('.fr-btn');
     const headerElement = container.querySelector('.fr-header');
 
@@ -23,10 +26,10 @@ describe('ConnectionImpot component', () => {
     const rectangleRightContent3Element = getByText('rectangleRight.content3');
     const rectangleRightContent4Element = getByText('rectangleRight.content4');
 
-    const lien = container.querySelector('a[href="/verification/succes"]');
+    const link = getByRole('link', { name: /rectangleLeft.button/i });
+    expect(link).toBeInTheDocument();
 
-    expect(lien).toBeInTheDocument();
-    expect(buttonElement.length).toBe(4);
+    expect(buttonElement.length).toBe(6);
     expect(headerElement).toHaveClass('fr-header');
 
     expect(overlayTextTitleElement).toBeInTheDocument();

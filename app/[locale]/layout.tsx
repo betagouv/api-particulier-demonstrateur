@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import JourneyProvider from '../journey-provider';
+import Banner from '@/components/Banner';
 
 interface Params {
   locale: string;
@@ -62,7 +63,12 @@ export default async function RootLayout({ children, params: { locale } }: PageP
           <NextAppDirEmotionCacheProvider options={{ key: 'css' }}>
             <MuiDsfrThemeProvider>
               <NextIntlClientProvider locale={locale} messages={messages}>
-                <JourneyProvider>{children}</JourneyProvider>
+                <JourneyProvider>
+                  <>
+                    <Banner />
+                    {children}
+                  </>
+                </JourneyProvider>
               </NextIntlClientProvider>
             </MuiDsfrThemeProvider>
           </NextAppDirEmotionCacheProvider>

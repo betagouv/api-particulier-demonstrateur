@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import Tooltip from '@/components/Tooltip';
 
 export default function ConnectionChoice() {
   const t = useTranslations('Choix-connexion');
@@ -51,34 +52,17 @@ export default function ConnectionChoice() {
 
         <div className={styles.rectangleContainer}>
           <div className={styles.rectangle}>
-            <Image
-              src="/images/impots.gouv.jpg"
-              width={300}
-              height={140}
-              alt=""
-              style={{ objectFit: 'cover', maxWidth: '100%' }}
-            />
+            <Image src="/images/impots_gouv_fr.svg" width={280} height={131} alt="Logo DGFIP" />
           </div>
           <div className={styles.rectangle}>
-            <Image
-              src="/images/assurance-maladie.png"
-              width={300}
-              height={140}
-              alt=""
-              style={{ objectFit: 'cover', maxWidth: '100%' }}
-            />
+            <Image src="/images/assurance-maladie.png" width={280} height={131} alt="Logo Assurance Maladie" />
           </div>
           <div className={styles.rectangle}>
-            <Image
-              src="/images/yris.png"
-              alt=""
-              width={300}
-              height={140}
-              style={{ objectFit: 'cover', maxWidth: '100%' }}
-            />
+            <Image src="/images/yris.png" alt="Logo YRIS" width={280} height={131} style={{ maxWidth: '100%' }} />
           </div>
         </div>
       </div>
+      <Tooltip />
     </>
   );
 }

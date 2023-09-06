@@ -13,6 +13,10 @@
   gap: 20px;
 }
 
+.info div:last-child {
+  margin-bottom: 1rem;
+}
+
 .closeBtn,
 .openBtn {
   height: 60px;
