@@ -4,15 +4,16 @@ import { Stepper } from '@codegouvfr/react-dsfr/Stepper';
 import { fr } from '@codegouvfr/react-dsfr';
 import { Checkbox } from '@codegouvfr/react-dsfr/Checkbox';
 import { Button } from '@codegouvfr/react-dsfr/Button';
-import Link from 'next/link';
 import { Alert } from '@codegouvfr/react-dsfr/Alert';
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 import CardSocialPricing from '@/components/CardSocialPricing';
 import Tooltip from '@/components/Tooltip';
 import styles from './page.module.css';
 
 export default function Page() {
   const t = useTranslations('Eligibilite');
+  const router = useRouter();
 
   return (
     <>
@@ -77,16 +78,14 @@ export default function Page() {
             />
 
             <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
-              <Link href="/connexion">
-                <Button
-                  size="large"
-                  // onClick={function noRefCheck() {}}
-                  iconId="fr-icon-arrow-right-line"
-                  iconPosition="right"
-                >
-                  {t('button')}
-                </Button>
-              </Link>
+              <Button
+                size="large"
+                onClick={() => router.push('/connexion')}
+                iconId="fr-icon-arrow-right-line"
+                iconPosition="right"
+              >
+                {t('button')}
+              </Button>
             </div>
             <Alert
               closable

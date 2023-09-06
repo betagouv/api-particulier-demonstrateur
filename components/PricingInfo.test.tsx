@@ -1,5 +1,9 @@
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import PricingInfo from './PricingInfo';
+
+jest.mock('next/navigation', () => ({
+  useRouter: () => ({ back: jest.fn(), push: jest.fn() }),
+}));
 
 describe('PricingInfo component', () => {
   it('should render Highlight composant', async () => {
@@ -18,5 +22,17 @@ describe('PricingInfo component', () => {
     const titleElement = getByText('content.title');
 
     expect(titleElement).toBeInTheDocument();
+  });
+
+  it('Button next click', () => {
+    const routerMock = jest.spyOn(require('next/navigation'), 'useRouter');
+    const pushMock = jest.fn();
+    routerMock.mockReturnValue({ push: pushMock });
+
+    const { getByText } = render(<PricingInfo />);
+    const button = getByText('content.button');
+    fireEvent.click(button);
+
+    expect(pushMock).toHaveBeenCalledWith('/eligibilite');
   });
 });

@@ -6,11 +6,12 @@ import { useTranslations } from 'next-intl';
 import Banner from '@/components/Banner';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { Accordion } from '@codegouvfr/react-dsfr/Accordion';
-import Link from 'next/link';
 import Tooltip from '@/components/Tooltip';
 import { useJourney } from '@/app/journey-provider';
+import { useRouter } from 'next/navigation';
 
 export default function ConnectionConfirmation() {
+  const router = useRouter();
   const t = useTranslations('Confirmation-connexion');
   const { journey } = useJourney();
 
@@ -41,13 +42,13 @@ export default function ConnectionConfirmation() {
         <h1 className={styles.name}>{journey?.user?.firstName + ' ' + journey?.user?.lastName}</h1>
         <Button
           size="large"
-          // onClick={function noRefCheck() {}}
+          onClick={() => router.push('/verification/succes')}
           iconId="fr-icon-arrow-right-line"
           iconPosition="right"
           priority="primary"
           style={{ marginBottom: '70px' }}
         >
-          <Link href="/verification/succes">{t('button')}</Link>
+          {t('button')}
         </Button>
 
         <Accordion

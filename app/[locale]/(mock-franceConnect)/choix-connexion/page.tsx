@@ -5,11 +5,12 @@ import { Header } from '@codegouvfr/react-dsfr/Header';
 import Image from 'next/image';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import Tooltip from '@/components/Tooltip';
 
 export default function ConnectionChoice() {
   const t = useTranslations('Choix-connexion');
+  const router = useRouter();
 
   return (
     <>
@@ -22,7 +23,7 @@ export default function ConnectionChoice() {
           </>
         }
         homeLinkProps={{
-          href: '/',
+          href: {},
           title: t('header.homeLinkPropsTitle'),
         }}
         id="fr-header-simple-header-with-service-title-and-tagline"
@@ -36,12 +37,12 @@ export default function ConnectionChoice() {
         <p>{t('overlayText.title')}</p>
         <Button
           size="large"
-          // onClick={function noRefCheck() {}}
+          onClick={() => router.push('/impot-connexion')}
           iconId="fr-icon-arrow-right-line"
           iconPosition="right"
           priority="secondary"
         >
-          <Link href="/impot-connexion">{t('overlayText.button')}</Link>
+          {t('overlayText.button')}
         </Button>
       </div>
       <div className={styles.overlay}></div>
