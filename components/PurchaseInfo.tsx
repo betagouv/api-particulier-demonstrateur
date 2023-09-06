@@ -1,16 +1,17 @@
-import { useColors } from '@codegouvfr/react-dsfr/useColors';
 import { fr } from '@codegouvfr/react-dsfr';
 import { useTranslations } from 'next-intl';
+import styles from './BackgroundImage.module.css';
 
 export default function PurchaseInfo() {
-  const theme = useColors();
   const t = useTranslations('Souscription');
 
   return (
-    <div style={{ backgroundColor: theme.decisions.background.alt.blueCumulus.default }}>
+    <div className={styles.backgroundImage}>
       <div
         className={'fr-container'}
         style={{
+          zIndex: 1,
+          position: 'relative',
           ...fr.spacing('padding', {
             top: '15v',
             bottom: '15v',
