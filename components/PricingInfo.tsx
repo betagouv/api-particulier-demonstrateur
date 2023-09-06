@@ -2,10 +2,12 @@ import { fr } from '@codegouvfr/react-dsfr';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import HighlightSubscription from '@/components/HighlightSubscription';
 
 export default function PricingInfo() {
   const t = useTranslations('Souscription');
+  const router = useRouter();
 
   return (
     <div
@@ -22,8 +24,8 @@ export default function PricingInfo() {
       <HighlightSubscription />
       <Link href="/eligibilite">
         <Button
+          onClick={() => router.push('/eligibilite')}
           size="large"
-          /*onClick={function noRefCheck() {}}*/
           iconId="fr-icon-arrow-right-line"
           iconPosition="right"
         >

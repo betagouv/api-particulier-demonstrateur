@@ -6,11 +6,13 @@ import { Input } from '@codegouvfr/react-dsfr/Input';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import Link from 'next/link';
 import Tooltip from '@/components/Tooltip';
+import { useRouter } from 'next/navigation';
 
 import styles from './page.module.css';
 
 export default function ConnectionImpot() {
   const t = useTranslations('Impot-connexion');
+  const router = useRouter();
 
   return (
     <>
@@ -41,12 +43,12 @@ export default function ConnectionImpot() {
         </p>
         <Button
           size="large"
-          // onClick={function noRefCheck() {}}
+          onClick={() => router.push('/confirmation-connexion')}
           iconId="fr-icon-arrow-right-line"
           iconPosition="right"
           priority="secondary"
         >
-          <Link href="/confirmation-connexion">{t('overlayText.button')}</Link>
+          {t('overlayText.button')}
         </Button>
       </div>
       <div className={styles.overlay}></div>
@@ -67,8 +69,8 @@ export default function ConnectionImpot() {
               }}
               iconId="fr-icon-lock-unlock-fill"
             />
-            <Button style={{ color: 'grey' }} /*onClick={/function noRefCheck() {}}*/ priority="tertiary">
-              <Link href="/confirmation/succes">{t('rectangleLeft.button')}</Link>
+            <Button style={{ color: 'grey' }} onClick={function noRefCheck() {}} priority="tertiary">
+              {t('rectangleLeft.button')}
             </Button>
           </div>
           <div className={styles.rectangle}>
