@@ -1,4 +1,4 @@
-import { renderWithProvider } from '@/utils/test.utils';
+import { renderWithProvider, fireEvent } from '@/utils/test.utils';
 import Page from './page';
 
 import Tooltip from '@/components/Tooltip';
@@ -20,7 +20,6 @@ describe('ConnectionConfirmation component', () => {
 
     const buttonElement = container.querySelector('.fr-btn');
     const headerElement = container.querySelector('.fr-header');
-    const lien = container.querySelector('a[href="/verification/succes"]');
 
     const titleElement = getByText('title');
     const subTitleElement = getByText('John Doe');
@@ -36,7 +35,6 @@ describe('ConnectionConfirmation component', () => {
     const accordionContent7Element = getByText('accordionContent7');
     const accordionContent8Element = getByText('accordionContent8');
 
-    expect(lien).toBeInTheDocument();
     expect(buttonElement).toHaveClass('fr-btn');
     expect(headerElement).toHaveClass('fr-header');
     expect(titleElement).toBeInTheDocument();
@@ -55,5 +53,17 @@ describe('ConnectionConfirmation component', () => {
 
     expect(Tooltip).toHaveBeenCalledTimes(1);
     expect(Banner).toHaveBeenCalledTimes(1);
+  });
+
+  it('Button click', () => {
+    const routerMock = jest.spyOn(require('next/navigation'), 'useRouter');
+    const pushMock = jest.fn();
+    routerMock.mockReturnValue({ push: pushMock });
+
+    const { getByText } = renderWithProvider(<Page />);
+    const button = getByText('button');
+    fireEvent.click(button);
+
+    expect(pushMock).toHaveBeenCalledWith('/verification/succes');
   });
 });

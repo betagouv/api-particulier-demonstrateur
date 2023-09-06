@@ -68,7 +68,7 @@ export default function ConnectionImpot() {
               }}
               iconId="fr-icon-lock-unlock-fill"
             />
-            <Button style={{ color: 'grey' }} onClick={function noRefCheck() {}} priority="tertiary">
+            <Button style={{ color: 'grey' }} priority="tertiary">
               {t('rectangleLeft.button')}
             </Button>
           </div>

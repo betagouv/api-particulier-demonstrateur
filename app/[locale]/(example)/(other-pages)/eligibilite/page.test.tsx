@@ -1,4 +1,4 @@
-import { renderWithProvider } from '@/utils/test.utils';
+import { renderWithProvider, fireEvent } from '@/utils/test.utils';
 import Page from './page';
 
 jest.mock('next/navigation', () => ({
@@ -14,13 +14,23 @@ describe('Page component', () => {
     const buttonElement = container.querySelector('.fr-btn');
     const alertElement = container.querySelector('.fr-alert');
     const cardElement = container.querySelector('.fr-card');
-    const linkElements = container.querySelector('a[href="/connexion"]');
 
     expect(stepperElement).toHaveClass('fr-stepper');
     expect(checkboxElement).toHaveClass('fr-checkbox-group');
     expect(buttonElement).toHaveClass('fr-btn');
     expect(alertElement).toHaveClass('fr-alert');
     expect(cardElement).toHaveClass('fr-card');
-    expect(linkElements).toBeInTheDocument();
+  });
+
+  it('Button click', () => {
+    const routerMock = jest.spyOn(require('next/navigation'), 'useRouter');
+    const pushMock = jest.fn();
+    routerMock.mockReturnValue({ push: pushMock });
+
+    const { getByText } = renderWithProvider(<Page />);
+    const button = getByText('button');
+    fireEvent.click(button);
+
+    expect(pushMock).toHaveBeenCalledWith('/connexion');
   });
 });
