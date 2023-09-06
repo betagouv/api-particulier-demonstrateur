@@ -4,7 +4,6 @@ import { Stepper } from '@codegouvfr/react-dsfr/Stepper';
 import { fr } from '@codegouvfr/react-dsfr';
 import { Checkbox } from '@codegouvfr/react-dsfr/Checkbox';
 import { Button } from '@codegouvfr/react-dsfr/Button';
-import Link from 'next/link';
 import { Alert } from '@codegouvfr/react-dsfr/Alert';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';

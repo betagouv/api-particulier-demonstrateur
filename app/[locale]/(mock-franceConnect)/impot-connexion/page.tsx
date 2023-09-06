@@ -4,7 +4,6 @@ import { Header } from '@codegouvfr/react-dsfr/Header';
 import { useTranslations } from 'next-intl';
 import { Input } from '@codegouvfr/react-dsfr/Input';
 import { Button } from '@codegouvfr/react-dsfr/Button';
-import Link from 'next/link';
 import Tooltip from '@/components/Tooltip';
 import { useRouter } from 'next/navigation';
 

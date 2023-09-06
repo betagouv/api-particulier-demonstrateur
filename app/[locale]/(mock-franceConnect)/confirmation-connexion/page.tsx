@@ -6,7 +6,6 @@ import { useTranslations } from 'next-intl';
 import Banner from '@/components/Banner';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { Accordion } from '@codegouvfr/react-dsfr/Accordion';
-import Link from 'next/link';
 import Tooltip from '@/components/Tooltip';
 import { useJourney } from '@/app/journey-provider';
 import { useRouter } from 'next/navigation';
