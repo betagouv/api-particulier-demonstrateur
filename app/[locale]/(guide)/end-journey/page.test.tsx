@@ -9,6 +9,21 @@ jest.mock('next/navigation', () => ({
 
 jest.mock('@/components/Tooltip');
 
+beforeEach(() => {
+  Object.defineProperty(window, 'localStorage', {
+    value: {
+      getItem: jest.fn(),
+      setItem: jest.fn(),
+      removeItem: jest.fn(),
+    },
+    writable: true,
+  });
+});
+
+afterEach(() => {
+  jest.clearAllMocks();
+});
+
 describe('Page component', () => {
   it('should calls correct components', async () => {
     const { container, getByText } = renderWithProvider(<Page />);
@@ -26,16 +41,18 @@ describe('Page component', () => {
     expect(Tooltip).toHaveBeenCalledTimes(1);
   });
 
-  it('Button1', () => {
+  it('Button1', async () => {
     const routerMock = jest.spyOn(require('next/navigation'), 'useRouter');
     const pushMock = jest.fn();
     routerMock.mockReturnValue({ push: pushMock });
 
-    const { getByText } = renderWithProvider(<Page />);
+    const { getByText } = renderWithProvider(<Page />, {
+      user: { firstName: 'John', lastName: 'Doe', description: '', isFranceConnectAuth: false },
+      type: 'cantine',
+    });
     const button = getByText('button1');
     fireEvent.click(button);
-
-    expect(pushMock).toHaveBeenCalledWith('/eligibilite');
+    expect(pushMock).toHaveBeenCalledWith('/cantine/eligibilite');
   });
 
   it('Button2', () => {

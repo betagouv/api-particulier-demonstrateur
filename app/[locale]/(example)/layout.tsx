@@ -5,26 +5,29 @@ import { Footer } from '@codegouvfr/react-dsfr/Footer';
 import { headerFooterDisplayItem } from '@codegouvfr/react-dsfr/Display';
 import Banner from '@/components/Banner';
 import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 
 export default function DemonstratorLayout({ children }: { children: JSX.Element }) {
   const t = useTranslations('DemonstratorLayout');
+  const pathname = usePathname();
+  const type = pathname.split('/')[1];
 
   return (
     <>
       <Banner />
       <Header
         style={{ zIndex: 'unset' }}
-        brandTop={<>{t('header.brandTop')}</>}
-        serviceTitle={t('header.serviceTitle')}
+        brandTop={<>{t('headerLogo')}</>}
+        serviceTitle={t(type + '.serviceTitle')}
         homeLinkProps={{
           href: '/',
-          title: t('header.homeLinkTitle'),
+          title: t(type + '.homeLinkTitle'),
         }}
       />
       {children}
       <Footer
         accessibility="fully compliant"
-        contentDescription={t('header.footerDesc')}
+        contentDescription={t('footerDesc')}
         bottomItems={[headerFooterDisplayItem]}
       />
     </>

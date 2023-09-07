@@ -80,7 +80,7 @@ export default function Page() {
             <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
               <Button
                 size="large"
-                onClick={() => router.push('/connexion')}
+                onClick={() => router.push('/transport/connexion')}
                 iconId="fr-icon-arrow-right-line"
                 iconPosition="right"
               >

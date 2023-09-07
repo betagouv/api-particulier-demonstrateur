@@ -9,14 +9,14 @@
       "socialPricing": "Social Pricing",
       "solidarityPricing": "Solidarity Pricing",
       "transportCard": "Transport Card",
-      "canteen": "Cafeteria"
+      "cantine": "Cafeteria"
     },
     "cards": {
       "transport": {
         "title": "Social Pricing for Transport",
         "desc": "With the Individual API, build a service with rates adapted to your user's status."
       },
-      "canteen": {
+      "cantine": {
         "title": "Solidarity Pricing for the Cafeteria",
         "desc": "With the Individual API, build a service with rates adapted to your users' resources."
       },
@@ -38,19 +38,11 @@
       }
     }
   },
-  "Souscription": {
-    "title": "Buy my Mobility + transport card from FuturVille",
-    "content": {
-      "title": "Mobility card +",
-      "button": "Next"
-    }
-  },
   "Banner": {
     "mobileTitle": "Demo",
-    "webTitle": "Démonstrateur API Particulier"
+    "webTitle": "API Particulier Demonstrator"
   },
   "Eligibilite": {
-    "title": "Subscription to the Mobility + Card",
     "stepperTitle": "Eligibility for the social tariff",
     "stepperNextTitle": "Check card information",
     "checkboxLegend": "Are you ?",
@@ -85,7 +77,7 @@
     "header": {
       "brandTop1": "RÉPUBLIQUE",
       "brandTop2": "FRANCAISE",
-      "homeLinkPropsTitle": "Home - Name of entity (ministry, secretariat of state, government)"
+      "homeLinkPropsTitle": "Authentication page - API Particulier Demonstrator"
     },
     "overlayText": {
       "title": "The user goes to the FranceConnect website, selects the account of his choice to connect...",
@@ -96,7 +88,7 @@
     "header": {
       "brandTop1": "RÉPUBLIQUE",
       "brandTop2": "FRANCAISE",
-      "homeLinkPropsTitle": "Home - Name of entity (ministry, secretariat of state, government)"
+      "homeLinkPropsTitle": "Validation page - API Particulier Demonstrator"
     },
     "overlayText": {
       "title": "Once the user has selected the account of their choice, they are transferred to the relevant login page, in this case the impot.gouv.fr website.",
@@ -137,23 +129,40 @@
     "checkboxLabel3": "I need my card now, I order a card without a discount.",
     "button": "I send my supporting documents"
   },
-  "HighlightSubscription": {
-    "price": "80€/month",
-    "socialTariff": "Social tariff: 30€/month*",
-    "subContent": "*for job seekers, students, pupils and beneficiaries of complementary health insurance."
-  },
   "CardSocialPricing": {
     "cardTitle": "How does social pricing work?",
     "cardDescription": "Find the description of the process, the eligibility criteria and the documents necessary to obtain a reduced rate Pass",
     "cardDetail": "PDF - 61,88 Ko"
   },
   "DemonstratorLayout": {
-    "header": {
-      "brandTop": "DÉMONSTRATEUR API PARTICULIER",
-      "serviceTitle": "Mobility+ ",
-      "homeLinkTitle": "Home - Name of entity (ministry, secretariat of state, government)",
-      "footerDesc": "This is a demo to illustrate the use of the Particulier API."
-    }
+    "cantine": {
+      "serviceTitle": "Citizen Procedures Portal",
+      "homeLinkTitle": "Citizen Procedures Portal - API Particular Demonstrator",
+      "subscribeTitle": "Register my child for the cafeteria",
+      "pricing": {
+        "title": "Cafeteria",
+        "price": "3€/month",
+        "socialPrice": "Solidarity pricing: from 0.3 to 3 €/meal depending on your resources*",
+        "subSocialPrice": "*determined based on your CAF or MSA family quotient.",
+        "button": "Start registration"
+      },
+      "eligibiliteTitle": "Cafeteria registration"
+    },
+    "transport": {
+      "serviceTitle": "Mobility+",
+      "homeLinkTitle": "Transport - API Particulier Demonstrator",
+      "subscribeTitle": "Purchase my Mobility+ card for FuturVille transports",
+      "pricing": {
+        "title": "Mobility+ Card",
+        "price": "80€/month",
+        "socialPrice": "Social pricing: 30€/month*",
+        "subSocialPrice": "*for job seekers, students, pupils and beneficiaries of supplementary health solidarity.",
+        "button": "Next"
+      },
+      "eligibiliteTitle": "Mobility+ Card Subscription"
+    },
+    "headerLogo": "API PARTICULIER DEMONSTRATOR",
+    "footerDesc": "This is a demonstrator to illustrate the use of the API Particular."
   },
   "Tooltip": {
     "title": "API Particulier Example",
@@ -161,7 +170,7 @@
     "backBtn": "Previous page",
     "useCase": "Use case",
     "transport": "Transport",
-    "canteen": "Canteen",
+    "cantine": "Canteen",
     "user": "Character",
     "users": {
       "henri": "Henri, job seeker",
@@ -181,7 +190,7 @@
     "header": {
       "brandTop1": "RÉPUBLIQUE",
       "brandTop2": "FRANCAISE",
-      "homeLinkPropsTitle": "Home - Name of entity (ministry, secretariat of state, government)"
+      "homeLinkPropsTitle": "Confirmation page - API Particulier Demonstrator"
     },
     "title": "You will log in as :",
     "button": "Continue to the Citizenship Portal",

@@ -9,14 +9,14 @@
       "socialPricing": "Tarification sociale",
       "solidarityPricing": "Tarification solidaire",
       "transportCard": "Carte Transport",
-      "canteen": "Cantine"
+      "cantine": "Cantine"
     },
     "cards": {
       "transport": {
         "title": "Tarification sociale des transports",
         "desc": "Avec API Particulier, construire un service aux tarifs adaptés selon le statut de votre usager."
       },
-      "canteen": {
+      "cantine": {
         "title": "Tarification solidaire de la cantine",
         "desc": "Avec API Particulier, construire un service aux tarifs adaptés selon les ressources de vos usagers."
       },
@@ -38,19 +38,11 @@
       }
     }
   },
-  "Souscription": {
-    "title": "Acheter ma carte Mobilité + des transports de FuturVille",
-    "content": {
-      "title": "Carte Mobilité +",
-      "button": "Suivant"
-    }
-  },
   "Banner": {
     "mobileTitle": "Démo",
     "webTitle": "Démonstrateur API Particulier"
   },
   "Eligibilite": {
-    "title": "Souscription à la Carte Mobilités +",
     "stepperTitle": "Éligibilité au tarif social",
     "stepperNextTitle": "Vérifier les informations de la carte",
     "checkboxLegend": "Étes-vous ?",
@@ -85,7 +77,7 @@
     "header": {
       "brandTop1": "RÉPUBLIQUE",
       "brandTop2": "FRANCAISE",
-      "homeLinkPropsTitle": "Accueil - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)"
+      "homeLinkPropsTitle": "Page de connexion - Démonstrateur API Particulier"
     },
     "overlayText": {
       "title": "L'utilisateur se retrouve sur le site de FranceConnect, il sélectionne le compte de son choix pour se connecter...",
@@ -96,7 +88,7 @@
     "header": {
       "brandTop1": "RÉPUBLIQUE",
       "brandTop2": "FRANCAISE",
-      "homeLinkPropsTitle": "Accueil - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)"
+      "homeLinkPropsTitle": "Page de validation de la connexion - Démonstrateur API Particulier"
     },
     "overlayText": {
       "title": "L'utilisateur a selectionné le compte de son choix, il est transféré sur la page de connexion concernée, ici en exemple, le site impot.gouv.fr.",
@@ -137,23 +129,40 @@
     "checkboxLabel3": "J'ai besoin de ma carte maintenant, je commande une carte sans réduction.",
     "button": "Je transmets mes justificatifs"
   },
-  "HighlightSubscription": {
-    "price": "80€/mois",
-    "socialTariff": "Tarification sociale: 30€/mois*",
-    "subContent": "*pour les demandeurs d'emploi, les étudiants, les élèves et les bénéficiaires de la complémentaire santé solidaire."
-  },
   "CardSocialPricing": {
     "cardTitle": "Comment fonctionne la tarification sociale ?",
     "cardDescription": "Retrouvez le descriptif de la démarche, les critères d'élibilité et les documents nécessaires pour obtenir un Pass tarif réduit",
     "cardDetail": "PDF - 61,88 Ko"
   },
   "DemonstratorLayout": {
-    "header": {
-      "brandTop": "DÉMONSTRATEUR API PARTICULIER",
-      "serviceTitle": "Mobilité+ ",
-      "homeLinkTitle": "Accueil - Nom de l’entité (ministère, secrétariat d'état, gouvernement)",
-      "footerDesc": "Ceci est un démonstrateur pour illustrer l'usage de l'API Particulier."
-    }
+    "cantine": {
+      "serviceTitle": "Portail des démarches citoyennes",
+      "homeLinkTitle": "Portail des démarches citoyennes - Démonstrateur API Particulier",
+      "subscribeTitle": "Inscrire mon enfant à la cantine",
+      "pricing": {
+        "title": "Cantine",
+        "price": "3€/mois",
+        "socialPrice": "Tarification solidaire : de 0,3 à 3 €/repas selon vos ressources*",
+        "subSocialPrice": "*déterminées selon votre quotient familial CAF ou MSA.",
+        "button": "Commencer l'inscription"
+      },
+      "eligibiliteTitle": "Inscription à la cantine"
+    },
+    "transport": {
+      "serviceTitle": "Mobilité+",
+      "homeLinkTitle": "Transport - Démonstrateur API Particulier",
+      "subscribeTitle": "Acheter ma carte Mobilité + des transports de FuturVille",
+      "pricing": {
+        "title": "Carte Mobilité+",
+        "price": "80€/mois",
+        "socialPrice": "Tarification sociale: 30€/mois*",
+        "subSocialPrice": "*pour les demandeurs d'emploi, les étudiants, les élèves et les bénéficiaires de la complémentaire santé solidaire.",
+        "button": "Suivant"
+      },
+      "eligibiliteTitle": "Souscription à la Carte Mobilités +"
+    },
+    "headerLogo": "DÉMONSTRATEUR API PARTICULIER",
+    "footerDesc": "Ceci est un démonstrateur pour illustrer l'usage de l'API Particulier."
   },
   "Tooltip": {
     "title": "Démonstrateur API Particulier",
@@ -161,7 +170,7 @@
     "backBtn": "Retour à l'écran précédent",
     "useCase": "Cas d'usage",
     "transport": "Tarification sociale des transports ",
-    "canteen": "Tarification solidaire de la cantine",
+    "cantine": "Tarification solidaire de la cantine",
     "user": "Personnage",
     "withFranceConnect": "avec FranceConnect",
     "withoutFranceConnect": "sans FranceConnect"
@@ -175,7 +184,7 @@
     "header": {
       "brandTop1": "RÉPUBLIQUE",
       "brandTop2": "FRANCAISE",
-      "homeLinkPropsTitle": "Accueil - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)"
+      "homeLinkPropsTitle": "Accueil - Démonstrateur API Particulier"
     },
     "title": "Vous allez vous connecter en tant que :",
     "button": "Continuer sur le Portail des démarches citoyennes",

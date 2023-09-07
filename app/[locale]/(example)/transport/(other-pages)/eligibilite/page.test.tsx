@@ -31,6 +31,6 @@ describe('Page component', () => {
     const button = getByText('button');
     fireEvent.click(button);
 
-    expect(pushMock).toHaveBeenCalledWith('/connexion');
+    expect(pushMock).toHaveBeenCalledWith('/transport/connexion');
   });
 });
