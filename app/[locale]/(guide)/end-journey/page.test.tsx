@@ -1,4 +1,4 @@
-import { renderWithProvider, fireEvent, waitFor } from '@/utils/test.utils';
+import { renderWithProvider, fireEvent } from '@/utils/test.utils';
 
 import Page from './page';
 import Tooltip from '@/components/Tooltip';
