@@ -2,7 +2,7 @@
 
 import { Stepper } from '@codegouvfr/react-dsfr/Stepper';
 import { fr } from '@codegouvfr/react-dsfr';
-import { Checkbox } from '@codegouvfr/react-dsfr/Checkbox';
+import { RadioButtons } from '@codegouvfr/react-dsfr/RadioButtons';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { Alert } from '@codegouvfr/react-dsfr/Alert';
 import { useTranslations } from 'next-intl';
@@ -36,8 +36,9 @@ export default function Page() {
 
         <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
           <div style={{ flex: '65%' }}>
-            <Checkbox
+            <RadioButtons
               legend={t('checkboxLegend')}
+              name="Statut"
               options={[
                 {
                   label: t('checkboxLabel1'),
