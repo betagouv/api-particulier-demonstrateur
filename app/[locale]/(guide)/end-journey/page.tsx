@@ -15,7 +15,12 @@ export default function Page() {
   return (
     <div className={styles.container}>
       <h2>{t('title')}</h2>
-      <Button size="large" style={{ margin: '10px' }} onClick={() => router.push('/eligibilite')} priority="secondary">
+      <Button
+        size="large"
+        style={{ margin: '10px' }}
+        onClick={() => router.push('/' + journey?.type + '/eligibilite')}
+        priority="secondary"
+      >
         {t('button1', { user: journey?.user?.firstName })}
       </Button>
 

@@ -42,7 +42,7 @@ export default function ConnectionConfirmation() {
         <h1 className={styles.name}>{journey?.user?.firstName + ' ' + journey?.user?.lastName}</h1>
         <Button
           size="large"
-          onClick={() => router.push('/verification/succes')}
+          onClick={() => router.push('/' + journey?.type + '/verification/succes')}
           iconId="fr-icon-arrow-right-line"
           iconPosition="right"
           priority="primary"

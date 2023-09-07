@@ -1,0 +1,107 @@
+.choiceContainer {
+  width: 100%;
+  height: 60%;
+  border: 1px solid var(--border-default-grey);
+  border-radius: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.choice {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.leftChoice,
+.rightChoice {
+  flex: 1;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.leftTitle,
+.rightTitle {
+  margin: 0;
+}
+
+.tag {
+  margin-top: 2%;
+  margin-bottom: 10%;
+  background-color: var(--background-alt-blue-france-active);
+}
+
+.centeredText {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.forgotPassword {
+  text-align: left;
+  width: 50%;
+  margin: 0 auto;
+  text-decoration: underline;
+}
+
+.centeredInput {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 10px;
+  width: 60%;
+  text-align: left;
+}
+
+.separator {
+  height: 0.5px;
+  position: relative;
+  background: var(--border-default-grey);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.orText {
+  background: var(--background-default-grey);
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 10px);
+  transform: translateX(-50%);
+  padding: 0 10px;
+  line-height: 1;
+}
+
+@media (min-width: 992px) {
+  .separator {
+    width: 0.5px;
+    height: auto;
+    background: none;
+  }
+
+  .separator::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    background: var(--border-default-grey);
+  }
+
+  .orText {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .leftChoice,
+  .rightChoice {
+    padding: 20px;
+  }
+
+  .choice {
+    flex-direction: row;
+  }
+}

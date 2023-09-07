@@ -13,7 +13,7 @@ describe('Layout component', () => {
       </Layout>,
       {
         user: { firstName: 'John', lastName: 'Doe', description: '', isFranceConnectAuth: true },
-        type: 'canteen',
+        type: 'cantine',
       },
     );
 

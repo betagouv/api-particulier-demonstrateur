@@ -6,21 +6,15 @@ jest.mock('next/navigation', () => ({
 }));
 
 describe('PricingInfo component', () => {
-  it('should render Highlight composant', async () => {
+  it('should render Highlight component', async () => {
     const { container } = render(<PricingInfo />);
-
     const highlightElement = container.querySelector('.fr-highlight');
-    const linkElements = container.querySelector('a[href="/eligibilite"]');
-
-    expect(linkElements).toBeInTheDocument();
     expect(highlightElement).not.toBeNull();
   });
 
   it('should render with correct text', async () => {
     const { getByText } = render(<PricingInfo />);
-
-    const titleElement = getByText('content.title');
-
+    const titleElement = getByText('cantine.pricing.title');
     expect(titleElement).toBeInTheDocument();
   });
 
@@ -30,9 +24,9 @@ describe('PricingInfo component', () => {
     routerMock.mockReturnValue({ push: pushMock });
 
     const { getByText } = render(<PricingInfo />);
-    const button = getByText('content.button');
+    const button = getByText('cantine.pricing.button');
     fireEvent.click(button);
 
-    expect(pushMock).toHaveBeenCalledWith('/eligibilite');
+    expect(pushMock).toHaveBeenCalledWith('/cantine/eligibilite');
   });
 });

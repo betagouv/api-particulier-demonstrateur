@@ -15,7 +15,7 @@ describe('ConnectionConfirmation component', () => {
   it('should render components', async () => {
     const { container, getByText } = renderWithProvider(<Page />, {
       user: { firstName: 'John', lastName: 'Doe', description: '', isFranceConnectAuth: false },
-      type: 'canteen',
+      type: 'cantine',
     });
 
     const buttonElement = container.querySelector('.fr-btn');
@@ -64,6 +64,6 @@ describe('ConnectionConfirmation component', () => {
     const button = getByText('button');
     fireEvent.click(button);
 
-    expect(pushMock).toHaveBeenCalledWith('/verification/succes');
+    expect(pushMock).toHaveBeenCalledWith('/cantine/verification/succes');
   });
 });

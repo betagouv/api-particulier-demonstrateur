@@ -13,7 +13,7 @@ describe('Layout component', () => {
     expect(highlightElement).not.toBeNull();
     expect(highlightElement).toHaveClass('fr-highlight');
 
-    const titleElement = getByText('title');
+    const titleElement = getByText('transport.eligibiliteTitle');
     expect(titleElement).toBeInTheDocument();
 
     const child = getByText('Yolo');

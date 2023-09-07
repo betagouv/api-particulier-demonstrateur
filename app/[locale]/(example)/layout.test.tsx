@@ -4,6 +4,12 @@ import Banner from '@/components/Banner';
 
 jest.mock('@/components/Banner');
 
+jest.mock('next/navigation', () => ({
+  usePathname: jest.fn().mockImplementation(() => {
+    return '/a/b/c/d';
+  }),
+}));
+
 describe('Layout component', () => {
   it('should render the layout and its children', async () => {
     const { getByText, container } = render(

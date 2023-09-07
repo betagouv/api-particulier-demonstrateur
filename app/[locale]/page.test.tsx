@@ -10,7 +10,7 @@ describe('Page component', () => {
       type: 'transport',
     },
     {
-      type: 'canteen',
+      type: 'cantine',
     },
   ];
 

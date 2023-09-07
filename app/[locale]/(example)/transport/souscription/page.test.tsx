@@ -1,11 +1,11 @@
 import { renderWithProvider } from '@/utils/test.utils';
 import PurchaseInfo from '@/components/PurchaseInfo';
-import PricingInfo from '@/components/PricingInfo';
+import PricingInfo from '@/components/transport/PricingInfo';
 import Tooltip from '@/components/Tooltip';
 import Page from './page';
 
 jest.mock('@/components/PurchaseInfo');
-jest.mock('@/components/PricingInfo');
+jest.mock('@/components/transport/PricingInfo');
 jest.mock('@/components/Tooltip');
 
 describe('Page component', () => {

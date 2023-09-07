@@ -62,7 +62,7 @@ export default function Index() {
                           </Tag>
                         </li>
                         <li>
-                          <Tag small>{t('tags.canteen')}</Tag>
+                          <Tag small>{t('tags.cantine')}</Tag>
                         </li>
                       </ul>
                       <span>{t('scenario', { number: 1 })}</span>
@@ -71,7 +71,7 @@ export default function Index() {
                   desc={t('cards.user1.desc')}
                   enlargeLink
                   linkProps={{
-                    href: '/souscription',
+                    href: '/transport/souscription',
                   }}
                   title={t('cards.user1.title')}
                 />
@@ -99,7 +99,7 @@ export default function Index() {
                     <>
                       <ul className="fr-tags-group">
                         <li>
-                          <Tag small>{t('tags.canteen')}</Tag>
+                          <Tag small>{t('tags.cantine')}</Tag>
                         </li>
                       </ul>
                       <span>{t('scenario', { number: 2 })}</span>
@@ -108,7 +108,7 @@ export default function Index() {
                   desc={t('cards.user2.desc')}
                   enlargeLink
                   linkProps={{
-                    href: '/souscription',
+                    href: '/transport/souscription',
                   }}
                   title={t('cards.user2.title')}
                 />
@@ -158,7 +158,7 @@ export default function Index() {
                   desc={t('cards.user3.desc')}
                   enlargeLink
                   linkProps={{
-                    href: '/souscription',
+                    href: '/cantine/souscription',
                   }}
                   title={t('cards.user3.title')}
                 />
@@ -195,7 +195,7 @@ export default function Index() {
                   desc={t('cards.user4.desc')}
                   enlargeLink
                   linkProps={{
-                    href: '/souscription',
+                    href: '/cantine/souscription',
                   }}
                   title={t('cards.user4.title')}
                 />

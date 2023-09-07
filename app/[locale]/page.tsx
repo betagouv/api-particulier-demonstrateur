@@ -41,7 +41,7 @@ export default function Index() {
               title={t('cards.transport.title')}
             />
           </div>
-          <div role="button" onClick={() => setJourney((prev: Journey) => ({ ...prev, type: 'canteen' }) as Journey)}>
+          <div role="button" onClick={() => setJourney((prev: Journey) => ({ ...prev, type: 'cantine' }) as Journey)}>
             <Card
               className={styles.card}
               start={
@@ -51,12 +51,12 @@ export default function Index() {
                   </li>
                 </ul>
               }
-              desc={t('cards.canteen.desc')}
+              desc={t('cards.cantine.desc')}
               enlargeLink
               linkProps={{
                 href: '/choix-personnage?usage=2',
               }}
-              title={t('cards.canteen.title')}
+              title={t('cards.cantine.title')}
             />
           </div>
         </div>

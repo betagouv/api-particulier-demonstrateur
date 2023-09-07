@@ -159,12 +159,12 @@ test('tooltipContainer element has info from local storage', async () => {
         isFranceConnectAuth: true,
         description: 'Alexander Doe, cosmonaut',
       },
-      type: 'canteen',
+      type: 'cantine',
     }),
   );
   const { getByText } = renderWithProvider(<Tooltip />);
   await waitFor(() => {
-    const authFranceConnectElement = getByText('canteen | withFranceConnect');
+    const authFranceConnectElement = getByText('cantine | withFranceConnect');
     expect(authFranceConnectElement).toBeInTheDocument();
     const description = getByText('Alexander Doe, cosmonaut');
     expect(description).toBeInTheDocument();
