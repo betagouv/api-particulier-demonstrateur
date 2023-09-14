@@ -7,6 +7,11 @@
   margin-bottom: 1.2rem;
 }
 
+.hasTips .buttons,
+.hasTips .info {
+  display: none;
+}
+
 .buttons {
   flex-direction: column;
   display: flex;
@@ -59,6 +64,9 @@
 }
 
 .tooltipContainer {
+  display: flex;
+  flex-direction: column;
+  max-height: 50%;
   padding: 2rem;
   transition: all 0.2s ease-in-out;
   position: fixed;
@@ -67,6 +75,7 @@
   bottom: 0;
   shape-outside: circle(100%);
   clip-path: circle(0px at calc(100% - 50px) calc(100% - 50px));
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .tooltipContainer.active {
   clip-path: circle(150% at calc(100% - 50px) calc(100% - 50px));
@@ -78,5 +87,30 @@
   }
   .buttons {
     flex-direction: row;
+  }
+}
+
+@media (min-width: 1248px) {
+  .hasTips .info {
+    display: block;
+  }
+  .hasTips .buttons {
+    display: flex;
+  }
+  .hasTips.tooltipContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  .hasTips.tooltipContainer > div {
+    flex: 1;
+  }
+  .hasTips.tooltipContainer > div:first-child {
+    flex: 1;
+    max-width: 595px;
+    border-right-style: solid;
+    border-right-width: 1px;
+  }
+  .hasTips.tooltipContainer > div:nth-child(2) {
+    padding-left: 2rem;
   }
 }

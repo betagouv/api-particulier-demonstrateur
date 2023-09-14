@@ -197,5 +197,13 @@
     "accordionContent6": "Lieu de naissance",
     "accordionContent7": "Pays de naissance",
     "accordionContent8": "Quotient familial CAF ou MSA"
+  },
+  "ToggleButton": {
+    "text": "Mode développeur",
+    "checked": "Activé",
+    "unchecked": "Désactivé"
+  },
+  "Tips": {
+    "next": "Recommandation suivante"
   }
 }

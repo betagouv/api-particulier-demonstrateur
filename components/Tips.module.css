@@ -1,0 +1,46 @@
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttons > div:first-child {
+  flex: 1;
+}
+
+.nextButton {
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.previousButton {
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.nextButton span {
+  display: none;
+}
+
+.tips {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.tip > li {
+  list-style: none;
+}
+
+.tip {
+  margin-bottom: 1rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+@media (min-width: 576px) {
+  .nextButton {
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+  }
+  .nextButton span {
+    display: inline;
+  }
+}
