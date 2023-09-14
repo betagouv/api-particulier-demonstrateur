@@ -99,6 +99,23 @@ test('Home button changes background color on hover', () => {
   expect(homeButton).toHaveStyle('background-color: transparent');
 });
 
+test('Tips added to Tooltip component', () => {
+  const { container } = renderWithProvider(
+    <Tooltip>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+      </ul>
+      <ul>
+        <li>1</li>
+      </ul>
+    </Tooltip>,
+  );
+  const tooltipContainer = container.getElementsByClassName('hasTips')[0];
+
+  expect(tooltipContainer).toBeInTheDocument();
+});
+
 test('Open button changes background color on hover', () => {
   const { container } = renderWithProvider(<Tooltip />);
   const openButton = container.getElementsByClassName('openBtn')[0];
