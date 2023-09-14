@@ -203,5 +203,13 @@
     "accordionContent6": "Place of birth",
     "accordionContent7": "Country of birth",
     "accordionContent8": "Family quota CAF or MSA"
+  },
+  "ToggleButton": {
+    "text": "Developer mode",
+    "checked": "Enabled",
+    "unchecked": "Disabled"
+  },
+  "Tips": {
+    "next": "Recommandation suivante"
   }
 }
