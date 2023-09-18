@@ -1,20 +1,18 @@
-import { renderWithProvider } from '@/utils/test.utils';
+import { render } from '@testing-library/react';
 import Layout from './layout';
 
 jest.mock('next/navigation', () => ({
   useRouter: () => ({ back: jest.fn(), push: jest.fn() }),
 }));
 
+jest.mock('@/components/Tooltip');
+
 describe('Layout component', () => {
   it('should render the layout and its children', async () => {
-    const { getByText, container } = renderWithProvider(
+    const { getByText, container } = render(
       <Layout>
         <p>Yolo</p>
       </Layout>,
-      {
-        user: { firstName: 'John', lastName: 'Doe', description: '', isFranceConnectAuth: true },
-        type: 'cantine',
-      },
     );
 
     const stepperElement = container.querySelector('.fr-stepper');

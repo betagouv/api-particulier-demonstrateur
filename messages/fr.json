@@ -8,7 +8,7 @@
       "FranceConnect": "FranceConnect",
       "socialPricing": "Tarification sociale",
       "solidarityPricing": "Tarification solidaire",
-      "transportCard": "Carte Transport",
+      "transport": "Carte Transport",
       "cantine": "Cantine"
     },
     "cards": {
@@ -187,7 +187,10 @@
       "homeLinkPropsTitle": "Accueil - Démonstrateur API Particulier"
     },
     "title": "Vous allez vous connecter en tant que :",
-    "button": "Continuer sur le Portail des démarches citoyennes",
+    "button": {
+      "cantine": "Continuer sur le Portail des démarches citoyennes",
+      "transport": "Continuer sur Mobilité+"
+    },
     "accordionTitle": "Les données suivantes vont être transmises :",
     "accordionContent1": "Prénom",
     "accordionContent2": "Nom de naissance",
@@ -196,7 +199,10 @@
     "accordionContent5": "Sexe",
     "accordionContent6": "Lieu de naissance",
     "accordionContent7": "Pays de naissance",
-    "accordionContent8": "Quotient familial CAF ou MSA"
+    "accordionContent8": {
+      "cantine": "Quotient familial CAF ou MSA",
+      "transport": "Statut demandeur d'emploi"
+    }
   },
   "ToggleButton": {
     "text": "Mode développeur",

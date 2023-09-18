@@ -6,12 +6,15 @@ import { RadioButtons } from '@codegouvfr/react-dsfr/RadioButtons';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { Alert } from '@codegouvfr/react-dsfr/Alert';
 import { useTranslations } from 'next-intl';
+import { useJourney } from '@/app/journey-provider';
 import { useRouter } from 'next/navigation';
 import CardSocialPricing from '@/components/CardSocialPricing';
 import Tooltip from '@/components/Tooltip';
 import styles from './page.module.css';
 
 export default function Page() {
+  const { journey } = useJourney();
+
   const t = useTranslations('Eligibilite');
   const router = useRouter();
 
@@ -81,7 +84,7 @@ export default function Page() {
             <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
               <Button
                 size="large"
-                onClick={() => router.push('/transport/connexion')}
+                onClick={() => router.push('/' + journey?.type + '/connexion?user=' + journey?.user?.id)}
                 iconId="fr-icon-arrow-right-line"
                 iconPosition="right"
               >

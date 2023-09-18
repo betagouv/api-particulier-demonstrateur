@@ -3,8 +3,10 @@ import { Alert } from '@codegouvfr/react-dsfr/Alert';
 import { useTranslations } from 'next-intl';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { useRouter } from 'next/navigation';
+import { useJourney } from '@/app/journey-provider';
 
 export default function Page() {
+  const { journey } = useJourney();
   const t = useTranslations('Succes-verification');
   const router = useRouter();
   return (
@@ -40,7 +42,7 @@ export default function Page() {
           // onClick={function noRefCheck() {}}
           iconId="fr-icon-arrow-right-line"
           iconPosition="right"
-          onClick={() => router.push('/end-journey')}
+          onClick={() => router.push('/' + journey?.type + '/end-journey?user=' + journey?.user?.id)}
         >
           {t('button')}
         </Button>

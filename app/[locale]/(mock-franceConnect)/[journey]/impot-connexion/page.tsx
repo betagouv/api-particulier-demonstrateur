@@ -6,10 +6,12 @@ import { Input } from '@codegouvfr/react-dsfr/Input';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import Tooltip from '@/components/Tooltip';
 import { useRouter } from 'next/navigation';
+import { useJourney } from '@/app/journey-provider';
 
 import styles from './page.module.css';
 
 export default function ConnectionImpot() {
+  const { journey } = useJourney();
   const t = useTranslations('Impot-connexion');
   const router = useRouter();
 
@@ -42,7 +44,7 @@ export default function ConnectionImpot() {
         </p>
         <Button
           size="large"
-          onClick={() => router.push('/confirmation-connexion')}
+          onClick={() => router.push('/' + journey?.type + '/confirmation-connexion?user=' + journey?.user?.id)}
           iconId="fr-icon-arrow-right-line"
           iconPosition="right"
           priority="secondary"

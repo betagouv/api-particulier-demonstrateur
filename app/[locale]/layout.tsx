@@ -2,13 +2,13 @@ import { NextAppDirEmotionCacheProvider } from 'tss-react/next';
 import { DsfrHead } from '@codegouvfr/react-dsfr/next-appdir/DsfrHead';
 import { DsfrProvider } from '@codegouvfr/react-dsfr/next-appdir/DsfrProvider';
 import { getHtmlAttributes } from '@codegouvfr/react-dsfr/next-appdir/getHtmlAttributes';
-import { StartDsfr } from '../StartDsfr';
-import { defaultColorScheme } from '../defaultColorScheme';
+import { StartDsfr } from '@/app/StartDsfr';
+import { defaultColorScheme } from '@/app/defaultColorScheme';
 import MuiDsfrThemeProvider from '@codegouvfr/react-dsfr/mui';
 import Link from 'next/link';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
-import JourneyProvider from '../journey-provider';
+import JourneyProvider from '@/app/journey-provider';
 import Banner from '@/components/Banner';
 
 interface Params {

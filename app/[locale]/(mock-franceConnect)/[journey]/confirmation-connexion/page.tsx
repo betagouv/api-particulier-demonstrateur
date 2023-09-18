@@ -42,19 +42,16 @@ export default function ConnectionConfirmation() {
         <h1 className={styles.name}>{journey?.user?.firstName + ' ' + journey?.user?.lastName}</h1>
         <Button
           size="large"
-          onClick={() => router.push('/' + journey?.type + '/verification/succes')}
+          onClick={() => router.push('/' + journey?.type + '/verification/succes?user=' + journey?.user?.id)}
           iconId="fr-icon-arrow-right-line"
           iconPosition="right"
           priority="primary"
           style={{ marginBottom: '70px' }}
         >
-          {t('button')}
+          {journey?.type ? t('button.' + journey?.type) : ''}
         </Button>
 
-        <Accordion
-          className={styles.accordion}
-          label={t('accordionTitle')} /*onExpandedChange={function noRefCheck() {}}*/
-        >
+        <Accordion className={styles.accordion} label={t('accordionTitle')}>
           <ul style={{ textAlign: 'left', fontWeight: 'bold' }}>
             <li>{t('accordionContent1')}</li>
             <li>{t('accordionContent2')}</li>
@@ -63,7 +60,7 @@ export default function ConnectionConfirmation() {
             <li>{t('accordionContent5')}</li>
             <li>{t('accordionContent6')}</li>
             <li>{t('accordionContent7')}</li>
-            <li>{t('accordionContent8')}</li>
+            <li>{journey?.type ? t('accordionContent8.' + journey.type) : ''}</li>
           </ul>
         </Accordion>
       </div>

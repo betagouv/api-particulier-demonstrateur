@@ -6,9 +6,11 @@ import Image from 'next/image';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
+import { useJourney } from '@/app/journey-provider';
 import Tooltip from '@/components/Tooltip';
 
 export default function ConnectionChoice() {
+  const { journey } = useJourney();
   const t = useTranslations('Choix-connexion');
   const router = useRouter();
 
@@ -37,7 +39,7 @@ export default function ConnectionChoice() {
         <p>{t('overlayText.title')}</p>
         <Button
           size="large"
-          onClick={() => router.push('/impot-connexion')}
+          onClick={() => router.push('/' + journey?.type + '/impot-connexion?user=' + journey?.user?.id)}
           iconId="fr-icon-arrow-right-line"
           iconPosition="right"
           priority="secondary"

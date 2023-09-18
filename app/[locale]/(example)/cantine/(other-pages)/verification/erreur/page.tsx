@@ -1,5 +1,6 @@
 'use client';
 import { Alert } from '@codegouvfr/react-dsfr/Alert';
+import { useJourney } from '@/app/journey-provider';
 import { useTranslations } from 'next-intl';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { Checkbox } from '@codegouvfr/react-dsfr/Checkbox';
@@ -7,6 +8,7 @@ import { useRouter } from 'next/navigation';
 
 export default function Page() {
   const t = useTranslations('Erreur-verification');
+  const { journey } = useJourney();
   const router = useRouter();
   return (
     <>
@@ -58,7 +60,7 @@ export default function Page() {
       >
         <Button
           size="large"
-          onClick={() => router.push('/end-journey')}
+          onClick={() => router.push('/' + journey?.type + '/end-journey?user=' + journey?.user?.id)}
           iconId="fr-icon-arrow-right-line"
           iconPosition="right"
         >

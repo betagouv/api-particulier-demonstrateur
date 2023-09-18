@@ -1,4 +1,4 @@
-import { renderWithProvider } from '@/utils/test.utils';
+import { render } from '@testing-library/react';
 import PurchaseInfo from '@/components/PurchaseInfo';
 import PricingInfo from '@/components/transport/PricingInfo';
 import Tooltip from '@/components/Tooltip';
@@ -10,7 +10,7 @@ jest.mock('@/components/Tooltip');
 
 describe('Page component', () => {
   it('should render PurchaseInfo and PricingInfo components', async () => {
-    renderWithProvider(<Page />);
+    render(<Page />);
 
     expect(PurchaseInfo).toHaveBeenCalledTimes(1);
     expect(PricingInfo).toHaveBeenCalledTimes(1);

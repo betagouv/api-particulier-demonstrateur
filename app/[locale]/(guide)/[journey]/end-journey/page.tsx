@@ -4,7 +4,7 @@ import Tooltip from '@/components/Tooltip';
 import { useJourney } from '@/app/journey-provider';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { useTranslations } from 'next-intl';
-import styles from '../styles.module.css';
+import styles from '../../styles.module.css';
 import { useRouter } from 'next/navigation';
 
 export default function Page() {
@@ -18,7 +18,7 @@ export default function Page() {
       <Button
         size="large"
         style={{ margin: '10px' }}
-        onClick={() => router.push('/' + journey?.type + '/eligibilite')}
+        onClick={() => router.push('/' + journey?.type + '/eligibilite?user=' + journey?.user?.id)}
         priority="secondary"
       >
         {t('button1', { user: journey?.user?.firstName })}
