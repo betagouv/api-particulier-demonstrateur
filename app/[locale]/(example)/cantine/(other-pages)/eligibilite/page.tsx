@@ -7,6 +7,7 @@ import { Button } from '@codegouvfr/react-dsfr/Button';
 import { Alert } from '@codegouvfr/react-dsfr/Alert';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
+import { useJourney } from '@/app/journey-provider';
 import CardSocialPricing from '@/components/CardSocialPricing';
 import Tooltip from '@/components/Tooltip';
 import styles from './page.module.css';
@@ -14,6 +15,7 @@ import styles from './page.module.css';
 export default function Page() {
   const t = useTranslations('Eligibilite');
   const router = useRouter();
+  const { journey } = useJourney();
 
   return (
     <>
@@ -80,7 +82,7 @@ export default function Page() {
             <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
               <Button
                 size="large"
-                onClick={() => router.push('/cantine/connexion')}
+                onClick={() => router.push('/' + journey?.type + '/connexion?user=' + journey?.user?.id)}
                 iconId="fr-icon-arrow-right-line"
                 iconPosition="right"
               >

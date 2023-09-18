@@ -9,9 +9,11 @@ import { Input } from '@codegouvfr/react-dsfr/Input';
 import { PasswordInput } from '@codegouvfr/react-dsfr/blocks/PasswordInput';
 import { Tag } from '@codegouvfr/react-dsfr/Tag';
 import { useTranslations } from 'next-intl';
+import { useJourney } from '@/app/journey-provider';
 import Tooltip from '@/components/Tooltip';
 
 export default function Page() {
+  const { journey } = useJourney();
   const t = useTranslations('Connexion');
 
   return (
@@ -36,7 +38,7 @@ export default function Page() {
               <Tag className={styles.tag} iconId="fr-icon-notification-3-fill">
                 {t('tagLeft')}
               </Tag>
-              <FranceConnectButton url="/choix-connexion" />
+              <FranceConnectButton url={'/' + journey?.type + '/choix-connexion?user=' + journey?.user?.id} />
             </div>
             <div className={styles.separator}>
               <span className={styles.orText}>{t('middleText')}</span>

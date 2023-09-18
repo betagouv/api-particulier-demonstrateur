@@ -5,6 +5,17 @@ jest.mock('next/navigation', () => ({
   useRouter: () => ({ back: jest.fn(), push: jest.fn() }),
 }));
 
+jest.mock('@/app/journey-provider', () => ({
+  useJourney: () => ({
+    journey: {
+      type: 'aaa',
+      user: {
+        id: '123',
+      },
+    },
+  }),
+}));
+
 describe('Page component', () => {
   it('should render Page correctly', async () => {
     const { container, getByText } = render(<Page />);
@@ -33,6 +44,6 @@ describe('Page component', () => {
     const button = getByText('button');
     fireEvent.click(button);
 
-    expect(pushMock).toHaveBeenCalledWith('/end-journey');
+    expect(pushMock).toHaveBeenCalledWith('/aaa/end-journey?user=123');
   });
 });

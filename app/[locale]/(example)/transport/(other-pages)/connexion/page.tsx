@@ -4,6 +4,7 @@ import { Stepper } from '@codegouvfr/react-dsfr/Stepper';
 import { fr } from '@codegouvfr/react-dsfr';
 import styles from './page.module.css';
 import { Button } from '@codegouvfr/react-dsfr/Button';
+import { useJourney } from '@/app/journey-provider';
 import { FranceConnectButton } from '@codegouvfr/react-dsfr/FranceConnectButton';
 import { Input } from '@codegouvfr/react-dsfr/Input';
 import { PasswordInput } from '@codegouvfr/react-dsfr/blocks/PasswordInput';
@@ -12,6 +13,7 @@ import { useTranslations } from 'next-intl';
 import Tooltip from '@/components/Tooltip';
 
 export default function Page() {
+  const { journey } = useJourney();
   const t = useTranslations('Connexion');
 
   return (
@@ -36,7 +38,7 @@ export default function Page() {
               <Tag className={styles.tag} iconId="fr-icon-notification-3-fill">
                 {t('tagLeft')}
               </Tag>
-              <FranceConnectButton url="/choix-connexion" />
+              <FranceConnectButton url={'/' + journey?.type + '/choix-connexion?user=' + journey?.user?.id} />
             </div>
             <div className={styles.separator}>
               <span className={styles.orText}>{t('middleText')}</span>

@@ -1,4 +1,4 @@
-import { renderWithProvider, fireEvent } from '@/utils/test.utils';
+import { render, fireEvent } from '@testing-library/react';
 
 import Page from './page';
 import Tooltip from '@/components/Tooltip';
@@ -9,24 +9,18 @@ jest.mock('next/navigation', () => ({
 
 jest.mock('@/components/Tooltip');
 
-beforeEach(() => {
-  Object.defineProperty(window, 'localStorage', {
-    value: {
-      getItem: jest.fn(),
-      setItem: jest.fn(),
-      removeItem: jest.fn(),
+jest.mock('@/app/journey-provider', () => ({
+  useJourney: () => ({
+    journey: {
+      type: 'aaa',
+      user: { id: '123', firstName: 'John', lastName: 'Doe', description: '', isFranceConnectAuth: false },
     },
-    writable: true,
-  });
-});
-
-afterEach(() => {
-  jest.clearAllMocks();
-});
+  }),
+}));
 
 describe('Page component', () => {
   it('should calls correct components', async () => {
-    const { container, getByText } = renderWithProvider(<Page />);
+    const { container, getByText } = render(<Page />);
 
     const buttonElement = container.querySelectorAll('.fr-btn');
 
@@ -46,13 +40,10 @@ describe('Page component', () => {
     const pushMock = jest.fn();
     routerMock.mockReturnValue({ push: pushMock });
 
-    const { getByText } = renderWithProvider(<Page />, {
-      user: { firstName: 'John', lastName: 'Doe', description: '', isFranceConnectAuth: false },
-      type: 'cantine',
-    });
+    const { getByText } = render(<Page />);
     const button = getByText('button1');
     fireEvent.click(button);
-    expect(pushMock).toHaveBeenCalledWith('/cantine/eligibilite');
+    expect(pushMock).toHaveBeenCalledWith('/aaa/eligibilite?user=123');
   });
 
   it('Button2', () => {
@@ -60,7 +51,7 @@ describe('Page component', () => {
     const pushMock = jest.fn();
     routerMock.mockReturnValue({ push: pushMock });
 
-    const { getByText } = renderWithProvider(<Page />);
+    const { getByText } = render(<Page />);
     const button = getByText('button2');
     fireEvent.click(button);
 

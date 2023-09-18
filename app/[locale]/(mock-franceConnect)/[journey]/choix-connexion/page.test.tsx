@@ -1,13 +1,22 @@
 import Page from './page';
-import { renderWithProvider, fireEvent } from '@/utils/test.utils';
+import { render, fireEvent } from '@testing-library/react';
 
 jest.mock('next/navigation', () => ({
   useRouter: () => ({ back: jest.fn(), push: jest.fn() }),
 }));
 
+jest.mock('@/app/journey-provider', () => ({
+  useJourney: () => ({
+    journey: {
+      type: 'aaa',
+      user: { id: '123', firstName: 'John', lastName: 'Doe', description: '', isFranceConnectAuth: false },
+    },
+  }),
+}));
+
 describe('ConnectionChoice component', () => {
   it('should render components', async () => {
-    const { container, getByText, getAllByText } = renderWithProvider(<Page />);
+    const { container, getByText, getAllByText } = render(<Page />);
 
     const buttonElement = container.querySelector('.fr-btn');
     const headerElement = container.querySelector('.fr-header');
@@ -30,10 +39,10 @@ describe('ConnectionChoice component', () => {
     const pushMock = jest.fn();
     routerMock.mockReturnValue({ push: pushMock });
 
-    const { getByText } = renderWithProvider(<Page />);
+    const { getByText } = render(<Page />);
     const button = getByText('overlayText.button');
     fireEvent.click(button);
 
-    expect(pushMock).toHaveBeenCalledWith('/impot-connexion');
+    expect(pushMock).toHaveBeenCalledWith('/aaa/impot-connexion?user=123');
   });
 });

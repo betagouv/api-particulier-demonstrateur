@@ -1,13 +1,26 @@
-import { renderWithProvider, fireEvent } from '@/utils/test.utils';
+import { render, fireEvent } from '@testing-library/react';
 import Page from './page';
 
 jest.mock('next/navigation', () => ({
   useRouter: () => ({ back: jest.fn(), push: jest.fn() }),
 }));
 
+jest.mock('@/app/journey-provider', () => ({
+  useJourney: () => ({
+    journey: {
+      type: 'aaa',
+      user: {
+        id: '123',
+      },
+    },
+  }),
+}));
+
+jest.mock('@/components/Tooltip');
+
 describe('Page component', () => {
   it('should render page', async () => {
-    const { container } = renderWithProvider(<Page />);
+    const { container } = render(<Page />);
 
     const stepperElement = container.querySelector('.fr-stepper');
     const buttonElement = container.querySelector('.fr-btn');
@@ -25,10 +38,10 @@ describe('Page component', () => {
     const pushMock = jest.fn();
     routerMock.mockReturnValue({ push: pushMock });
 
-    const { getByText } = renderWithProvider(<Page />);
+    const { getByText } = render(<Page />);
     const button = getByText('button');
     fireEvent.click(button);
 
-    expect(pushMock).toHaveBeenCalledWith('/transport/connexion');
+    expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=123');
   });
 });
