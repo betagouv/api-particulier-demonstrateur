@@ -4,6 +4,9 @@ export type User = {
   lastName: string | null;
   description: string | null;
   isFranceConnectAuth: Boolean;
+  jobSeeker?: Boolean | undefined;
+  student?: Boolean | undefined;
+  qf_msa?: number | undefined;
 } | null;
 
 export type Journey = {

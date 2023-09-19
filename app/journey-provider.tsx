@@ -56,7 +56,7 @@ const Provider: React.FC<ProviderProps> = ({ children, value }) => {
       }
 
       const getUserProfile = (id: string): User => {
-        const user = users.find((user) => user.id === id);
+        const user = users.find((user) => user?.id === id);
         return user || null;
       };
 
