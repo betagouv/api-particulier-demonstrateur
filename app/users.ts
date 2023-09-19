@@ -1,4 +1,6 @@
-export const users = [
+import { User } from '@/app/types';
+
+export const users: User[] = [
   {
     id: '1',
     firstName: 'Henri',
@@ -6,6 +8,7 @@ export const users = [
     // eslint-disable-next-line quotes
     description: "Henri, demandeur d'emploi",
     isFranceConnectAuth: true,
+    jobSeeker: true,
   },
   {
     id: '2',
@@ -13,6 +16,7 @@ export const users = [
     lastName: 'Lejeune',
     description: 'Juliette, étudiante',
     isFranceConnectAuth: false,
+    student: true,
   },
   {
     id: '3',
@@ -20,6 +24,7 @@ export const users = [
     lastName: 'Dubois',
     description: 'Camille, quotient familial MSA de 320',
     isFranceConnectAuth: true,
+    qf_msa: 320,
   },
   {
     id: '4',
@@ -27,5 +32,6 @@ export const users = [
     lastName: 'Durand',
     description: 'Kevin, quotient familial MSA of 750',
     isFranceConnectAuth: false,
+    qf_msa: 750,
   },
 ];
