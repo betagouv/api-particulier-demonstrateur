@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { Stepper } from '@codegouvfr/react-dsfr/Stepper';
 import { fr } from '@codegouvfr/react-dsfr';
 import { RadioButtons } from '@codegouvfr/react-dsfr/RadioButtons';
@@ -16,6 +17,9 @@ export default function Page() {
   const t = useTranslations('Eligibilite');
   const router = useRouter();
   const { journey } = useJourney();
+  const [scope, setScope] = useState<'jobSeeker' | 'student' | 'studentScholarship' | 'c2s' | undefined | null>(
+    undefined,
+  );
 
   return (
     <>
@@ -32,8 +36,8 @@ export default function Page() {
           alignItems: 'flex-start',
         }}
       >
-        <div style={{ width: '65%' }}>
-          <Stepper currentStep={2} nextTitle={t('stepperNextTitle')} stepCount={4} title={t('stepperTitle')} />
+        <div className={styles.stepper}>
+          <Stepper currentStep={1} nextTitle={t('stepperNextTitle')} stepCount={4} title={t('stepperTitle')} />
         </div>
 
         <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
@@ -45,44 +49,47 @@ export default function Page() {
                 {
                   label: t('checkboxLabel1'),
                   nativeInputProps: {
-                    name: 'checkboxes-1',
-                    value: 'value1',
+                    checked: scope === 'jobSeeker',
+                    onChange: () => setScope('jobSeeker'),
                   },
                 },
                 {
                   label: t('checkboxLabel2'),
                   nativeInputProps: {
-                    name: 'checkboxes-1',
-                    value: 'value2',
+                    checked: scope === 'student',
+                    onChange: () => setScope('student'),
                   },
                 },
                 {
                   label: t('checkboxLabel3'),
                   nativeInputProps: {
-                    name: 'checkboxes-1',
-                    value: 'value3',
+                    checked: scope === 'studentScholarship',
+                    onChange: () => setScope('studentScholarship'),
                   },
                 },
                 {
                   label: t('checkboxLabel4'),
                   nativeInputProps: {
-                    name: 'checkboxes-1',
-                    value: 'value4',
+                    checked: scope === 'c2s',
+                    onChange: () => setScope('c2s'),
                   },
                 },
                 {
                   label: t('checkboxLabel5'),
                   nativeInputProps: {
-                    name: 'checkboxes-1',
-                    value: 'value5',
+                    checked: scope === null,
+                    onChange: () => setScope(null),
                   },
                 },
               ]}
             />
             <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
               <Button
+                disabled={scope === undefined}
                 size="large"
-                onClick={() => router.push('/' + journey?.type + '/connexion?user=' + journey?.user?.id)}
+                onClick={() =>
+                  router.push('/' + journey?.type + '/connexion?user=' + journey?.user?.id + '&scope=' + scope)
+                }
                 iconId="fr-icon-arrow-right-line"
                 iconPosition="right"
               >

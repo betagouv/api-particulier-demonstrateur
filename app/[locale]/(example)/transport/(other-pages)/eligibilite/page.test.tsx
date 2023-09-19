@@ -38,10 +38,34 @@ describe('Page component', () => {
     const pushMock = jest.fn();
     routerMock.mockReturnValue({ push: pushMock });
 
-    const { getByText } = render(<Page />);
-    const button = getByText('button');
-    fireEvent.click(button);
+    const { getByText, getByLabelText } = render(<Page />);
 
-    expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=123');
+    const button = getByText('button');
+
+    const labelRadio1 = getByLabelText('checkboxLabel1');
+    const labelRadio2 = getByLabelText('checkboxLabel2');
+    const labelRadio3 = getByLabelText('checkboxLabel3');
+    const labelRadio4 = getByLabelText('checkboxLabel4');
+    const labelRadio5 = getByLabelText('checkboxLabel5');
+
+    fireEvent.click(labelRadio1);
+    fireEvent.click(button);
+    expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=123&scope=jobSeeker');
+
+    fireEvent.click(labelRadio2);
+    fireEvent.click(button);
+    expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=123&scope=student');
+
+    fireEvent.click(labelRadio3);
+    fireEvent.click(button);
+    expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=123&scope=studentScholarship');
+
+    fireEvent.click(labelRadio4);
+    fireEvent.click(button);
+    expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=123&scope=c2s');
+
+    fireEvent.click(labelRadio5);
+    fireEvent.click(button);
+    expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=123&scope=null');
   });
 });

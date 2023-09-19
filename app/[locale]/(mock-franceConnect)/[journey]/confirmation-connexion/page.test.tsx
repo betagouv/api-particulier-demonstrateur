@@ -10,6 +10,7 @@ jest.mock('@/components/Banner');
 
 jest.mock('next/navigation', () => ({
   useRouter: () => ({ back: jest.fn(), push: jest.fn() }),
+  useSearchParams: () => ({ get: jest.fn().mockReturnValue('yolo') }),
 }));
 
 jest.mock('@/app/journey-provider');
@@ -39,7 +40,7 @@ describe('ConnectionConfirmation component', () => {
     const accordionContent5Element = getByText('accordionContent5');
     const accordionContent6Element = getByText('accordionContent6');
     const accordionContent7Element = getByText('accordionContent7');
-    const accordionContent8Element = getByText('accordionContent8.aaa');
+    const accordionContent8Element = getByText('accordionContent8.yolo');
 
     expect(buttonElement).toHaveClass('fr-btn');
     expect(headerElement).toHaveClass('fr-header');
@@ -70,9 +71,11 @@ describe('ConnectionConfirmation component', () => {
     const button = getByText('button.aaa');
     fireEvent.click(button);
 
-    expect(pushMock).toHaveBeenCalledWith('/aaa/verification/succes?user=123');
+    expect(pushMock).toHaveBeenCalledWith('/aaa/verification/succes?user=123&scope=yolo');
   });
   it('should have no users on page when journey is not setted', async () => {
+    const useSearchParamsMock = jest.spyOn(require('next/navigation'), 'useSearchParams');
+    useSearchParamsMock.mockReturnValue({ get: jest.fn().mockReturnValue(null) });
     (useJourney as jest.Mock).mockImplementation(() => ({
       journey: {
         type: null,

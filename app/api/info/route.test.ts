@@ -23,7 +23,7 @@ describe('GET', () => {
   });
   it('should return 320 when id is 3 and scope', async () => {
     const result = await POST({
-      json: async () => ({ id: '3', scope: 'qf_msa' }),
+      json: async () => ({ id: '3', scope: 'qfMSA' }),
     } as any);
     const data = await result.json();
 
@@ -39,7 +39,7 @@ describe('GET', () => {
   });
   it('should return error', async () => {
     const result = await POST({
-      json: async () => ({ id: '000000000', scope: 'qf_msa' }),
+      json: async () => ({ id: '000000000', scope: 'qfMSA' }),
     } as any);
     const data = await result.json();
 

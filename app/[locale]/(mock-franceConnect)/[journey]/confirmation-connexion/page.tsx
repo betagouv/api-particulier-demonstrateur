@@ -9,9 +9,11 @@ import { Accordion } from '@codegouvfr/react-dsfr/Accordion';
 import Tooltip from '@/components/Tooltip';
 import { useJourney } from '@/app/journey-provider';
 import { useRouter } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 
 export default function ConnectionConfirmation() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const t = useTranslations('Confirmation-connexion');
   const { journey } = useJourney();
 
@@ -42,7 +44,16 @@ export default function ConnectionConfirmation() {
         <h1 className={styles.name}>{journey?.user?.firstName + ' ' + journey?.user?.lastName}</h1>
         <Button
           size="large"
-          onClick={() => router.push('/' + journey?.type + '/verification/succes?user=' + journey?.user?.id)}
+          onClick={() =>
+            router.push(
+              '/' +
+                journey?.type +
+                '/verification/succes?user=' +
+                journey?.user?.id +
+                '&scope=' +
+                searchParams.get('scope'),
+            )
+          }
           iconId="fr-icon-arrow-right-line"
           iconPosition="right"
           priority="primary"
@@ -60,7 +71,7 @@ export default function ConnectionConfirmation() {
             <li>{t('accordionContent5')}</li>
             <li>{t('accordionContent6')}</li>
             <li>{t('accordionContent7')}</li>
-            <li>{journey?.type ? t('accordionContent8.' + journey.type) : ''}</li>
+            <li>{searchParams.get('scope') ? t('accordionContent8.' + searchParams.get('scope')) : ''}</li>
           </ul>
         </Accordion>
       </div>

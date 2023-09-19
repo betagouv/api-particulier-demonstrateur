@@ -3,6 +3,7 @@ import Page from './page';
 
 jest.mock('next/navigation', () => ({
   useRouter: () => ({ back: jest.fn(), push: jest.fn() }),
+  useSearchParams: () => ({ get: jest.fn().mockReturnValue('yolo') }),
 }));
 
 jest.mock('@/app/journey-provider', () => ({
@@ -28,7 +29,7 @@ describe('Page component', () => {
     const InputIDElement = container.querySelector('.fr-label');
     const InputPasswordElement = container.querySelector('.fr-password');
     const buttonElements = container.querySelectorAll('.fr-btn');
-    const lien = container.querySelector('a[href="/aaa/choix-connexion?user=123"]');
+    const lien = container.querySelector('a[href="/aaa/choix-connexion?user=123&scope=yolo"]');
 
     expect(lien).toBeInTheDocument();
     expect(stepperElement).toHaveClass('fr-stepper');
