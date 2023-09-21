@@ -8,7 +8,7 @@ import Tooltip from '@/components/Tooltip';
 import styles from './layout.module.css';
 
 export default function Layout({ children }: { children: JSX.Element }) {
-  const t = useTranslations('Succes-verification');
+  const t = useTranslations('Verification');
 
   return (
     <>

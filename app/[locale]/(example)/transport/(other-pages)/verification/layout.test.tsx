@@ -4,7 +4,6 @@ import Layout from './layout';
 jest.mock('next/navigation', () => ({
   useRouter: () => ({ back: jest.fn(), push: jest.fn() }),
 }));
-
 jest.mock('@/components/Tooltip');
 
 describe('Layout component', () => {

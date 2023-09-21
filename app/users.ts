@@ -11,6 +11,15 @@ export const users: User[] = [
     jobSeeker: true,
   },
   {
+    id: '1',
+    firstName: 'Henri',
+    lastName: 'Dupont',
+    // eslint-disable-next-line quotes
+    description: "Henri, demandeur d'emploi",
+    isFranceConnectAuth: true,
+    jobSeeker: true,
+  },
+  {
     id: '2',
     firstName: 'Juliette',
     lastName: 'Lejeune',

@@ -46,12 +46,7 @@ export default function ConnectionConfirmation() {
           size="large"
           onClick={() =>
             router.push(
-              '/' +
-                journey?.type +
-                '/verification/succes?user=' +
-                journey?.user?.id +
-                '&scope=' +
-                searchParams.get('scope'),
+              '/' + journey?.type + '/verification?user=' + journey?.user?.id + '&scope=' + searchParams.get('scope'),
             )
           }
           iconId="fr-icon-arrow-right-line"

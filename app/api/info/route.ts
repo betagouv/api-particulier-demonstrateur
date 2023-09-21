@@ -17,6 +17,10 @@ type Params = {
   scope: string;
 };
 
+function delay(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 const getUserInfo = async ({ id, scope }: Params) => {
   if (!id || !scope) {
     throw new HttpError('Missing body params', 400);
@@ -32,6 +36,7 @@ export async function POST(request: Request) {
   try {
     const data = await request.json();
     const result = await getUserInfo(data);
+    await delay(data?.delay ? data.delay : 0);
     return NextResponse.json(result);
   } catch (error) {
     let errorMessage = 'Internal Server Error';

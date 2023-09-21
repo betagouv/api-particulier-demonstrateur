@@ -71,7 +71,7 @@ describe('ConnectionConfirmation component', () => {
     const button = getByText('button.aaa');
     fireEvent.click(button);
 
-    expect(pushMock).toHaveBeenCalledWith('/aaa/verification/succes?user=123&scope=yolo');
+    expect(pushMock).toHaveBeenCalledWith('/aaa/verification?user=123&scope=yolo');
   });
   it('should have no users on page when journey is not setted', async () => {
     const useSearchParamsMock = jest.spyOn(require('next/navigation'), 'useSearchParams');

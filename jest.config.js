@@ -37,13 +37,16 @@ const customJestConfig = {
     '!**/components/Tips.tsx/**',
     '!**/components/ToggleButton.tsx/**',
     '!**/components/Tooltip.tsx/**',
+    '!**/components/Status.tsx/**',
+    '!**/verification/page.tsx/**',
+    '!**/verification/page.tsx/**',
   ],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
     '^@/components/(.*)$': '<rootDir>/components/$1',
     '^@/app/(.*)$': '<rootDir>/app/$1',
-    '^@/utils/(.*)$': '<rootDir>/utils/$1',
+    '^@/services/(.*)$': '<rootDir>/services/$1',
   },
 };
 

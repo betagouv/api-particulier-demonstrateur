@@ -29,7 +29,7 @@ export default function PricingInfo() {
         subContent={t('cantine.pricing.subSocialPrice')}
       />
       <Button
-        onClick={() => router.push('/' + journey?.type + '/eligibilite?user=' + journey?.user?.id)}
+        onClick={() => router.push('/' + journey?.type + '/connexion?user=' + journey?.user?.id + '&scope=qfMSA')}
         size="large"
         iconId="fr-icon-arrow-right-line"
         iconPosition="right"
