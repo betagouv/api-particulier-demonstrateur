@@ -36,6 +36,13 @@ export const users: User[] = [
     qfMSA: 320,
   },
   {
+    id: '3bis',
+    firstName: 'Camille',
+    lastName: 'Dubois',
+    description: 'Camille, quotient familial MSA de 320',
+    isFranceConnectAuth: true,
+  },
+  {
     id: '4',
     firstName: 'Kevin',
     lastName: 'Durand',

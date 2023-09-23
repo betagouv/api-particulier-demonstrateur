@@ -1,9 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Stepper } from '@codegouvfr/react-dsfr/Stepper';
 import { fr } from '@codegouvfr/react-dsfr';
-import { RadioButtons } from '@codegouvfr/react-dsfr/RadioButtons';
 import { Button } from '@codegouvfr/react-dsfr/Button';
 import { Alert } from '@codegouvfr/react-dsfr/Alert';
 import { useTranslations } from 'next-intl';
@@ -12,14 +11,27 @@ import { useJourney } from '@/app/journey-provider';
 import CardSocialPricing from '@/components/CardSocialPricing';
 import Tooltip from '@/components/Tooltip';
 import styles from './page.module.css';
+import { useSearchParams } from 'next/navigation';
+import RadioButton from '@/components/RadioButton';
+import { useColors } from '@codegouvfr/react-dsfr/useColors';
 
 export default function Page() {
+  const searchParams = useSearchParams();
   const t = useTranslations('Eligibilite');
   const router = useRouter();
   const { journey } = useJourney();
-  const [scope, setScope] = useState<'jobSeeker' | 'student' | 'studentScholarship' | 'c2s' | undefined | null>(
-    undefined,
+  const theme = useColors();
+
+  const colorTip = fr.colors.getHex({ isDark: !theme.isDark }).options.blueFrance._925_125.default;
+
+  const [selectedValue, setSelectedValue] = useState<string | undefined | null>(
+    searchParams.get('scope') || 'jobSeeker',
   );
+
+  const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, value: string) => {
+    e.preventDefault();
+    setSelectedValue(value);
+  };
 
   return (
     <>
@@ -42,53 +54,79 @@ export default function Page() {
 
         <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
           <div style={{ flex: '65%' }}>
-            <RadioButtons
-              legend={t('checkboxLegend')}
-              name="Statut"
-              options={[
-                {
-                  label: t('checkboxLabel1'),
-                  nativeInputProps: {
-                    checked: scope === 'jobSeeker',
-                    onChange: () => setScope('jobSeeker'),
-                  },
-                },
-                {
-                  label: t('checkboxLabel2'),
-                  nativeInputProps: {
-                    checked: scope === 'student',
-                    onChange: () => setScope('student'),
-                  },
-                },
-                {
-                  label: t('checkboxLabel3'),
-                  nativeInputProps: {
-                    checked: scope === 'studentScholarship',
-                    onChange: () => setScope('studentScholarship'),
-                  },
-                },
-                {
-                  label: t('checkboxLabel4'),
-                  nativeInputProps: {
-                    checked: scope === 'c2s',
-                    onChange: () => setScope('c2s'),
-                  },
-                },
-                {
-                  label: t('checkboxLabel5'),
-                  nativeInputProps: {
-                    checked: scope === null,
-                    onChange: () => setScope(null),
-                  },
-                },
-              ]}
-            />
+            <div style={{ position: 'relative' }}>
+              <p>{t('checkboxLegend')}</p>
+              <div
+                className={styles.tip}
+                style={{ borderColor: colorTip }}
+                onClick={(e) => handleClick(e, 'jobSeeker')}
+              >
+                <RadioButton
+                  name="status"
+                  value="jobSeeker"
+                  selectedValue={selectedValue}
+                  text={t('checkboxLabel1')}
+                ></RadioButton>
+                <div style={{ backgroundColor: colorTip }}>
+                  <div>{t('guide1.letter')}</div>
+                  <div>
+                    <div>{t('guide1.text')}</div>
+                    <div>
+                      <b>{t('guide1.subText')}</b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <RadioButton
+                disabled={true}
+                name="status"
+                value="student"
+                selectedValue={selectedValue}
+                text={t('checkboxLabel2')}
+              ></RadioButton>
+              <div
+                className={styles.tip}
+                style={{ borderColor: colorTip }}
+                onClick={(e) => handleClick(e, 'studentScholarship')}
+              >
+                <RadioButton
+                  name="status"
+                  value="studentScholarship"
+                  selectedValue={selectedValue}
+                  text={t('checkboxLabel3')}
+                ></RadioButton>
+                <div style={{ backgroundColor: colorTip }}>
+                  <div>{t('guide2.letter')}</div>
+                  <div>
+                    <div>{t('guide2.text')}</div>
+                    <div>
+                      <b>{t('guide2.subText')}</b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <RadioButton
+                disabled={true}
+                name="status"
+                value="c2s"
+                selectedValue={selectedValue}
+                text={t('checkboxLabel4')}
+              ></RadioButton>
+              <RadioButton
+                disabled={true}
+                name="status"
+                value="aucun"
+                selectedValue={selectedValue}
+                text={t('checkboxLabel5')}
+              ></RadioButton>
+              <div className={styles.choiceB}></div>
+            </div>
             <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
               <Button
-                disabled={scope === undefined}
+                disabled={selectedValue === undefined}
                 size="large"
                 onClick={() =>
-                  router.push('/' + journey?.type + '/connexion?user=' + journey?.user?.id + '&scope=' + scope)
+                  router.push('/' + journey?.type + '/connexion?user=' + journey?.user?.id + '&scope=' + selectedValue)
                 }
                 iconId="fr-icon-arrow-right-line"
                 iconPosition="right"

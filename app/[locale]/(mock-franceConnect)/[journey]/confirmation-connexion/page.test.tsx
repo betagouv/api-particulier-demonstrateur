@@ -71,8 +71,27 @@ describe('ConnectionConfirmation component', () => {
     const button = getByText('button.aaa');
     fireEvent.click(button);
 
-    expect(pushMock).toHaveBeenCalledWith('/aaa/verification?user=123&scope=yolo');
+    expect(pushMock).toHaveBeenCalledWith('/aaa/choice-journey?user=123');
   });
+
+  it('Button click when type is transport', () => {
+    (useJourney as jest.Mock).mockImplementation(() => ({
+      journey: {
+        type: 'transport',
+        user: { id: '123', firstName: 'John', lastName: 'Doe', description: '', isFranceConnectAuth: false },
+      },
+    }));
+    const routerMock = jest.spyOn(require('next/navigation'), 'useRouter');
+    const pushMock = jest.fn();
+    routerMock.mockReturnValue({ push: pushMock });
+
+    const { getByText } = render(<Page />);
+    const button = getByText('button.transport');
+    fireEvent.click(button);
+
+    expect(pushMock).toHaveBeenCalledWith('/transport/verification?user=123&scope=yolo');
+  });
+
   it('should have no users on page when journey is not setted', async () => {
     const useSearchParamsMock = jest.spyOn(require('next/navigation'), 'useSearchParams');
     useSearchParamsMock.mockReturnValue({ get: jest.fn().mockReturnValue(null) });
