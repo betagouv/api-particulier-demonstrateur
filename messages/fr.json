@@ -109,25 +109,66 @@
       "content4": "Gestion des cookies"
     }
   },
-  "Succes-verification": {
+  "Verification": {
     "stepperTitle": "Vérification de votre statut",
     "stepperNextTitle": "Souscription",
-    "alertInfoTitle": "Votre statut demandeur d'emploi a été confirmé",
-    "alertInfoDescription": "Pôle emploi nous a confirmé votre inscription en tant que demandeur d'emploi",
-    "alertSuccessTitle": "Vous êtes éligible au tarif réduit !",
-    "alertSuccessDescription": "Votre carte Mobilités + sera financée à 50% par votre commune et vous reviendra à 30 euros/mois.",
-    "button": "Suivant"
-  },
-  "Erreur-verification": {
-    "stepperTitle": "Vérification de votre statut",
-    "stepperNextTitle": "Souscription",
-    "alertTitle": "Votre statut demandeur d'emploi n'a pas pu être confirmé",
-    "alertDesc": "Pôle emploi n'a pas pu confirmer votre statut.",
-    "checkboxLegend": "Pour poursuivre ma souscription :",
-    "checkboxLabel1": "J'autorise Mobilités + à redemander mon statut a pôle emploi ultérieurement. Je terminerai ma souscription une fois mon statut obtenu.",
-    "checkboxLabel2": "Je transmets par moi-même mon attestation Pôle emploi qui sera vérifiée par un agent dans les prochains jours.",
-    "checkboxLabel3": "J'ai besoin de ma carte maintenant, je commande une carte sans réduction.",
-    "button": "Je transmets mes justificatifs"
+    "loadingTitle": "Patientez quelques instants...",
+    "loadingText": "Nous sommes en train de vérifier votre statut",
+    "success": {
+      "infoTitle": {
+        "jobSeeker": "Votre statut demandeur d'emploi a été confirmé",
+        "student": "Votre statut étudiant a été confirmé",
+        "studentScholarship": "Votre statut étudiant boursié a été confirmé",
+        "c2s": "Votre statut bénéficiaire de la complémentaire santé solidaire a été confirmé",
+        "qfMSA": "Nous avons pu obtenir votre quotient familial CAF ou MSA"
+      },
+      "infoDescription": {
+        "jobSeeker": "Pôle emploi nous a confirmé votre inscription en tant que demandeur d'emploi",
+        "student": "Le Ministère de l'Enseignement Supérieur et de la Recherche nous a confirmé votre statut étudiant",
+        "studentScholarship": "Le CNOUS nous a confirmé votre inscription en tant qu'étudiant boursier",
+        "c2s": "La Sécurité Sociale nous a confirmé votre statut de bénéficaire de la complémentaire santé solidaire",
+        "qfMSA": "L’administration nous a confirmé votre QF, nous sommes donc en mesure de calculer automatiquement votre tarif cantine"
+      },
+      "successTitle": "Vous êtes éligible au tarif réduit !",
+      "successDescription": {
+        "jobSeeker": "Votre carte Mobilités+ sera financée à 50% par votre commune et vous reviendra à <important>30 euros/mois</important>.",
+        "student": "Votre carte Mobilités+ sera financée à 50% par votre commune et vous reviendra à <important>30 euros/mois</important>.",
+        "studentScholarship": "Votre carte Mobilités+ sera financée à 75% par votre commune et vous reviendra à <b>15 euros/mois</important>.",
+        "c2s": "Votre carte Mobilités+ sera financée à 75% par votre commune et vous reviendra à <important>15 euros/mois</important>.",
+        "qfMSA": "Vos ressources vous permettent d’accéder au tarif réduit de <important>0,30 €/repas</important>. Ce tarif est co-financé par la collectivité et l’État."
+      },
+      "button": "Suivant"
+    },
+    "error": {
+      "title": {
+        "jobSeeker": "Votre statut demandeur d'emploi n'a pas pu être confirmé",
+        "student": "Votre statut étudiant n'a pas pu être confirmé",
+        "studentScholarship": "Votre statut étudiant boursier n'a pas pu être confirmé",
+        "c2s": "Votre statut bénéficiaire de la complémentaire santé solidaire n'a pas pu être confirmé",
+        "qfMSA": "Nous n’avons pas pu obtenir votre quotient familial CAF ou MSA"
+      },
+      "desc": {
+        "jobSeeker": "Pôle emploi n'a pu confirmer votre inscription en tant que demandeur d'emploi",
+        "student": "Le Ministère de l'Enseignement Supérieur et de la Recherche n'a pu confirmer votre statut étudiant",
+        "studentScholarship": "Le CNOUS n'a pu confirmer votre inscription en tant qu'étudiant boursier",
+        "c2s": "La Sécurité Sociale n'a pu confirmer votre statut de bénéficaire de la complémentaire santé solidaire",
+        "qfMSA": "La transmission automatique de cette information n’a pas fonctionné"
+      },
+      "text": "Pour poursuivre votre souscription en tarif réduit, veuillez nous transmettre le justificatif adéquat. <important>Le délai moyen de traitement est de 15 jours.</important>",
+      "upload": {
+        "jobSeeker": "Transmettre l'attestion Pôle Emploi : ",
+        "student": "Transmettre le certificat de scolarité du mois en cours : ",
+        "studentScholarship": "Transmettre l'attestion du CNOUS : ",
+        "c2s": "Transmettre l'attestion de bénéficaire de la complémentaire santé solidaire : ",
+        "qfMSA": "Transmettre l’attestation de votre quotient familial CAF ou MSA du mois en cours : "
+      },
+      "checkboxLegend": "Pour poursuivre ma souscription :",
+      "checkboxLabel1": "J'autorise Mobilités + à redemander mon statut a pôle emploi ultérieurement. Je terminerai ma souscription une fois mon statut obtenu.",
+      "checkboxLabel2": "Je transmets par moi-même mon attestation Pôle emploi qui sera vérifiée par un agent dans les prochains jours.",
+      "checkboxLabel3": "J'ai besoin de ma carte maintenant, je commande une carte sans réduction.",
+      "delay": "Délai moyen de 15 jours",
+      "button": "Transmettre le justificatif"
+    }
   },
   "CardSocialPricing": {
     "cardTitle": "Comment fonctionne la tarification sociale ?",

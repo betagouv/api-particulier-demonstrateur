@@ -109,25 +109,27 @@
       "content4": "Cookie management"
     }
   },
-  "Succes-verification": {
+  "Verification": {
+    "loadingTitle": "Wait few seconds...",
+    "loadingText": "We are checking your status",
     "stepperTitle": "Check your status",
     "stepperNextTitle": "Subscription",
-    "alertInfoTitle": "Your job-seeker status has been confirmed",
-    "alertInfoDescription": "Pôle emploi has confirmed your registration as a job seeker",
-    "alertSuccessTitle": "You're eligible for the reduced rate!",
-    "alertSuccessDescription": "Your Mobilités + card will be 50% financed by your local council and will cost you 30 euros/month.",
-    "button": "Next"
-  },
-  "Erreur-verification": {
-    "stepperTitle": "Check your status",
-    "stepperNextTitle": "Subscription",
-    "alertTitle": "Your job-seeker status could not be confirmed",
-    "alertDesc": "Pôle emploi has been unable to confirm your status.",
-    "checkboxLegend": "To continue my subscription :",
-    "checkboxLabel1": "I authorize Mobilités + to reapply for my status at a proposed job centre. I will end my subscription once my status has been obtained.",
-    "checkboxLabel2": "I am sending my Pôle Emploi certificate myself, which will be checked by an agent in the coming days.",
-    "checkboxLabel3": "I need my card now, I order a card without a discount.",
-    "button": "I send my supporting documents"
+    "success": {
+      "alertInfoTitle": "Your job-seeker status has been confirmed",
+      "alertInfoDescription": "Pôle emploi has confirmed your registration as a job seeker",
+      "alertSuccessTitle": "You're eligible for the reduced rate!",
+      "alertSuccessDescription": "Your Mobilités + card will be 50% financed by your local council and will cost you 30 euros/month.",
+      "button": "Next"
+    },
+    "error": {
+      "alertTitle": "Your job-seeker status could not be confirmed",
+      "alertDesc": "Pôle emploi has been unable to confirm your status.",
+      "checkboxLegend": "To continue my subscription :",
+      "checkboxLabel1": "I authorize Mobilités + to reapply for my status at a proposed job centre. I will end my subscription once my status has been obtained.",
+      "checkboxLabel2": "I am sending my Pôle Emploi certificate myself, which will be checked by an agent in the coming days.",
+      "checkboxLabel3": "I need my card now, I order a card without a discount.",
+      "button": "I send my supporting documents"
+    }
   },
   "CardSocialPricing": {
     "cardTitle": "How does social pricing work?",

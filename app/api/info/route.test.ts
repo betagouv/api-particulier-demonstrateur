@@ -4,10 +4,15 @@
 
 import { POST } from './route';
 
+jest.mock('./route', () => ({
+  ...jest.requireActual('./route'),
+  delay: jest.fn().mockResolvedValue(undefined),
+}));
+
 describe('GET', () => {
   it('should return true when id is 1 and scope job seeker', async () => {
     const result = await POST({
-      json: async () => ({ id: '1', scope: 'jobSeeker' }),
+      json: async () => ({ id: '1', scope: 'jobSeeker', delay: 200 }),
     } as any);
     const data = await result.json();
 

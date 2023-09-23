@@ -38,6 +38,6 @@ describe('PricingInfo component', () => {
     const button = getByText('cantine.pricing.button');
     fireEvent.click(button);
 
-    expect(pushMock).toHaveBeenCalledWith('/aaa/eligibilite?user=123');
+    expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=123&scope=qfMSA');
   });
 });
