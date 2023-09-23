@@ -11,9 +11,11 @@ import { PasswordInput } from '@codegouvfr/react-dsfr/blocks/PasswordInput';
 import { Tag } from '@codegouvfr/react-dsfr/Tag';
 import { useTranslations } from 'next-intl';
 import Tooltip from '@/components/Tooltip';
+import { useSearchParams } from 'next/navigation';
 
 export default function Page() {
   const { journey } = useJourney();
+  const searchParams = useSearchParams();
   const t = useTranslations('Connexion');
 
   return (
@@ -28,7 +30,9 @@ export default function Page() {
           width: '100%',
         }}
       >
-        <Stepper currentStep={1} nextTitle={t('stepperNextTitle')} stepCount={3} title={t('stepperTitle')} />
+        <div className={styles.stepper}>
+          <Stepper currentStep={2} nextTitle={t('stepperNextTitle')} stepCount={4} title={t('stepperTitle')} />
+        </div>
 
         <div className={styles.choiceContainer}>
           <h2>{t('connectionTitle')}</h2>
@@ -38,7 +42,16 @@ export default function Page() {
               <Tag className={styles.tag} iconId="fr-icon-notification-3-fill">
                 {t('tagLeft')}
               </Tag>
-              <FranceConnectButton url={'/' + journey?.type + '/choix-connexion?user=' + journey?.user?.id} />
+              <FranceConnectButton
+                url={
+                  '/' +
+                  journey?.type +
+                  '/choix-connexion?user=' +
+                  journey?.user?.id +
+                  '&scope=' +
+                  searchParams.get('scope')
+                }
+              />
             </div>
             <div className={styles.separator}>
               <span className={styles.orText}>{t('middleText')}</span>

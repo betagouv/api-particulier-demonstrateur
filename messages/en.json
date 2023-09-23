@@ -43,8 +43,8 @@
     "webTitle": "API Particulier Demonstrator"
   },
   "Eligibilite": {
-    "stepperTitle": "Eligibility for the social tariff",
-    "stepperNextTitle": "Check card information",
+    "stepperTitle": "Choice of the price depending on the status",
+    "stepperNextTitle": "Authentication",
     "checkboxLegend": "Are you ?",
     "checkboxLabel1": "Job seeker",
     "checkboxLabel2": "Student",
@@ -57,7 +57,7 @@
   },
   "Connexion": {
     "stepperTitle": "Authenticate",
-    "stepperNextTitle": "Eligibility for the social tariff",
+    "stepperNextTitle": "Check your status",
     "connectionTitle": "Sign in",
     "contentLeft": "Connect with FranceConnect:",
     "tagLeft": "In case of request for a reduced rate: Subscription in 3 clicks",
@@ -72,7 +72,7 @@
     "bottomButton": "Create an account"
   },
   "Choix-connexion": {
-    "title": "Connection in progress on Mobilités +",
+    "title": "Connection in progress on Mobilités+",
     "subTitle": "Choose an account to log in:",
     "header": {
       "brandTop1": "RÉPUBLIQUE",
@@ -202,7 +202,13 @@
     "accordionContent5": "Gender",
     "accordionContent6": "Place of birth",
     "accordionContent7": "Country of birth",
-    "accordionContent8": "Family quota CAF or MSA"
+    "accordionContent8": {
+      "student": "Student status",
+      "studentScholarship": "Scholarship student status",
+      "jobSeeker": "Jobseeker status",
+      "c2s": "Complementary Health Care status",
+      "qfMSA": "Family status"
+    }
   },
   "ToggleButton": {
     "text": "Developer mode",

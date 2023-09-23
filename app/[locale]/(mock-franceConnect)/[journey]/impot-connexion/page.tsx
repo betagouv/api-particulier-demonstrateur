@@ -7,10 +7,12 @@ import { Button } from '@codegouvfr/react-dsfr/Button';
 import Tooltip from '@/components/Tooltip';
 import { useRouter } from 'next/navigation';
 import { useJourney } from '@/app/journey-provider';
+import { useSearchParams } from 'next/navigation';
 
 import styles from './page.module.css';
 
 export default function ConnectionImpot() {
+  const searchParams = useSearchParams();
   const { journey } = useJourney();
   const t = useTranslations('Impot-connexion');
   const router = useRouter();
@@ -44,7 +46,16 @@ export default function ConnectionImpot() {
         </p>
         <Button
           size="large"
-          onClick={() => router.push('/' + journey?.type + '/confirmation-connexion?user=' + journey?.user?.id)}
+          onClick={() =>
+            router.push(
+              '/' +
+                journey?.type +
+                '/confirmation-connexion?user=' +
+                journey?.user?.id +
+                '&scope=' +
+                searchParams.get('scope'),
+            )
+          }
           iconId="fr-icon-arrow-right-line"
           iconPosition="right"
           priority="secondary"

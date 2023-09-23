@@ -3,6 +3,7 @@ import { render, fireEvent } from '@testing-library/react';
 
 jest.mock('next/navigation', () => ({
   useRouter: () => ({ back: jest.fn(), push: jest.fn() }),
+  useSearchParams: () => ({ get: jest.fn().mockReturnValue('yolo') }),
 }));
 
 jest.mock('@/app/journey-provider', () => ({
@@ -43,6 +44,6 @@ describe('ConnectionChoice component', () => {
     const button = getByText('overlayText.button');
     fireEvent.click(button);
 
-    expect(pushMock).toHaveBeenCalledWith('/aaa/impot-connexion?user=123');
+    expect(pushMock).toHaveBeenCalledWith('/aaa/impot-connexion?user=123&scope=yolo');
   });
 });

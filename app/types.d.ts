@@ -6,7 +6,7 @@ export type User = {
   isFranceConnectAuth: Boolean;
   jobSeeker?: Boolean | undefined;
   student?: Boolean | undefined;
-  qf_msa?: number | undefined;
+  qfMSA?: number | undefined;
 } | null;
 
 export type Journey = {

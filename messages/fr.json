@@ -43,8 +43,8 @@
     "webTitle": "Démonstrateur API Particulier"
   },
   "Eligibilite": {
-    "stepperTitle": "Éligibilité au tarif social",
-    "stepperNextTitle": "Vérifier les informations de la carte",
+    "stepperTitle": "Choix du tarif selon votre situation",
+    "stepperNextTitle": "Connexion",
     "checkboxLegend": "Étes-vous ?",
     "checkboxLabel1": "Demandeur d'emploi",
     "checkboxLabel2": "Étudiant",
@@ -56,8 +56,8 @@
     "alertDescription": "Nous allons demander le justificatif de votre situation directement auprès des administrations en charges. Si l'information est disponible, vous n'aurez pas de justificatifs à fournir."
   },
   "Connexion": {
-    "stepperTitle": "S'authentifier",
-    "stepperNextTitle": "Éligibilité au tarif social",
+    "stepperTitle": "Connexion",
+    "stepperNextTitle": "Vérification de votre statut",
     "connectionTitle": "Se connecter",
     "contentLeft": "Se connecter avec FranceConnect :",
     "tagLeft": "En cas de demande de tarif réduit: Souscription en 3 clics",
@@ -200,8 +200,11 @@
     "accordionContent6": "Lieu de naissance",
     "accordionContent7": "Pays de naissance",
     "accordionContent8": {
-      "cantine": "Quotient familial CAF ou MSA",
-      "transport": "Statut demandeur d'emploi"
+      "student": "Statut Etudiant",
+      "studentScholarship": "Statut Etudiant Boursier",
+      "jobSeeker": "Statut demandeur d'emploi",
+      "c2s": "Statut Complémentaire Santé Solidaire",
+      "qfMSA": "Quotient familial CAF ou MSA"
     }
   },
   "ToggleButton": {
