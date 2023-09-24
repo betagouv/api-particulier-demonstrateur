@@ -3,6 +3,7 @@ import Page from './page';
 
 jest.mock('next/navigation', () => ({
   useRouter: () => ({ back: jest.fn(), push: jest.fn() }),
+  useSearchParams: () => ({ get: jest.fn() }),
 }));
 
 jest.mock('@/app/journey-provider', () => ({
@@ -37,6 +38,8 @@ describe('Page component', () => {
     const routerMock = jest.spyOn(require('next/navigation'), 'useRouter');
     const pushMock = jest.fn();
     routerMock.mockReturnValue({ push: pushMock });
+    const useSearchParamsMock = jest.spyOn(require('next/navigation'), 'useSearchParams');
+    useSearchParamsMock.mockReturnValue({ get: jest.fn().mockReturnValue(undefined) });
 
     const { getByText, getByLabelText } = render(<Page />);
 
@@ -48,13 +51,12 @@ describe('Page component', () => {
     const labelRadio4 = getByLabelText('checkboxLabel4');
     const labelRadio5 = getByLabelText('checkboxLabel5');
 
-    fireEvent.click(labelRadio1);
     fireEvent.click(button);
     expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=123&scope=jobSeeker');
 
     fireEvent.click(labelRadio2);
     fireEvent.click(button);
-    expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=123&scope=student');
+    expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=123&scope=jobSeeker');
 
     fireEvent.click(labelRadio3);
     fireEvent.click(button);
@@ -62,10 +64,29 @@ describe('Page component', () => {
 
     fireEvent.click(labelRadio4);
     fireEvent.click(button);
-    expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=123&scope=c2s');
+    expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=123&scope=studentScholarship');
 
     fireEvent.click(labelRadio5);
     fireEvent.click(button);
-    expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=123&scope=null');
+    expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=123&scope=studentScholarship');
+
+    fireEvent.click(labelRadio1);
+    fireEvent.click(button);
+    expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=123&scope=jobSeeker');
+  });
+
+  it('Button click with scope setted in url', () => {
+    const routerMock = jest.spyOn(require('next/navigation'), 'useRouter');
+    const pushMock = jest.fn();
+    routerMock.mockReturnValue({ push: pushMock });
+    const useSearchParamsMock = jest.spyOn(require('next/navigation'), 'useSearchParams');
+    useSearchParamsMock.mockReturnValue({ get: jest.fn().mockReturnValue('student') });
+
+    const { getByText } = render(<Page />);
+
+    const button = getByText('button');
+
+    fireEvent.click(button);
+    expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=123&scope=student');
   });
 });

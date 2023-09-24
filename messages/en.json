@@ -53,7 +53,17 @@
     "checkboxLabel5": "In none of these situations",
     "button": "Next",
     "alertTitle": "Your information will be transmitted to verify your status",
-    "alertDescription": "We will request proof of your situation directly from the authorities in charge. If the information is available, you will not have to provide supporting documents."
+    "alertDescription": "We will request proof of your situation directly from the authorities in charge. If the information is available, you will not have to provide supporting documents.",
+    "guide1": {
+      "letter": "A",
+      "text": "Henry chooses the right rate",
+      "subText": "Example of validated path"
+    },
+    "guide2": {
+      "letter": "B",
+      "text": "Henry chooses the wrong rate",
+      "subText": "Example of an error case"
+    }
   },
   "Connexion": {
     "stepperTitle": "Authenticate",
@@ -183,10 +193,26 @@
     "withFranceConnect": "with FranceConnect",
     "withoutFranceConnect": "without FranceConnect"
   },
+  "Choice-journey": {
+    "title": "Choose the next step of the journey",
+    "button": {
+      "withGoodStatus": "<important>See the Journey A</important>, where everything goes well",
+      "withWrongStatus": "<important>See the Journey B</important>, where the connection with the Specific API does not work"
+    }
+  },
   "End-journey": {
-    "title": "End of journey!",
-    "button1": "See the route when {user} selects the wrong discount status",
-    "button2": "Back to scenario selection"
+    "title": "End of the journey!",
+    "button1": {
+      "transport": {
+        "withWrongStatus": "See the journey when {user} selects the wrong reduced fare status",
+        "withGoodStatus": "See the journey when {user} selects the right reduced fare status"
+      },
+      "canteen": {
+        "withWrongStatus": "<important>See the Journey B</important>, when {user} cannot obtain his CAF or MSA family quotient",
+        "withGoodStatus": "<important>See the Journey A</important>, when {user} can obtain his CAF or MSA family quotient"
+      }
+    },
+    "button2": "Return to the scenario choice"
   },
   "Confirmation-connexion": {
     "header": {

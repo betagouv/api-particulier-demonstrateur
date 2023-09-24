@@ -1,9 +1,69 @@
+.tip {
+  width: 100%;
+  border: 6px solid var(--background-action-high-blue-france);
+  border-bottom: 0;
+  cursor: pointer;
+}
+.tip > div:last-child {
+  padding: 0.4rem 0.2rem;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.tip > div > div {
+  color: var(--text-inverted-blue-france);
+}
+
+.tip > div:last-child > div:first-child {
+  line-height: 0;
+}
+
+.tip > fieldset:first-child {
+  margin: 0;
+  padding: 0;
+}
+
+.tip > div:last-child > div:first-child {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.tip > div:last-child > div:last-child {
+  flex: 1;
+  margin-left: 0.4rem;
+  line-height: 1.3;
+}
+
 .card {
   display: none;
 }
 
 .stepper {
   width: 100%;
+}
+
+@media (min-width: 576px) {
+  .tip {
+    display: flex;
+    border-bottom: initial;
+    align-items: stretch;
+    border: 6px solid var(--background-action-high-blue-france);
+  }
+  .tip > fieldset:first-child {
+    flex: 1;
+    margin-bottom: 0.2rem !important;
+  }
+  .tip > div:last-child {
+    min-width: 270px;
+    align-items: center;
+    width: initial;
+  }
 }
 
 @media (min-width: 768px) {

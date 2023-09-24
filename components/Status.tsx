@@ -57,7 +57,9 @@ export default function Status({ status }: Props) {
                   // onClick={function noRefCheck() {}}
                   iconId="fr-icon-arrow-right-line"
                   iconPosition="right"
-                  onClick={() => router.push('/' + journey?.type + '/end-journey?user=' + journey?.user?.id)}
+                  onClick={() =>
+                    router.push('/' + journey?.type + '/end-journey?user=' + journey?.user?.id + '&scope=' + scope)
+                  }
                 >
                   {t('success.button')}
                 </Button>
@@ -96,7 +98,9 @@ export default function Status({ status }: Props) {
                   // onClick={function noRefCheck() {}}
                   iconId="fr-icon-arrow-right-line"
                   iconPosition="right"
-                  onClick={() => router.push('/' + journey?.type + '/end-journey?user=' + journey?.user?.id)}
+                  onClick={() =>
+                    router.push('/' + journey?.type + '/end-journey?user=' + journey?.user?.id + '&scope=' + scope)
+                  }
                 >
                   {t('error.button')}
                 </Button>

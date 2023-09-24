@@ -53,7 +53,17 @@
     "checkboxLabel5": "Dans aucune de ces situations",
     "button": "Suivant",
     "alertTitle": "Vos informations vont être transmises pour vérifier votre statut",
-    "alertDescription": "Nous allons demander le justificatif de votre situation directement auprès des administrations en charges. Si l'information est disponible, vous n'aurez pas de justificatifs à fournir."
+    "alertDescription": "Nous allons demander le justificatif de votre situation directement auprès des administrations en charges. Si l'information est disponible, vous n'aurez pas de justificatifs à fournir.",
+    "guide1": {
+      "letter": "A",
+      "text": "Henri choisit le bon tarif",
+      "subText": "Exemple de parcours validé"
+    },
+    "guide2": {
+      "letter": "B",
+      "text": "Henri se trompe de tarif",
+      "subText": "Exemple de cas d'erreur"
+    }
   },
   "Connexion": {
     "stepperTitle": "Connexion",
@@ -216,9 +226,25 @@
     "withFranceConnect": "avec FranceConnect",
     "withoutFranceConnect": "sans FranceConnect"
   },
+  "Choice-journey": {
+    "title": "Choisissez la suite du parcours",
+    "button": {
+      "withGoodStatus": "<important>Voir le parcours A</important>, où tout se passe bien",
+      "withWrongStatus": "<important>Voir le parcours B</important>, où la connexion avec API Particulier ne fonctionne pas"
+    }
+  },
   "End-journey": {
     "title": "Fin du parcours !",
-    "button1": "Voir le parcours lorsque {user} sélectionne le mauvais statut tarif réduit",
+    "button1": {
+      "transport": {
+        "withWrongStatus": "Voir le parcours lorsque {user} sélectionne le mauvais statut tarif réduit",
+        "withGoodStatus": "Voir le parcours lorsque {user} sélectionne le bon statut tarif réduit"
+      },
+      "cantine": {
+        "withWrongStatus": "<important>Voir le parcours B</important>, lorsque {user} n'arrive pas à obtenir son quotient familial CAF ou MSA",
+        "withGoodStatus": "<important>Voir le parcours A</important>, lorsque {user} arrive à obtenir son quotient familial CAF ou MSA"
+      }
+    },
     "button2": "Retourner au choix du scénario"
   },
   "Confirmation-connexion": {
