@@ -3,11 +3,26 @@
   height: 60%;
   border: 1px solid var(--border-default-grey);
   border-radius: 15px;
-  padding: 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlayAuth {
+  border-width: 6px;
+  border-style: solid;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.infoAuth {
+  padding: 1rem 1.5rem 0.1rem;
+  text-align: left;
+  max-width: 360px;
+  margin-bottom: 1rem;
 }
 
 .choice {
@@ -19,10 +34,20 @@
 
 .leftChoice,
 .rightChoice {
+  position: relative;
+  padding: 2rem;
   flex: 1;
-  text-align: center;
   width: 100%;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+}
+
+.rightChoice {
+  justify-content: center;
+  padding-bottom: 140px;
 }
 
 .leftTitle,
@@ -31,14 +56,18 @@
 }
 
 .tag {
-  margin-top: 2%;
-  margin-bottom: 10%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
   background-color: var(--background-alt-blue-france-active);
 }
 
 .centeredText {
   text-align: center;
   margin-top: 20px;
+  padding-bottom: 2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .forgotPassword {
@@ -52,7 +81,7 @@
   display: block;
   margin: 0 auto;
   padding: 5px 10px;
-  width: 60%;
+  max-width: 320px;
   text-align: left;
 }
 
@@ -60,8 +89,6 @@
   height: 0.5px;
   position: relative;
   background: var(--border-default-grey);
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .orText {
@@ -78,6 +105,30 @@
   width: 100%;
 }
 
+.withFranceConnectAuth > div > div:last-child::before {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  content: '';
+  background: linear-gradient(0deg, var(--background-alt-blue-france-hover) 67.57%, rgba(227, 227, 253, 0.09) 96.66%);
+  opacity: 0.5;
+}
+
+.withoutFranceConnectAuth > div > div:first-child::before {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  background: linear-gradient(180deg, var(--background-alt-blue-france-hover) 67.57%, rgba(227, 227, 253, 0.09) 96.66%);
+  opacity: 0.5;
+}
+
 @media (min-width: 768px) {
   .stepper {
     width: 65%;
@@ -85,6 +136,46 @@
 }
 
 @media (min-width: 992px) {
+  .withFranceConnectAuth > div > div:last-child::before {
+    background: linear-gradient(
+      270deg,
+      var(--background-alt-blue-france-hover) 67.57%,
+      rgba(227, 227, 253, 0.09) 96.66%
+    );
+  }
+
+  .withoutFranceConnectAuth > div > div:first-child::before {
+    background: linear-gradient(
+      90deg,
+      var(--background-alt-blue-france-hover) 67.57%,
+      rgba(227, 227, 253, 0.09) 96.66%
+    );
+  }
+  .withoutFranceConnectAuth > div > div:last-child {
+    overflow: visible;
+  }
+  .rightChoice {
+    padding-top: 70px;
+    padding-bottom: 140px;
+  }
+  .leftChoice > div {
+    padding-bottom: 80px;
+  }
+  .leftChoice h2 {
+    align-self: flex-start;
+  }
+  .overlayAuth {
+    padding-top: 1rem;
+  }
+  .infoAuth {
+    position: absolute;
+    left: 0;
+    top: -6px;
+    bottom: -6px;
+    transform: translateX(-100%);
+    margin-bottom: 0;
+    padding: 1rem 1.5rem;
+  }
   .separator {
     width: 0.5px;
     height: auto;
@@ -106,12 +197,12 @@
     transform: translate(-50%, -50%);
   }
 
-  .leftChoice,
-  .rightChoice {
-    padding: 20px;
-  }
-
   .choice {
     flex-direction: row;
+  }
+
+  .centeredText {
+    padding-top: 2rem;
+    background-color: var(--background-default-grey);
   }
 }
