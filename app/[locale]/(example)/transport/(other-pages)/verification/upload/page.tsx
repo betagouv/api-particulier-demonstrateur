@@ -7,10 +7,13 @@ import { useJourney } from '@/app/journey-provider';
 import { useRouter } from 'next/navigation';
 import { Tag } from '@codegouvfr/react-dsfr/Tag';
 import styles from './page.module.css';
+import { useSearchParams } from 'next/navigation';
 
-export default function Page({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
+export default function Page() {
   const t = useTranslations('Verification');
   const { journey } = useJourney();
+  const searchParams = useSearchParams();
+  const error = searchParams.get('error');
   const router = useRouter();
   return (
     <>
@@ -48,7 +51,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
                 journey?.type +
                 '/end-journey-without-france-connect?user=' +
                 journey?.user?.id +
-                (searchParams.error ? '&error=true' : ''),
+                (error ? '&error=true' : ''),
             )
           }
         >
