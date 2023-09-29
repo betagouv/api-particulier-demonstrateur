@@ -1,5 +1,5 @@
 'use client';
-
+import { useState } from 'react';
 import { Stepper } from '@codegouvfr/react-dsfr/Stepper';
 import { fr } from '@codegouvfr/react-dsfr';
 import { useColors } from '@codegouvfr/react-dsfr/useColors';
@@ -13,12 +13,17 @@ import { Tag } from '@codegouvfr/react-dsfr/Tag';
 import { useTranslations } from 'next-intl';
 import Tooltip from '@/components/Tooltip';
 import { useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
+import CustomButton from '@/components/CustomButton';
 
 export default function Page() {
   const { journey } = useJourney();
   const theme = useColors();
   const searchParams = useSearchParams();
   const t = useTranslations('Connexion');
+  const router = useRouter();
+  const [username, setUsername] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
 
   return (
     <>
@@ -95,22 +100,23 @@ export default function Page() {
                   <div
                     className={styles.infoAuth}
                     style={{
-                      color: fr.colors.getHex({ isDark: !theme.isDark }).options.grey._200_850.default,
                       backgroundColor: fr.colors.getHex({ isDark: !theme.isDark }).options.blueFrance._925_125.default,
                     }}
                   >
-                    <p>
-                      Dans ce scénario, {journey?.user?.firstName} choisit de se connecter avec son identifiant et son
-                      mot de passe.
-                      <br />
-                    </p>
-                    <p>
-                      <b>Renseignez-les.</b>
-                    </p>
-                    <ul>
-                      <li>Identifiant : demo</li>
-                      <li>Mot de passe : demo</li>
-                    </ul>
+                    {t.rich('tip', {
+                      firstName: journey?.user?.firstName,
+                      ul: (chunks) => <ul>{chunks}</ul>,
+                      li: (chunks) => <li>{chunks}</li>,
+                      b: (chunks) => <b>{chunks}</b>,
+                      p: (chunks) => <p>{chunks}</p>,
+                    })}
+                    <CustomButton
+                      onClick={() => {
+                        setUsername('demo');
+                        setPassword('demo');
+                      }}
+                      buttonText="Remplir"
+                    />
                   </div>
                 )}
                 <Input
@@ -118,13 +124,33 @@ export default function Page() {
                   label={t('inputLabel')}
                   state="default"
                   stateRelatedMessage={t('inputRelatedMessage')}
+                  nativeInputProps={{
+                    onChange: (e) => {
+                      setUsername(e.target.value);
+                    },
+                    value: username,
+                  }}
                 />
 
-                <PasswordInput className={styles.centeredInput} label={t('inputPassword')} />
+                <PasswordInput
+                  className={styles.centeredInput}
+                  label={t('inputPassword')}
+                  nativeInputProps={{
+                    onChange: (e) => {
+                      setPassword(e.target.value);
+                    },
+                    value: password,
+                  }}
+                />
                 {/* <div className={styles.forgotPassword}>Mot de passe oublié ?</div> */}
                 <Button
+                  disabled={username !== 'demo' || password !== 'demo'}
                   size="large"
-                  /*onClick={function noRefCheck() {}}*/
+                  onClick={() => {
+                    if (!journey?.user?.isFranceConnectAuth) {
+                      router.push('/' + journey?.type + '/formulaire?user=' + journey?.user?.id);
+                    }
+                  }}
                   iconId="fr-icon-arrow-right-line"
                   iconPosition="right"
                 >
@@ -141,7 +167,6 @@ export default function Page() {
               style={{ color: '#636363' }}
               iconId="fr-icon-arrow-right-line"
               iconPosition="right"
-              // onClick={function noRefCheck() {}}
               priority="tertiary no outline"
             >
               {t('bottomButton')}

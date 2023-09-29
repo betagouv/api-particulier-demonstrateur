@@ -65,6 +65,33 @@
       "subText": "Example of an error case"
     }
   },
+  "Formulaire": {
+    "stepperTitle": "Checking your status",
+    "stepperNextTitle": "Subscription",
+    "text": "With the completed information, we will request proof of your situation directly from the responsible administrations. If the information is available, you will not have to provide any proof.",
+    "titleForm": "Enter your identity information:",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "sex": "Gender",
+    "female": "Female",
+    "male": "Male",
+    "birthdate": "Date of birth",
+    "ine": "INE Number (student card)",
+    "middleText": "Or",
+    "alertTitle": "Your information will be forwarded to check your status",
+    "alertDescription": "We will request proof of your situation directly from the responsible administrations. If the information is available, you will not have to provide any proofs.",
+    "button": "Next",
+    "guide1": {
+      "letter": "A",
+      "text": "{firstName} enters his/her identity information:<ul><li>Gender: <important>Female</important></li><li>Date of birth: <important>17/04/2003</important></li></ul>",
+      "subText": "Example of a validated journey"
+    },
+    "guide2": {
+      "letter": "B",
+      "text": "{firstName} makes an error writing his/her INE number: <important>12345678</important>",
+      "subText": "Example of an error case"
+    }
+  },
   "Connexion": {
     "stepperTitle": "Authenticate",
     "stepperNextTitle": "Check your status",
@@ -79,7 +106,8 @@
     "inputPassword": "Password",
     "buttonConnection": "Sign in",
     "bottomTitle": "No account yet?",
-    "bottomButton": "Create an account"
+    "bottomButton": "Create an account",
+    "tip": "<p>In this scenario, {firstName} chooses to log in with his/her username and password.</p><p><b>Enter them.</b></p><ul><li>Username: <b>demo</b></li><li>Password: <b>demo</b></li></ul>"
   },
   "Choix-connexion": {
     "title": "Connection in progress on Mobilités+",
@@ -120,25 +148,82 @@
     }
   },
   "Verification": {
-    "loadingTitle": "Wait few seconds...",
-    "loadingText": "We are checking your status",
-    "stepperTitle": "Check your status",
+    "stepperTitle": "Checking your status",
     "stepperNextTitle": "Subscription",
+    "loadingTitle": "Please wait a moment...",
+    "loadingText": "We are checking your status",
     "success": {
-      "alertInfoTitle": "Your job-seeker status has been confirmed",
-      "alertInfoDescription": "Pôle emploi has confirmed your registration as a job seeker",
-      "alertSuccessTitle": "You're eligible for the reduced rate!",
-      "alertSuccessDescription": "Your Mobilités + card will be 50% financed by your local council and will cost you 30 euros/month.",
+      "infoTitle": {
+        "jobSeeker": "Your job seeker status has been confirmed",
+        "student": "Your student status has been confirmed",
+        "studentScholarship": "Your scholarship student status has been confirmed",
+        "c2s": "Your status as a beneficiary of the complementary health solidarity has been confirmed",
+        "qfMSA": "We were able to obtain your CAF or MSA family quotient"
+      },
+      "infoDescription": {
+        "jobSeeker": "Pôle emploi has confirmed your registration as a job seeker",
+        "student": "The Ministry of Higher Education and Research has confirmed your student status",
+        "studentScholarship": "CNOUS has confirmed your registration as a scholarship student",
+        "c2s": "The Social Security has confirmed your status as a beneficiary of the complementary health solidarity",
+        "qfMSA": "The administration has confirmed your QF, so we are able to automatically calculate your canteen rate"
+      },
+      "successTitle": "You are eligible for the reduced rate!",
+      "successDescription": {
+        "jobSeeker": "Your Mobilités+ card will be funded 50% by your municipality and will cost you <important>30 euros/month</important>.",
+        "student": "Your Mobilités+ card will be funded 50% by your municipality and will cost you <important>30 euros/month</important>.",
+        "studentScholarship": "Your Mobilités+ card will be funded 75% by your municipality and will cost you <important>15 euros/month</important>.",
+        "c2s": "Your Mobilités+ card will be funded 75% by your municipality and will cost you <important>15 euros/month</important>.",
+        "qfMSA": "Your resources allow you to access the reduced rate of <important>0.30 €/meal</important>. This rate is co-financed by the community and the state."
+      },
       "button": "Next"
     },
     "error": {
-      "alertTitle": "Your job-seeker status could not be confirmed",
-      "alertDesc": "Pôle emploi has been unable to confirm your status.",
-      "checkboxLegend": "To continue my subscription :",
-      "checkboxLabel1": "I authorize Mobilités + to reapply for my status at a proposed job centre. I will end my subscription once my status has been obtained.",
-      "checkboxLabel2": "I am sending my Pôle Emploi certificate myself, which will be checked by an agent in the coming days.",
+      "title": {
+        "jobSeeker": "Your job seeker status could not be confirmed",
+        "student": "Your student status could not be confirmed",
+        "studentScholarship": "Your scholarship student status could not be confirmed",
+        "c2s": "Your status as a beneficiary of the complementary health solidarity could not be confirmed",
+        "qfMSA": "We were unable to obtain your CAF or MSA family quotient",
+        "studentWithoutFranceConnect": "The automatic connection with the Ministry of Higher Education could not be established"
+      },
+      "desc": {
+        "jobSeeker": "Pôle emploi could not confirm your registration as a job seeker",
+        "student": "The Ministry of Higher Education and Research could not confirm your student status",
+        "studentScholarship": "CNOUS could not confirm your registration as a scholarship student",
+        "c2s": "The Social Security could not confirm your status as a beneficiary of the complementary health solidarity",
+        "qfMSA": "The automatic transmission of this information did not work",
+        "studentWithoutFranceConnect": "So we could not verify your status. <link>Try again by re-checking my information</link>"
+      },
+      "text": "To continue your subscription at a reduced rate, please provide the appropriate proof. <important>The average processing time is 15 days.</important>",
+      "textBis": "After verifying your identity, your information will be transmitted to the competent administrations for your eligibility for the reduced rate.",
+      "upload": {
+        "jobSeeker": "Submit the Pôle Emploi certificate: ",
+        "student": "Submit the current month's school certificate: ",
+        "studentScholarship": "Submit the CNOUS certificate: ",
+        "c2s": "Submit the certificate of beneficiary of the complementary health solidarity: ",
+        "qfMSA": "Submit the certificate of your CAF or MSA family quotient for the current month: ",
+        "studentProof": "Submit the student school certificate:",
+        "identityProof": "Please upload an identity proof:"
+      },
+      "checkboxLegend": "To continue my subscription:",
+      "checkboxLabel1": "I authorize Mobilités + to re-request my status from Pôle emploi later. I will complete my subscription once my status is obtained.",
+      "checkboxLabel2": "I will submit my Pôle emploi certificate myself, which will be checked by an agent in the coming days.",
       "checkboxLabel3": "I need my card now, I order a card without a discount.",
-      "button": "I send my supporting documents"
+      "delay": "Average delay of 15 days",
+      "button": "Submit the proof",
+      "transportErrorButton": "Continue by submitting my certificate",
+      "transportSendButton": "Send my file"
+    },
+    "delay": {
+      "transport": "Average delay of 15 days"
+    },
+    "links": {
+      "transport": {
+        "withoutFranceConnect": {
+          "withoutPrice": "Continue without reduced rate",
+          "viewShops": "Check the list of Mobilités+ counters to submit my paper file"
+        }
+      }
     }
   },
   "CardSocialPricing": {
@@ -184,12 +269,6 @@
     "transport": "Transport",
     "cantine": "Canteen",
     "user": "Character",
-    "users": {
-      "henri": "Henri, job seeker",
-      "juliette": "Juliette, student",
-      "camille": "Camille, with an MSA family quotient of 320",
-      "kevin": "Kevin, with an MSA family quotient of 750"
-    },
     "withFranceConnect": "with FranceConnect",
     "withoutFranceConnect": "without FranceConnect"
   },
@@ -213,6 +292,21 @@
       }
     },
     "button2": "Return to the scenario choice"
+  },
+  "End-journey-without-france-connect": {
+    "title": "End of the journey!",
+    "text": "{user} will receive a letter with the response and their card after reviewing their file",
+    "button1": {
+      "transport": {
+        "withWrongStatus": "See the journey when {user} provides the correct information | <b>Path A</b>",
+        "withGoodStatus": "See the journey where {user} makes an input error | <b>Path B</b>"
+      },
+      "cantine": {
+        "withWrongStatus": "See the journey when {user} provides the correct information | <b>Path A</b>",
+        "withGoodStatus": "See the journey where {user} makes an input error | <b>Path B</b>"
+      }
+    },
+    "button2": "Return to the scenario selection"
   },
   "Confirmation-connexion": {
     "header": {
