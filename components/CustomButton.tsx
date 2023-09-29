@@ -4,9 +4,9 @@ import { useColors } from '@codegouvfr/react-dsfr/useColors';
 import styles from './CustomButton.module.css';
 
 interface ButtonProps {
-  disabled: boolean;
+  disabled?: boolean;
   onClick: () => void;
-  iconClass: FrCxArg;
+  iconClass?: FrCxArg;
   className?: string;
   buttonText?: string;
   onMouseEnter?: () => void;

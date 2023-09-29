@@ -1,0 +1,116 @@
+.tip {
+  width: 100%;
+  border: 6px solid var(--background-action-high-blue-france);
+  cursor: pointer;
+  position: relative;
+}
+.tip > div:first-child {
+  padding: 0.4rem 0.2rem 1rem;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.tip > div > div {
+  color: var(--text-inverted-blue-france);
+}
+
+.tip > div:first-child > div:first-child {
+  line-height: 40px;
+  margin-right: 0.7rem;
+}
+
+.tip > fieldset:first-child {
+  margin: 0;
+  padding: 0;
+}
+
+.tip > div:first-child > div:first-child {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.tip button {
+  margin-top: 0.5rem;
+}
+
+.stepper {
+  width: 100%;
+}
+
+.card {
+  display: none;
+}
+
+.separator {
+  height: 0.5px;
+  position: relative;
+  background: var(--border-default-grey);
+}
+
+.orText {
+  background: var(--background-default-grey);
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 10px);
+  transform: translateX(-50%);
+  padding: 0 10px;
+  line-height: 1;
+}
+
+.inputGroup {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.inputGroup > div,
+.inputGroup > fieldset {
+  flex: 1;
+}
+
+@media (min-width: 1260px) {
+  .tip {
+    display: flex;
+    align-items: stretch;
+    border-width: 6px;
+    border-style: solid;
+  }
+  .tip > fieldset:first-child {
+    flex: 1;
+    margin-bottom: 0.2rem !important;
+  }
+  .tip > div:first-child {
+    z-index: 1;
+    min-width: 270px;
+    max-width: 370px;
+    justify-content: center;
+    width: initial;
+    position: absolute;
+    right: 0;
+    top: -6px;
+    transform: translateX(100%);
+    padding: 1rem 1.5rem;
+  }
+  .containerInputs.oneChild {
+    width: fit-content;
+  }
+  .containerInputs.oneChild > div {
+    width: 390px;
+  }
+}
+
+@media (min-width: 768px) {
+  .stepper {
+    width: 65%;
+  }
+  .card {
+    display: block;
+  }
+}

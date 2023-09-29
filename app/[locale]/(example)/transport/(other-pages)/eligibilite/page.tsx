@@ -153,6 +153,15 @@ export default function Page() {
               ></RadioButton>
               <div className={styles.choiceB}></div>
             </div>
+            <Alert
+              closable
+              title={t('alertTitle')}
+              description={t('alertDescription')}
+              // onClose={function noRefCheck() {}}
+              severity="info"
+              small
+              style={{ marginTop: '2rem', marginBottom: '1.5rem' }}
+            />
             <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
               <Button
                 disabled={selectedValue === undefined}
@@ -166,15 +175,6 @@ export default function Page() {
                 {t('button')}
               </Button>
             </div>
-            <Alert
-              closable
-              title={t('alertTitle')}
-              description={t('alertDescription')}
-              // onClose={function noRefCheck() {}}
-              severity="info"
-              small
-              style={{ marginTop: '60px' }}
-            />
           </div>
 
           <div style={{ flex: '35%', paddingLeft: '60px' }} className={styles.card}>

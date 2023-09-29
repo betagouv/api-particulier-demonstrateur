@@ -65,6 +65,33 @@
       "subText": "Exemple de cas d'erreur"
     }
   },
+  "Formulaire": {
+    "stepperTitle": "Vérification de votre statut",
+    "stepperNextTitle": "Souscription",
+    "text": "Avec les informations complétées, nous allons demander le justificatif de votre situation directement auprès des administrations en charge. Si l’information est disponible, vous n’aurez pas de justificatifs à fournir.",
+    "titleForm": "Renseigner vos informations d’identité :",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "sex": "Sexe",
+    "female": "Féminin",
+    "male": "Masculin",
+    "birthdate": "Date de naissance",
+    "ine": "Numéro INE (carte étudiant)",
+    "middleText": "Ou",
+    "alertTitle": "Vos informations vont être transmises pour vérifier votre statut",
+    "alertDescription": "Nous allons demander le justificatif de votre situation directement auprès des administrations en charges. Si l'information est disponible, vous n'aurez pas de justificatifs à fournir.",
+    "button": "Suivant",
+    "guide1": {
+      "letter": "A",
+      "text": "{firstName} renseigne ses informations d’identité :<ul><li>Sexe : <important>Féminin</important></li><li>Date de naissance : <important>17/04/2003</important></li></ul>",
+      "subText": "Exemple de parcours validé"
+    },
+    "guide2": {
+      "letter": "B",
+      "text": "{firstName} fait une erreur en écrivant son numéro INE : <important>12345678</important>",
+      "subText": "Exemple de cas d'erreur"
+    }
+  },
   "Connexion": {
     "stepperTitle": "Connexion",
     "stepperNextTitle": "Vérification de votre statut",
@@ -79,7 +106,8 @@
     "inputPassword": "Mot de passe",
     "buttonConnection": "Se connecter",
     "bottomTitle": "Pas encore de compte ?",
-    "bottomButton": "Créer un compte"
+    "bottomButton": "Créer un compte",
+    "tip": "<p>Dans ce scénario, {firstName} choisit de se connecter avec son identifiant et son mot de passe.</p><p><b>Renseignez-les.</b></p><ul><li>Identifiant : <b>demo</b></li><li>Mot de passe : <b>demo</b></li></ul>"
   },
   "Choix-connexion": {
     "title": "Connexion en cours sur Mobilités +",
@@ -155,29 +183,47 @@
         "student": "Votre statut étudiant n'a pas pu être confirmé",
         "studentScholarship": "Votre statut étudiant boursier n'a pas pu être confirmé",
         "c2s": "Votre statut bénéficiaire de la complémentaire santé solidaire n'a pas pu être confirmé",
-        "qfMSA": "Nous n’avons pas pu obtenir votre quotient familial CAF ou MSA"
+        "qfMSA": "Nous n’avons pas pu obtenir votre quotient familial CAF ou MSA",
+        "studentWithoutFranceConnect": "La connexion automatique avec le Ministère de l’enseignement supérieur n’a pas pu être établie"
       },
       "desc": {
         "jobSeeker": "Pôle emploi n'a pu confirmer votre inscription en tant que demandeur d'emploi",
         "student": "Le Ministère de l'Enseignement Supérieur et de la Recherche n'a pu confirmer votre statut étudiant",
         "studentScholarship": "Le CNOUS n'a pu confirmer votre inscription en tant qu'étudiant boursier",
         "c2s": "La Sécurité Sociale n'a pu confirmer votre statut de bénéficaire de la complémentaire santé solidaire",
-        "qfMSA": "La transmission automatique de cette information n’a pas fonctionné"
+        "qfMSA": "La transmission automatique de cette information n’a pas fonctionné",
+        "studentWithoutFranceConnect": "Nous n’avons donc pas pu vérifier votre statut.<link>Essayer une seconde fois en revérifiant mes informations</link>"
       },
       "text": "Pour poursuivre votre souscription en tarif réduit, veuillez nous transmettre le justificatif adéquat. <important>Le délai moyen de traitement est de 15 jours.</important>",
+      "textBis": "Après vérification de votre identité, vos informations seront transmises aux administrations compétentes pour votre éligibilité au tarif réduit.",
       "upload": {
         "jobSeeker": "Transmettre l'attestion Pôle Emploi : ",
         "student": "Transmettre le certificat de scolarité du mois en cours : ",
         "studentScholarship": "Transmettre l'attestion du CNOUS : ",
         "c2s": "Transmettre l'attestion de bénéficaire de la complémentaire santé solidaire : ",
-        "qfMSA": "Transmettre l’attestation de votre quotient familial CAF ou MSA du mois en cours : "
+        "qfMSA": "Transmettre l’attestation de votre quotient familial CAF ou MSA du mois en cours : ",
+        "studentProof": "Transmettre le certificat de scolarité étudiant :",
+        "identityProof": "Veuillez déposer un justificatif d’identité :"
       },
       "checkboxLegend": "Pour poursuivre ma souscription :",
       "checkboxLabel1": "J'autorise Mobilités + à redemander mon statut a pôle emploi ultérieurement. Je terminerai ma souscription une fois mon statut obtenu.",
       "checkboxLabel2": "Je transmets par moi-même mon attestation Pôle emploi qui sera vérifiée par un agent dans les prochains jours.",
       "checkboxLabel3": "J'ai besoin de ma carte maintenant, je commande une carte sans réduction.",
       "delay": "Délai moyen de 15 jours",
-      "button": "Transmettre le justificatif"
+      "button": "Transmettre le justificatif",
+      "transportErrorButton": "Poursuivre en transmettant mon certificat",
+      "transportSendButton": "Envoyer mon dossier"
+    },
+    "delay": {
+      "transport": "Délai moyen de 15 jours"
+    },
+    "links": {
+      "transport": {
+        "withoutFranceConnect": {
+          "withoutPrice": "Poursuivre sans tarif réduit",
+          "viewShops": "Consulter la liste des guichets Mobilités+ pour déposer mon dossier papier"
+        }
+      }
     }
   },
   "CardSocialPricing": {
@@ -243,6 +289,21 @@
       "cantine": {
         "withWrongStatus": "<important>Voir le parcours B</important>, lorsque {user} n'arrive pas à obtenir son quotient familial CAF ou MSA",
         "withGoodStatus": "<important>Voir le parcours A</important>, lorsque {user} arrive à obtenir son quotient familial CAF ou MSA"
+      }
+    },
+    "button2": "Retourner au choix du scénario"
+  },
+  "End-journey-without-france-connect": {
+    "title": "Fin du parcours !",
+    "text": "{user} recevra un courrier avec la réponse et sa carte après étude de son dossier",
+    "button1": {
+      "transport": {
+        "withWrongStatus": "Voir le parcours lorsque {user} renseigne les bonnes informations | <b>Parcours A</b>",
+        "withGoodStatus": "Voir le parcours où {user} fait une erreur de saisie | <b>Parcours B</b>"
+      },
+      "cantine": {
+        "withWrongStatus": "Voir le parcours lorsque {user} renseigne les bonnes informations | <b>Parcours A</b>",
+        "withGoodStatus": "Voir le parcours où {user} fait une erreur de saisie | <b>Parcours B</b>"
       }
     },
     "button2": "Retourner au choix du scénario"
