@@ -175,7 +175,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <Tooltip />
+      <Tooltip isOpenedByDefault={false} />
     </>
   );
 }

@@ -35,7 +35,7 @@ export default function Page() {
           important: (chunks) => <b>{chunks}</b>,
         })}
       </Button>
-      <Tooltip />
+      <Tooltip isOpenedByDefault={false} />
     </div>
   );
 }

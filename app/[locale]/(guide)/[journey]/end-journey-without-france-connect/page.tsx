@@ -45,7 +45,7 @@ export default function Page() {
       <Button size="large" onClick={() => router.push('/')} priority="secondary">
         {t('button2')}
       </Button>
-      <Tooltip />
+      <Tooltip isOpenedByDefault={false} />
     </div>
   );
 }
