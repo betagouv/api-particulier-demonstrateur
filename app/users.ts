@@ -46,7 +46,7 @@ export const users: User[] = [
     id: '4',
     firstName: 'Kevin',
     lastName: 'Durand',
-    description: 'Kevin, quotient familial MSA of 750',
+    description: 'Kevin, quotient familial MSA de 750',
     isFranceConnectAuth: false,
     qfMSA: 750,
   },

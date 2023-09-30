@@ -92,6 +92,32 @@
       "subText": "Example of an error case"
     }
   },
+  "Formulaire-Cantine": {
+    "stepperTitle": "Checking your status",
+    "stepperNextTitle": "Subscription",
+    "text": "With the completed information, we will request proof of your situation directly from the responsible administrations. If the information is available, you will not have to provide any justification.",
+    "titleForm": "Enter your identity information:",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "sex": "Gender",
+    "female": "Female",
+    "male": "Male",
+    "birthdate": "Date of Birth",
+    "birthPlace": "Place of Birth",
+    "alertTitle": "Your information will be transmitted to verify your QF",
+    "alertDescription": "Your title will be transferred to the CNAF",
+    "button": "Next",
+    "guide1": {
+      "letter": "A",
+      "text": "{firstName} enters his information:<ul><li>Gender: <important>Male</important></li><li>Date of Birth: <important>23/06/1984</important></li><li>Place of Birth: <important>France</important></li></ul>",
+      "subText": "Example of a validated path"
+    },
+    "guide2": {
+      "letter": "B",
+      "text": "{firstName} makes a data entry error",
+      "subText": "Example of error case"
+    }
+  },
   "Connexion": {
     "stepperTitle": "Authenticate",
     "stepperNextTitle": "Check your status",

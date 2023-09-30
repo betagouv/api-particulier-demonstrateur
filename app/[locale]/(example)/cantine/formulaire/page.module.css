@@ -3,27 +3,30 @@
   border: 6px solid var(--background-action-high-blue-france);
   cursor: pointer;
   position: relative;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
-.tip > div:first-child {
+.tip > div:first-child > div {
   padding: 0.4rem 0.2rem 1rem;
   display: flex;
   position: relative;
   width: 100%;
+  flex-direction: row;
 }
 
 .tip > div > div {
   color: var(--text-inverted-blue-france);
 }
 
-.tip > div:first-child > div:first-child {
+.tip > div:first-child > div > div:first-child {
+  line-height: 40px;
+  margin-right: 0.7rem;
   width: 40px;
   display: flex;
   justify-content: center;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
-  line-height: 40px;
-  margin-right: 0.7rem;
 }
 
 .tip button {
@@ -36,22 +39,6 @@
 
 .card {
   display: none;
-}
-
-.separator {
-  height: 0.5px;
-  position: relative;
-  background: var(--border-default-grey);
-}
-
-.orText {
-  background: var(--background-default-grey);
-  position: absolute;
-  left: 50%;
-  top: calc(50% - 10px);
-  transform: translateX(-50%);
-  padding: 0 10px;
-  line-height: 1;
 }
 
 .inputGroup {
@@ -67,16 +54,22 @@
   flex: 1;
 }
 
+.lastInputGroup {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0;
+}
+.lastInputGroup > div {
+  max-width: 50%;
+}
+
 @media (min-width: 1260px) {
   .tip {
     display: flex;
     align-items: stretch;
     border-width: 6px;
     border-style: solid;
-  }
-  .tip > fieldset:first-child {
-    flex: 1;
-    margin-bottom: 0.2rem !important;
   }
   .tip > div:first-child {
     z-index: 1;

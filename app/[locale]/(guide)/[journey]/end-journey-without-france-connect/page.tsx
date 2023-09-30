@@ -21,7 +21,7 @@ export default function Page() {
     <div className={styles.container}>
       <h2>{t('title')}</h2>
       <p style={{ fontSize: '22px', lineHeight: '30px', maxWidth: '460px', textAlign: 'center' }}>
-        {t('text', { user: journey?.user?.firstName })}
+        {t('text.' + type, { user: journey?.user?.firstName })}
       </p>
       <Button
         size="large"
