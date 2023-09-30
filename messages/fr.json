@@ -92,6 +92,32 @@
       "subText": "Exemple de cas d'erreur"
     }
   },
+  "Formulaire-Cantine": {
+    "stepperTitle": "Vérification de votre statut",
+    "stepperNextTitle": "Souscription",
+    "text": "Avec les informations complétées, nous allons demander le justificatif de votre situation directement auprès des administrations en charge. Si l’information est disponible, vous n’aurez pas de justificatifs à fournir.",
+    "titleForm": "Renseigner vos informations d’identité :",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "sex": "Sexe",
+    "female": "Féminin",
+    "male": "Masculin",
+    "birthdate": "Date de naissance",
+    "birthPlace": "Lieu de naissance",
+    "alertTitle": "Vos informations vont être transmises pour vérifier votre QF",
+    "alertDescription": "Votre civilité va être transférée à la CNAF",
+    "button": "Suivant",
+    "guide1": {
+      "letter": "A",
+      "text": "{firstName} renseigne ses informations :<ul><li>Sexe : <important>Masculin</important></li><li>Date de naissance : <important>23/06/1984</important></li><li>Lieu de naissance : <important>France</important></li></ul>",
+      "subText": "Exemple de parcours validé"
+    },
+    "guide2": {
+      "letter": "B",
+      "text": "{firstName} fait une erreur de saisie",
+      "subText": "Exemple de cas d'erreur"
+    }
+  },
   "Connexion": {
     "stepperTitle": "Connexion",
     "stepperNextTitle": "Vérification de votre statut",
@@ -212,16 +238,23 @@
       "delay": "Délai moyen de 15 jours",
       "button": "Transmettre le justificatif",
       "transportErrorButton": "Poursuivre en transmettant mon certificat",
+      "cantineErrorButton": "Poursuivre en transmettant l'attestation",
       "transportSendButton": "Envoyer mon dossier"
     },
     "delay": {
-      "transport": "Délai moyen de 15 jours"
+      "transport": "Délai moyen de 15 jours",
+      "cantine": "Délai moyen de 15 jours"
     },
     "links": {
       "transport": {
         "withoutFranceConnect": {
           "withoutPrice": "Poursuivre sans tarif réduit",
           "viewShops": "Consulter la liste des guichets Mobilités+ pour déposer mon dossier papier"
+        }
+      },
+      "cantine": {
+        "withoutFranceConnect": {
+          "withoutPrice": "Poursuivre sans tarification solidaire"
         }
       }
     }
@@ -295,7 +328,10 @@
   },
   "End-journey-without-france-connect": {
     "title": "Fin du parcours !",
-    "text": "{user} recevra un courrier avec la réponse et sa carte après étude de son dossier",
+    "text": {
+      "transport": "{user} recevra un courrier avec la réponse et sa carte après étude de son dossier",
+      "cantine": "{user} recevra un courrier avec la réponse après étude de son dossier par un agent de la collectivité"
+    },
     "button1": {
       "transport": {
         "withWrongStatus": "Voir le parcours lorsque {user} renseigne les bonnes informations | <b>Parcours A</b>",
