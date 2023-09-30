@@ -37,7 +37,7 @@ export default function Layout({ children }: { children: JSX.Element }) {
           </div>
         </div>
       </div>
-      <Tooltip />
+      <Tooltip isOpenedByDefault={false} />
     </>
   );
 }

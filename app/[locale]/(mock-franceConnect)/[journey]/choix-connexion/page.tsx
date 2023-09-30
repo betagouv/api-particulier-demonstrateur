@@ -76,7 +76,7 @@ export default function ConnectionChoice() {
           </div>
         </div>
       </div>
-      <Tooltip />
+      <Tooltip isOpenedByDefault={false} />
     </>
   );
 }

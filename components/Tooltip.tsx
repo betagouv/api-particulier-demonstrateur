@@ -32,7 +32,7 @@ export default function Tooltip({
   const t = useTranslations('Tooltip');
   const theme = useColors();
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [isVisible, setIsVisible] = useState(isOpenedByDefault);
+  const [isVisible, setIsVisible] = useState(false);
   const [isOpenBtnHovered, setIsOpenBtnHovered] = useState(false);
   const [isBackBtnHovered, setIsBackBtnHovered] = useState(false);
   const [isHomeBtnHovered, setIsHomeBtnHovered] = useState(false);
@@ -49,6 +49,15 @@ export default function Tooltip({
     const spacing = isVisible && containerRef?.current?.offsetHeight ? containerRef?.current?.offsetHeight : 0;
     document.body.style.paddingBottom = spacing + 'px';
   }, [isVisible, containerRef]);
+
+  useEffect(() => {
+    !isOpenedByDefault || localStorage.getItem('hiddenTips') ? setIsVisible(false) : setIsVisible(true);
+  }, [isOpenedByDefault]);
+
+  const toggleDisplay = () => {
+    isVisible ? localStorage.setItem('hiddenTips', 'true') : localStorage.removeItem('hiddenTips');
+    setIsVisible(!isVisible);
+  };
 
   return (
     <>
@@ -137,13 +146,13 @@ export default function Tooltip({
           </div>
         </div>
         {hasTips && <Tips>{children}</Tips>}
-        <button className={styles.closeBtn} onClick={() => setIsVisible(!isVisible)}>
+        <button className={styles.closeBtn} onClick={() => toggleDisplay()}>
           <i className={fr.cx('fr-icon-close-line')} />
         </button>
       </div>
       <button
         className={`${styles.openBtn} ${isVisible ? '' : styles.active}`}
-        onClick={() => setIsVisible(!isVisible)}
+        onClick={() => toggleDisplay()}
         style={{
           backgroundColor: isOpenBtnHovered
             ? fr.colors.getHex({ isDark: !theme.isDark }).options.blueFrance.sun113_625.hover

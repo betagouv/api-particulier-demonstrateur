@@ -109,7 +109,7 @@ export default function ConnectionImpot() {
           </div>
         </div>
       </div>
-      <Tooltip />
+      <Tooltip isOpenedByDefault={false} />
     </>
   );
 }

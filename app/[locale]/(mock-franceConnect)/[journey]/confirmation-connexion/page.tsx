@@ -77,7 +77,7 @@ export default function ConnectionConfirmation() {
           </ul>
         </Accordion>
       </div>
-      <Tooltip />
+      <Tooltip isOpenedByDefault={false} />
     </>
   );
 }
