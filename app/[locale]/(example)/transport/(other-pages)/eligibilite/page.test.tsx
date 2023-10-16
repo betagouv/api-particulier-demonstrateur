@@ -13,6 +13,7 @@ jest.mock('@/app/journey-provider');
     type: 'aaa',
     user: {
       id: '1',
+      isFranceConnectAuth: true,
     },
   },
 }));
@@ -21,7 +22,7 @@ jest.mock('@/components/Tooltip');
 
 describe('Page component', () => {
   it('should render page', async () => {
-    const { container } = render(<Page />);
+    const { container, getByText } = render(<Page />);
 
     const stepperElement = container.querySelector('.fr-stepper');
     const buttonElement = container.querySelector('.fr-btn');
@@ -32,6 +33,7 @@ describe('Page component', () => {
     expect(buttonElement).toHaveClass('fr-btn');
     expect(alertElement).toHaveClass('fr-alert');
     expect(cardElement).toHaveClass('fr-card');
+    expect(getByText('Étape 1 sur 3')).toBeInTheDocument();
   });
 
   it('Button click', () => {
@@ -101,6 +103,7 @@ describe('Page component', () => {
         type: 'aaa',
         user: {
           id: '2',
+          isFranceConnectAuth: false,
         },
       },
     }));
@@ -109,5 +112,6 @@ describe('Page component', () => {
     const button = getByText('button');
     fireEvent.click(button);
     expect(pushMock).toHaveBeenCalledWith('/aaa/connexion?user=2&scope=student');
+    expect(getByText('Étape 1 sur 4')).toBeInTheDocument();
   });
 });

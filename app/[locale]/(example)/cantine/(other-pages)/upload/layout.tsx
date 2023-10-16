@@ -3,7 +3,7 @@
 import { Stepper } from '@codegouvfr/react-dsfr/Stepper';
 import { fr } from '@codegouvfr/react-dsfr';
 import { useTranslations } from 'next-intl';
-import CardSocialPricing from '@/components/CardSocialPricing';
+import CardUnitedPricing from '@/components/CardUnitedPricing';
 import Tooltip from '@/components/Tooltip';
 import styles from './layout.module.css';
 import { useJourney } from '@/app/journey-provider';
@@ -29,8 +29,8 @@ export default function Layout({ children }: { children: JSX.Element }) {
       >
         <div className={styles.stepper}>
           <Stepper
-            currentStep={4}
-            stepCount={journey?.user?.isFranceConnectAuth ? 3 : 4}
+            currentStep={3}
+            stepCount={journey?.user?.isFranceConnectAuth ? 2 : 3}
             title={t('stepperNextTitle')}
           />
         </div>
@@ -39,7 +39,7 @@ export default function Layout({ children }: { children: JSX.Element }) {
           <div style={{ flex: '65%' }}>{children}</div>
 
           <div style={{ flex: '35%', paddingLeft: '60px' }} className={styles.card}>
-            <CardSocialPricing />
+            <CardUnitedPricing />
           </div>
         </div>
       </div>

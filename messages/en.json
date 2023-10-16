@@ -67,7 +67,7 @@
   },
   "Formulaire": {
     "stepperTitle": "Checking your status",
-    "stepperNextTitle": "Subscription",
+    "stepperNextTitle": "Checking your identity",
     "text": "With the completed information, we will request proof of your situation directly from the responsible administrations. If the information is available, you will not have to provide any proof.",
     "titleForm": "Enter your identity information:",
     "firstName": "First name",

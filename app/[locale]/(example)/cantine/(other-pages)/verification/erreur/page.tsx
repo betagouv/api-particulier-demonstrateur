@@ -52,9 +52,7 @@ export default function Page() {
           // onClick={function noRefCheck() {}}
           iconId="fr-icon-arrow-right-line"
           iconPosition="right"
-          onClick={() =>
-            router.push('/' + journey?.type + '/verification/upload?user=' + journey?.user?.id + '&error=true')
-          }
+          onClick={() => router.push('/' + journey?.type + '/upload?user=' + journey?.user?.id + '&error=true')}
         >
           {t('error.cantineErrorButton')}
         </Button>

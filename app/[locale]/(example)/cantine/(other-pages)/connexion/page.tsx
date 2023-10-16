@@ -38,7 +38,12 @@ export default function Page() {
         }}
       >
         <div className={styles.stepper}>
-          <Stepper currentStep={1} nextTitle={t('stepperNextTitle')} stepCount={3} title={t('stepperTitle')} />
+          <Stepper
+            currentStep={1}
+            nextTitle={t('stepperNextTitle')}
+            stepCount={journey?.user?.isFranceConnectAuth ? 2 : 3}
+            title={t('stepperTitle')}
+          />
         </div>
 
         <div

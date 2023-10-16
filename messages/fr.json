@@ -67,7 +67,7 @@
   },
   "Formulaire": {
     "stepperTitle": "Vérification de votre statut",
-    "stepperNextTitle": "Souscription",
+    "stepperNextTitle": "Vérification de votre identité",
     "text": "Avec les informations complétées, nous allons demander le justificatif de votre situation directement auprès des administrations en charge. Si l’information est disponible, vous n’aurez pas de justificatifs à fournir.",
     "titleForm": "Renseigner vos informations d’identité :",
     "firstName": "Prénom",
@@ -176,8 +176,7 @@
   },
   "Verification": {
     "stepperTitle": "Vérification de votre statut",
-    "stepperTitleIdentity": "Vérification de votre identité",
-    "stepperNextTitle": "Souscription",
+    "stepperNextTitle": "Vérification de votre identité",
     "loadingTitle": "Patientez quelques instants...",
     "loadingText": "Nous sommes en train de vérifier votre statut.",
     "success": {
