@@ -63,8 +63,8 @@ export default function ConnectionConfirmation() {
         >
           {journey?.type ? t('button.' + journey?.type) : ''}
         </Button>
-
-        <Accordion className={styles.accordion} label={t('accordionTitle')}>
+        {}
+        <Accordion className={styles.accordion} label={t('accordionTitle')} expanded={true} onExpandedChange={() => {}}>
           <ul style={{ textAlign: 'left', fontWeight: 'bold' }}>
             <li>{t('accordionContent1')}</li>
             <li>{t('accordionContent2')}</li>

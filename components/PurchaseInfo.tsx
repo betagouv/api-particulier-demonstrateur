@@ -5,9 +5,10 @@ import styles from './BackgroundImage.module.css';
 interface PurchaseInfoProps {
   title?: string;
   style?: React.CSSProperties;
+  pricingStyle?: React.CSSProperties;
 }
 
-export default function PurchaseInfo({ title = '', style = {} }: PurchaseInfoProps) {
+export default function PurchaseInfo({ title = '', style = {}, pricingStyle = {} }: PurchaseInfoProps) {
   return (
     <div className={styles.backgroundImage} style={style}>
       <div
@@ -23,6 +24,16 @@ export default function PurchaseInfo({ title = '', style = {} }: PurchaseInfoPro
         }}
       >
         <h1 style={{ maxWidth: '700px', overflowWrap: 'break-word', lineHeight: '1.2', marginBottom: 0 }}>{title}</h1>
+        <div
+          className={styles.pricing}
+          style={{
+            position: 'absolute',
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            right: 0,
+            ...pricingStyle,
+          }}
+        ></div>
       </div>
     </div>
   );

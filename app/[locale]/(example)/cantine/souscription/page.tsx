@@ -11,13 +11,21 @@ export default function Page() {
 
   return (
     <>
-      <PurchaseInfo title={t('cantine.subscribeTitle')} style={{ backgroundImage: 'url("/images/bg-cantine.jpg")' }} />
+      <PurchaseInfo
+        title={t('cantine.subscribeTitle')}
+        style={{ backgroundImage: 'url("/images/bg-cantine.jpg")' }}
+        pricingStyle={{
+          backgroundImage: 'url("/images/pricing-canteen.png")',
+          height: '212px',
+          width: '545px',
+        }}
+      />
       <PricingInfo />
       <Tooltip>
         <ul>
           <li>
-            <i className={fr.cx('ri-information-fill')} /> Ceci est un conseil business concernant la page souscription
-            du cas d&apos;usage de la cantine
+            <i className={fr.cx('ri-information-fill')} /> Ceci est un conseil de parcours usager concernant la page
+            souscription du cas d&apos;usage de la cantine
           </li>
           <li>
             <p>

@@ -3,7 +3,7 @@
 import { Stepper } from '@codegouvfr/react-dsfr/Stepper';
 import { fr } from '@codegouvfr/react-dsfr';
 import { useTranslations } from 'next-intl';
-import CardUnitedPricing from '@/components/CardUnitedPricing';
+import CardSocialPricing from '@/components/CardSocialPricing';
 import Tooltip from '@/components/Tooltip';
 import styles from './layout.module.css';
 
@@ -26,14 +26,14 @@ export default function Layout({ children }: { children: JSX.Element }) {
         }}
       >
         <div className={styles.stepper}>
-          <Stepper currentStep={2} nextTitle={t('stepperNextTitle')} stepCount={3} title={t('stepperTitle')} />
+          <Stepper currentStep={4} stepCount={4} title={t('stepperTitleIdentity')} />
         </div>
 
         <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
           <div style={{ flex: '65%' }}>{children}</div>
 
           <div style={{ flex: '35%', paddingLeft: '60px' }} className={styles.card}>
-            <CardUnitedPricing />
+            <CardSocialPricing />
           </div>
         </div>
       </div>

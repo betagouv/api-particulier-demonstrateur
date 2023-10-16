@@ -22,19 +22,19 @@
       },
       "user1": {
         "title": "Henri, demandeur d’emploi",
-        "desc": "Henri achète une carte des transports annuelle. Il est demandeur d’emploi et éligible au tarif réduit. Il va se connecter avec FranceConnect."
+        "desc": "Henri achète une carte des transports annuelle. Il est demandeur d’emploi et éligible au tarif réduit. Il va se connecter AVEC FranceConnect."
       },
       "user2": {
         "title": "Juliette, étudiante",
-        "desc": "Juliette souhaite acheter une carte des transports avec abonnement mensuel. Elle est étudiante et éligible au tarif réduit. Elle va se connecter SANS FranceConnect."
+        "desc": "Juliette achète une carte des transports annuelle. Elle est étudiante et éligible au tarif réduit. Elle va se connecter SANS FranceConnect."
       },
       "user3": {
         "title": "Camille, QF MSA de 320",
-        "desc": "Camille inscrit ses enfants à la cantine, son quotient familial (QF) est de 320, elle est éligible au dispositif Cantines à 1 euros. Elle va se connecter avec FranceConnect."
+        "desc": "Camille inscrit ses enfants à la cantine, son quotient familial (QF) est de 320, elle est éligible au dispositif Cantines à 1 euros. Elle va se connecter AVEC FranceConnect."
       },
       "user4": {
         "title": "Kevin, QF MSA de 750",
-        "desc": "Kevin inscrit ses enfants à la cantine, son quotient familial (QF) est de 750, il est éligible au tarif solidaire."
+        "desc": "Kevin inscrit ses enfants à la cantine, son quotient familial (QF) est de 750, il est éligible au tarif solidaire. Il va se connecter SANS FranceConnect."
       }
     }
   },
@@ -49,11 +49,11 @@
     "checkboxLabel1": "Demandeur d'emploi",
     "checkboxLabel2": "Étudiant",
     "checkboxLabel3": "Étudiant boursier",
-    "checkboxLabel4": "Bénéficiaire de la C2S",
+    "checkboxLabel4": "Bénéficiaire de la complémentaire santé solidaire (C2S)",
     "checkboxLabel5": "Dans aucune de ces situations",
     "button": "Suivant",
     "alertTitle": "Vos informations vont être transmises pour vérifier votre statut",
-    "alertDescription": "Nous allons demander le justificatif de votre situation directement auprès des administrations en charges. Si l'information est disponible, vous n'aurez pas de justificatifs à fournir.",
+    "alertDescription": "Nous allons demander le justificatif de votre situation directement auprès des administrations en charge. Si l'information est disponible, vous n'aurez pas de justificatifs à fournir.",
     "guide1": {
       "letter": "A",
       "text": "Henri choisit le bon tarif",
@@ -79,7 +79,7 @@
     "ine": "Numéro INE (carte étudiant)",
     "middleText": "Ou",
     "alertTitle": "Vos informations vont être transmises pour vérifier votre statut",
-    "alertDescription": "Nous allons demander le justificatif de votre situation directement auprès des administrations en charges. Si l'information est disponible, vous n'aurez pas de justificatifs à fournir.",
+    "alertDescription": "Nous allons demander le justificatif de votre situation directement auprès des administrations en charge. Si l'information est disponible, vous n'aurez pas de justificatifs à fournir.",
     "button": "Suivant",
     "guide1": {
       "letter": "A",
@@ -105,7 +105,7 @@
     "birthdate": "Date de naissance",
     "birthPlace": "Lieu de naissance",
     "alertTitle": "Vos informations vont être transmises pour vérifier votre QF",
-    "alertDescription": "Votre civilité va être transférée à la CNAF",
+    "alertDescription": "Votre civilité va être transférée à la CNAF.",
     "button": "Suivant",
     "guide1": {
       "letter": "A",
@@ -121,12 +121,13 @@
   "Connexion": {
     "stepperTitle": "Connexion",
     "stepperNextTitle": "Vérification de votre statut",
+    "stepperNextTitleIdentity": "Vérification de votre identité",
     "connectionTitle": "Se connecter",
     "contentLeft": "Se connecter avec FranceConnect :",
-    "tagLeft": "En cas de demande de tarif réduit: Souscription en 3 clics",
+    "tagLeft": "En cas de demande de tarif réduit : souscription en 3 clics",
     "middleText": "Ou",
     "contentRight": "Se connecter avec son compte :",
-    "tafRight": "En cas de demande de tarif réduit: Délais moyen de 15 jours",
+    "tafRight": "En cas de demande de tarif réduit: délai moyen de 15 jours",
     "inputLabel": "Identifiant",
     "inputRelatedMessage": "Le mot de passe n'est pas bon.",
     "inputPassword": "Mot de passe",
@@ -144,7 +145,7 @@
       "homeLinkPropsTitle": "Page de connexion - Démonstrateur API Particulier"
     },
     "overlayText": {
-      "title": "L'utilisateur se retrouve sur le site de FranceConnect, il sélectionne le compte de son choix pour se connecter...",
+      "title": "{firstName} se retrouve sur le site de FranceConnect, {gender, select, female {elle} male {il} other {il}} sélectionne le compte de son choix pour se connecter...",
       "button": "Poursuivre le parcours"
     }
   },
@@ -155,7 +156,7 @@
       "homeLinkPropsTitle": "Page de validation de la connexion - Démonstrateur API Particulier"
     },
     "overlayText": {
-      "title": "L'utilisateur a selectionné le compte de son choix, il est transféré sur la page de connexion concernée, ici en exemple, le site impot.gouv.fr.",
+      "title": "{firstName} a selectionné le compte de son choix, {gender, select, female {elle est transférée} male {il est transféré} other {il est transféré}} sur la page de connexion concernée, ici en exemple, le site impot.gouv.fr.",
       "titleBold": "Il entre son identifiant et son mot de passe...",
       "button": "Poursuivre le parcours"
     },
@@ -175,9 +176,10 @@
   },
   "Verification": {
     "stepperTitle": "Vérification de votre statut",
+    "stepperTitleIdentity": "Vérification de votre identité",
     "stepperNextTitle": "Souscription",
     "loadingTitle": "Patientez quelques instants...",
-    "loadingText": "Nous sommes en train de vérifier votre statut",
+    "loadingText": "Nous sommes en train de vérifier votre statut.",
     "success": {
       "infoTitle": {
         "jobSeeker": "Votre statut demandeur d'emploi a été confirmé",
@@ -187,16 +189,16 @@
         "qfMSA": "Nous avons pu obtenir votre quotient familial CAF ou MSA"
       },
       "infoDescription": {
-        "jobSeeker": "Pôle emploi nous a confirmé votre inscription en tant que demandeur d'emploi",
-        "student": "Le Ministère de l'Enseignement Supérieur et de la Recherche nous a confirmé votre statut étudiant",
-        "studentScholarship": "Le CNOUS nous a confirmé votre inscription en tant qu'étudiant boursier",
-        "c2s": "La Sécurité Sociale nous a confirmé votre statut de bénéficaire de la complémentaire santé solidaire",
-        "qfMSA": "L’administration nous a confirmé votre QF, nous sommes donc en mesure de calculer automatiquement votre tarif cantine"
+        "jobSeeker": "Pôle emploi nous a confirmé votre inscription en tant que demandeur d'emploi.",
+        "student": "Le Ministère de l'Enseignement Supérieur et de la Recherche nous a confirmé votre statut étudiant.",
+        "studentScholarship": "Le CNOUS nous a confirmé votre inscription en tant qu'étudiant boursier.",
+        "c2s": "La Sécurité Sociale nous a confirmé votre statut de bénéficaire de la complémentaire santé solidaire.",
+        "qfMSA": "L’administration nous a confirmé votre QF, nous sommes donc en mesure de calculer automatiquement votre tarif cantine."
       },
       "successTitle": "Vous êtes éligible au tarif réduit !",
       "successDescription": {
-        "jobSeeker": "Votre carte Mobilités+ sera financée à 50% par votre commune et vous reviendra à <important>30 euros/mois</important>.",
-        "student": "Votre carte Mobilités+ sera financée à 50% par votre commune et vous reviendra à <important>30 euros/mois</important>.",
+        "jobSeeker": "Votre carte Mobilités+ sera financée à 65% par votre commune et vous reviendra à <important>30 euros/mois</important>.",
+        "student": "Votre carte Mobilités+ sera financée à 65% par votre commune et vous reviendra à <important>30 euros/mois</important>.",
         "studentScholarship": "Votre carte Mobilités+ sera financée à 75% par votre commune et vous reviendra à <b>15 euros/mois</important>.",
         "c2s": "Votre carte Mobilités+ sera financée à 75% par votre commune et vous reviendra à <important>15 euros/mois</important>.",
         "qfMSA": "Vos ressources vous permettent d’accéder au tarif réduit de <important>0,30 €/repas</important>. Ce tarif est co-financé par la collectivité et l’État."
@@ -213,15 +215,15 @@
         "studentWithoutFranceConnect": "La connexion automatique avec le Ministère de l’enseignement supérieur n’a pas pu être établie"
       },
       "desc": {
-        "jobSeeker": "Pôle emploi n'a pu confirmer votre inscription en tant que demandeur d'emploi",
-        "student": "Le Ministère de l'Enseignement Supérieur et de la Recherche n'a pu confirmer votre statut étudiant",
-        "studentScholarship": "Le CNOUS n'a pu confirmer votre inscription en tant qu'étudiant boursier",
-        "c2s": "La Sécurité Sociale n'a pu confirmer votre statut de bénéficaire de la complémentaire santé solidaire",
-        "qfMSA": "La transmission automatique de cette information n’a pas fonctionné",
-        "studentWithoutFranceConnect": "Nous n’avons donc pas pu vérifier votre statut.<link>Essayer une seconde fois en revérifiant mes informations</link>"
+        "jobSeeker": "Pôle emploi n'a pu confirmer votre inscription en tant que demandeur d'emploi.",
+        "student": "Le Ministère de l'Enseignement Supérieur et de la Recherche n'a pu confirmer votre statut étudiant.",
+        "studentScholarship": "Le CNOUS n'a pu confirmer votre inscription en tant qu'étudiant boursier.",
+        "c2s": "La Sécurité Sociale n'a pu confirmer votre statut de bénéficaire de la complémentaire santé solidaire.",
+        "qfMSA": "La transmission automatique de cette information n’a pas fonctionné.",
+        "studentWithoutFranceConnect": "Nous n’avons donc pas pu vérifier votre statut. <link>Essayer une seconde fois en revérifiant mes informations.</link>"
       },
       "text": "Pour poursuivre votre souscription en tarif réduit, veuillez nous transmettre le justificatif adéquat. <important>Le délai moyen de traitement est de 15 jours.</important>",
-      "textBis": "Après vérification de votre identité, vos informations seront transmises aux administrations compétentes pour votre éligibilité au tarif réduit.",
+      "textBis": "Après vérification de votre identité, vos informations seront transmises aux administrations compétentes pour vérifier votre éligibilité au tarif réduit.",
       "upload": {
         "jobSeeker": "Transmettre l'attestion Pôle Emploi : ",
         "student": "Transmettre le certificat de scolarité du mois en cours : ",
@@ -246,6 +248,12 @@
       "cantine": "Délai moyen de 15 jours"
     },
     "links": {
+      "null": {
+        "withoutFranceConnect": {
+          "withoutPrice": "Poursuivre sans tarif réduit",
+          "viewShops": "Consulter la liste des guichets Mobilités+ pour déposer mon dossier papier"
+        }
+      },
       "transport": {
         "withoutFranceConnect": {
           "withoutPrice": "Poursuivre sans tarif réduit",
@@ -254,7 +262,8 @@
       },
       "cantine": {
         "withoutFranceConnect": {
-          "withoutPrice": "Poursuivre sans tarification solidaire"
+          "withoutPrice": "Poursuivre sans tarification solidaire",
+          "viewShops": "Consulter la liste des guichets pour déposer mon dossier papier"
         }
       }
     }
@@ -262,6 +271,11 @@
   "CardSocialPricing": {
     "cardTitle": "Comment fonctionne la tarification sociale ?",
     "cardDescription": "Retrouvez le descriptif de la démarche, les critères d'élibilité et les documents nécessaires pour obtenir un Pass tarif réduit",
+    "cardDetail": "PDF - 61,88 Ko"
+  },
+  "CardUnitedPricing": {
+    "cardTitle": "Comment fonctionne la tarification solidaire ?",
+    "cardDescription": "Retrouvez le descriptif de la démarche, la grille tarifaire et les critères d'éligibilité pour les inscriptions à la cantine.",
     "cardDetail": "PDF - 61,88 Ko"
   },
   "DemonstratorLayout": {
@@ -364,10 +378,10 @@
     "accordionContent6": "Lieu de naissance",
     "accordionContent7": "Pays de naissance",
     "accordionContent8": {
-      "student": "Statut Etudiant",
-      "studentScholarship": "Statut Etudiant Boursier",
+      "student": "Statut étudiant",
+      "studentScholarship": "Statut étudiant boursier",
       "jobSeeker": "Statut demandeur d'emploi",
-      "c2s": "Statut Complémentaire Santé Solidaire",
+      "c2s": "Statut complémentaire santé solidaire",
       "qfMSA": "Quotient familial CAF ou MSA"
     }
   },

@@ -8,7 +8,7 @@ import { Alert } from '@codegouvfr/react-dsfr/Alert';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useJourney } from '@/app/journey-provider';
-import CardSocialPricing from '@/components/CardSocialPricing';
+import CardUnitedPricing from '@/components/CardUnitedPricing';
 import Tooltip from '@/components/Tooltip';
 import styles from './page.module.css';
 import { Input } from '@codegouvfr/react-dsfr/Input';
@@ -53,7 +53,7 @@ export default function Page() {
         }}
       >
         <div className={styles.stepper}>
-          <Stepper currentStep={3} nextTitle={t('stepperNextTitle')} stepCount={4} title={t('stepperTitle')} />
+          <Stepper currentStep={2} nextTitle={t('stepperNextTitle')} stepCount={3} title={t('stepperTitle')} />
         </div>
 
         <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
@@ -220,7 +220,7 @@ export default function Page() {
           </div>
 
           <div style={{ flex: '35%', paddingLeft: '60px' }} className={styles.card}>
-            <CardSocialPricing />
+            <CardUnitedPricing />
           </div>
         </div>
       </div>

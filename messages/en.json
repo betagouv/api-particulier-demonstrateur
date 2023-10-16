@@ -94,6 +94,7 @@
   },
   "Formulaire-Cantine": {
     "stepperTitle": "Checking your status",
+    "stepperTitleIdentity": "Checking your identity",
     "stepperNextTitle": "Subscription",
     "text": "With the completed information, we will request proof of your situation directly from the responsible administrations. If the information is available, you will not have to provide any justification.",
     "titleForm": "Enter your identity information:",
@@ -105,7 +106,7 @@
     "birthdate": "Date of Birth",
     "birthPlace": "Place of Birth",
     "alertTitle": "Your information will be transmitted to verify your QF",
-    "alertDescription": "Your title will be transferred to the CNAF",
+    "alertDescription": "Your title will be transferred to the CNAF.",
     "button": "Next",
     "guide1": {
       "letter": "A",
@@ -144,7 +145,7 @@
       "homeLinkPropsTitle": "Authentication page - API Particulier Demonstrator"
     },
     "overlayText": {
-      "title": "The user goes to the FranceConnect website, selects the account of his choice to connect...",
+      "title": "{firstName} goes to the FranceConnect website, selects the account of {gender, select, female {her} male {his} other {his}} choice to connect...",
       "button": "Continuing the journey"
     }
   },
@@ -155,7 +156,7 @@
       "homeLinkPropsTitle": "Validation page - API Particulier Demonstrator"
     },
     "overlayText": {
-      "title": "Once the user has selected the account of their choice, they are transferred to the relevant login page, in this case the impot.gouv.fr website.",
+      "title": "Once {firstName} has selected the account of their choice, {gender, select, female {she} male {he} other {he}} is transferred to the relevant login page, in this case the impot.gouv.fr website.",
       "titleBold": "He enters his login and password...",
       "button": "Continuing the journey"
     },
@@ -177,7 +178,7 @@
     "stepperTitle": "Checking your status",
     "stepperNextTitle": "Subscription",
     "loadingTitle": "Please wait a moment...",
-    "loadingText": "We are checking your status",
+    "loadingText": "We are checking your status.",
     "success": {
       "infoTitle": {
         "jobSeeker": "Your job seeker status has been confirmed",
@@ -187,11 +188,11 @@
         "qfMSA": "We were able to obtain your CAF or MSA family quotient"
       },
       "infoDescription": {
-        "jobSeeker": "Pôle emploi has confirmed your registration as a job seeker",
-        "student": "The Ministry of Higher Education and Research has confirmed your student status",
-        "studentScholarship": "CNOUS has confirmed your registration as a scholarship student",
-        "c2s": "The Social Security has confirmed your status as a beneficiary of the complementary health solidarity",
-        "qfMSA": "The administration has confirmed your QF, so we are able to automatically calculate your canteen rate"
+        "jobSeeker": "Pôle emploi has confirmed your registration as a job seeker.",
+        "student": "The Ministry of Higher Education and Research has confirmed your student status.",
+        "studentScholarship": "CNOUS has confirmed your registration as a scholarship student.",
+        "c2s": "The Social Security has confirmed your status as a beneficiary of the complementary health solidarity.",
+        "qfMSA": "The administration has confirmed your QF, so we are able to automatically calculate your canteen rate."
       },
       "successTitle": "You are eligible for the reduced rate!",
       "successDescription": {
@@ -213,15 +214,15 @@
         "studentWithoutFranceConnect": "The automatic connection with the Ministry of Higher Education could not be established"
       },
       "desc": {
-        "jobSeeker": "Pôle emploi could not confirm your registration as a job seeker",
-        "student": "The Ministry of Higher Education and Research could not confirm your student status",
-        "studentScholarship": "CNOUS could not confirm your registration as a scholarship student",
-        "c2s": "The Social Security could not confirm your status as a beneficiary of the complementary health solidarity",
-        "qfMSA": "The automatic transmission of this information did not work",
-        "studentWithoutFranceConnect": "So we could not verify your status. <link>Try again by re-checking my information</link>"
+        "jobSeeker": "Pôle emploi could not confirm your registration as a job seeker.",
+        "student": "The Ministry of Higher Education and Research could not confirm your student status.",
+        "studentScholarship": "CNOUS could not confirm your registration as a scholarship student.",
+        "c2s": "The Social Security could not confirm your status as a beneficiary of the complementary health solidarity.",
+        "qfMSA": "The automatic transmission of this information did not work.",
+        "studentWithoutFranceConnect": "So we could not verify your status. <link>Try again by re-checking my information.</link>"
       },
       "text": "To continue your subscription at a reduced rate, please provide the appropriate proof. <important>The average processing time is 15 days.</important>",
-      "textBis": "After verifying your identity, your information will be transmitted to the competent administrations for your eligibility for the reduced rate.",
+      "textBis": "After verifying your identity, your information will be transmitted to the competent administrations to check your eligibility for the reduced rate.",
       "upload": {
         "jobSeeker": "Submit the Pôle Emploi certificate: ",
         "student": "Submit the current month's school certificate: ",
@@ -244,10 +245,22 @@
       "transport": "Average delay of 15 days"
     },
     "links": {
+      "null": {
+        "withoutFranceConnect": {
+          "withoutPrice": "Continue without reduced rate",
+          "viewShops": "Check the list of Mobilités+ counters to submit my paper file"
+        }
+      },
       "transport": {
         "withoutFranceConnect": {
           "withoutPrice": "Continue without reduced rate",
           "viewShops": "Check the list of Mobilités+ counters to submit my paper file"
+        }
+      },
+      "cantine": {
+        "withoutFranceConnect": {
+          "withoutPrice": "Continue without reduced rate",
+          "viewShops": "Check the list of places to submit my paper file"
         }
       }
     }
@@ -255,6 +268,11 @@
   "CardSocialPricing": {
     "cardTitle": "How does social pricing work?",
     "cardDescription": "Find the description of the process, the eligibility criteria and the documents necessary to obtain a reduced rate Pass",
+    "cardDetail": "PDF - 61,88 Ko"
+  },
+  "CardUnitedPricing": {
+    "cardTitle": "How does united pricing work?",
+    "cardDescription": "Find the description of the process, the price list and the eligibility criteria for registrations at the canteen.",
     "cardDetail": "PDF - 61,88 Ko"
   },
   "DemonstratorLayout": {

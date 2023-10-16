@@ -7,6 +7,7 @@ export type User = {
   jobSeeker?: Boolean | undefined;
   student?: Boolean | undefined;
   qfMSA?: number | undefined;
+  gender: 'female' | 'male';
 } | null;
 
 export type Journey = {
