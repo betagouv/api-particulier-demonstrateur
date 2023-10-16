@@ -53,7 +53,12 @@ export default function Page() {
         }}
       >
         <div className={styles.stepper}>
-          <Stepper currentStep={2} nextTitle={t('stepperNextTitle')} stepCount={3} title={t('stepperTitle')} />
+          <Stepper
+            currentStep={2}
+            nextTitle={t('stepperNextTitle')}
+            stepCount={journey?.user?.isFranceConnectAuth ? 2 : 3}
+            title={t('stepperTitle')}
+          />
         </div>
 
         <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
@@ -205,9 +210,9 @@ export default function Page() {
                   size="large"
                   onClick={() => {
                     if (sex === 'male' && birthdate === '1984-06-23' && birthPlace === 'France') {
-                      router.push('/' + journey?.type + '/verification/upload?user=' + journey?.user?.id);
+                      router.push('/' + journey?.type + '/upload?user=' + journey?.user?.id);
                     } else if (!(birthdate === '' || sex === '' || birthPlace === '')) {
-                      router.push('/' + journey?.type + '/verification/upload/erreur?user=' + journey?.user?.id);
+                      router.push('/' + journey?.type + '/verification/erreur?user=' + journey?.user?.id);
                     }
                   }}
                   iconId="fr-icon-arrow-right-line"

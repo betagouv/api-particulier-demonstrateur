@@ -6,9 +6,11 @@ import { useTranslations } from 'next-intl';
 import CardSocialPricing from '@/components/CardSocialPricing';
 import Tooltip from '@/components/Tooltip';
 import styles from './layout.module.css';
+import { useJourney } from '@/app/journey-provider';
 
 export default function Layout({ children }: { children: JSX.Element }) {
   const t = useTranslations('Verification');
+  const { journey } = useJourney();
 
   return (
     <>
@@ -26,7 +28,12 @@ export default function Layout({ children }: { children: JSX.Element }) {
         }}
       >
         <div className={styles.stepper}>
-          <Stepper currentStep={3} nextTitle={t('stepperNextTitle')} stepCount={4} title={t('stepperTitle')} />
+          <Stepper
+            currentStep={3}
+            nextTitle={t('stepperNextTitle')}
+            stepCount={journey?.user?.isFranceConnectAuth ? 3 : 4}
+            title={t('stepperTitle')}
+          />
         </div>
 
         <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
