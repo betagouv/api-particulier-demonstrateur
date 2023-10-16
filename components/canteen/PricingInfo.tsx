@@ -24,7 +24,6 @@ export default function PricingInfo() {
       <h2>{t('cantine.pricing.title')}</h2>
       <HighlightSubscription
         style={{ marginTop: '2rem', marginBottom: '2rem' }}
-        title={t('cantine.pricing.price')}
         content={t('cantine.pricing.socialPrice')}
         subContent={t('cantine.pricing.subSocialPrice')}
       />

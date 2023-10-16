@@ -59,7 +59,6 @@ export default function Page() {
         <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
           <div style={{ flex: '65%' }}>
             <div style={{ position: 'relative' }}>
-              <p>{t('text')}</p>
               <p>
                 <b>{t('titleForm')}</b>
               </p>
@@ -205,7 +204,7 @@ export default function Page() {
                 // onClose={function noRefCheck() {}}
                 severity="info"
                 small
-                style={{ marginTop: '1.5rem', marginBottom: '1.5rem' }}
+                style={{ marginTop: '3.5rem', marginBottom: '1.5rem' }}
               />
               <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
                 <Button
@@ -213,10 +212,10 @@ export default function Page() {
                   size="large"
                   onClick={() => {
                     if (sex === 'female' && birthdate === '2003-04-17') {
-                      router.push('/' + journey?.type + '/verification/upload?user=' + journey?.user?.id);
+                      router.push('/' + journey?.type + '/upload?user=' + journey?.user?.id);
                     }
                     if (ine == '12345678') {
-                      router.push('/' + journey?.type + '/verification/upload/erreur?user=' + journey?.user?.id);
+                      router.push('/' + journey?.type + '/verification/erreur?user=' + journey?.user?.id);
                     }
                   }}
                   iconId="fr-icon-arrow-right-line"

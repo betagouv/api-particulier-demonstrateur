@@ -21,18 +21,16 @@ export default function Page() {
         description={t.rich('error.desc.studentWithoutFranceConnect', {
           p: (chunks) => <p>{chunks}</p>,
           link: (chunks) => (
-            <a
-              href="#"
-              style={{ display: 'inline-block' }}
+            <div
+              style={{ display: 'inline-block', textDecoration: 'underline', cursor: 'pointer' }}
               onClick={() => router.push('/' + journey?.type + '/formulaire?user=' + journey?.user?.id)}
             >
               {chunks}
-            </a>
+            </div>
           ),
         })}
         // onClose={function noRefCheck() {}}
         severity="warning"
-        small
         style={{ marginBottom: '20px' }}
       />
       <div style={{ marginTop: '1.5rem' }}>
@@ -61,15 +59,12 @@ export default function Page() {
           {t('error.cantineErrorButton')}
         </Button>
       </div>
-      <div
-        className={styles.rightElement}
-        style={{
-          paddingTop: '2rem',
-          paddingBottom: '3rem',
-        }}
-      >
-        <a className="fr-link fr-icon-arrow-right-line fr-link--icon-right" href="#">
-          {t('links.cantine.withoutFranceConnect.withoutPrice')}
+      <div style={{ display: 'flex', alignItems: 'flex-end', flexDirection: 'column', paddingTop: '50px' }}>
+        <a className={'fr-link fr-icon-arrow-right-line fr-link--icon-right'} href="#">
+          {t('links.' + journey?.type + '.withoutFranceConnect.viewShops')}
+        </a>
+        <a style={{ marginTop: '1rem' }} className={'fr-link fr-icon-arrow-right-line fr-link--icon-right'} href="#">
+          {t('links.' + journey?.type + '.withoutFranceConnect.withoutPrice')}
         </a>
       </div>
     </>

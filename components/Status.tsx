@@ -32,7 +32,6 @@ export default function Status({ status }: Props) {
                 description={t('success.infoDescription.' + scope)}
                 // onClose={function noRefCheck() {}}
                 severity="info"
-                small
               />
               <Alert
                 closable
@@ -73,7 +72,6 @@ export default function Status({ status }: Props) {
                 description={t('error.desc.' + scope)}
                 // onClose={function noRefCheck() {}}
                 severity="warning"
-                small
                 style={{ marginBottom: '20px' }}
               />
               <div style={{ marginTop: '2rem' }}>
@@ -104,6 +102,18 @@ export default function Status({ status }: Props) {
                 >
                   {t('error.button')}
                 </Button>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'flex-end', flexDirection: 'column' }}>
+                <a className={'fr-link fr-icon-arrow-right-line fr-link--icon-right'} href="#">
+                  {t('links.' + journey?.type + '.withoutFranceConnect.viewShops')}
+                </a>
+                <a
+                  style={{ marginTop: '1rem' }}
+                  className={'fr-link fr-icon-arrow-right-line fr-link--icon-right'}
+                  href="#"
+                >
+                  {t('links.' + journey?.type + '.withoutFranceConnect.withoutPrice')}
+                </a>
               </div>
             </>
           )}

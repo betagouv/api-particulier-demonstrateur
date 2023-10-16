@@ -26,7 +26,6 @@ export default function Layout({ children }: { children: JSX.Element }) {
           <h2>{t('cantine.eligibiliteTitle')}</h2>
           <HighlightSubscription
             style={{ marginBottom: '-20px' }}
-            title={t('cantine.pricing.price')}
             content={t('cantine.pricing.socialPrice')}
             subContent={t('cantine.pricing.subSocialPrice')}
           />

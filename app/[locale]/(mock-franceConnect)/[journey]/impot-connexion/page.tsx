@@ -41,7 +41,7 @@ export default function ConnectionImpot() {
 
       <div className={styles.textOverlay}>
         <p>
-          {t('overlayText.title')}
+          {t('overlayText.title', { firstName: journey?.user?.firstName, gender: journey?.user?.gender })}
           <span style={{ display: 'block', fontWeight: 'bold' }}>{t('overlayText.titleBold')}</span>
         </p>
         <Button

@@ -14,13 +14,18 @@ export default function Page() {
       <PurchaseInfo
         title={t('transport.subscribeTitle')}
         style={{ backgroundImage: 'url("/images/bg-transport.jpg")' }}
+        pricingStyle={{
+          backgroundImage: 'url("/images/pricing-transport.png")',
+          height: '212px',
+          width: '450px',
+        }}
       />
       <PricingInfo />
       <Tooltip>
         <ul>
           <li>
-            <i className={fr.cx('ri-information-fill')} /> Ceci est un conseil business concernant la page souscription
-            du cas d&apos;usage du transport
+            <i className={fr.cx('ri-information-fill')} /> Ceci est un conseil de parcours usager concernant la page
+            souscription du cas d&apos;usage du transport
           </li>
           <li>
             <p>

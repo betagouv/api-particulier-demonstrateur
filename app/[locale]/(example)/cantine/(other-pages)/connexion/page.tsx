@@ -38,7 +38,7 @@ export default function Page() {
         }}
       >
         <div className={styles.stepper}>
-          <Stepper currentStep={2} nextTitle={t('stepperNextTitle')} stepCount={4} title={t('stepperTitle')} />
+          <Stepper currentStep={1} nextTitle={t('stepperNextTitle')} stepCount={3} title={t('stepperTitle')} />
         </div>
 
         <div
