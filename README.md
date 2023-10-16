@@ -31,7 +31,6 @@ Une fois que vous avez installé les dépendances, vous pouvez lancer l'applicat
 1. Exécutez la commande suivante pour démarrer l'application en mode développement :
 
    ```shell
-   Copy code
    npm run dev
    ```
 
