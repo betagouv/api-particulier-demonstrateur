@@ -189,7 +189,7 @@ export default function Page() {
       </div>
       <Tooltip isOpenedByDefault={true}>
         <ul>
-          <li class="fr">
+          <li>
             <i className={fr.cx('ri-information-fill')} />{' '}
             <b>Dans le cadre d’une tarification en fonction du statut de l’usager, nous vous recommandons</b> :
             <ul>
