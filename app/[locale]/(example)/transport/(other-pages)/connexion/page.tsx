@@ -179,7 +179,42 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <Tooltip isOpenedByDefault={false} />
+      <Tooltip isOpenedByDefault={true}>
+        <ul>
+          <li>
+            <i className={fr.cx('ri-information-fill')} />{' '}
+            <b>
+              Les données de l’API Particulier sont sensibles et personnelles à l’usager. Seul ce dernier doit pouvoir
+              les visualiser. C’est pourquoi votre service doit permettre d’identifier l’usager.
+            </b>{' '}
+            <ul>
+              <li>
+                <b>
+                  Proposez{' '}
+                  <a
+                    href="https://franceconnect.gouv.fr/partenaires?source=homepage_header"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    FranceConnect
+                  </a>{' '}
+                  &nbsp;:
+                </b>{' '}
+                <br />
+                Ce mode d’authentification facilite et accélère grandement la démarche. Couplé à API Particulier, ce
+                mode de connexion permet de délivrer une réponse instantanée à l’usager.
+              </li>
+              <li>
+                <b>Mettez toujours à disposition un autre moyen d’authentification&nbsp;:</b>
+                <br />
+                FranceConnect n’est pas accessible à tous les usagers et l’API Particulier est tout à fait appelable
+                sans FranceConnect.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul></ul>
+      </Tooltip>
     </>
   );
 }
