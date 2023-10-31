@@ -20,9 +20,9 @@
         "title": "Solidarity Pricing for the Cafeteria",
         "desc": "With the Individual API, build a service with rates adapted to your users' resources."
       },
-      "henri": {
-        "title": "Henri, job seeker",
-        "desc": "Henri buys an annual transport card. He is a job seeker and eligible for the reduced rate. He will connect using FranceConnect."
+      "nicolas": {
+        "title": "Nicolas, job seeker",
+        "desc": "Nicolas buys an annual transport card. He is a job seeker and eligible for the reduced rate. He will connect using FranceConnect."
       },
       "juliette": {
         "title": "Juliette, student",

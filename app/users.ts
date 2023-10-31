@@ -3,21 +3,21 @@ import { User } from '@/app/types';
 export const users: User[] = [
   {
     id: '1',
-    firstName: 'Henri',
+    firstName: 'Nicolas',
     lastName: 'Dupont',
     gender: 'male',
     // eslint-disable-next-line quotes
-    description: "Henri, demandeur d'emploi",
+    description: "Nicolas, demandeur d'emploi",
     isFranceConnectAuth: true,
     jobSeeker: true,
   },
   {
     id: '1',
-    firstName: 'Henri',
+    firstName: 'Nicolas',
     lastName: 'Dupont',
     gender: 'male',
     // eslint-disable-next-line quotes
-    description: "Henri, demandeur d'emploi",
+    description: "Nicolas, demandeur d'emploi",
     isFranceConnectAuth: true,
     jobSeeker: true,
   },
