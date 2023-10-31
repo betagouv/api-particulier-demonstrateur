@@ -24,8 +24,9 @@ export default function Page() {
       <Tooltip>
         <ul>
           <li>
-            <i className={fr.cx('ri-information-fill')} /> Ceci est un conseil de parcours usager concernant la page
-            souscription du cas d&apos;usage du transport
+            <i className={fr.cx('ri-information-fill')} /> Dans la suite du parcours, retrouvez ici des conseils
+            d&apos;expérience utilisateur <br />
+            ou des conseils techniques en utilisant le mode développeur ci-dessous.
           </li>
           <li>
             <p>

@@ -187,7 +187,100 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <Tooltip isOpenedByDefault={false} />
+      <Tooltip isOpenedByDefault={true}>
+        <ul>
+          <li class="fr">
+            <i className={fr.cx('ri-information-fill')} />{' '}
+            <b>Dans le cadre d’une tarification en fonction du statut de l’usager, nous vous recommandons</b> :
+            <ul>
+              <li>
+                <b>de laisser l’usager choisir lui-même son statut.</b> Cela permettant d’éviter d’imposer un choix par
+                défaut à l’usager. <br />
+                <i>
+                  Par exemple, si un particulier est concerné par deux statuts, lui laisser le choix du statut permet à
+                  l’usager de privilégier autant le statut au meilleur tarif que le statut qu’il pense garder plus
+                  longtemps pour éviter d’avoir à entreprendre à nouveau la démarche.
+                </i>
+              </li>
+              <li>
+                <b>de demander le choix du statut avant la page de connexion</b> pour appeler ultérieurement uniquement
+                les données du statut concerné.
+                <br />
+                <i>
+                  De façon générale, il est toujours préférable d’appeler les données strictement nécessaires pour des
+                  raisons de rapidité et de protection des données personnelles.
+                </i>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>
+              <b>Nous vous recommandons d’expliquer au maximum les mécanismes de traitement des données à l’usager</b> :
+              <br />
+              <i>
+                Ici, cela s’illustre par la présence d’un panneau indiquant que les informations de l’usager vont être
+                transmises pour vérifier son statut.
+              </i>
+              <br />
+              La dématérialisation de l’information ne doit pas opacifier le fonctionnement des démarches.
+            </p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <i className={fr.cx('ri-information-fill')} />{' '}
+            <b>
+              Cet écran de choix du statut anticipe l’utilisation de différentes API du bouquet API Particulier&nbsp;:
+            </b>
+            <ul>
+              <li>
+                <b>Demandeur d’emploi&nbsp;:</b>{' '}
+                <a
+                  href="https://particulier.api.gouv.fr/catalogue/pole_emploi/situation"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  API Statut demandeur d’emploi
+                </a>{' '}
+                ;
+              </li>
+              <li>
+                <b>Étudiant&nbsp;:</b>{' '}
+                <a
+                  href="https://particulier.api.gouv.fr/catalogue/mesri/statut_etudiant"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  API Statut étudiant
+                </a>{' '}
+                ;
+              </li>
+              <li>
+                <b>Étudiant boursier&nbsp;:</b>{' '}
+                <a
+                  href="https://particulier.api.gouv.fr/catalogue/cnous/statut_etudiant_boursier"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  API Statut étudiant boursier
+                </a>{' '}
+                ;
+              </li>
+              <li>
+                <b>Bénficiaire de la C2S&nbsp;:</b>{' '}
+                <a
+                  href="https://particulier.api.gouv.fr/catalogue/cnaf_msa/complementaire_sante_solidaire"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  API Complémentaire santé solidaire
+                </a>{' '}
+                ;
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </Tooltip>
     </>
   );
 }
