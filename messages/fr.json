@@ -21,8 +21,8 @@
         "desc": "Avec API Particulier, construire un service aux tarifs adaptés selon les ressources de vos usagers."
       },
       "user1": {
-        "title": "Henri, demandeur d’emploi",
-        "desc": "Henri achète une carte des transports annuelle. Il est demandeur d’emploi et éligible au tarif réduit. Il va se connecter AVEC FranceConnect."
+        "title": "Nicolas, demandeur d’emploi",
+        "desc": "Nicolas achète une carte des transports annuelle. Il est demandeur d’emploi et éligible au tarif réduit. Il va se connecter AVEC FranceConnect."
       },
       "user2": {
         "title": "Juliette, étudiante",
@@ -56,12 +56,12 @@
     "alertDescription": "Nous allons demander le justificatif de votre situation directement auprès des administrations en charge. Si l'information est disponible, vous n'aurez pas de justificatifs à fournir.",
     "guide1": {
       "letter": "A",
-      "text": "Henri choisit le bon tarif",
+      "text": "Nicolas choisit le bon tarif",
       "subText": "Exemple de parcours validé"
     },
     "guide2": {
       "letter": "B",
-      "text": "Henri se trompe de tarif",
+      "text": "Nicolas se trompe de tarif",
       "subText": "Exemple de cas d'erreur"
     }
   },
