@@ -145,6 +145,7 @@ export default function Page() {
                   <div className={`${styles.inputGroup}`} style={{ paddingBottom: 0 }}>
                     <RadioButtons
                       legend={t('sex')}
+                      hintText="* Champ obligatoire"
                       name="radio"
                       orientation="horizontal"
                       options={[
