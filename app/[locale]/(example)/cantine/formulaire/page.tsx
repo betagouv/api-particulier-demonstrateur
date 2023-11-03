@@ -181,7 +181,7 @@ export default function Page() {
                   </div>
                   <div className={`${styles.inputGroup} ${styles.lastInputGroup}`}>
                     <Input
-                      hintText=""
+                      hintText="* Champ obligatoire"
                       label={t('birthPlace')}
                       state="default"
                       stateRelatedMessage=""
@@ -230,7 +230,91 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <Tooltip isOpenedByDefault={false} />
+      <Tooltip isOpenedByDefault={true}>
+        <ul>
+          <li>
+            <i className={fr.cx('ri-information-fill')} /> Pour reccueillir les informations avec API Particulier sans
+            FranceConnect,{' '}
+            <b>il est nécessaire de demander à l’usager de renseigner les paramètres d’appel de l’API concernée.</b>{' '}
+            <i>
+              Ici, pour l’API Quotient familial CAF & MSA, il s’agit des noms, prénoms, sexe, date de naissance et lieu
+              de naissance de l'allocataire. Ces modalités d’appel sont documentées, comme pour toutes les API, dans la{' '}
+              <a
+                href="https://particulier.api.gouv.fr/catalogue/cnaf-msa/quotient_familial_v2#parameters_details"
+                target="_blank"
+                rel="noreferrer"
+              >
+                fiche métier de l’API
+              </a>
+            </i>
+            . <br />
+            <br />
+            Pour en savoir plus sur les paramètres obligatoires et la configuration du champ <i>"lieu de naissance"</i>,
+            lire les recommandations suivantes...
+          </li>
+          <li>
+            <b>
+              Certains paramètres d’appel sont obligatoires, d’autres facultatifs. Nous vous recommandons d’appliquer
+              les conditions indiquées dans la fiche métier de chaque API.
+            </b>
+            <br />
+            <ul>
+              <li>
+                <b>Respecter les paramètres obligatoires :</b> Si un paramètre est indiqué comme obligatoire dans la
+                documentation d’une API, c’est qu’il est indispensable pour que l’appel soit effectué.
+              </li>
+              <li>
+                <b>Respecter les paramètres facultatifs :</b> Il peut être tentant d’obliger l’usager à remplir tous les
+                champs. En effet, la saisie d’un maximum de champs permet de maximiser les chances de trouver le
+                particulier dans la base du fournisseur de la donnée. Toutefois,{' '}
+                <b>rendre les paramètres obligatoires peut exclure des utilisateurs</b>.{' '}
+                <i>
+                  Par exemple, certaines personnes n’ont pas de prénom ; d’autres n’ont pas de nom de famille ; d’autres
+                  n’ont pas de jour de naissance, etc.
+                </i>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b>
+              Simplifier la saisie du champ <i>"Lieu de naissance"</i> :
+            </b>
+            <br />
+            <i>
+              L’
+              <a
+                href="https://particulier.api.gouv.fr/catalogue/cnaf-msa/quotient_familial_v2#parameters_details"
+                target="_blank"
+                rel="noreferrer"
+              >
+                API Quotient familial CAF & MSA
+              </a>{' '}
+              requiert en paramètre d’appel le code Insee (code COG) de la commune de naissance pour les personnes née
+              en France, et le code Insee du pays de naissance pour les personnes nées à l’étranger.{' '}
+            </i>
+            <ul>
+              <li>
+                <b>Permettre à l’usager de renseigner son lieu de naissance en saisissant son nom ou son code postal</b>{' '}
+                : Le code COG est un code inconnu du grand public, il faut éviter de le demander à l’usager et préférer
+                faire la correspondance en back-office. Pour faire cette correspondance, vous pouvez vous aider de{' '}
+                <a
+                  href="https://github.com/skelz0r/identite_pivot_code_insee_naissance_lookup#readme "
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  cette application
+                </a>
+                .
+              </li>
+              <li>
+                <b>Créer un seul champ "Lieu de naissance"</b> : pour éviter aux utilisateurs nés à l’étranger d’avoir à
+                renseigner leur commune de naissance alors que ce n’est pas nécessaire.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul></ul>
+      </Tooltip>
     </>
   );
 }
