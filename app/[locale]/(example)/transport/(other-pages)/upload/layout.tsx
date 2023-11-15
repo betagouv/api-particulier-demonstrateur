@@ -53,9 +53,9 @@ export default function Layout({ children }: { children: JSX.Element }) {
             </b>
             <br />
             <i>
-              Dans cet exemple, le statut étudiant de Juliette a pu être vérifié. Cette information ne sera cependant
-              pas affichée, car l’identité de Juliette devra d’abord être vérifiée manuellement par un agent. Sa pièce
-              d’identité est donc demandée.
+              Dans cet exemple, que le statut étudiant de Juliette soit confirmé ou non, cette information ne sera
+              cependant pas affichée, car l’identité de Juliette devra d’abord être vérifiée manuellement par un agent.
+              Sa pièce d’identité est donc demandée.
             </i>
             <br />
             <br />

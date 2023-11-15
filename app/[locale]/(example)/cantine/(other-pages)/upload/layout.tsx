@@ -53,9 +53,9 @@ export default function Layout({ children }: { children: JSX.Element }) {
             </b>
             <br />
             <i>
-              Dans cet exemple, le quotient familial de Kevin a pu être récupéré. Aucune information ne sera cependant
-              pas affichée, car l’identité de Kevin devra d’abord être vérifiée manuellement par un agent. Sa pièce
-              d’identité est donc demandée.
+              Dans cet exemple, que le quotient familial de Kevin soit récupéré ou non, aucune information ne sera
+              cependant affichée, car l’identité de Kevin devra d’abord être vérifiée manuellement par un agent. Sa
+              pièce d’identité est donc demandée.
             </i>
             <br />
             <br />

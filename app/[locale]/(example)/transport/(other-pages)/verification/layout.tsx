@@ -44,7 +44,20 @@ export default function Layout({ children }: { children: JSX.Element }) {
           </div>
         </div>
       </div>
-      <Tooltip isOpenedByDefault={false} />
+      <Tooltip isOpenedByDefault={true}>
+        <ul>
+          <li>
+            <i className={fr.cx('ri-information-fill')} />{' '}
+            <b>
+              En cas d’échec, indiquer que la connexion automatique n’a pu être établie et permettre à l’usager de
+              reessayer ou de choisir une solution alternative.
+            </b>
+            <br />
+            Cea
+          </li>
+        </ul>
+        <ul></ul>
+      </Tooltip>
     </>
   );
 }
