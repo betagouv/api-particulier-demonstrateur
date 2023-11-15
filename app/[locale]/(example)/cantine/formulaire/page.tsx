@@ -29,7 +29,7 @@ export default function Page() {
   const error = searchParams.get('error');
   const [birthdate, setBirthdate] = useState<string>(error ? (error === 'true' ? '2000-11-05' : '1984-06-23') : '');
   const [sex, setSex] = useState<string>(error ? (error === 'true' ? 'female' : 'male') : '');
-  const [birthPlace, setBirthPlace] = useState<string>(error ? (error === 'true' ? 'Canada' : 'France') : '');
+  const [birthPlace, setBirthPlace] = useState<string>(error ? (error === 'true' ? 'Canada' : 'Angers') : '');
 
   const resetFields = () => {
     setBirthdate('');
@@ -114,7 +114,7 @@ export default function Page() {
                             resetFields();
                             setSex('male');
                             setBirthdate('1984-06-23');
-                            setBirthPlace('France');
+                            setBirthPlace('Angers');
                           }}
                           buttonText="Remplir"
                         />
@@ -210,7 +210,7 @@ export default function Page() {
                   disabled={birthdate === '' || sex === '' || birthPlace === ''}
                   size="large"
                   onClick={() => {
-                    if (sex === 'male' && birthdate === '1984-06-23' && birthPlace === 'France') {
+                    if (sex === 'male' && birthdate === '1984-06-23' && birthPlace === 'Angers') {
                       router.push('/' + journey?.type + '/upload?user=' + journey?.user?.id);
                     } else if (!(birthdate === '' || sex === '' || birthPlace === '')) {
                       router.push('/' + journey?.type + '/verification/erreur?user=' + journey?.user?.id);

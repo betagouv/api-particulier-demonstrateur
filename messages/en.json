@@ -110,7 +110,7 @@
     "button": "Next",
     "guide1": {
       "letter": "A",
-      "text": "{firstName} enters his information:<ul><li>Gender: <important>Male</important></li><li>Date of Birth: <important>23/06/1984</important></li><li>Place of Birth: <important>France</important></li></ul>",
+      "text": "{firstName} enters his information:<ul><li>Gender: <important>Male</important></li><li>Date of Birth: <important>23/06/1984</important></li><li>Place of Birth: <important>Angers</important></li></ul>",
       "subText": "Example of a validated path"
     },
     "guide2": {

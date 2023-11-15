@@ -109,7 +109,7 @@
     "button": "Suivant",
     "guide1": {
       "letter": "A",
-      "text": "{firstName} renseigne ses informations :<ul><li>Sexe : <important>Masculin</important></li><li>Date de naissance : <important>23/06/1984</important></li><li>Lieu de naissance : <important>France</important></li></ul>",
+      "text": "{firstName} renseigne ses informations :<ul><li>Sexe : <important>Masculin</important></li><li>Date de naissance : <important>23/06/1984</important></li><li>Lieu de naissance : <important>Angers</important></li></ul>",
       "subText": "Exemple de parcours validé"
     },
     "guide2": {
