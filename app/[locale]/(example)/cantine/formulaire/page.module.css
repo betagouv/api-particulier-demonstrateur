@@ -49,6 +49,25 @@
   gap: 1rem;
 }
 
+.inputGroupBirthPlace {
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.codeCodeHelpGroup {
+  background-color: #e8edff;
+  color: black !important;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
 .inputGroup > div,
 .inputGroup > fieldset {
   flex: 1;

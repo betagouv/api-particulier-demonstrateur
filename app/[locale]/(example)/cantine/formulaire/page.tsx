@@ -179,19 +179,25 @@ export default function Page() {
                       }}
                     />
                   </div>
-                  <div className={`${styles.inputGroup} ${styles.lastInputGroup}`}>
-                    <Input
-                      hintText="* Champ obligatoire"
-                      label={t('birthPlace')}
-                      state="default"
-                      stateRelatedMessage=""
-                      nativeInputProps={{
-                        onChange: (e) => {
-                          setBirthPlace(e.target.value);
-                        },
-                        value: birthPlace,
-                      }}
-                    />
+                  <div className={`${styles.inputGroupBirthPlace} ${styles.lastInputGroup}`}>
+                    <div className={`${styles.inputGroup}`}>
+                      <Input
+                        hintText="* Champ obligatoire"
+                        label={t('birthPlace')}
+                        state="default"
+                        stateRelatedMessage=""
+                        nativeInputProps={{
+                          onChange: (e) => {
+                            setBirthPlace(e.target.value);
+                          },
+                          value: birthPlace,
+                        }}
+                      />
+                    </div>
+                    <div className={`${styles.codeCodeHelpGroup}`}>
+                      <i className={fr.cx('ri-information-fill')} />
+                      &nbsp;Comment retrouver mon code COG ?{' '}
+                    </div>
                   </div>
                 </div>
               </div>
