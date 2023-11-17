@@ -241,8 +241,7 @@ export default function Page() {
             </b>{' '}
             <i>
               Ici, pour l’API Quotient familial CAF & MSA, il s’agit des noms, prénoms, sexe, date de naissance et lieu
-              de naissance de l’allocataire. Ces modalités d’appel sont documentées, comme pour toutes les API,
-              dans la{' '}
+              de naissance de l’allocataire. Ces modalités d’appel sont documentées, comme pour toutes les API, dans la{' '}
               <a
                 href="https://particulier.api.gouv.fr/catalogue/cnaf-msa/quotient_familial_v2#parameters_details"
                 target="_blank"
@@ -255,8 +254,8 @@ export default function Page() {
             <br />
             <i className={fr.cx('ri-information-fill')} />{' '}
             <b>
-              Pour configurer correctement le champ <i>&quot;lieu de naissance&quot;</i> utilisant en
-              majorité le code COG,{' '}
+              Pour configurer correctement le champ <i>&quot;lieu de naissance&quot;</i> utilisant en majorité le code
+              COG,{' '}
               <a
                 href="https://particulier.api.gouv.fr/blog/parametre-lieu-naissance-code-cog"
                 target="_blank"
