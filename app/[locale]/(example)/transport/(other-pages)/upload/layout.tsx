@@ -74,14 +74,15 @@ export default function Layout({ children }: { children: JSX.Element }) {
                 </li>
                 <li>
                   <b>
-                    Si l’appel à l’API fonctionne et indique que l’information n'est pas vérifiée ou n’existe pas pour
+                    Si l’appel à l’API fonctionne et indique que l’information n’est pas vérifiée ou n’existe pas pour
                     cet usager/ :
                   </b>{' '}
                   L’interface ne doit pas le mentionner car il s’agit aussi d’une information personnelle.{' '}
                 </li>
                 <li>
                   <b>Enfin, si l’appel à l’API ne fonctionne pas :</b> Il est inutile de le préciser, cela permet de
-                  brouiller l’information précédente du cas où l’appel fonctionne mais renvoie une réponse négative.{' '}
+                  brouiller l’information précédente du cas où l’appel fonctionne mais renvoie
+                  une réponse négative.{' '}
                 </li>
               </ul>
               Pour chacun de ces cas, la suite de la démarche se fait donc a posteriori d’une vérification par un agent

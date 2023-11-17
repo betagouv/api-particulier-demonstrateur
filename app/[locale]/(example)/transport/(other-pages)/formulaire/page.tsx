@@ -242,7 +242,10 @@ export default function Page() {
           <li>
             <i className={fr.cx('ri-information-fill')} /> Pour reccueillir les informations avec API Particulier sans
             FranceConnect,{' '}
-            <b>il est nécessaire de demander à l’usager de renseigner les paramètres d’appel de l’API concernée.</b>{' '}
+            <b>
+              il est nécessaire de demander à l’usager de renseigner les paramètres d’appel de
+              l’API concernée.
+            </b>{' '}
             <i>
               Ici, pour l’API statut étudiant, il s’agit des noms, prénoms, sexe et date de naissance, ou du numéro INE.
               Ces modalités d’appel sont documentées, comme pour toutes les API, dans la{' '}

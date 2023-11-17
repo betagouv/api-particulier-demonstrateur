@@ -4,7 +4,6 @@ import PurchaseInfo from '@/components/PurchaseInfo';
 import PricingInfo from '@/components/canteen/PricingInfo';
 import Tooltip from '@/components/Tooltip';
 import { useTranslations } from 'next-intl';
-import { fr } from '@codegouvfr/react-dsfr';
 
 export default function Page() {
   const t = useTranslations('DemonstratorLayout');
