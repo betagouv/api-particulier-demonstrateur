@@ -230,12 +230,15 @@ export default function Page() {
           </div>
         </div>
       </div>
+
       <Tooltip isOpenedByDefault={true}>
         <ul>
           <li>
-            <i className={fr.cx('ri-information-fill')} /> Pour reccueillir les informations avec API Particulier sans
-            FranceConnect,{' '}
-            <b>il est nécessaire de demander à l’usager de renseigner les paramètres d’appel de l’API concernée.</b>{' '}
+            <i className={fr.cx('ri-information-fill')} />{' '}
+            <b>
+              Pour reccueillir les informations avec API Particulier sans FranceConnect, il est nécessaire de demander à
+              l’usager de renseigner les paramètres d’appel de l’API concernée.
+            </b>{' '}
             <i>
               Ici, pour l’API Quotient familial CAF & MSA, il s’agit des noms, prénoms, sexe, date de naissance et lieu
               de naissance de l'allocataire. Ces modalités d’appel sont documentées, comme pour toutes les API, dans la{' '}
@@ -249,10 +252,21 @@ export default function Page() {
             </i>
             . <br />
             <br />
-            Pour en savoir plus sur les paramètres obligatoires et la configuration du champ <i>"lieu de naissance"</i>,
-            lire les recommandations suivantes...
-          </li>
-          <li>
+            <i className={fr.cx('ri-information-fill')} />{' '}
+            <b>
+              Pour configurer correctement le champ <i>"lieu de naissance"</i> utilisant en majorité le code COG,{' '}
+              <a
+                href="https://particulier.api.gouv.fr/blog/parametre-lieu-naissance-code-cog"
+                target="_blank"
+                rel="noreferrer"
+              >
+                veuillez lire ce guide
+              </a>
+              .
+            </b>
+            <br />
+            <br />
+            <i className={fr.cx('ri-information-fill')} />{' '}
             <b>
               Certains paramètres d’appel sont obligatoires, d’autres facultatifs. Nous vous recommandons d’appliquer
               les conditions indiquées dans la fiche métier de chaque API.
@@ -272,43 +286,6 @@ export default function Page() {
                   Par exemple, certaines personnes n’ont pas de prénom ; d’autres n’ont pas de nom de famille ; d’autres
                   n’ont pas de jour de naissance, etc.
                 </i>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <b>
-              Simplifier la saisie du champ <i>"Lieu de naissance"</i> :
-            </b>
-            <br />
-            <i>
-              L’
-              <a
-                href="https://particulier.api.gouv.fr/catalogue/cnaf-msa/quotient_familial_v2#parameters_details"
-                target="_blank"
-                rel="noreferrer"
-              >
-                API Quotient familial CAF & MSA
-              </a>{' '}
-              requiert en paramètre d’appel le code Insee (code COG) de la commune de naissance pour les personnes née
-              en France, et le code Insee du pays de naissance pour les personnes nées à l’étranger.{' '}
-            </i>
-            <ul>
-              <li>
-                <b>Permettre à l’usager de renseigner son lieu de naissance en saisissant son nom ou son code postal</b>{' '}
-                : Le code COG est un code inconnu du grand public, il faut éviter de le demander à l’usager et préférer
-                faire la correspondance en back-office. Pour faire cette correspondance, vous pouvez vous aider de{' '}
-                <a
-                  href="https://github.com/skelz0r/identite_pivot_code_insee_naissance_lookup#readme "
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  cette application
-                </a>
-                .
-              </li>
-              <li>
-                <b>Créer un seul champ "Lieu de naissance"</b> : pour éviter aux utilisateurs nés à l’étranger d’avoir à
-                renseigner leur commune de naissance alors que ce n’est pas nécessaire.
               </li>
             </ul>
           </li>

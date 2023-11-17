@@ -187,6 +187,7 @@ export default function Page() {
           </div>
         </div>
       </div>
+
       <Tooltip isOpenedByDefault={true}>
         <ul>
           <li>
@@ -215,6 +216,7 @@ export default function Page() {
           </li>
           <li>
             <p>
+              <i className={fr.cx('ri-information-fill')} />{' '}
               <b>Nous vous recommandons d’expliquer au maximum les mécanismes de traitement des données à l’usager</b> :
               <br />
               <i>
