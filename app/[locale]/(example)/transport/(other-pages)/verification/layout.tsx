@@ -7,10 +7,13 @@ import CardSocialPricing from '@/components/CardSocialPricing';
 import Tooltip from '@/components/Tooltip';
 import styles from './layout.module.css';
 import { useJourney } from '@/app/journey-provider';
+import { useSearchParams } from 'next/navigation';
 
 export default function Layout({ children }: { children: JSX.Element }) {
   const t = useTranslations('Verification');
   const { journey } = useJourney();
+  const searchParams = useSearchParams();
+  const scope = searchParams.get('scope');
 
   return (
     <>
@@ -44,17 +47,26 @@ export default function Layout({ children }: { children: JSX.Element }) {
           </div>
         </div>
       </div>
+
       <Tooltip isOpenedByDefault={true}>
         <ul>
-          <li>
-            <i className={fr.cx('ri-information-fill')} />{' '}
-            <b>
-              En cas d’échec, indiquer que la connexion automatique n’a pu être établie et permettre à l’usager de
-              reessayer ou de choisir une solution alternative.
-            </b>
-            <br />
-            Cea
-          </li>
+          {scope === 'studentScholarship' ? (
+            <li>
+              <i className={fr.cx('ri-information-fill')} />{' '}
+              <b>
+                En cas d’échec, indiquer que la connexion automatique n’a pu être établie et permettre à l’usager de
+                reessayer ou de choisir une solution alternative.
+              </b>
+              <br />
+              Cea
+            </li>
+          ) : (
+            <li>
+              <i className={fr.cx('ri-information-fill')} /> <b>COUCOU</b>
+              <br />
+              Cea
+            </li>
+          )}
         </ul>
         <ul></ul>
       </Tooltip>
