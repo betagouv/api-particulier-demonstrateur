@@ -197,9 +197,9 @@ export default function Page() {
                 <b>de laisser l’usager choisir lui-même son statut.</b> Cela permettant d’éviter d’imposer un choix par
                 défaut à l’usager. <br />
                 <i>
-                  Par exemple, si un particulier est concerné par deux statuts, lui laisser le choix du statut permet à
-                  l’usager de privilégier autant le statut au meilleur tarif que le statut qu’il pense garder plus
-                  longtemps pour éviter d’avoir à entreprendre à nouveau la démarche.
+                  Par exemple, si un particulier est concerné par deux statuts, lui laisser le choix permet à l’usager
+                  de privilégier autant le statut au meilleur tarif que le statut qu’il pense garder plus longtemps pour
+                  éviter d’avoir à entreprendre à nouveau la démarche.
                 </i>
               </li>
               <li>
@@ -230,7 +230,8 @@ export default function Page() {
           <li>
             <i className={fr.cx('ri-information-fill')} />{' '}
             <b>
-              Cet écran de choix du statut anticipe l’utilisation de différentes API du bouquet API Particulier&nbsp;:
+              Cet écran de choix du statut préfigure le choix des API du bouquet API Particulier qui seront
+              utilisées&nbsp;:
             </b>
             <ul>
               <li>
