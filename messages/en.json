@@ -100,7 +100,7 @@
     "titleForm": "Enter your identity information:",
     "firstName": "First Name",
     "lastName": "Last Name",
-    "sex": "Gender",
+    "sex": "Gender *",
     "female": "Female",
     "male": "Male",
     "birthdate": "Date of Birth",
