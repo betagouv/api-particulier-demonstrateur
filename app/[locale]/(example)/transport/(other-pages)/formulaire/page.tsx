@@ -160,7 +160,7 @@ export default function Page() {
                   <div className={`${styles.inputGroupBirthPlace} ${styles.lastInputGroup}`}>
                     <div className={`${styles.inputGroup}`}>
                       <Input
-                        hintText=""
+                        hintText="* Champ obligatoire"
                         label={t('birthPlace')}
                         state="default"
                         stateRelatedMessage=""
