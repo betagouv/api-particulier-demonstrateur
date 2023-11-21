@@ -4,6 +4,7 @@ import { useJourney } from '@/app/journey-provider';
 
 jest.mock('next/navigation', () => ({
   useRouter: () => ({ back: jest.fn(), push: jest.fn() }),
+  useSearchParams: () => ({ get: jest.fn().mockReturnValue('yolo') }),
 }));
 jest.mock('@/components/Tooltip');
 jest.mock('@/app/journey-provider');

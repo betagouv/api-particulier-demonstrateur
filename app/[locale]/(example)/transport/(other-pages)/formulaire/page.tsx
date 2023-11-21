@@ -237,7 +237,63 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <Tooltip isOpenedByDefault={false} />
+      <Tooltip isOpenedByDefault={true}>
+        <ul>
+          <li>
+            <i className={fr.cx('ri-information-fill')} /> Pour reccueillir les informations avec API Particulier sans
+            FranceConnect,{' '}
+            <b>il est nécessaire de demander à l’usager de renseigner les paramètres d’appel de l’API concernée.</b>{' '}
+            <i>
+              Ici, pour l’API statut étudiant, il s’agit des noms, prénoms, sexe et date de naissance, ou du numéro INE.
+              Ces modalités d’appel sont documentées, comme pour toutes les API, dans la{' '}
+              <a
+                href="https://particulier.api.gouv.fr/catalogue/mesri/statut_etudiant#parameters_details"
+                target="_blank"
+                rel="noreferrer"
+              >
+                fiche métier de l’API
+              </a>
+            </i>
+            . <br />
+            <br />
+            Pour en savoir plus sur les paramètres obligatoires et les modalités d’appels, lire les recommandations
+            suivantes...
+          </li>
+          <li>
+            <b>
+              Certains paramètres d’appel sont obligatoires, d’autres facultatifs. Nous vous recommandons d’appliquer
+              les conditions indiquées dans la fiche métier de chaque API.
+            </b>
+            <br />
+            <ul>
+              <li>
+                <b>Respecter les paramètres obligatoires :</b> Si un paramètre est indiqué comme obligatoire dans la
+                documentation d’une API, c’est qu’il est indispensable pour que l’appel soit effectué.
+              </li>
+              <li>
+                <b>Respecter les paramètres facultatifs :</b> Il peut être tentant d’obliger l’usager à remplir tous les
+                champs. En effet, la saisie d’un maximum de champs permet de maximiser les chances de trouver le
+                particulier dans la base du fournisseur de la donnée. Toutefois,{' '}
+                <b>rendre les paramètres obligatoires peut exclure des utilisateurs</b>.{' '}
+                <i>
+                  Par exemple, certaines personnes n’ont pas de prénom ; d’autres n’ont pas de nom de famille ; d’autres
+                  n’ont pas de jour de naissance, etc.
+                </i>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b>Proposer différentes modalités d’appel quand l’API le permet</b>
+            <br />
+            <i>
+              Comme ici pour l’API Statut Étudiant, il est proposé à l’usager de renseigner sa civilité ou son numéro
+              INE.
+            </i>{' '}
+            Proposer différentes modalités d’appel augmente le taux de succès des appels.
+          </li>
+        </ul>
+        <ul></ul>
+      </Tooltip>
     </>
   );
 }

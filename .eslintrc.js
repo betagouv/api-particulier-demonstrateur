@@ -14,7 +14,7 @@ module.exports = {
     'react/jsx-key': 'off',
     quotes: ['error', 'single'],
     indent: ['error', 2, { SwitchCase: 1, offsetTernaryExpressions: true }],
-    'max-len': ['error', { code: 120 }],
+    'max-len': 'off',
     'no-tabs': ['error'],
     semi: ['error', 'always'],
     'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
