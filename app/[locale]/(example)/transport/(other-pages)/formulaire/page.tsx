@@ -30,11 +30,13 @@ export default function Page() {
   const [birthdate, setBirthdate] = useState<string>(error ? (error === 'true' ? '' : '2003-04-17') : '');
   const [sex, setSex] = useState<string>(error ? (error === 'true' ? '' : 'female') : '');
   const [ine, setIne] = useState<string>(error ? (error === 'true' ? '12345678' : '') : '');
+  const [birthPlace, setBirthPlace] = useState<string>(error ? (error === 'true' ? '' : '75056') : '');
 
   const resetFields = () => {
     setBirthdate('');
     setSex('');
     setIne('');
+    setBirthPlace('');
   };
 
   return (
@@ -113,6 +115,7 @@ export default function Page() {
                           resetFields();
                           setSex('female');
                           setBirthdate('2003-04-17');
+                          setBirthPlace('75006');
                         }}
                         buttonText="Remplir"
                       />
@@ -153,6 +156,27 @@ export default function Page() {
                         value: birthdate,
                       }}
                     />
+                  </div>
+                  <div className={`${styles.inputGroupBirthPlace} ${styles.lastInputGroup}`}>
+                    <div className={`${styles.inputGroup}`}>
+                      <Input
+                        hintText="* Champ obligatoire"
+                        label={t('birthPlace')}
+                        state="default"
+                        stateRelatedMessage=""
+                        nativeInputProps={{
+                          onChange: (e) => {
+                            setBirthPlace(e.target.value);
+                          },
+                          value: birthPlace,
+                        }}
+                      />
+                    </div>
+                    <div className={`${styles.codeCodeHelpGroup}`}>
+                      <i className={fr.cx('ri-information-fill')} />
+                      <span className={`${styles.codeCodeHelpLabel}`}>Comment retrouver mon code COG&nbsp;? </span>
+                      <i className={fr.cx('ri-arrow-down-s-line')} />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -213,10 +237,10 @@ export default function Page() {
               />
               <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
                 <Button
-                  disabled={(birthdate === '' || sex === '') && ine === ''}
+                  disabled={(birthdate === '' || sex === '' || birthPlace === '') && ine === ''}
                   size="large"
                   onClick={() => {
-                    if (sex === 'female' && birthdate === '2003-04-17') {
+                    if (sex === 'female' && birthdate === '2003-04-17' && birthPlace === '75056') {
                       router.push('/' + journey?.type + '/upload?user=' + journey?.user?.id);
                     }
                     if (ine == '12345678') {
@@ -244,8 +268,8 @@ export default function Page() {
             FranceConnect,{' '}
             <b>il est nécessaire de demander à l’usager de renseigner les paramètres d’appel de l’API concernée.</b>{' '}
             <i>
-              Ici, pour l’API statut étudiant, il s’agit des noms, prénoms, sexe et date de naissance, ou du numéro INE.
-              Ces modalités d’appel sont documentées, comme pour toutes les API, dans la{' '}
+              Ici, pour l’API statut étudiant, il s’agit des noms, prénoms, sexe, date de naissance et code COG du lieu
+              de naissance, ou du numéro INE. Ces modalités d’appel sont documentées, comme pour toutes les API, dans la{' '}
               <a
                 href="https://particulier.api.gouv.fr/catalogue/mesri/statut_etudiant#parameters_details"
                 target="_blank"
@@ -256,8 +280,22 @@ export default function Page() {
             </i>
             . <br />
             <br />
-            Pour en savoir plus sur les paramètres obligatoires et les modalités d’appels, lire les recommandations
-            suivantes...
+            <i className={fr.cx('ri-information-fill')} />{' '}
+            <b>
+              Pour faciliter la saisie du champ <i>&quot;Code COG du lieu de naissance&quot;</i> ,{' '}
+              <a
+                href="https://particulier.api.gouv.fr/blog/parametre-lieu-naissance-code-cog"
+                target="_blank"
+                rel="noreferrer"
+              >
+                veuillez lire ce guide
+              </a>{' '}
+            </b>
+            . En effet, le code COG est inconnu des usagers !
+            <br />
+            <br />
+            <i className={fr.cx('ri-information-fill')} /> Pour en savoir plus sur les paramètres obligatoires et les
+            modalités d’appels, lire les recommandations suivantes...
           </li>
           <li>
             <b>

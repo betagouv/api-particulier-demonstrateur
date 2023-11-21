@@ -76,6 +76,7 @@
     "female": "Female",
     "male": "Male",
     "birthdate": "Date of birth",
+    "birthPlace": "Birth COG Code",
     "ine": "INE Number (student card)",
     "middleText": "Or",
     "alertTitle": "Your information will be forwarded to check your status",
@@ -83,7 +84,7 @@
     "button": "Next",
     "guide1": {
       "letter": "A",
-      "text": "{firstName} enters his/her identity information:<ul><li>Gender: <important>Female</important></li><li>Date of birth: <important>17/04/2003</important></li></ul>",
+      "text": "{firstName} enters his/her identity information:<ul><li>Gender: <important>Female</important></li><li>Date of birth: <important>17/04/2003</important></li></li><li>Birth COG code: <important>75056 - Paris</important></li></ul>",
       "subText": "Example of a validated journey"
     },
     "guide2": {
@@ -100,17 +101,17 @@
     "titleForm": "Enter your identity information:",
     "firstName": "First Name",
     "lastName": "Last Name",
-    "sex": "Gender",
+    "sex": "Gender *",
     "female": "Female",
     "male": "Male",
     "birthdate": "Date of Birth",
-    "birthPlace": "Place of Birth",
+    "birthPlace": "Birth COG Code *",
     "alertTitle": "Your information will be transmitted to verify your QF",
     "alertDescription": "Your title will be transferred to the CNAF.",
     "button": "Next",
     "guide1": {
       "letter": "A",
-      "text": "{firstName} enters his information:<ul><li>Gender: <important>Male</important></li><li>Date of Birth: <important>23/06/1984</important></li><li>Place of Birth: <important>Angers</important></li></ul>",
+      "text": "{firstName} enters his information:<ul><li>Gender: <important>Male</important></li><li>Date of Birth: <important>23/06/1984</important></li><li>Birth COG code: <important>49007 - Angers</important></li></ul>",
       "subText": "Example of a validated path"
     },
     "guide2": {

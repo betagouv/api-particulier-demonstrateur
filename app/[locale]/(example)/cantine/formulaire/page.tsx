@@ -29,7 +29,7 @@ export default function Page() {
   const error = searchParams.get('error');
   const [birthdate, setBirthdate] = useState<string>(error ? (error === 'true' ? '2000-11-05' : '1984-06-23') : '');
   const [sex, setSex] = useState<string>(error ? (error === 'true' ? 'female' : 'male') : '');
-  const [birthPlace, setBirthPlace] = useState<string>(error ? (error === 'true' ? 'Canada' : 'Angers') : '');
+  const [birthPlace, setBirthPlace] = useState<string>(error ? (error === 'true' ? '49000' : '49007') : '');
 
   const resetFields = () => {
     setBirthdate('');
@@ -114,7 +114,7 @@ export default function Page() {
                             resetFields();
                             setSex('male');
                             setBirthdate('1984-06-23');
-                            setBirthPlace('Angers');
+                            setBirthPlace('49007');
                           }}
                           buttonText="Remplir"
                         />
@@ -135,7 +135,7 @@ export default function Page() {
                             resetFields();
                             setSex('female');
                             setBirthdate('2000-11-05');
-                            setBirthPlace('Canada');
+                            setBirthPlace('49000');
                           }}
                           buttonText="Remplir"
                         />
@@ -179,19 +179,26 @@ export default function Page() {
                       }}
                     />
                   </div>
-                  <div className={`${styles.inputGroup} ${styles.lastInputGroup}`}>
-                    <Input
-                      hintText="* Champ obligatoire"
-                      label={t('birthPlace')}
-                      state="default"
-                      stateRelatedMessage=""
-                      nativeInputProps={{
-                        onChange: (e) => {
-                          setBirthPlace(e.target.value);
-                        },
-                        value: birthPlace,
-                      }}
-                    />
+                  <div className={`${styles.inputGroupBirthPlace} ${styles.lastInputGroup}`}>
+                    <div className={`${styles.inputGroup}`}>
+                      <Input
+                        hintText="* Champ obligatoire"
+                        label={t('birthPlace')}
+                        state="default"
+                        stateRelatedMessage=""
+                        nativeInputProps={{
+                          onChange: (e) => {
+                            setBirthPlace(e.target.value);
+                          },
+                          value: birthPlace,
+                        }}
+                      />
+                    </div>
+                    <div className={`${styles.codeCodeHelpGroup}`}>
+                      <i className={fr.cx('ri-information-fill')} />
+                      <span className={`${styles.codeCodeHelpLabel}`}>Comment retrouver mon code COG&nbsp;? </span>
+                      <i className={fr.cx('ri-arrow-down-s-line')} />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -254,8 +261,7 @@ export default function Page() {
             <br />
             <i className={fr.cx('ri-information-fill')} />{' '}
             <b>
-              Pour configurer correctement le champ <i>&quot;lieu de naissance&quot;</i> utilisant en majorité le code
-              COG,{' '}
+              Pour faciliter la saisie du champ <i>&quot;Code COG du lieu de naissance&quot;</i> ,{' '}
               <a
                 href="https://particulier.api.gouv.fr/blog/parametre-lieu-naissance-code-cog"
                 target="_blank"
@@ -263,8 +269,8 @@ export default function Page() {
               >
                 veuillez lire ce guide
               </a>
-              .
             </b>
+            . En effet, le code COG est inconnu des usagers !
             <br />
             <br />
             <i className={fr.cx('ri-information-fill')} />{' '}
