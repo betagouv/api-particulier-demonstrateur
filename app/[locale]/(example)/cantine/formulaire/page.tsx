@@ -261,8 +261,7 @@ export default function Page() {
             <br />
             <i className={fr.cx('ri-information-fill')} />{' '}
             <b>
-              Pour configurer correctement le champ <i>&quot;lieu de naissance&quot;</i> utilisant en majorité le code
-              COG,{' '}
+              Pour faciliter la saisie du champ <i>&quot;Code COG du lieu de naissance&quot;</i> ,{' '}
               <a
                 href="https://particulier.api.gouv.fr/blog/parametre-lieu-naissance-code-cog"
                 target="_blank"
@@ -270,8 +269,8 @@ export default function Page() {
               >
                 veuillez lire ce guide
               </a>
-              .
             </b>
+            . En effet, le code COG est inconnu des usagers !
             <br />
             <br />
             <i className={fr.cx('ri-information-fill')} />{' '}

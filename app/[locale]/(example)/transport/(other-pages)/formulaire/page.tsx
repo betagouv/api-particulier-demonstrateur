@@ -268,8 +268,8 @@ export default function Page() {
             FranceConnect,{' '}
             <b>il est nécessaire de demander à l’usager de renseigner les paramètres d’appel de l’API concernée.</b>{' '}
             <i>
-              Ici, pour l’API statut étudiant, il s’agit des noms, prénoms, sexe et date de naissance, ou du numéro INE.
-              Ces modalités d’appel sont documentées, comme pour toutes les API, dans la{' '}
+              Ici, pour l’API statut étudiant, il s’agit des noms, prénoms, sexe, date de naissance et code COG du lieu
+              de naissance, ou du numéro INE. Ces modalités d’appel sont documentées, comme pour toutes les API, dans la{' '}
               <a
                 href="https://particulier.api.gouv.fr/catalogue/mesri/statut_etudiant#parameters_details"
                 target="_blank"
@@ -280,8 +280,22 @@ export default function Page() {
             </i>
             . <br />
             <br />
-            Pour en savoir plus sur les paramètres obligatoires et les modalités d’appels, lire les recommandations
-            suivantes...
+            <i className={fr.cx('ri-information-fill')} />{' '}
+            <b>
+              Pour faciliter la saisie du champ <i>&quot;Code COG du lieu de naissance&quot;</i> ,{' '}
+              <a
+                href="https://particulier.api.gouv.fr/blog/parametre-lieu-naissance-code-cog"
+                target="_blank"
+                rel="noreferrer"
+              >
+                veuillez lire ce guide
+              </a>{' '}
+            </b>
+            . En effet, le code COG est inconnu des usagers !
+            <br />
+            <br />
+            <i className={fr.cx('ri-information-fill')} /> Pour en savoir plus sur les paramètres obligatoires et les
+            modalités d’appels, lire les recommandations suivantes...
           </li>
           <li>
             <b>
