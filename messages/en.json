@@ -84,7 +84,7 @@
     "button": "Next",
     "guide1": {
       "letter": "A",
-      "text": "{firstName} enters his/her identity information:<ul><li>Gender: <important>Female</important></li><li>Date of birth: <important>17/04/2003</important></li></ul>",
+      "text": "{firstName} enters his/her identity information:<ul><li>Gender: <important>Female</important></li><li>Date of birth: <important>17/04/2003</important></li></li><li>Birth COG code: <important>75056 - Paris</important></li></ul>",
       "subText": "Example of a validated journey"
     },
     "guide2": {
@@ -111,7 +111,7 @@
     "button": "Next",
     "guide1": {
       "letter": "A",
-      "text": "{firstName} enters his information:<ul><li>Gender: <important>Male</important></li><li>Date of Birth: <important>23/06/1984</important></li><li>Place of Birth: <important>Angers</important></li></ul>",
+      "text": "{firstName} enters his information:<ul><li>Gender: <important>Male</important></li><li>Date of Birth: <important>23/06/1984</important></li><li>Birth COG code: <important>49007 - Angers</important></li></ul>",
       "subText": "Example of a validated path"
     },
     "guide2": {

@@ -29,7 +29,7 @@ export default function Page() {
   const error = searchParams.get('error');
   const [birthdate, setBirthdate] = useState<string>(error ? (error === 'true' ? '2000-11-05' : '1984-06-23') : '');
   const [sex, setSex] = useState<string>(error ? (error === 'true' ? 'female' : 'male') : '');
-  const [birthPlace, setBirthPlace] = useState<string>(error ? (error === 'true' ? 'Canada' : 'Angers') : '');
+  const [birthPlace, setBirthPlace] = useState<string>(error ? (error === 'true' ? '49000' : '49007') : '');
 
   const resetFields = () => {
     setBirthdate('');
@@ -114,7 +114,7 @@ export default function Page() {
                             resetFields();
                             setSex('male');
                             setBirthdate('1984-06-23');
-                            setBirthPlace('Angers');
+                            setBirthPlace('49007');
                           }}
                           buttonText="Remplir"
                         />
@@ -135,7 +135,7 @@ export default function Page() {
                             resetFields();
                             setSex('female');
                             setBirthdate('2000-11-05');
-                            setBirthPlace('Canada');
+                            setBirthPlace('49000');
                           }}
                           buttonText="Remplir"
                         />

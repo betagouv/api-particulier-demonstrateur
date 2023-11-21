@@ -84,7 +84,7 @@
     "button": "Suivant",
     "guide1": {
       "letter": "A",
-      "text": "{firstName} renseigne ses informations d’identité :<ul><li>Sexe : <important>Féminin</important></li><li>Date de naissance : <important>17/04/2003</important></li></ul>",
+      "text": "{firstName} renseigne ses informations d’identité :<ul><li>Sexe : <important>Féminin</important></li><li>Date de naissance : <important>17/04/2003</important></li><li>Code COG du lieu de naissance : <important>75056 - Paris</important></li></ul>",
       "subText": "Exemple de parcours validé"
     },
     "guide2": {
@@ -110,7 +110,7 @@
     "button": "Suivant",
     "guide1": {
       "letter": "A",
-      "text": "{firstName} renseigne ses informations :<ul><li>Sexe : <important>Masculin</important></li><li>Date de naissance : <important>23/06/1984</important></li><li>Lieu de naissance : <important>Angers</important></li></ul>",
+      "text": "{firstName} renseigne ses informations :<ul><li>Sexe : <important>Masculin</important></li><li>Date de naissance : <important>23/06/1984</important></li><li>Code COG du lieu de naissance : <important>49007 - Angers</important></li></ul>",
       "subText": "Exemple de parcours validé"
     },
     "guide2": {

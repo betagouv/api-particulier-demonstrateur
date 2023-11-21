@@ -30,7 +30,7 @@ export default function Page() {
   const [birthdate, setBirthdate] = useState<string>(error ? (error === 'true' ? '' : '2003-04-17') : '');
   const [sex, setSex] = useState<string>(error ? (error === 'true' ? '' : 'female') : '');
   const [ine, setIne] = useState<string>(error ? (error === 'true' ? '12345678' : '') : '');
-  const [birthPlace, setBirthPlace] = useState<string>(error ? (error === 'true' ? '' : '49007') : '');
+  const [birthPlace, setBirthPlace] = useState<string>(error ? (error === 'true' ? '' : '75056') : '');
 
   const resetFields = () => {
     setBirthdate('');
@@ -115,7 +115,7 @@ export default function Page() {
                           resetFields();
                           setSex('female');
                           setBirthdate('2003-04-17');
-                          setBirthPlace('49007');
+                          setBirthPlace('75006');
                         }}
                         buttonText="Remplir"
                       />
@@ -237,10 +237,10 @@ export default function Page() {
               />
               <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
                 <Button
-                  disabled={(birthdate === '' || sex === '') && ine === ''}
+                  disabled={(birthdate === '' || sex === '' || birthPlace === '') && ine === ''}
                   size="large"
                   onClick={() => {
-                    if (sex === 'female' && birthdate === '2003-04-17') {
+                    if (sex === 'female' && birthdate === '2003-04-17' && birthPlace === '75056') {
                       router.push('/' + journey?.type + '/upload?user=' + journey?.user?.id);
                     }
                     if (ine == '12345678') {
