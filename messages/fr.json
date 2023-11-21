@@ -103,7 +103,7 @@
     "female": "Féminin",
     "male": "Masculin",
     "birthdate": "Date de naissance",
-    "birthPlace": "Lieu de naissance",
+    "birthPlace": "Code COG de votre lieu de naissance",
     "alertTitle": "Vos informations vont être transmises pour vérifier votre QF",
     "alertDescription": "Votre civilité va être transférée à la CNAF.",
     "button": "Suivant",

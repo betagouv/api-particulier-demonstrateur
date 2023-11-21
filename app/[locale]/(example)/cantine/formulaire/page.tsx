@@ -196,7 +196,8 @@ export default function Page() {
                     </div>
                     <div className={`${styles.codeCodeHelpGroup}`}>
                       <i className={fr.cx('ri-information-fill')} />
-                      &nbsp;Comment retrouver mon code COG ?{' '}
+                      <span className={`${styles.codeCodeHelpLabel}`}>Comment retrouver mon code COG&nbsp;? </span>
+                      <i className={fr.cx('ri-arrow-down-s-line')} />
                     </div>
                   </div>
                 </div>

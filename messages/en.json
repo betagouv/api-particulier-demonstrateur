@@ -104,7 +104,7 @@
     "female": "Female",
     "male": "Male",
     "birthdate": "Date of Birth",
-    "birthPlace": "Place of Birth",
+    "birthPlace": "Birth COG Code",
     "alertTitle": "Your information will be transmitted to verify your QF",
     "alertDescription": "Your title will be transferred to the CNAF.",
     "button": "Next",
