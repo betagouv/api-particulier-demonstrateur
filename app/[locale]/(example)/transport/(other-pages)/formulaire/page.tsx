@@ -30,11 +30,13 @@ export default function Page() {
   const [birthdate, setBirthdate] = useState<string>(error ? (error === 'true' ? '' : '2003-04-17') : '');
   const [sex, setSex] = useState<string>(error ? (error === 'true' ? '' : 'female') : '');
   const [ine, setIne] = useState<string>(error ? (error === 'true' ? '12345678' : '') : '');
+  const [birthPlace, setBirthPlace] = useState<string>(error ? (error === 'true' ? '' : '49007') : '');
 
   const resetFields = () => {
     setBirthdate('');
     setSex('');
     setIne('');
+    setBirthPlace('');
   };
 
   return (
@@ -113,6 +115,7 @@ export default function Page() {
                           resetFields();
                           setSex('female');
                           setBirthdate('2003-04-17');
+                          setBirthPlace('49007');
                         }}
                         buttonText="Remplir"
                       />
@@ -153,6 +156,27 @@ export default function Page() {
                         value: birthdate,
                       }}
                     />
+                  </div>
+                  <div className={`${styles.inputGroupBirthPlace} ${styles.lastInputGroup}`}>
+                    <div className={`${styles.inputGroup}`}>
+                      <Input
+                        hintText=""
+                        label={t('birthPlace')}
+                        state="default"
+                        stateRelatedMessage=""
+                        nativeInputProps={{
+                          onChange: (e) => {
+                            setBirthPlace(e.target.value);
+                          },
+                          value: birthPlace,
+                        }}
+                      />
+                    </div>
+                    <div className={`${styles.codeCodeHelpGroup}`}>
+                      <i className={fr.cx('ri-information-fill')} />
+                      <span className={`${styles.codeCodeHelpLabel}`}>Comment retrouver mon code COG&nbsp;? </span>
+                      <i className={fr.cx('ri-arrow-down-s-line')} />
+                    </div>
                   </div>
                 </div>
               </div>

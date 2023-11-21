@@ -76,6 +76,7 @@
     "female": "Féminin",
     "male": "Masculin",
     "birthdate": "Date de naissance",
+    "birthPlace": "Code COG de votre lieu de naissance *",
     "ine": "Numéro INE (carte étudiant)",
     "middleText": "Ou",
     "alertTitle": "Vos informations vont être transmises pour vérifier votre statut",
