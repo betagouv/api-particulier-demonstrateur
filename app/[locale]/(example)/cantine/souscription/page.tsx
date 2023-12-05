@@ -15,8 +15,8 @@ export default function Page() {
         style={{ backgroundImage: 'url("/images/bg-cantine.jpg")' }}
         pricingStyle={{
           backgroundImage: 'url("/images/pricing-canteen.png")',
-          height: '212px',
-          width: '545px',
+          height: '270px',
+          width: '450px',
         }}
       />
       <PricingInfo />

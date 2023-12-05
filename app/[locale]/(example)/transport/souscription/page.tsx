@@ -15,8 +15,8 @@ export default function Page() {
         style={{ backgroundImage: 'url("/images/bg-transport.jpg")' }}
         pricingStyle={{
           backgroundImage: 'url("/images/pricing-transport.png")',
-          height: '212px',
-          width: '450px',
+          height: '270px',
+          width: '350px',
         }}
       />
       <PricingInfo />

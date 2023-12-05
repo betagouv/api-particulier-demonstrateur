@@ -197,11 +197,11 @@
       },
       "successTitle": "Vous êtes éligible au tarif réduit !",
       "successDescription": {
-        "jobSeeker": "Votre carte Mobilités+ sera financée à 62,5% par l'État, votre région et département, et vous reviendra à <important>30 euros/mois</important>.",
-        "student": "Votre carte Mobilités+ sera financée à 62,5% par l'État, votre région et département, et vous reviendra à <important>30 euros/mois</important>.",
-        "studentScholarship": "Votre carte Mobilités+ sera financée à 75% par votre commune et vous reviendra à <b>15 euros/mois</important>.",
-        "c2s": "Votre carte Mobilités+ sera financée à 75% par votre commune et vous reviendra à <important>15 euros/mois</important>.",
-        "qfMSA": "Vos ressources vous permettent d’accéder au tarif réduit de <important>0,30 €/repas</important>. Ce tarif est co-financé par la collectivité et l’État."
+        "jobSeeker": "Votre carte Mobilités+ sera financée à 62,5% et vous reviendra à <important>30 euros/mois</important>.",
+        "student": "Votre carte Mobilités+ sera financée à 62,5% et vous reviendra à <important>30 euros/mois</important>.",
+        "studentScholarship": "Votre carte Mobilités+ sera financée à 75% et vous reviendra à <b>15 euros/mois</important>.",
+        "c2s": "Votre carte Mobilités+ sera financée à 75% et vous reviendra à <important>15 euros/mois</important>.",
+        "qfMSA": "Vos ressources vous permettent d’accéder au tarif réduit de <important>0,30 €/repas</important>."
       },
       "button": "Suivant"
     },
