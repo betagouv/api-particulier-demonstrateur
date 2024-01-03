@@ -10,6 +10,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import JourneyProvider from '@/app/journey-provider';
 import Banner from '@/components/Banner';
+import { MatomoTracker } from '@/app/matomo';
 
 interface Params {
   locale: string;
@@ -51,6 +52,7 @@ export default async function RootLayout({ children, params: { locale } }: PageP
             //"Spectral-ExtraBold"
           ]}
         />
+        <MatomoTracker />
       </head>
       <body
         style={{
