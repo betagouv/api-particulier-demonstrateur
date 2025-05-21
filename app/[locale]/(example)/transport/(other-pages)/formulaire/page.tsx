@@ -115,7 +115,7 @@ export default function Page() {
                           resetFields();
                           setSex('female');
                           setBirthdate('2003-04-17');
-                          setBirthPlace('75006');
+                          setBirthPlace('75056');
                         }}
                         buttonText="Remplir"
                       />
