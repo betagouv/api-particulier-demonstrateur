@@ -50,7 +50,6 @@ export default function ToggleButton(props: Props) {
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
-                // eslint-disable-next-line max-len
                 d="M14 6.5L10.7001 9.56421L9.87525 8.79829L12.3503 6.5L9.87525 4.20171L10.7001 3.43579L14 6.5ZM1.64967 6.5L4.12475 8.79829L3.29992 9.56421L0 6.5L3.29992 3.43579L4.12417 4.20171L1.64967 6.5ZM5.70967 11.375H4.46833L8.29033 1.625H9.53167L5.70967 11.375Z"
               />
             </svg>
