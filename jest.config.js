@@ -29,6 +29,8 @@ const customJestConfig = {
     '!**/defaultColorScheme.ts',
     '!**/middleware.ts',
     '!**/i18n-config.ts',
+    '!**/i18n/**',
+    '!**/next-env.d.ts',
     '!**/.next/**',
     '!**/.history/**',
     '!**/journey-provider.tsx/**',

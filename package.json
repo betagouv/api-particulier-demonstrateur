@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3000",
-    "build": "next build",
+    "dev": "next dev --webpack -p 3000",
+    "build": "next build --webpack",
     "start": "next start -p ${PORT:-3000}",
-    "lint": "next lint",
+    "lint": "eslint .",
     "test": "jest --colors",
     "test:coverage": "jest --coverage --colors",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
@@ -22,11 +22,12 @@
     "accept-language": "^3.0.18",
     "eslint-config-next": "13.0.0",
     "eslint-config-prettier": "^8.3.0",
-    "next": "^13.5.4",
-    "next-intl": "^2.19.1",
+    "next": "^16.1.6",
+    "next-intl": "^4.8.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "tss-react": "^4.7.5"
+    "sass": "^1.97.3",
+    "tss-react": "^4.9.20"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -44,10 +45,9 @@
     "prettier": "latest",
     "ts-jest": "^29.1.1",
     "tsconfig": "*",
-    "typescript": "^4.5.3"
+    "typescript": "^5.9.3"
   },
   "engines": {
-    "node": "18.17.0",
-    "npm": "9.6.7"
+    "node": ">=20.9.0"
   }
 }
