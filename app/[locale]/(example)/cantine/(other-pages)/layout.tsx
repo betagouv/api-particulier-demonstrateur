@@ -1,11 +1,12 @@
 'use client';
 
+import { ReactNode } from 'react';
 import { useTranslations } from 'next-intl';
 import { fr } from '@codegouvfr/react-dsfr';
 import HighlightSubscription from '@/components/HighlightSubscription';
 import BackgroundImage from '@/components/BackgroundImage';
 
-export default function Layout({ children }: { children: JSX.Element }) {
+export default function Layout({ children }: { children: ReactNode }) {
   const t = useTranslations('DemonstratorLayout');
 
   return (

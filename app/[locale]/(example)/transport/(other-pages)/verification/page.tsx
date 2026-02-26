@@ -6,9 +6,10 @@ import { getUserInfo } from '@/services/users';
 export default async function Page({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const status = await getUserInfo(searchParams.user, searchParams.scope);
+  const { user, scope } = await searchParams;
+  const status = await getUserInfo(user, scope);
 
   return (
     <>

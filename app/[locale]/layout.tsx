@@ -1,4 +1,4 @@
-import { NextAppDirEmotionCacheProvider } from 'tss-react/next';
+import { NextAppDirEmotionCacheProvider } from 'tss-react/next/appDir';
 import { DsfrHead } from '@codegouvfr/react-dsfr/next-appdir/DsfrHead';
 import { DsfrProvider } from '@codegouvfr/react-dsfr/next-appdir/DsfrProvider';
 import { getHtmlAttributes } from '@codegouvfr/react-dsfr/next-appdir/getHtmlAttributes';
@@ -11,21 +11,19 @@ import { notFound } from 'next/navigation';
 import JourneyProvider from '@/app/journey-provider';
 import Banner from '@/components/Banner';
 import { MatomoTracker } from '@/app/matomo';
-
-interface Params {
-  locale: string;
-}
+import { ReactNode } from 'react';
 
 interface PageProps {
-  params: Params;
-  children: JSX.Element;
+  params: Promise<{ locale: string }>;
+  children: ReactNode;
 }
 
 export function generateStaticParams() {
   return [{ locale: 'fr' }, { locale: 'en' }];
 }
 
-export default async function RootLayout({ children, params: { locale } }: PageProps) {
+export default async function RootLayout({ children, params }: PageProps) {
+  const { locale } = await params;
   let messages;
   try {
     messages = (await import(`../../messages/${locale}.json`)).default;

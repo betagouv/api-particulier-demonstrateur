@@ -1,5 +1,5 @@
 import { Journey } from '@/app/types';
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, ReactNode, SetStateAction } from 'react';
 
 export interface JourneyContextType {
   journey: Journey;
@@ -7,6 +7,6 @@ export interface JourneyContextType {
 }
 
 export interface ProviderProps {
-  children: JSX.Element;
+  children: ReactNode;
   value?: Journey;
 }
