@@ -22,7 +22,7 @@ export default function Status({ status }: Props) {
 
   return (
     <>
-      {status !== (null || undefined) && (
+      {status != null && (
         <>
           {status ? (
             <>
@@ -35,9 +35,11 @@ export default function Status({ status }: Props) {
               />
               <Alert
                 closable
-                description={t.rich('success.successDescription.' + scope, {
-                  important: (chunks) => <b>{chunks}</b>,
-                })}
+                description={
+                  t.rich('success.successDescription.' + scope, {
+                    important: (chunks) => <b>{chunks}</b>,
+                  }) ?? undefined
+                }
                 // onClose={function noRefCheck() {}}
                 severity="success"
                 title={t('success.successTitle')}

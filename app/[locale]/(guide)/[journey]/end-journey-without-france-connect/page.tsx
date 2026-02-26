@@ -21,7 +21,7 @@ export default function Page() {
     <div className={styles.container}>
       <h2>{t('title')}</h2>
       <p style={{ fontSize: '22px', lineHeight: '30px', maxWidth: '460px', textAlign: 'center' }}>
-        {t('text.' + type, { user: journey?.user?.firstName })}
+        {t('text.' + type, { user: journey?.user?.firstName || '' })}
       </p>
       <Button
         size="large"
@@ -33,11 +33,11 @@ export default function Page() {
       >
         {error
           ? t.rich('button1.' + type + '.withWrongStatus', {
-              user: journey?.user?.firstName,
+              user: journey?.user?.firstName || '',
               b: (chunks) => <b>&nbsp;{chunks}</b>,
             })
           : t.rich('button1.' + type + '.withGoodStatus', {
-              user: journey?.user?.firstName,
+              user: journey?.user?.firstName || '',
               b: (chunks) => <b>&nbsp;{chunks}</b>,
             })}
       </Button>

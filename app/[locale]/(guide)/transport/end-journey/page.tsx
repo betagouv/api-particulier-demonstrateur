@@ -33,8 +33,8 @@ export default function Page() {
         priority="secondary"
       >
         {scope === 'jobSeeker'
-          ? t('button1.transport.withWrongStatus', { user: journey?.user?.firstName })
-          : t('button1.transport.withGoodStatus', { user: journey?.user?.firstName })}
+          ? t('button1.transport.withWrongStatus', { user: journey?.user?.firstName || '' })
+          : t('button1.transport.withGoodStatus', { user: journey?.user?.firstName || '' })}
       </Button>
 
       <Button size="large" onClick={() => router.push('/')} priority="secondary">

@@ -63,6 +63,32 @@ describe('Page component', () => {
     expect(pushMock).toHaveBeenCalledWith('/aaa/verification?user=123&scope=qfMSA');
   });
 
+  it('Button1 with undefined firstName and wrong status', async () => {
+    (useJourney as jest.Mock).mockImplementation(() => ({
+      journey: {
+        type: 'aaa',
+        user: { id: '123', lastName: 'Doe', description: '', isFranceConnectAuth: false },
+      },
+    }));
+
+    const { getByText } = render(<Page />);
+    const button = getByText('button1.cantine.withWrongStatus {"user":""}');
+    expect(button).toBeInTheDocument();
+  });
+
+  it('Button1 with undefined firstName and good status', async () => {
+    (useJourney as jest.Mock).mockImplementation(() => ({
+      journey: {
+        type: 'aaa',
+        user: { id: '123bis', lastName: 'Doe', description: '', isFranceConnectAuth: false },
+      },
+    }));
+
+    const { getByText } = render(<Page />);
+    const button = getByText('button1.cantine.withGoodStatus {"user":""}');
+    expect(button).toBeInTheDocument();
+  });
+
   it('Button2', () => {
     const routerMock = jest.spyOn(require('next/navigation'), 'useRouter');
     const pushMock = jest.fn();

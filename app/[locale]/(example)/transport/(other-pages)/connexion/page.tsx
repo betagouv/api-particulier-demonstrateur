@@ -109,7 +109,7 @@ export default function Page() {
                     }}
                   >
                     {t.rich('tip', {
-                      firstName: journey?.user?.firstName,
+                      firstName: journey?.user?.firstName || '',
                       ul: (chunks) => <ul>{chunks}</ul>,
                       li: (chunks) => <li>{chunks}</li>,
                       b: (chunks) => <b>{chunks}</b>,

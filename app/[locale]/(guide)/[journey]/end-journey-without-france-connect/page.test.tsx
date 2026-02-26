@@ -28,7 +28,7 @@ describe('Page component', () => {
     const buttonElement = container.querySelectorAll('.fr-btn');
 
     const titleElement = getByText('title');
-    const button1Element = getByText('button1.aaa.withGoodStatus {}');
+    const button1Element = getByText('button1.aaa.withGoodStatus {"user":""}');
     const button2Element = getByText('button2');
 
     expect(titleElement).toBeInTheDocument();
@@ -44,7 +44,7 @@ describe('Page component', () => {
     routerMock.mockReturnValue({ push: pushMock });
 
     const { getByText } = render(<Page />);
-    const button = getByText('button1.aaa.withGoodStatus {}');
+    const button = getByText('button1.aaa.withGoodStatus {"user":""}');
     fireEvent.click(button);
     expect(pushMock).toHaveBeenCalledWith('/aaa/formulaire?user=123&error=true');
   });
@@ -66,7 +66,7 @@ describe('Page component', () => {
     routerMock.mockReturnValue({ push: pushMock });
 
     const { getByText } = render(<Page />);
-    const button1 = getByText('button1.transport.withWrongStatus {}');
+    const button1 = getByText('button1.transport.withWrongStatus {"user":""}');
     fireEvent.click(button1);
     expect(pushMock).toHaveBeenCalledWith('/transport/formulaire?user=123&error=false');
 

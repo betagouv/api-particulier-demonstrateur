@@ -1,10 +1,11 @@
-module.exports = {
+const createNextIntlPlugin = require('next-intl/plugin');
+const withNextIntl = createNextIntlPlugin();
+
+module.exports = withNextIntl({
   reactStrictMode: true,
-  swcMinify: true,
   transpilePackages: ['@codegouvfr/react-dsfr'],
-  experimental: {
-    appDir: true,
-  },
+  images: { unoptimized: true },
+  turbopack: {},
   webpack: (config) => {
     config.module.rules.push({
       test: /\.woff2$/,
@@ -12,7 +13,4 @@ module.exports = {
     });
     return config;
   },
-  eslint: {
-    dirs: ['.'],
-  },
-};
+});

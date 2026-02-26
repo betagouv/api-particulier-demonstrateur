@@ -1,21 +1,30 @@
 import Page from './page';
 import { render, fireEvent } from '@testing-library/react';
+import { useJourney } from '@/app/journey-provider';
 
 jest.mock('next/navigation', () => ({
   useRouter: () => ({ back: jest.fn(), push: jest.fn() }),
   useSearchParams: () => ({ get: jest.fn().mockReturnValue('yolo') }),
 }));
 
-jest.mock('@/app/journey-provider', () => ({
-  useJourney: () => ({
-    journey: {
-      type: 'aaa',
-      user: { id: '123', firstName: 'John', lastName: 'Doe', description: '', isFranceConnectAuth: false },
-    },
-  }),
+jest.mock('@/app/journey-provider');
+(useJourney as jest.Mock).mockImplementation(() => ({
+  journey: {
+    type: 'aaa',
+    user: { id: '123', firstName: 'John', lastName: 'Doe', description: '', isFranceConnectAuth: false },
+  },
 }));
 
 describe('ConnectionChoice component', () => {
+  beforeEach(() => {
+    (useJourney as jest.Mock).mockImplementation(() => ({
+      journey: {
+        type: 'aaa',
+        user: { id: '123', firstName: 'John', lastName: 'Doe', description: '', isFranceConnectAuth: false },
+      },
+    }));
+  });
+
   it('should render components', async () => {
     const { container, getByText, getAllByText } = render(<Page />);
 
@@ -33,6 +42,18 @@ describe('ConnectionChoice component', () => {
     expect(subTitleElement).toBeInTheDocument();
     expect(overlayTextTitleElement).toBeInTheDocument();
     expect(overlayButtonElement).toBeInTheDocument();
+  });
+
+  it('should render with undefined firstName', () => {
+    (useJourney as jest.Mock).mockImplementation(() => ({
+      journey: {
+        type: 'aaa',
+        user: { id: '123', lastName: 'Doe', description: '', isFranceConnectAuth: false },
+      },
+    }));
+
+    const { getByText } = render(<Page />);
+    expect(getByText('overlayText.title')).toBeInTheDocument();
   });
 
   it('Button click', () => {

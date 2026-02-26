@@ -1,5 +1,6 @@
 'use client';
 
+import { ReactNode } from 'react';
 import { Stepper } from '@codegouvfr/react-dsfr/Stepper';
 import { fr } from '@codegouvfr/react-dsfr';
 import { useTranslations } from 'next-intl';
@@ -9,7 +10,7 @@ import styles from './layout.module.css';
 import { useJourney } from '@/app/journey-provider';
 import { useSearchParams } from 'next/navigation';
 
-export default function Layout({ children }: { children: JSX.Element }) {
+export default function Layout({ children }: { children: ReactNode }) {
   const t = useTranslations('Verification');
   const { journey } = useJourney();
   const searchParams = useSearchParams();

@@ -4,11 +4,12 @@ import Status from '@/components/Status';
 import { getUserInfo } from '@/services/users';
 
 export default async function Page({
-  searchParams = {},
+  searchParams,
 }: {
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const userInfo = await getUserInfo(searchParams.user, searchParams.scope);
+  const { user, scope } = await searchParams;
+  const userInfo = await getUserInfo(user, scope);
   const status = userInfo && userInfo > 0 ? true : false;
 
   return (
