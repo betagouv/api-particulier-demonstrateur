@@ -107,7 +107,7 @@ export default function Page() {
                           ul: (chunks) => <ul>{chunks}</ul>,
                           li: (chunks) => <li>{chunks}</li>,
                           important: (chunks) => <b>{chunks}</b>,
-                          firstName: journey?.user?.firstName,
+                          firstName: journey?.user?.firstName || '',
                         })}
                       </div>
                       <CustomButton
@@ -198,7 +198,7 @@ export default function Page() {
                         <b>{t('guide2.subText')}</b>️ <br />
                         {t.rich('guide2.text', {
                           important: (chunks) => <b>{chunks}</b>,
-                          firstName: journey?.user?.firstName,
+                          firstName: journey?.user?.firstName || '',
                         })}
                       </div>
                       <CustomButton

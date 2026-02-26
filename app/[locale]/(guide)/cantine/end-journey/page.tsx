@@ -30,11 +30,11 @@ export default function Page() {
       >
         {journey?.user?.id && journey.user.id.includes('bis')
           ? t.rich('button1.cantine.withGoodStatus', {
-              user: journey?.user?.firstName,
+              user: journey?.user?.firstName || '',
               important: (chunks) => <b>{chunks}</b>,
             })
           : t.rich('button1.cantine.withWrongStatus', {
-              user: journey?.user?.firstName,
+              user: journey?.user?.firstName || '',
               important: (chunks) => <b>{chunks}</b>,
             })}
       </Button>

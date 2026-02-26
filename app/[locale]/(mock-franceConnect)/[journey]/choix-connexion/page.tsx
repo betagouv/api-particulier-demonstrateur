@@ -38,7 +38,9 @@ export default function ConnectionChoice() {
         }}
       />
       <div className={styles.textOverlay}>
-        <p>{t('overlayText.title', { firstName: journey?.user?.firstName, gender: journey?.user?.gender })}</p>
+        <p>
+          {t('overlayText.title', { firstName: journey?.user?.firstName || '', gender: journey?.user?.gender || '' })}
+        </p>
         <Button
           size="large"
           onClick={() =>

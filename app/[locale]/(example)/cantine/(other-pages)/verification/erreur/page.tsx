@@ -18,17 +18,19 @@ export default function Page() {
       <Alert
         closable
         title={t('error.title.studentWithoutFranceConnect')}
-        description={t.rich('error.desc.studentWithoutFranceConnect', {
-          p: (chunks) => <p>{chunks}</p>,
-          link: (chunks) => (
-            <div
-              style={{ display: 'inline-block', textDecoration: 'underline', cursor: 'pointer' }}
-              onClick={() => router.push('/' + journey?.type + '/formulaire?user=' + journey?.user?.id)}
-            >
-              {chunks}
-            </div>
-          ),
-        })}
+        description={
+          t.rich('error.desc.studentWithoutFranceConnect', {
+            p: (chunks) => <p>{chunks}</p>,
+            link: (chunks) => (
+              <div
+                style={{ display: 'inline-block', textDecoration: 'underline', cursor: 'pointer' }}
+                onClick={() => router.push('/' + journey?.type + '/formulaire?user=' + journey?.user?.id)}
+              >
+                {chunks}
+              </div>
+            ),
+          }) ?? undefined
+        }
         // onClose={function noRefCheck() {}}
         severity="warning"
         style={{ marginBottom: '20px' }}
