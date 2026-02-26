@@ -1,4 +1,5 @@
 import { render, fireEvent } from '@testing-library/react';
+import { useJourney } from '@/app/journey-provider';
 
 import Page from './page';
 import Tooltip from '@/components/Tooltip';
@@ -10,16 +11,25 @@ jest.mock('next/navigation', () => ({
 
 jest.mock('@/components/Tooltip');
 
-jest.mock('@/app/journey-provider', () => ({
-  useJourney: () => ({
-    journey: {
-      type: 'aaa',
-      user: { id: '123', firstName: 'John', lastName: 'Doe', description: '', isFranceConnectAuth: false },
-    },
-  }),
+jest.mock('@/app/journey-provider');
+(useJourney as jest.Mock).mockImplementation(() => ({
+  journey: {
+    type: 'aaa',
+    user: { id: '123', firstName: 'John', lastName: 'Doe', description: '', isFranceConnectAuth: false },
+  },
 }));
 
 describe('Page component', () => {
+  beforeEach(() => {
+    jest.restoreAllMocks();
+    (useJourney as jest.Mock).mockImplementation(() => ({
+      journey: {
+        type: 'aaa',
+        user: { id: '123', firstName: 'John', lastName: 'Doe', description: '', isFranceConnectAuth: false },
+      },
+    }));
+  });
+
   it('should calls correct components', async () => {
     const { container, getByText } = render(<Page />);
 
@@ -52,6 +62,32 @@ describe('Page component', () => {
     fireEvent.click(button2);
 
     expect(pushMock).toHaveBeenCalledWith('/');
+  });
+
+  it('With undefined firstName and good status', async () => {
+    (useJourney as jest.Mock).mockImplementation(() => ({
+      journey: {
+        type: 'aaa',
+        user: { id: '123', lastName: 'Doe', description: '', isFranceConnectAuth: false },
+      },
+    }));
+
+    const { getByText } = render(<Page />);
+    expect(getByText('button1.transport.withGoodStatus')).toBeInTheDocument();
+  });
+
+  it('With undefined firstName and wrong status', async () => {
+    (useJourney as jest.Mock).mockImplementation(() => ({
+      journey: {
+        type: 'aaa',
+        user: { id: '123', lastName: 'Doe', description: '', isFranceConnectAuth: false },
+      },
+    }));
+    const useSearchParamsMock = jest.spyOn(require('next/navigation'), 'useSearchParams');
+    useSearchParamsMock.mockReturnValue({ get: jest.fn().mockReturnValue('jobSeeker') });
+
+    const { getByText } = render(<Page />);
+    expect(getByText('button1.transport.withWrongStatus')).toBeInTheDocument();
   });
 
   it('When result was wrong', async () => {
