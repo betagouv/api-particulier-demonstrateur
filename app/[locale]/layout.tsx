@@ -27,7 +27,7 @@ export default async function RootLayout({ children, params }: PageProps) {
   let messages;
   try {
     messages = (await import(`../../messages/${locale}.json`)).default;
-  } catch (error) {
+  } catch {
     notFound();
   }
 

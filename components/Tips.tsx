@@ -16,6 +16,8 @@ export default function Tips({ children = [undefined, undefined] }: Props) {
   const [tips, setTips] = useState<ReactElement[]>([]);
   const [tip, setTip] = useState<ReactElement | null>(null);
   const [index, setIndex] = useState(0);
+  const [isNextBtnDisabled, setIsNextBtnDisabled] = useState(false);
+  const [isPreviousBtnDisabled, setIsPreviousBtnDisabled] = useState(true);
 
   useEffect(() => {
     setIndex(0);
@@ -34,9 +36,6 @@ export default function Tips({ children = [undefined, undefined] }: Props) {
     const tipsArray = Array.isArray(tips) ? tips : [tips];
     setTips(tipsArray);
   }, [children, isDeveloperMode]);
-
-  const [isNextBtnDisabled, setIsNextBtnDisabled] = useState(false);
-  const [isPreviousBtnDisabled, setIsPreviousBtnDisabled] = useState(true);
 
   const handleDeveloperModeChange = () => {
     setIsDeveloperMode(!isDeveloperMode);
