@@ -20,19 +20,19 @@
         "title": "Solidarity Pricing for the Cafeteria",
         "desc": "With the Individual API, build a service with rates adapted to your users' resources."
       },
-      "nicolas": {
+      "user1": {
         "title": "Nicolas, job seeker",
         "desc": "Nicolas buys an annual transport card. He is a job seeker and eligible for the reduced rate. He will connect using FranceConnect."
       },
-      "juliette": {
+      "user2": {
         "title": "Juliette, student",
         "desc": "Juliette wishes to purchase a transport card with a monthly subscription. She is a student and eligible for the reduced rate. She will connect WITHOUT using FranceConnect."
       },
-      "camille": {
+      "user3": {
         "title": "Camille, MSA Family Quotient of 320",
         "desc": "Camille registers her children in the cafeteria, her family quotient (QF) is 320, she is eligible for the 1 euro Cafeterias program. She will connect using FranceConnect."
       },
-      "kevin": {
+      "user4": {
         "title": "Kevin, MSA Family Quotient of 750",
         "desc": "Kevin registers his children in the cafeteria, his family quotient (QF) is 750, he is eligible for the solidarity rate."
       }
@@ -240,10 +240,12 @@
       "delay": "Average delay of 15 days",
       "button": "Submit the proof",
       "transportErrorButton": "Continue by submitting my certificate",
+      "cantineErrorButton": "Continue by submitting the certificate",
       "transportSendButton": "Send my file"
     },
     "delay": {
-      "transport": "Average delay of 15 days"
+      "transport": "Average delay of 15 days",
+      "cantine": "Average delay of 15 days"
     },
     "links": {
       "null": {
@@ -331,7 +333,7 @@
         "withWrongStatus": "See the journey when {user} selects the wrong reduced fare status",
         "withGoodStatus": "See the journey when {user} selects the right reduced fare status"
       },
-      "canteen": {
+      "cantine": {
         "withWrongStatus": "<important>See the Journey B</important>, when {user} cannot obtain his CAF or MSA family quotient",
         "withGoodStatus": "<important>See the Journey A</important>, when {user} can obtain his CAF or MSA family quotient"
       }
@@ -360,7 +362,10 @@
       "homeLinkPropsTitle": "Confirmation page - API Particulier Demonstrator"
     },
     "title": "You will log in as :",
-    "button": "Continue to the Citizenship Portal",
+    "button": {
+      "cantine": "Continue to the Citizen Procedures Portal",
+      "transport": "Continue to Mobility+"
+    },
     "accordionTitle": "The following data will be transmitted:",
     "accordionContent1": "First name",
     "accordionContent2": "Birth name",
@@ -383,6 +388,6 @@
     "unchecked": "Disabled"
   },
   "Tips": {
-    "next": "Recommandation suivante"
+    "next": "Next recommendation"
   }
 }
