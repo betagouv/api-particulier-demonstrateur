@@ -21,7 +21,7 @@
     "@mui/material": "^5.11.11",
     "accept-language": "^3.0.18",
     "eslint-config-next": "16.1.6",
-    "next": "^16.1.6",
+    "next": "^16.1.7",
     "next-intl": "^4.8.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
