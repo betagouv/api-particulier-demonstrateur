@@ -31,7 +31,7 @@
       }
     ],
     "inlineSources": false,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "preserveWatchOutput": true
