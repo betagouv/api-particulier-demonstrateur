@@ -5,6 +5,7 @@ import { fr } from '@codegouvfr/react-dsfr';
 import { useColors } from '@codegouvfr/react-dsfr/useColors';
 import styles from './page.module.css';
 import { Button } from '@codegouvfr/react-dsfr/Button';
+import { Alert } from '@codegouvfr/react-dsfr/Alert';
 import { useJourney } from '@/app/journey-provider';
 import { FranceConnectButton } from '@codegouvfr/react-dsfr/FranceConnectButton';
 import { Input } from '@codegouvfr/react-dsfr/Input';
@@ -45,6 +46,15 @@ export default function Page() {
             title={t('stepperTitle')}
           />
         </div>
+
+        <Alert
+          closable
+          title={t('alertTitle')}
+          description={t('alertDescription')}
+          severity="info"
+          small
+          style={{ marginTop: '2rem', marginBottom: '1.5rem' }}
+        />
 
         <div
           className={`${styles.choiceContainer} ${

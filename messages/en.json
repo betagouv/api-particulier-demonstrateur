@@ -135,7 +135,9 @@
     "buttonConnection": "Sign in",
     "bottomTitle": "No account yet?",
     "bottomButton": "Create an account",
-    "tip": "<p>In this scenario, {firstName} chooses to log in with his/her username and password.</p><p><b>Enter them.</b></p><ul><li>Username: <b>demo</b></li><li>Password: <b>demo</b></li></ul>"
+    "tip": "<p>In this scenario, {firstName} chooses to log in with his/her username and password.</p><p><b>Enter them.</b></p><ul><li>Username: <b>demo</b></li><li>Password: <b>demo</b></li></ul>",
+    "alertTitle": "Your information will be transmitted to verify your status",
+    "alertDescription": "We will request proof of your situation directly from the authorities in charge. If the information is available, you will not have to provide supporting documents."
   },
   "Choix-connexion": {
     "title": "Connection in progress on Mobilités+",

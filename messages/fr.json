@@ -135,7 +135,9 @@
     "buttonConnection": "Se connecter",
     "bottomTitle": "Pas encore de compte ?",
     "bottomButton": "Créer un compte",
-    "tip": "<p>Dans ce scénario, {firstName} choisit de se connecter avec son identifiant et son mot de passe.</p><p><b>Renseignez-les.</b></p><ul><li>Identifiant : <b>demo</b></li><li>Mot de passe : <b>demo</b></li></ul>"
+    "tip": "<p>Dans ce scénario, {firstName} choisit de se connecter avec son identifiant et son mot de passe.</p><p><b>Renseignez-les.</b></p><ul><li>Identifiant : <b>demo</b></li><li>Mot de passe : <b>demo</b></li></ul>",
+    "alertTitle": "Vos informations vont être transmises pour vérifier votre statut",
+    "alertDescription": "Nous allons demander le justificatif de votre situation directement auprès des administrations en charge. Si l'information est disponible, vous n'aurez pas de justificatifs à fournir."
   },
   "Choix-connexion": {
     "title": "Connexion en cours sur Mobilités +",
