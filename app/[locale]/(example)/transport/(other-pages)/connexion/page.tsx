@@ -78,14 +78,16 @@ export default function Page() {
                     searchParams.get('scope')
                   }
                 />
-                <Alert
-                  closable
-                  title={t('transportAlertTitle')}
-                  description={t('transportAlertDescription')}
-                  severity="info"
-                  small
-                  style={{ width: '100%', marginTop: '1.5rem' }}
-                />
+                {journey?.user?.isFranceConnectAuth && (
+                  <Alert
+                    closable
+                    title={t('transportAlertTitle')}
+                    description={t('transportAlertDescription')}
+                    severity="info"
+                    small
+                    style={{ width: '100%', marginTop: '1.5rem' }}
+                  />
+                )}
               </div>
             </div>
             <div className={styles.separator}>

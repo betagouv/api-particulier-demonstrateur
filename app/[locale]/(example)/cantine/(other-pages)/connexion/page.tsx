@@ -76,14 +76,16 @@ export default function Page() {
                     }
                   />
                 </div>
-                <Alert
-                  closable
-                  title={t('alertTitle')}
-                  description={t('alertDescription')}
-                  severity="info"
-                  small
-                  style={{ width: '100%', marginTop: '1.5rem' }}
-                />
+                {journey?.user?.isFranceConnectAuth && (
+                  <Alert
+                    closable
+                    title={t('alertTitle')}
+                    description={t('alertDescription')}
+                    severity="info"
+                    small
+                    style={{ width: '100%', marginTop: '1.5rem' }}
+                  />
+                )}
               </div>
             </div>
             <div className={styles.separator}>

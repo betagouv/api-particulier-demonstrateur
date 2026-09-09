@@ -58,7 +58,9 @@ describe('Page component', () => {
     const { container } = render(<Page />);
 
     const choiceContainerElement = container.querySelector('.choiceContainer');
+    const alertElement = container.querySelector('.fr-alert');
 
     expect(choiceContainerElement).toHaveClass('withoutFranceConnectAuth');
+    expect(alertElement).not.toBeInTheDocument();
   });
 });
