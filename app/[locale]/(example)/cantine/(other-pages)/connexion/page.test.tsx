@@ -26,6 +26,7 @@ describe('Page component', () => {
 
     const stepperElement = container.querySelector('.fr-stepper');
     const franceConnectElement = container.querySelector('.fr-connect__login');
+    const alertElement = container.querySelector('.fr-alert');
     const tagElement = container.querySelector('.fr-tag');
     const InputIDElement = container.querySelector('.fr-label');
     const InputPasswordElement = container.querySelector('.fr-password');
@@ -37,7 +38,8 @@ describe('Page component', () => {
     expect(choiceContainerElement).toHaveClass('withFranceConnectAuth');
     expect(stepperElement).toHaveClass('fr-stepper');
     expect(franceConnectElement).toHaveClass('fr-connect__login');
-    expect(tagElement).toHaveClass('fr-tag');
+    expect(alertElement).toHaveClass('fr-alert');
+    expect(tagElement).not.toBeInTheDocument();
     expect(InputIDElement).toHaveClass('fr-label');
     expect(InputPasswordElement).toHaveClass('fr-password');
     expect(buttonElements.length).toBe(3);

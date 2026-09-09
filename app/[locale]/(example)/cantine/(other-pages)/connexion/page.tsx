@@ -10,7 +10,6 @@ import { useJourney } from '@/app/journey-provider';
 import { FranceConnectButton } from '@codegouvfr/react-dsfr/FranceConnectButton';
 import { Input } from '@codegouvfr/react-dsfr/Input';
 import { PasswordInput } from '@codegouvfr/react-dsfr/blocks/PasswordInput';
-import { Tag } from '@codegouvfr/react-dsfr/Tag';
 import { useTranslations } from 'next-intl';
 import Tooltip from '@/components/Tooltip';
 import { useSearchParams } from 'next/navigation';
@@ -47,15 +46,6 @@ export default function Page() {
           />
         </div>
 
-        <Alert
-          closable
-          title={t('alertTitle')}
-          description={t('alertDescription')}
-          severity="info"
-          small
-          style={{ marginTop: '2rem', marginBottom: '1.5rem' }}
-        />
-
         <div
           className={`${styles.choiceContainer} ${
             journey?.user?.isFranceConnectAuth ? styles.withFranceConnectAuth : styles.withoutFranceConnectAuth
@@ -74,9 +64,6 @@ export default function Page() {
                 }}
               >
                 <h3 className={styles.leftTitle}>{t('contentLeft')}</h3>
-                <Tag className={styles.tag} iconId="fr-icon-notification-3-fill">
-                  {t('tagLeft')}
-                </Tag>
                 <FranceConnectButton
                   url={
                     '/' +
@@ -86,6 +73,14 @@ export default function Page() {
                     '&scope=' +
                     searchParams.get('scope')
                   }
+                />
+                <Alert
+                  closable
+                  title={t('alertTitle')}
+                  description={t('alertDescription')}
+                  severity="info"
+                  small
+                  style={{ width: '100%', marginTop: '1.5rem' }}
                 />
               </div>
             </div>
@@ -99,9 +94,6 @@ export default function Page() {
               }}
             >
               <h3 className={styles.rightTitle}>{t('contentRight')}</h3>
-              <Tag className={styles.tag} iconId="fr-icon-notification-3-fill">
-                {t('tafRight')}
-              </Tag>
 
               <div
                 className={`${!journey?.user?.isFranceConnectAuth ? styles.overlayAuth : ''}`}
