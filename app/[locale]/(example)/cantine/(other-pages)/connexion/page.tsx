@@ -64,16 +64,18 @@ export default function Page() {
                 }}
               >
                 <h3 className={styles.leftTitle}>{t('contentLeft')}</h3>
-                <FranceConnectButton
-                  url={
-                    '/' +
-                    journey?.type +
-                    '/choix-connexion?user=' +
-                    journey?.user?.id +
-                    '&scope=' +
-                    searchParams.get('scope')
-                  }
-                />
+                <div style={{ marginTop: '1.5rem' }}>
+                  <FranceConnectButton
+                    url={
+                      '/' +
+                      journey?.type +
+                      '/choix-connexion?user=' +
+                      journey?.user?.id +
+                      '&scope=' +
+                      searchParams.get('scope')
+                    }
+                  />
+                </div>
                 <Alert
                   closable
                   title={t('alertTitle')}
