@@ -31,7 +31,7 @@ describe('Page component', () => {
 
     expect(stepperElement).toHaveClass('fr-stepper');
     expect(buttonElement).toHaveClass('fr-btn');
-    expect(alertElement).toHaveClass('fr-alert');
+    expect(alertElement).not.toBeInTheDocument();
     expect(cardElement).toHaveClass('fr-card');
     expect(getByText('Étape 1 sur 3')).toBeInTheDocument();
   });

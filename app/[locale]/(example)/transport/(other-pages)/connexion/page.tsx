@@ -5,6 +5,7 @@ import { fr } from '@codegouvfr/react-dsfr';
 import { useColors } from '@codegouvfr/react-dsfr/useColors';
 import styles from './page.module.css';
 import { Button } from '@codegouvfr/react-dsfr/Button';
+import { Alert } from '@codegouvfr/react-dsfr/Alert';
 import { useJourney } from '@/app/journey-provider';
 import { FranceConnectButton } from '@codegouvfr/react-dsfr/FranceConnectButton';
 import { Input } from '@codegouvfr/react-dsfr/Input';
@@ -76,6 +77,14 @@ export default function Page() {
                     '&scope=' +
                     searchParams.get('scope')
                   }
+                />
+                <Alert
+                  closable
+                  title={t('transportAlertTitle')}
+                  description={t('transportAlertDescription')}
+                  severity="info"
+                  small
+                  style={{ width: '100%', marginTop: '1.5rem' }}
                 />
               </div>
             </div>

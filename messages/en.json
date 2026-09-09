@@ -137,7 +137,9 @@
     "bottomButton": "Create an account",
     "tip": "<p>In this scenario, {firstName} chooses to log in with his/her username and password.</p><p><b>Enter them.</b></p><ul><li>Username: <b>demo</b></li><li>Password: <b>demo</b></li></ul>",
     "alertTitle": "Your FranceConnect information will be transmitted to retrieve your family quotient",
-    "alertDescription": "To assign you the cafeteria rate adapted to your resources, we transmit your FranceConnect information to the administration that knows your family quotient. If this administration returns its amount and you are eligible for a reduced rate, you will not have to provide a CAF or MSA certificate."
+    "alertDescription": "To assign you the cafeteria rate adapted to your resources, we transmit your FranceConnect information to the administration that knows your family quotient. If this administration returns its amount and you are eligible for a reduced rate, you will not have to provide a CAF or MSA certificate.",
+    "transportAlertTitle": "Reduced rate: your FranceConnect information will be transmitted to verify your status",
+    "transportAlertDescription": "To validate your reduced rate without requiring proof, we transmit your FranceConnect information to the relevant administration. If this administration can confirm your status, you will not have to provide any proof."
   },
   "Choix-connexion": {
     "title": "Connection in progress on Mobilités+",

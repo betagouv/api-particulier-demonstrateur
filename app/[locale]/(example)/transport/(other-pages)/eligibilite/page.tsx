@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { Stepper } from '@codegouvfr/react-dsfr/Stepper';
 import { fr } from '@codegouvfr/react-dsfr';
 import { Button } from '@codegouvfr/react-dsfr/Button';
-import { Alert } from '@codegouvfr/react-dsfr/Alert';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useJourney } from '@/app/journey-provider';
@@ -158,16 +157,7 @@ export default function Page() {
               ></RadioButton>
               <div className={styles.choiceB}></div>
             </div>
-            <Alert
-              closable
-              title={t('alertTitle')}
-              description={t('alertDescription')}
-              // onClose={function noRefCheck() {}}
-              severity="info"
-              small
-              style={{ marginTop: '2rem', marginBottom: '1.5rem' }}
-            />
-            <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
+            <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end', marginTop: '2rem' }}>
               <Button
                 disabled={selectedValue === undefined}
                 size="large"
@@ -220,8 +210,8 @@ export default function Page() {
               <b>Nous vous recommandons d’expliquer au maximum les mécanismes de traitement des données à l’usager</b> :
               <br />
               <i>
-                Ici, cela s’illustre par la présence d’un panneau indiquant que les informations de l’usager vont être
-                transmises pour vérifier son statut.
+                Ici, cela s’illustre par la présence d’un panneau, sur l’écran de connexion FranceConnect, indiquant que
+                les informations de l’usager vont être transmises pour vérifier son statut.
               </i>
               <br />
               La dématérialisation de l’information ne doit pas opacifier le fonctionnement des démarches.

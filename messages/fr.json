@@ -137,7 +137,9 @@
     "bottomButton": "Créer un compte",
     "tip": "<p>Dans ce scénario, {firstName} choisit de se connecter avec son identifiant et son mot de passe.</p><p><b>Renseignez-les.</b></p><ul><li>Identifiant : <b>demo</b></li><li>Mot de passe : <b>demo</b></li></ul>",
     "alertTitle": "Vos informations FranceConnect seront transmises pour récupérer votre quotient familial",
-    "alertDescription": "Pour vous attribuer le tarif cantine adapté à vos ressources, nous transmettons vos informations FranceConnect à l'administration qui connaît votre quotient familial. Si cette administration nous retourne son montant et que vous êtes éligible à un tarif réduit, vous n'aurez pas d'attestation CAF ou MSA à fournir."
+    "alertDescription": "Pour vous attribuer le tarif cantine adapté à vos ressources, nous transmettons vos informations FranceConnect à l'administration qui connaît votre quotient familial. Si cette administration nous retourne son montant et que vous êtes éligible à un tarif réduit, vous n'aurez pas d'attestation CAF ou MSA à fournir.",
+    "transportAlertTitle": "Tarif réduit : vos informations FranceConnect seront transmises pour vérifier votre statut",
+    "transportAlertDescription": "Pour valider votre tarif réduit sans vous demander de justificatif, nous transmettons vos informations FranceConnect à l'administration concernée. Si cette administration peut nous confirmer votre statut, vous n'aurez pas de justificatifs à fournir."
   },
   "Choix-connexion": {
     "title": "Connexion en cours sur Mobilités +",
