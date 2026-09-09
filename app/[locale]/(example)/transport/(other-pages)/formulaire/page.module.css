@@ -93,6 +93,16 @@
   flex: 1;
 }
 
+.lastInputGroup {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0;
+}
+.lastInputGroup > div {
+  max-width: 50%;
+}
+
 @media (min-width: 1260px) {
   .tip {
     display: flex;
