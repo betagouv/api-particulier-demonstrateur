@@ -1,0 +1,23 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    groups:
+      production-dependencies:
+        dependency-type: 'production'
+      development-dependencies:
+        dependency-type: 'development'
+    directory: '/'
+    schedule:
+      day: 'monday'
+      time: '01:00'
+      interval: 'weekly'
+    cooldown:
+      default-days: 7
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      day: 'monday'
+      time: '01:00'
+      interval: 'weekly'
+    cooldown:
+      default-days: 7
