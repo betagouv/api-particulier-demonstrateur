@@ -135,7 +135,11 @@
     "buttonConnection": "Se connecter",
     "bottomTitle": "Pas encore de compte ?",
     "bottomButton": "Créer un compte",
-    "tip": "<p>Dans ce scénario, {firstName} choisit de se connecter avec son identifiant et son mot de passe.</p><p><b>Renseignez-les.</b></p><ul><li>Identifiant : <b>demo</b></li><li>Mot de passe : <b>demo</b></li></ul>"
+    "tip": "<p>Dans ce scénario, {firstName} choisit de se connecter avec son identifiant et son mot de passe.</p><p><b>Renseignez-les.</b></p><ul><li>Identifiant : <b>demo</b></li><li>Mot de passe : <b>demo</b></li></ul>",
+    "alertTitle": "Vos informations FranceConnect seront transmises pour récupérer votre quotient familial",
+    "alertDescription": "Pour vous attribuer le tarif cantine adapté à vos ressources, nous transmettons vos informations FranceConnect à l'administration qui connaît votre quotient familial. Si cette administration nous retourne son montant et que vous êtes éligible à un tarif réduit, vous n'aurez pas d'attestation CAF ou MSA à fournir.",
+    "transportAlertTitle": "Tarif réduit : vos informations FranceConnect seront transmises pour vérifier votre statut",
+    "transportAlertDescription": "Pour valider votre tarif réduit sans vous demander de justificatif, nous transmettons vos informations FranceConnect à l'administration concernée. Si cette administration peut nous confirmer votre statut, vous n'aurez pas de justificatifs à fournir."
   },
   "Choix-connexion": {
     "title": "Connexion en cours sur Mobilités +",
@@ -212,7 +216,8 @@
         "studentScholarship": "Votre statut étudiant boursier n'a pas pu être confirmé",
         "c2s": "Votre statut bénéficiaire de la complémentaire santé solidaire n'a pas pu être confirmé",
         "qfMSA": "Nous n’avons pas pu obtenir votre quotient familial CAF ou MSA",
-        "studentWithoutFranceConnect": "La connexion automatique avec le Ministère de l’enseignement supérieur n’a pas pu être établie"
+        "studentWithoutFranceConnect": "La connexion automatique avec le Ministère de l’enseignement supérieur n’a pas pu être établie",
+        "qfMSAWithoutFranceConnect": "La connexion automatique avec la CNAF n’a pas pu être établie"
       },
       "desc": {
         "jobSeeker": "Pôle emploi n'a pu confirmer votre inscription en tant que demandeur d'emploi.",
@@ -220,7 +225,8 @@
         "studentScholarship": "Le CNOUS n'a pu confirmer votre inscription en tant qu'étudiant boursier.",
         "c2s": "La Sécurité Sociale n'a pu confirmer votre statut de bénéficaire de la complémentaire santé solidaire.",
         "qfMSA": "La transmission automatique de cette information n’a pas fonctionné.",
-        "studentWithoutFranceConnect": "Nous n’avons donc pas pu vérifier votre statut. <link>Essayer une seconde fois en revérifiant mes informations.</link>"
+        "studentWithoutFranceConnect": "Nous n’avons donc pas pu vérifier votre statut. <link>Essayer une seconde fois en revérifiant mes informations.</link>",
+        "qfMSAWithoutFranceConnect": "Nous n’avons donc pas pu obtenir votre quotient familial. <link>Essayer une seconde fois en revérifiant mes informations.</link>"
       },
       "text": "Pour poursuivre votre souscription en tarif réduit, veuillez nous transmettre le justificatif adéquat. <important>Le délai moyen de traitement est de 15 jours.</important>",
       "textBis": "Après vérification de votre identité, vos informations seront transmises aux administrations compétentes pour vérifier votre éligibilité au tarif réduit.",

@@ -11,7 +11,9 @@ import { usePathname } from 'next/navigation';
 export default function DemonstratorLayout({ children }: { children: ReactNode }) {
   const t = useTranslations('DemonstratorLayout');
   const pathname = usePathname();
-  const type = pathname.split('/')[1];
+  // pathname is locale-prefixed (e.g. /fr/cantine/connexion): segment 1 is the
+  // locale, segment 2 is the use case.
+  const type = pathname.split('/')[2];
 
   return (
     <>

@@ -17,9 +17,9 @@ export default function Page() {
     <>
       <Alert
         closable
-        title={t('error.title.studentWithoutFranceConnect')}
+        title={t('error.title.qfMSAWithoutFranceConnect')}
         description={
-          t.rich('error.desc.studentWithoutFranceConnect', {
+          t.rich('error.desc.qfMSAWithoutFranceConnect', {
             p: (chunks) => <p>{chunks}</p>,
             link: (chunks) => (
               <div

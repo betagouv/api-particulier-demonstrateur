@@ -4,10 +4,12 @@ import Banner from '@/components/Banner';
 
 jest.mock('@/components/Banner');
 
+const mockUsePathname = jest.fn().mockImplementation(() => {
+  return '/a/b/c/d';
+});
+
 jest.mock('next/navigation', () => ({
-  usePathname: jest.fn().mockImplementation(() => {
-    return '/a/b/c/d';
-  }),
+  usePathname: () => mockUsePathname(),
 }));
 
 describe('Layout component', () => {
@@ -28,5 +30,17 @@ describe('Layout component', () => {
     expect(child).toBeInTheDocument();
 
     expect(Banner).toHaveBeenCalledTimes(1);
+  });
+
+  it('derives the use case from the pathname segment after the locale, not the locale itself', async () => {
+    mockUsePathname.mockReturnValue('/fr/cantine/connexion');
+
+    const { getByText } = render(
+      <Layout>
+        <p>Toto</p>
+      </Layout>,
+    );
+
+    expect(getByText('cantine.serviceTitle')).toBeInTheDocument();
   });
 });

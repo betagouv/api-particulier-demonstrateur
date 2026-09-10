@@ -217,7 +217,7 @@ export default function Page() {
                   disabled={birthdate === '' || sex === '' || birthPlace === ''}
                   size="large"
                   onClick={() => {
-                    if (sex === 'male' && birthdate === '1984-06-23' && birthPlace === 'Angers') {
+                    if (sex === 'male' && birthdate === '1984-06-23' && birthPlace === '49007') {
                       router.push('/' + journey?.type + '/upload?user=' + journey?.user?.id);
                     } else if (!(birthdate === '' || sex === '' || birthPlace === '')) {
                       router.push('/' + journey?.type + '/verification/erreur?user=' + journey?.user?.id);

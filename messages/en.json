@@ -135,7 +135,11 @@
     "buttonConnection": "Sign in",
     "bottomTitle": "No account yet?",
     "bottomButton": "Create an account",
-    "tip": "<p>In this scenario, {firstName} chooses to log in with his/her username and password.</p><p><b>Enter them.</b></p><ul><li>Username: <b>demo</b></li><li>Password: <b>demo</b></li></ul>"
+    "tip": "<p>In this scenario, {firstName} chooses to log in with his/her username and password.</p><p><b>Enter them.</b></p><ul><li>Username: <b>demo</b></li><li>Password: <b>demo</b></li></ul>",
+    "alertTitle": "Your FranceConnect information will be transmitted to retrieve your family quotient",
+    "alertDescription": "To assign you the cafeteria rate adapted to your resources, we transmit your FranceConnect information to the administration that knows your family quotient. If this administration returns its amount and you are eligible for a reduced rate, you will not have to provide a CAF or MSA certificate.",
+    "transportAlertTitle": "Reduced rate: your FranceConnect information will be transmitted to verify your status",
+    "transportAlertDescription": "To validate your reduced rate without requiring proof, we transmit your FranceConnect information to the relevant administration. If this administration can confirm your status, you will not have to provide any proof."
   },
   "Choix-connexion": {
     "title": "Connection in progress on Mobilités+",
@@ -212,7 +216,8 @@
         "studentScholarship": "Your scholarship student status could not be confirmed",
         "c2s": "Your status as a beneficiary of the complementary health solidarity could not be confirmed",
         "qfMSA": "We were unable to obtain your CAF or MSA family quotient",
-        "studentWithoutFranceConnect": "The automatic connection with the Ministry of Higher Education could not be established"
+        "studentWithoutFranceConnect": "The automatic connection with the Ministry of Higher Education could not be established",
+        "qfMSAWithoutFranceConnect": "The automatic connection with the CNAF could not be established"
       },
       "desc": {
         "jobSeeker": "Pôle emploi could not confirm your registration as a job seeker.",
@@ -220,7 +225,8 @@
         "studentScholarship": "CNOUS could not confirm your registration as a scholarship student.",
         "c2s": "The Social Security could not confirm your status as a beneficiary of the complementary health solidarity.",
         "qfMSA": "The automatic transmission of this information did not work.",
-        "studentWithoutFranceConnect": "So we could not verify your status. <link>Try again by re-checking my information.</link>"
+        "studentWithoutFranceConnect": "So we could not verify your status. <link>Try again by re-checking my information.</link>",
+        "qfMSAWithoutFranceConnect": "So we could not obtain your family quotient. <link>Try again by re-checking my information.</link>"
       },
       "text": "To continue your subscription at a reduced rate, please provide the appropriate proof. <important>The average processing time is 15 days.</important>",
       "textBis": "After verifying your identity, your information will be transmitted to the competent administrations to check your eligibility for the reduced rate.",
