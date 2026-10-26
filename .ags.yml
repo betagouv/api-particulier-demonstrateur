@@ -2,8 +2,8 @@ version: 1
 
 jobs:
   weekly-dependencies-bump:
-    schedule: "0 9 * * *"
-    catch_up: "12h"
+    schedule: '0 9 * * *'
+    catch_up: '12h'
     precheck: |
       count=$(gh pr list --author app/dependabot --state open --json number --jq length)
       case "$count" in
